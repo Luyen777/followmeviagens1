@@ -57,8 +57,8 @@ const FeaturedResorts = () => {
 
         {/* View All Link */}
         <div className="text-center px-4">
-          <a href="#all-resorts" className="inline-flex items-center gap-2 px-6 py-3 text-foreground font-semibold hover:text-primary transition-all duration-300 group tracking-luxury bg-white/50 backdrop-blur-sm rounded-full border border-foreground/10 hover:border-primary/30 hover:bg-white/70">
-            <span className="relative text-sm">
+          <a href="#all-resorts" className="inline-flex items-center gap-2 px-8 py-4 text-foreground font-semibold hover:text-primary transition-all duration-300 group tracking-luxury bg-white/50 backdrop-blur-sm rounded-full border border-foreground/10 hover:border-primary/30 hover:bg-white/70">
+            <span className="relative text-base">
               Ver todos os 50+ resorts disponíveis
             </span>
             <span className="transform group-hover:translate-x-1 transition-transform duration-300">→</span>
