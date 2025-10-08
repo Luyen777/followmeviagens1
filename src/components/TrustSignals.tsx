@@ -4,7 +4,7 @@ const TrustSignals = () => {
   const signals = [
     {
       icon: Award,
-      title: "10+ Anos de Expertise",
+      title: "20 Anos de Expertise",
       description: "Especialistas em jornadas de luxo"
     },
     {
@@ -14,8 +14,8 @@ const TrustSignals = () => {
     },
     {
       icon: Shield,
-      title: "50+ Resorts Exclusivos",
-      description: "Acesso privilegiado aos melhores destinos"
+      title: "50+ Resorts Parceiros",
+      description: "Preços exclusivos em alguns dos melhores resorts do mundo"
     },
     {
       icon: HeadphonesIcon,
