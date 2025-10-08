@@ -1,70 +1,102 @@
 import { Shield, Award, Users, HeadphonesIcon } from "lucide-react";
+
 const TrustSignals = () => {
-  const signals = [{
-    icon: Award,
-    title: "10+ Anos de Experiência",
-    description: "Especialistas em viagens de luxo"
-  }, {
-    icon: Users,
-    title: "5.000+ Clientes Satisfeitos",
-    description: "Depoimentos reais de viajantes"
-  }, {
-    icon: Shield,
-    title: "50+ Resorts Parceiros",
-    description: "Acesso exclusivo premium"
-  }, {
-    icon: HeadphonesIcon,
-    title: "Suporte 24/7",
-    description: "Atendimento personalizado"
-  }];
-  return <section className="py-20 sm:py-32 bg-foreground relative overflow-hidden">
-      {/* Background decoration */}
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,hsl(var(--primary)/0.1),transparent_50%)] pointer-events-none"></div>
+  const signals = [
+    {
+      icon: Award,
+      title: "10+ Anos de Expertise",
+      description: "Especialistas em jornadas de luxo"
+    },
+    {
+      icon: Users,
+      title: "5.000+ Clientes Satisfeitos",
+      description: "Depoimentos reais, experiências transformadoras"
+    },
+    {
+      icon: Shield,
+      title: "50+ Resorts Exclusivos",
+      description: "Acesso privilegiado aos melhores destinos"
+    },
+    {
+      icon: HeadphonesIcon,
+      title: "Atendimento 24/7",
+      description: "Suporte dedicado, sempre que você precisar"
+    }
+  ];
+
+  return (
+    <section className="py-24 sm:py-36 bg-background relative overflow-hidden">
+      {/* Elegant background gradients */}
+      <div className="absolute inset-0 bg-gradient-to-b from-muted/30 via-transparent to-muted/30 pointer-events-none"></div>
+      <div className="absolute top-0 left-1/4 w-96 h-96 bg-primary/5 rounded-full blur-3xl pointer-events-none"></div>
+      <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-accent/5 rounded-full blur-3xl pointer-events-none"></div>
       
       <div className="container mx-auto relative z-10">
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-16 sm:mb-24 animate-fade-in px-4">
-          <h2 className="text-4xl sm:text-5xl md:text-6xl font-display font-medium text-background mb-6 sm:mb-8 tracking-tight text-balance">
+        <div className="text-center max-w-2xl mx-auto mb-20 sm:mb-28 animate-fade-in px-4">
+          <h2 className="text-4xl sm:text-5xl md:text-6xl font-display font-medium text-foreground mb-6 tracking-tight text-balance">
             Por Que Nos Escolher
           </h2>
-          <p className="text-base sm:text-lg text-background/70 leading-relaxed font-light tracking-luxury">
-            Transformamos sonhos em experiências reais
+          <p className="text-lg sm:text-xl text-muted-foreground leading-relaxed font-light tracking-luxury">
+            Excelência e dedicação em cada detalhe da sua viagem
           </p>
         </div>
 
         {/* Trust Signals Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 mb-16 sm:mb-20 px-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-10 mb-20 sm:mb-24 px-4">
           {signals.map((signal, index) => {
-          const Icon = signal.icon;
-          return <div key={index} className="bg-white/5 backdrop-blur-md border border-white/10 rounded-3xl p-8 sm:p-10 text-center hover:bg-white/10 hover:border-white/20 transition-all duration-500 group animate-fade-in shadow-lg" style={{
-            animationDelay: `${index * 0.1}s`
-          }}>
-                <div className="inline-flex items-center justify-center w-14 h-14 sm:w-16 sm:h-16 bg-gradient-luxury rounded-2xl mb-6 sm:mb-8 group-hover:scale-110 transition-transform duration-500 shadow-luxury">
-                  <Icon className="w-7 h-7 sm:w-8 sm:h-8 text-white" />
+            const Icon = signal.icon;
+            return (
+              <div
+                key={index}
+                className="group relative bg-card border border-border rounded-2xl p-10 text-center hover:shadow-lg-custom hover:border-primary/20 transition-all duration-500 animate-fade-in"
+                style={{ animationDelay: `${index * 0.1}s` }}
+              >
+                {/* Icon container with glow effect */}
+                <div className="inline-flex items-center justify-center w-16 h-16 mb-8 relative">
+                  <div className="absolute inset-0 bg-gradient-luxury rounded-2xl opacity-10 group-hover:opacity-20 transition-opacity duration-500"></div>
+                  <div className="absolute inset-0 bg-gradient-luxury rounded-2xl blur-xl opacity-0 group-hover:opacity-30 transition-opacity duration-500"></div>
+                  <Icon className="w-8 h-8 text-primary relative z-10 group-hover:scale-110 transition-transform duration-500" strokeWidth={1.5} />
                 </div>
-                <h3 className="text-lg sm:text-xl font-display font-medium text-background mb-3 sm:mb-4 tracking-tight">
+
+                {/* Content */}
+                <h3 className="text-xl font-display font-semibold text-foreground mb-3 tracking-tight">
                   {signal.title}
                 </h3>
-                <p className="text-sm sm:text-base text-background/70 leading-relaxed font-light tracking-luxury">
+                <p className="text-base text-muted-foreground leading-relaxed font-light tracking-luxury">
                   {signal.description}
                 </p>
-              </div>;
-        })}
+              </div>
+            );
+          })}
         </div>
 
-        {/* Instagram Badge */}
+        {/* Social Proof Badge - Integrated Design */}
         <div className="text-center px-4">
-          <a href="https://instagram.com/followmeviagens" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-3 sm:gap-4 bg-white/5 backdrop-blur-md border border-white/10 rounded-full px-6 sm:px-10 py-4 sm:py-5 hover:bg-white/10 hover:border-white/20 transition-all duration-500 group shadow-lg">
-            <div className="w-12 h-12 sm:w-14 sm:h-14 bg-gradient-luxury rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-500 shadow-luxury">
-              <span className="text-white text-xl sm:text-2xl">📸</span>
-            </div>
-            <div className="text-left">
-              <div className="text-background font-semibold tracking-luxury text-sm sm:text-base">@followmeviagens</div>
-              <div className="text-background/70 text-xs sm:text-sm tracking-luxury">200.000+ seguidores</div>
-            </div>
-          </a>
+          <div className="inline-flex items-center gap-4 bg-card/50 backdrop-blur-sm border border-border rounded-full px-8 py-5 shadow-subtle animate-fade-in" style={{ animationDelay: '0.4s' }}>
+            <a 
+              href="https://instagram.com/followmeviagens" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="flex items-center gap-4 group"
+            >
+              <div className="w-12 h-12 bg-gradient-luxury rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-500 shadow-md-custom">
+                <span className="text-white text-xl">📸</span>
+              </div>
+              <div className="text-left">
+                <div className="text-foreground font-semibold text-base tracking-luxury group-hover:text-primary transition-colors duration-300">
+                  @followmeviagens
+                </div>
+                <div className="text-muted-foreground text-sm tracking-luxury">
+                  Confiado por 200.000+ viajantes
+                </div>
+              </div>
+            </a>
+          </div>
         </div>
       </div>
-    </section>;
+    </section>
+  );
+
 };
 export default TrustSignals;
