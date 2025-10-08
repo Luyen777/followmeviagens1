@@ -7,23 +7,66 @@ const FeaturedResorts = () => {
     name: "Velaa Private Island Maldives",
     location: "Noonu Atoll, Maldivas",
     rating: 5,
-    price: 1850,
+    price: 9400,
     image: resort1,
-    category: "Lua de Mel"
+    category: "Lua de Mel",
+    description: "4 noites em Sunset Lagoon Villa com experiência completa",
+    inclusions: [
+      "4 noites em Sunset Lagoon Villa (apartamento duplex)",
+      "Praia privativa e segura ao lado da acomodação",
+      "Todas as refeições inclusas em restaurantes familiares",
+      "Transfers de hidroavião incluídos",
+      "Café da manhã flutuante + cesta de boas-vindas na chegada",
+      "Crianças grátis: desconto para menores de 12, menores de 2 anos grátis",
+      "Amenidades especiais para crianças (brinquedos, jogos, roupões personalizados)",
+      "Bicicletas para toda a família com nomes personalizados",
+      "Equipamento de snorkel para adultos e crianças",
+      "Esportes aquáticos não motorizados para todas as idades",
+      "Atividades exclusivas: manta ray watching, caça ao tesouro e noites de contação de histórias",
+      "Muito mais para toda a família"
+    ]
   }, {
     name: "Soneva Jani",
     location: "Medhufaru Island, Maldivas",
     rating: 5,
-    price: 2200,
+    price: 11200,
     image: resort2,
-    category: "Luxo Premium"
+    category: "Luxo Premium",
+    description: "5 noites em Overwater Pool Villa com experiências românticas exclusivas",
+    inclusions: [
+      "5 noites em Overwater Pool Villa com rede e banheira com vista para o oceano",
+      "Todas as refeições inclusas e bebidas ilimitadas",
+      "Transfers de hidroavião para dois",
+      "Reposição diária de minibar com bebidas",
+      "Aulas de yoga matinais e noturnas",
+      "Chocolate diário para momentos especiais",
+      "Café da manhã flutuante na piscina privativa",
+      "Champagne de boas-vindas",
+      "Massagem para casal",
+      "Jantar romântico à luz de velas na praia",
+      "Experiências exclusivas e inesquecíveis"
+    ]
   }, {
     name: "Six Senses Laamu",
     location: "Laamu Atoll, Maldivas",
     rating: 5,
-    price: 1450,
+    price: 7400,
     image: resort3,
-    category: "Família"
+    category: "Família",
+    description: "5 noites no santuário de Ocean Pool Villa com programa completo de bem-estar",
+    inclusions: [
+      "5 noites no santuário de Ocean Pool Villa privativo",
+      "Consulta de bem-estar personalizada antes da chegada",
+      "Massagem terapêutica completa Four Pillar Signature",
+      "Terapia aquática (Watsu ou Hammam)",
+      "Sessões de terapia sonora ou AKTAR Mind Therapy",
+      "Yoga, meditação ou pilates diários",
+      "Chás e blends naturais desenvolvidos por especialistas",
+      "Consultas especializadas (Ayurveda, Naturopatia, TCM ou Homeopatia)",
+      "Aulas de culinária e workshops nutricionais",
+      "Tratamentos restauradores de cabelo e couro cabeludo no Flora Lab",
+      "Orientação de bem-estar para continuar saudável em casa"
+    ]
   }];
   return <section id="resorts" className="py-20 sm:py-32 bg-background relative overflow-hidden">
       {/* Subtle background decoration */}

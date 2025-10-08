@@ -9,9 +9,11 @@ interface ResortCardProps {
   price: number;
   image: string;
   category: string;
+  description?: string;
+  inclusions?: string[];
 }
 
-const ResortCard = ({ name, location, rating, price, image, category }: ResortCardProps) => {
+const ResortCard = ({ name, location, rating, price, image, category, description, inclusions }: ResortCardProps) => {
   return (
     <Card className="overflow-hidden group border-border hover:shadow-luxury transition-all duration-500 rounded-3xl bg-card backdrop-blur-sm">
       {/* Image */}
@@ -45,18 +47,42 @@ const ResortCard = ({ name, location, rating, price, image, category }: ResortCa
         </h3>
 
         {/* Location */}
-        <div className="flex items-center text-muted-foreground mb-4 sm:mb-6">
+        <div className="flex items-center text-muted-foreground mb-3 sm:mb-4">
           <MapPin className="w-4 h-4 mr-2 flex-shrink-0" />
           <span className="text-xs sm:text-sm tracking-luxury">{location}</span>
         </div>
 
+        {/* Description */}
+        {description && (
+          <p className="text-sm text-muted-foreground mb-4 sm:mb-6 leading-relaxed">
+            {description}
+          </p>
+        )}
+
         {/* Price */}
         <div className="flex items-baseline gap-2 mb-4 sm:mb-6 pb-4 sm:pb-6 border-b border-border">
           <span className="text-3xl sm:text-4xl font-display font-medium text-foreground">
-            ${price.toLocaleString()}
+            R$ {price.toLocaleString()}
           </span>
           <span className="text-xs sm:text-sm text-muted-foreground tracking-luxury">por noite</span>
         </div>
+
+        {/* Inclusions */}
+        {inclusions && inclusions.length > 0 && (
+          <div className="space-y-2 sm:space-y-3">
+            <h4 className="text-sm font-semibold text-foreground tracking-luxury mb-3">
+              O que está incluído:
+            </h4>
+            <ul className="space-y-2 max-h-64 overflow-y-auto pr-2 custom-scrollbar">
+              {inclusions.map((item, index) => (
+                <li key={index} className="flex items-start gap-2 text-xs sm:text-sm text-muted-foreground">
+                  <span className="text-primary mt-1 flex-shrink-0">✓</span>
+                  <span className="leading-relaxed">{item}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        )}
       </CardContent>
 
       <CardFooter className="p-6 sm:p-8 pt-0 flex gap-3">
