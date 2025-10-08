@@ -1,4 +1,4 @@
-import { Shield, Award, Users, HeadphonesIcon } from "lucide-react";
+import { Shield, Award, Users, HeadphonesIcon, Handshake } from "lucide-react";
 
 const TrustSignals = () => {
   const signals = [
@@ -13,7 +13,7 @@ const TrustSignals = () => {
       description: "Depoimentos reais, experiências transformadoras"
     },
     {
-      icon: Shield,
+      icon: Handshake,
       title: "50+ Resorts Parceiros",
       description: "Preços exclusivos em alguns dos melhores resorts do mundo"
     },
