@@ -1,5 +1,9 @@
+import { Star, Clock, Utensils, Plane, Sparkles } from "lucide-react";
+import { Badge } from "@/components/ui/badge";
+
 interface PackageListItemProps {
   title: string;
+  description?: string;
   image: string;
   duration: string;
   destination: string;
@@ -9,10 +13,13 @@ interface PackageListItemProps {
   mealPlan: string;
   referenceNumber: string;
   priceFrom: number;
+  focusTags?: string[];
+  uniquePerk?: string;
 }
 
 const PackageListItem = ({
   title,
+  description,
   image,
   duration,
   destination,
@@ -22,6 +29,8 @@ const PackageListItem = ({
   mealPlan,
   referenceNumber,
   priceFrom,
+  focusTags = [],
+  uniquePerk,
 }: PackageListItemProps) => {
   return (
     <div className="bg-card border border-border rounded-2xl overflow-hidden hover:shadow-luxury transition-all duration-500 flex flex-col lg:flex-row">
@@ -37,41 +46,97 @@ const PackageListItem = ({
       {/* Content Section */}
       <div className="flex-1 p-6 sm:p-8 flex flex-col justify-between">
         <div>
-          {/* Title */}
-          <h3 className="text-2xl sm:text-3xl font-display font-medium text-foreground mb-6 tracking-tight">
-            {title}
-          </h3>
+          {/* Header with Title and Focus Tags */}
+          <div className="mb-4">
+            <div className="flex flex-wrap gap-2 mb-3">
+              {focusTags.map((tag, index) => (
+                <Badge key={index} variant="secondary" className="text-xs font-medium px-3 py-1">
+                  {tag}
+                </Badge>
+              ))}
+            </div>
+            <h3 className="text-2xl sm:text-3xl font-display font-medium text-foreground mb-2 tracking-tight">
+              {title}
+            </h3>
+            
+            {/* Star Rating */}
+            <div className="flex items-center gap-1 mb-3">
+              {[...Array(5)].map((_, i) => (
+                <Star key={i} className="w-4 h-4 fill-primary text-primary" />
+              ))}
+            </div>
 
-          {/* Package Details List */}
-          <div className="space-y-3 mb-6">
-            <div className="flex items-start">
-              <span className="text-muted-foreground min-w-[140px] text-sm">Duração:</span>
-              <span className="text-foreground text-sm font-medium">{duration}</span>
+            {/* Description */}
+            {description && (
+              <p className="text-muted-foreground text-sm leading-relaxed mb-6">
+                {description}
+              </p>
+            )}
+          </div>
+
+          {/* Key Features with Icons */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
+            <div className="flex items-center gap-3">
+              <div className="flex-shrink-0 w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center">
+                <Clock className="w-5 h-5 text-primary" />
+              </div>
+              <div>
+                <div className="text-xs text-muted-foreground">Duração</div>
+                <div className="text-sm font-medium text-foreground">{duration}</div>
+              </div>
             </div>
-            <div className="flex items-start">
-              <span className="text-muted-foreground min-w-[140px] text-sm">Destino:</span>
-              <span className="text-foreground text-sm font-medium">{destination}</span>
+
+            <div className="flex items-center gap-3">
+              <div className="flex-shrink-0 w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center">
+                <Utensils className="w-5 h-5 text-primary" />
+              </div>
+              <div>
+                <div className="text-xs text-muted-foreground">Plano de Refeição</div>
+                <div className="text-sm font-medium text-foreground">{mealPlan}</div>
+              </div>
             </div>
-            <div className="flex items-start">
-              <span className="text-muted-foreground min-w-[140px] text-sm">Passagem Aérea:</span>
-              <span className="text-foreground text-sm font-medium">{flightIncluded}</span>
+
+            <div className="flex items-center gap-3">
+              <div className="flex-shrink-0 w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center">
+                <Plane className="w-5 h-5 text-primary" />
+              </div>
+              <div>
+                <div className="text-xs text-muted-foreground">Transfer</div>
+                <div className="text-sm font-medium text-foreground">{flightIncluded}</div>
+              </div>
             </div>
-            <div className="flex items-start">
-              <span className="text-muted-foreground min-w-[140px] text-sm">Validade:</span>
-              <span className="text-foreground text-sm font-medium">{validity}</span>
+
+            <div className="flex items-center gap-3">
+              <div className="flex-shrink-0 w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center">
+                <Sparkles className="w-5 h-5 text-primary" />
+              </div>
+              <div>
+                <div className="text-xs text-muted-foreground">Saídas</div>
+                <div className="text-sm font-medium text-foreground">{departures}</div>
+              </div>
             </div>
-            <div className="flex items-start">
-              <span className="text-muted-foreground min-w-[140px] text-sm">Saídas:</span>
-              <span className="text-foreground text-sm font-medium">{departures}</span>
+          </div>
+
+          {/* Unique Perk Highlight */}
+          {uniquePerk && (
+            <div className="bg-primary/5 border border-primary/20 rounded-xl p-4 mb-6">
+              <div className="flex items-start gap-3">
+                <Sparkles className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
+                <div>
+                  <div className="text-xs font-medium text-primary uppercase tracking-wide mb-1">
+                    Benefício Exclusivo
+                  </div>
+                  <div className="text-sm text-foreground font-medium">
+                    {uniquePerk}
+                  </div>
+                </div>
+              </div>
             </div>
-            <div className="flex items-start">
-              <span className="text-muted-foreground min-w-[140px] text-sm">Plano de Refeição:</span>
-              <span className="text-foreground text-sm font-medium">{mealPlan}</span>
-            </div>
-            <div className="flex items-start">
-              <span className="text-muted-foreground min-w-[140px] text-sm">Número de Referência:</span>
-              <span className="text-foreground text-sm font-medium">{referenceNumber}</span>
-            </div>
+          )}
+
+          {/* Reference Number */}
+          <div className="text-xs text-muted-foreground/60 mb-2">
+            Ref: {referenceNumber}
           </div>
         </div>
 
