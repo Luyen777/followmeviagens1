@@ -132,9 +132,7 @@ const Packages = () => {
       {/* Hero Section */}
       <section className="pt-40 pb-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-background via-background/50 to-background">
         <div className="max-w-4xl mx-auto text-center">
-          <h1 className="text-5xl sm:text-6xl lg:text-7xl font-display font-light text-foreground mb-8 tracking-tight leading-tight">
-            Pacotes Maldivas
-          </h1>
+          <h1 className="text-5xl sm:text-6xl font-display font-light text-foreground mb-8 tracking-tight leading-tight lg:text-5xl">Pacotes de viagem para as Ilhas Maldivas</h1>
           <p className="text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
             Experiências exclusivas em resorts de luxo. Personalizamos cada detalhe para tornar sua viagem inesquecível.
           </p>
