@@ -130,27 +130,33 @@ const Packages = () => {
       <WhatsAppButton />
 
       {/* Hero Section */}
-      <section className="pt-32 pb-16 px-4 sm:px-6 lg:px-8 bg-gradient-hero">
-        <div className="max-w-7xl mx-auto">
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-display font-medium text-foreground mb-6 tracking-tight">
-            Pacotes de Viagem para as Ilhas Maldivas
+      <section className="pt-40 pb-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-background via-background/50 to-background">
+        <div className="max-w-4xl mx-auto text-center">
+          <h1 className="text-5xl sm:text-6xl lg:text-7xl font-display font-light text-foreground mb-8 tracking-tight leading-tight">
+            Pacotes Maldivas
           </h1>
-          <p className="text-lg sm:text-xl text-muted-foreground max-w-3xl mb-8 leading-relaxed">Explore os melhores pacotes nas Ilhas Maldivas. Cada resort oferece experiências únicas, com opções de lazer e gastronomia para todos os estilos de viagem. Escolha seu pacote e prepare-se para dias inesquecíveis em cenários paradisíacos. Todos os pacotes são customizáveis - fale com a nossa equipe para encontrar a opção perfeita pra você.</p>
-
-          {/* Sorting Dropdown (Placeholder) */}
-          <div className="inline-flex items-center gap-2 bg-card border border-border rounded-2xl px-6 py-3 cursor-pointer hover:shadow-md transition-all duration-300">
-            <span className="text-sm text-foreground font-medium tracking-luxury">
-              Ordem de Exibição
-            </span>
-            <ChevronDown className="w-4 h-4 text-muted-foreground" />
-          </div>
+          <p className="text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
+            Experiências exclusivas em resorts de luxo. Personalizamos cada detalhe para tornar sua viagem inesquecível.
+          </p>
         </div>
       </section>
 
       {/* Packages List */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto space-y-8">
-          {packagesData.map(pkg => <PackageListItem key={pkg.id} {...pkg} />)}
+      <section className="pb-24 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          {/* Sorting Dropdown */}
+          <div className="mb-12 flex justify-end">
+            <div className="inline-flex items-center gap-2 bg-card border border-border rounded-xl px-5 py-2.5 cursor-pointer hover:border-foreground/20 transition-colors duration-200">
+              <span className="text-sm text-muted-foreground font-medium">
+                Ordenar por
+              </span>
+              <ChevronDown className="w-4 h-4 text-muted-foreground" />
+            </div>
+          </div>
+
+          <div className="space-y-8">
+            {packagesData.map(pkg => <PackageListItem key={pkg.id} {...pkg} />)}
+          </div>
         </div>
       </section>
 
