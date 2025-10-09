@@ -20,7 +20,7 @@ const Navigation = () => {
     href: "/pacotes"
   }, {
     label: "Blog",
-    href: "#blog"
+    href: "/blog"
   }, {
     label: "Sobre Nós",
     href: "#sobre"
