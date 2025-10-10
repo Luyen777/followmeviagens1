@@ -1,9 +1,12 @@
-import { ChevronDown } from "lucide-react";
+import { ChevronDown, Loader2 } from "lucide-react";
+import { useState, useEffect } from "react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import PackageListItem from "@/components/PackageListItem";
-const packagesData = [{
+
+// Temporary mock data - will be replaced with Google Sheets API
+const mockPackagesData = [{
   id: 1,
   title: "Ilhas Maldivas: Pullman Maldives Maamutaa",
   description: "Resort moderno com excelente infraestrutura, perfeito para famílias e casais que buscam conforto e variedade de atividades aquáticas.",
@@ -124,7 +127,36 @@ const packagesData = [{
   focusTags: ["Luxo Premium", "Exclusividade"],
   uniquePerk: "Mordomo pessoal 24h e transfer privativo de helicóptero"
 }];
-const Packages = () => {
+
+// TODO: Replace with actual Google Sheets API integration
+// Expected API endpoint format: /api/google-sheets/maldivas-resorts
+const fetchResortsFromGoogleSheets = async () => {
+  // Placeholder for Google Sheets API call
+  // return await fetch('/api/google-sheets/maldivas-resorts').then(res => res.json());
+  return mockPackagesData;
+};
+
+const IlhasMaldivas = () => {
+  const [resorts, setResorts] = useState(mockPackagesData);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState<string | null>(null);
+
+  useEffect(() => {
+    // When Google Sheets API is ready, uncomment this:
+    // const loadResorts = async () => {
+    //   setLoading(true);
+    //   try {
+    //     const data = await fetchResortsFromGoogleSheets();
+    //     setResorts(data);
+    //   } catch (err) {
+    //     setError('Erro ao carregar resorts. Por favor, tente novamente.');
+    //   } finally {
+    //     setLoading(false);
+    //   }
+    // };
+    // loadResorts();
+  }, []);
+
   return <div className="min-h-screen bg-background">
       <Navigation />
       <WhatsAppButton />
@@ -150,13 +182,28 @@ const Packages = () => {
             </div>
           </div>
 
-          <div className="space-y-8">
-            {packagesData.map(pkg => <PackageListItem key={pkg.id} {...pkg} />)}
-          </div>
+          {loading && (
+            <div className="flex justify-center items-center py-20">
+              <Loader2 className="w-8 h-8 animate-spin text-primary" />
+            </div>
+          )}
+
+          {error && (
+            <div className="text-center py-20">
+              <p className="text-destructive">{error}</p>
+            </div>
+          )}
+
+          {!loading && !error && (
+            <div className="space-y-8">
+              {resorts.map(pkg => <PackageListItem key={pkg.id} {...pkg} />)}
+            </div>
+          )}
         </div>
       </section>
 
       <Footer />
     </div>;
 };
-export default Packages;
+
+export default IlhasMaldivas;

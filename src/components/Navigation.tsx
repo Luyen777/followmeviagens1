@@ -17,7 +17,7 @@ const Navigation = () => {
     href: "#destinos"
   }, {
     label: "Pacotes",
-    href: "/pacotes"
+    href: "/ilhas-maldivas"
   }, {
     label: "Blog",
     href: "/blog"
