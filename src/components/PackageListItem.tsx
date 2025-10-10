@@ -1,6 +1,5 @@
 import { Star, Clock, Utensils, Plane, Sparkles } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
-
 interface PackageListItemProps {
   title: string;
   description?: string;
@@ -16,7 +15,6 @@ interface PackageListItemProps {
   focusTags?: string[];
   uniquePerk?: string;
 }
-
 const PackageListItem = ({
   title,
   description,
@@ -30,17 +28,12 @@ const PackageListItem = ({
   referenceNumber,
   priceFrom,
   focusTags = [],
-  uniquePerk,
+  uniquePerk
 }: PackageListItemProps) => {
-  return (
-    <div className="bg-card border border-border rounded-2xl overflow-hidden hover:shadow-luxury transition-all duration-500 flex flex-col lg:flex-row">
+  return <div className="bg-card border border-border rounded-2xl overflow-hidden hover:shadow-luxury transition-all duration-500 flex flex-col lg:flex-row">
       {/* Image Section */}
       <div className="lg:w-2/5 h-64 lg:h-auto">
-        <img 
-          src={image} 
-          alt={title}
-          className="w-full h-full object-cover"
-        />
+        <img src={image} alt={title} className="w-full h-full object-cover" />
       </div>
 
       {/* Content Section */}
@@ -49,22 +42,18 @@ const PackageListItem = ({
           {/* Header with Title and Focus Tags */}
           <div className="mb-4">
             <div className="flex flex-wrap gap-2 mb-3">
-              {focusTags.map((tag, index) => (
-                <Badge key={index} variant="secondary" className="text-xs font-medium px-3 py-1">
+              {focusTags.map((tag, index) => <Badge key={index} variant="secondary" className="text-xs font-medium px-3 py-1">
                   {tag}
-                </Badge>
-              ))}
+                </Badge>)}
             </div>
             <h3 className="text-2xl sm:text-3xl font-display font-medium text-foreground mb-2 tracking-tight">
               {title}
             </h3>
 
             {/* Description */}
-            {description && (
-              <p className="text-muted-foreground text-sm leading-relaxed mb-6">
+            {description && <p className="text-muted-foreground text-sm leading-relaxed mb-6">
                 {description}
-              </p>
-            )}
+              </p>}
           </div>
 
           {/* Key Features with Icons */}
@@ -112,8 +101,7 @@ const PackageListItem = ({
           </div>
 
           {/* Unique Perk Highlight */}
-          {uniquePerk && (
-            <div className="bg-primary/5 border border-primary/20 rounded-xl p-4 mb-6">
+          {uniquePerk && <div className="bg-primary/5 border border-primary/20 rounded-xl p-4 mb-6">
               <div className="flex items-start gap-3">
                 <Sparkles className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
                 <div>
@@ -125,8 +113,7 @@ const PackageListItem = ({
                   </div>
                 </div>
               </div>
-            </div>
-          )}
+            </div>}
 
           {/* Reference Number */}
           <div className="text-xs text-muted-foreground/60 mb-2">
@@ -152,8 +139,6 @@ const PackageListItem = ({
           </button>
         </div>
       </div>
-    </div>
-  );
+    </div>;
 };
-
 export default PackageListItem;
