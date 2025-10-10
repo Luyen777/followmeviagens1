@@ -16,7 +16,7 @@ const Hero = () => {
         <div className="max-w-5xl mx-auto animate-fade-in">
           {/* Main Heading */}
           <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-display font-medium text-foreground mb-4 leading-[1.2] tracking-tight overflow-visible">
-            Descubra o <span className="italic bg-gradient-luxury bg-clip-text text-transparent px-1 pb-2 inline-block overflow-visible">Paraíso</span>
+            Descubra o <span className="italic bg-gradient-luxury bg-clip-text px-1 pb-2 inline-block overflow-visible text-zinc-950">Paraíso.</span>
           </h1>
 
           {/* Subtitle - Expertise */}
