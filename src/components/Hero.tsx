@@ -15,7 +15,7 @@ const Hero = () => {
       <div className="relative z-10 container mx-auto px-4 pt-36 pb-24 text-center">
         <div className="max-w-5xl mx-auto animate-fade-in">
           {/* Main Heading */}
-          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-display text-foreground mb-4 leading-[1.2] tracking-tight overflow-visible font-light">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl font-display text-foreground mb-4 leading-[1.2] tracking-tight overflow-visible font-light lg:text-6xl">
             Descubra o <span className="font-bold">paraíso.</span>
           </h1>
 
