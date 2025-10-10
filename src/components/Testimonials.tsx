@@ -28,7 +28,7 @@ const Testimonials = () => {
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16 sm:mb-24 animate-fade-in px-4">
           <span className="inline-flex items-center gap-2 text-primary font-semibold sm:text-sm uppercase tracking-[0.2em] mb-4 px-4 py-2 bg-primary/5 rounded-full border border-primary/20 text-xs">EXPERIências</span>
-          <h2 className="text-4xl sm:text-5xl md:text-6xl font-display font-medium text-foreground mb-6 sm:mb-8 tracking-tight text-balance">Depoimentos</h2>
+          <h2 className="text-4xl sm:text-5xl font-display font-medium text-foreground mb-6 sm:mb-8 tracking-tight text-balance md:text-5xl">Depoimentos</h2>
           <p className="text-base sm:text-lg text-foreground/70 leading-relaxed font-light tracking-luxury">Mais de 5.000 clientes já viajaram com a gente. 100% de avaliações positivas!</p>
         </div>
 
