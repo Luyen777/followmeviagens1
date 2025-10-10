@@ -10,10 +10,10 @@ const Navigation = () => {
     href: "#buscar",
     mobileOnly: true
   }, {
-    label: "Maldivas",
+    label: "Ilhas Maldivas",
     href: "#maldivas"
   }, {
-    label: "Destinos",
+    label: "Outros Destinos",
     href: "#destinos"
   }, {
     label: "Pacotes",
