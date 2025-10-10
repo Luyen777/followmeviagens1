@@ -11,13 +11,13 @@ const Navigation = () => {
     mobileOnly: true
   }, {
     label: "Ilhas Maldivas",
-    href: "#maldivas"
+    href: "/ilhas-maldivas"
   }, {
     label: "Outros Destinos",
     href: "#destinos"
   }, {
     label: "Pacotes",
-    href: "/ilhas-maldivas"
+    href: "#pacotes"
   }, {
     label: "Blog",
     href: "/blog"
