@@ -9,7 +9,7 @@ interface PackageListItemProps {
   destination: string;
   flightIncluded: string;
   validity: string;
-  departures: string;
+  classification: string;
   mealPlan: string;
   referenceNumber: string;
   priceFrom: number;
@@ -25,7 +25,7 @@ const PackageListItem = ({
   destination,
   flightIncluded,
   validity,
-  departures,
+  classification,
   mealPlan,
   referenceNumber,
   priceFrom,
@@ -58,13 +58,6 @@ const PackageListItem = ({
             <h3 className="text-2xl sm:text-3xl font-display font-medium text-foreground mb-2 tracking-tight">
               {title}
             </h3>
-            
-            {/* Star Rating */}
-            <div className="flex items-center gap-1 mb-3">
-              {[...Array(5)].map((_, i) => (
-                <Star key={i} className="w-4 h-4 fill-primary text-primary" />
-              ))}
-            </div>
 
             {/* Description */}
             {description && (
@@ -76,6 +69,16 @@ const PackageListItem = ({
 
           {/* Key Features with Icons */}
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
+            <div className="flex items-center gap-3">
+              <div className="flex-shrink-0 w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center">
+                <Star className="w-5 h-5 text-primary" />
+              </div>
+              <div>
+                <div className="text-xs text-muted-foreground">Classificação</div>
+                <div className="text-sm font-medium text-foreground">{classification}</div>
+              </div>
+            </div>
+
             <div className="flex items-center gap-3">
               <div className="flex-shrink-0 w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center">
                 <Clock className="w-5 h-5 text-primary" />
@@ -106,15 +109,6 @@ const PackageListItem = ({
               </div>
             </div>
 
-            <div className="flex items-center gap-3">
-              <div className="flex-shrink-0 w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center">
-                <Sparkles className="w-5 h-5 text-primary" />
-              </div>
-              <div>
-                <div className="text-xs text-muted-foreground">Saídas</div>
-                <div className="text-sm font-medium text-foreground">{departures}</div>
-              </div>
-            </div>
           </div>
 
           {/* Unique Perk Highlight */}
