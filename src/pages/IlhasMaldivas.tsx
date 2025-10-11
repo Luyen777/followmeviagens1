@@ -4,157 +4,28 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import PackageListItem from "@/components/PackageListItem";
+import { fetchResortsFromGoogleSheets, type PackageData } from "@/services/googleSheetsService";
 
-// Temporary mock data - will be replaced with Google Sheets API
-const mockPackagesData = [{
-  id: 1,
-  title: "Ilhas Maldivas: Pullman Maldives Maamutaa",
-  description: "Resort moderno com excelente infraestrutura, perfeito para famílias e casais que buscam conforto e variedade de atividades aquáticas.",
-  image: "/src/assets/resort-1.jpg",
-  duration: "7 dias / 6 noites",
-  destination: "Atol de Gaafu Alifu",
-  flightIncluded: "1h de hidroavião",
-  validity: "01/11/2025 a 30/04/2026",
-  classification: "5 estrelas",
-  mealPlan: "All Inclusive",
-  referenceNumber: "FM01",
-  priceFrom: 3850,
-  focusTags: ["Família", "Mergulho"],
-  uniquePerk: "Upgrade garantido para villa sobre a água"
-}, {
-  id: 2,
-  title: "Ilhas Maldivas: Anantara Kihavah Villas",
-  description: "Resort ultra-luxuoso com villas exclusivas, restaurante subaquático e spa premiado. Experiência sofisticada em um dos atolóis mais preservados.",
-  image: "/src/assets/resort-2.jpg",
-  duration: "8 dias / 7 noites",
-  destination: "Atol de Baa",
-  flightIncluded: "35 min de hidroavião",
-  validity: "15/10/2025 a 20/12/2025",
-  classification: "5 estrelas",
-  mealPlan: "Café da Manhã",
-  referenceNumber: "FM02",
-  priceFrom: 5200,
-  focusTags: ["Lua de Mel", "Luxo"],
-  uniquePerk: "Jantar no restaurante subaquático SEA incluso"
-}, {
-  id: 3,
-  title: "Ilhas Maldivas: Conrad Maldives Rangali Island",
-  description: "Resort icônico com o primeiro restaurante totalmente submerso do mundo. Duas ilhas conectadas por uma ponte, oferecendo máxima privacidade.",
-  image: "/src/assets/resort-3.jpg",
-  duration: "6 dias / 5 noites",
-  destination: "Atol de Ari Sul",
-  flightIncluded: "30 min de hidroavião",
-  validity: "01/12/2025 a 31/03/2026",
-  classification: "5 estrelas",
-  mealPlan: "Meia Pensão",
-  referenceNumber: "FM03",
-  priceFrom: 4680,
-  focusTags: ["Lua de Mel", "Gastronomia"],
-  uniquePerk: "Café da manhã flutuante para casal"
-}, {
-  id: 4,
-  title: "Ilhas Maldivas: Six Senses Laamu",
-  description: "Resort eco-luxo focado em sustentabilidade e bem-estar. Spa excepcional, experiências holísticas e localização remota para máximo relaxamento.",
-  image: "/src/assets/resort-1.jpg",
-  duration: "9 dias / 8 noites",
-  destination: "Atol de Laamu",
-  flightIncluded: "45 min de voo doméstico + 10 min de lancha",
-  validity: "01/11/2025 a 15/04/2026",
-  classification: "5 estrelas",
-  mealPlan: "All Inclusive",
-  referenceNumber: "FM04",
-  priceFrom: 6120,
-  focusTags: ["Bem-estar", "Sustentabilidade"],
-  uniquePerk: "Massagem para casal de 60min inclusa"
-}, {
-  id: 5,
-  title: "Ilhas Maldivas: COMO Cocoa Island",
-  description: "Resort boutique minimalista com design elegante. Villas sobre a água em formato de barcos tradicionais dhoni, perfeito para casais.",
-  image: "/src/assets/resort-2.jpg",
-  duration: "7 dias / 6 noites",
-  destination: "Atol de Malé Sul",
-  flightIncluded: "40 min de lancha rápida",
-  validity: "10/11/2025 a 25/03/2026",
-  classification: "5 estrelas",
-  mealPlan: "Café da Manhã",
-  referenceNumber: "FM05",
-  priceFrom: 4250,
-  focusTags: ["Lua de Mel", "Design"],
-  uniquePerk: "Experiência de mergulho livre guiado inclusa"
-}, {
-  id: 6,
-  title: "Ilhas Maldivas: Soneva Fushi",
-  description: "O original resort barefoot luxury. Villas espaçosas na praia, cinema ao ar livre, observatório astronômico e experiências gastronômicas únicas.",
-  image: "/src/assets/resort-3.jpg",
-  duration: "10 dias / 9 noites",
-  destination: "Atol de Baa",
-  flightIncluded: "30 min de hidroavião",
-  validity: "01/10/2025 a 30/04/2026",
-  classification: "5 estrelas",
-  mealPlan: "Pensão Completa",
-  referenceNumber: "FM06",
-  priceFrom: 7890,
-  focusTags: ["Família", "Luxo", "Gastronomia"],
-  uniquePerk: "Jantar privativo sob as estrelas com astrônomo"
-}, {
-  id: 7,
-  title: "Ilhas Maldivas: Baros Maldives",
-  description: "Resort clássico e romântico, próximo ao aeroporto. Ideal para lua de mel, com villas charmosas e recife de corais espetacular.",
-  image: "/src/assets/resort-1.jpg",
-  duration: "5 dias / 4 noites",
-  destination: "Atol de Malé Norte",
-  flightIncluded: "25 min de lancha rápida",
-  validity: "15/11/2025 a 20/12/2025",
-  classification: "5 estrelas",
-  mealPlan: "All Inclusive",
-  referenceNumber: "FM07",
-  priceFrom: 3120,
-  focusTags: ["Lua de Mel", "Mergulho"],
-  uniquePerk: "Renovação de votos na praia inclusa"
-}, {
-  id: 8,
-  title: "Ilhas Maldivas: Velaa Private Island",
-  description: "Resort ultra-exclusivo com serviço impecável. Campo de golfe, spa sobre a água e beach club privativo. O ápice do luxo nas Maldivas.",
-  image: "/src/assets/resort-2.jpg",
-  duration: "8 dias / 7 noites",
-  destination: "Atol de Noonu",
-  flightIncluded: "45 min de hidroavião",
-  validity: "01/12/2025 a 31/03/2026",
-  classification: "5 estrelas",
-  mealPlan: "Pensão Completa",
-  referenceNumber: "FM08",
-  priceFrom: 9500,
-  focusTags: ["Luxo Premium", "Exclusividade"],
-  uniquePerk: "Mordomo pessoal 24h e transfer privativo de helicóptero"
-}];
-
-// TODO: Replace with actual Google Sheets API integration
-// Expected API endpoint format: /api/google-sheets/maldivas-resorts
-const fetchResortsFromGoogleSheets = async () => {
-  // Placeholder for Google Sheets API call
-  // return await fetch('/api/google-sheets/maldivas-resorts').then(res => res.json());
-  return mockPackagesData;
-};
 
 const IlhasMaldivas = () => {
-  const [resorts, setResorts] = useState(mockPackagesData);
-  const [loading, setLoading] = useState(false);
+  const [resorts, setResorts] = useState<PackageData[]>([]);
+  const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
-    // When Google Sheets API is ready, uncomment this:
-    // const loadResorts = async () => {
-    //   setLoading(true);
-    //   try {
-    //     const data = await fetchResortsFromGoogleSheets();
-    //     setResorts(data);
-    //   } catch (err) {
-    //     setError('Erro ao carregar resorts. Por favor, tente novamente.');
-    //   } finally {
-    //     setLoading(false);
-    //   }
-    // };
-    // loadResorts();
+    const loadResorts = async () => {
+      setLoading(true);
+      try {
+        const data = await fetchResortsFromGoogleSheets();
+        setResorts(data);
+      } catch (err) {
+        setError('Erro ao carregar resorts. Por favor, tente novamente.');
+        console.error('Error loading resorts:', err);
+      } finally {
+        setLoading(false);
+      }
+    };
+    loadResorts();
   }, []);
 
   return <div className="min-h-screen bg-background">
@@ -196,7 +67,7 @@ const IlhasMaldivas = () => {
 
           {!loading && !error && (
             <div className="space-y-8">
-              {resorts.map(pkg => <PackageListItem key={pkg.id} {...pkg} />)}
+              {resorts.map((pkg, index) => <PackageListItem key={pkg.referenceNumber || index} {...pkg} />)}
             </div>
           )}
         </div>
