@@ -32,12 +32,12 @@ const PackageListItem = ({
 }: PackageListItemProps) => {
   return <div className="bg-card border border-border rounded-2xl overflow-hidden hover:shadow-luxury transition-all duration-500 flex flex-col lg:flex-row">
       {/* Image Section */}
-      <div className="lg:w-[28%] h-[13.6rem] lg:h-auto">
+      <div className="lg:w-[24%] h-[13.6rem] lg:h-[280px] flex-shrink-0">
         <img src={image} alt={title} className="w-full h-full object-cover" />
       </div>
 
-      {/* Content Section */}
-      <div className="flex-1 p-6 sm:p-8 flex flex-col justify-between">
+      {/* Content Section - Middle */}
+      <div className="flex-1 p-6 sm:p-8 lg:pr-6">
         <div>
           {/* Header with Title and Focus Tags */}
           <div className="mb-4">
@@ -46,18 +46,18 @@ const PackageListItem = ({
                   {tag}
                 </Badge>)}
             </div>
-            <h3 className="text-2xl sm:text-3xl font-display font-medium text-foreground mb-2 tracking-tight">
+            <h3 className="text-2xl sm:text-3xl lg:text-2xl font-display font-medium text-foreground mb-2 tracking-tight">
               {title}
             </h3>
 
             {/* Description */}
-            {description && <p className="text-muted-foreground text-sm leading-relaxed mb-6">
+            {description && <p className="text-muted-foreground text-sm leading-relaxed mb-4 lg:mb-3">
                 {description}
               </p>}
           </div>
 
           {/* Key Features with Icons */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 lg:gap-2 mb-4">
             <div className="flex items-center gap-3">
               <div className="flex-shrink-0 w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center">
                 <Star className="w-5 h-5 text-primary" />
@@ -101,7 +101,7 @@ const PackageListItem = ({
           </div>
 
           {/* Unique Perk Highlight */}
-          {uniquePerk && <div className="bg-primary/5 border border-primary/20 rounded-xl p-4 mb-6">
+          {uniquePerk && <div className="bg-primary/5 border border-primary/20 rounded-xl p-3 lg:p-3 mb-4 lg:mb-3">
               <div className="flex items-start gap-3">
                 <Sparkles className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
                 <div>
@@ -114,25 +114,27 @@ const PackageListItem = ({
             </div>}
 
           {/* Reference Number */}
-          <div className="text-xs text-muted-foreground/60 mb-2">
+          <div className="text-xs text-muted-foreground/60">
             Ref: {referenceNumber}
           </div>
         </div>
+      </div>
 
-        {/* Price and CTA Section */}
-        <div className="space-y-4 border-t border-border pt-6">
+      {/* Price and CTA Section - Right Side (Desktop) / Bottom (Mobile) */}
+      <div className="lg:w-[280px] flex-shrink-0 p-6 sm:p-8 lg:py-8 lg:px-6 border-t lg:border-t-0 lg:border-l border-border flex flex-col justify-center">
+        <div className="space-y-4">
           <div className="text-foreground">
             <div className="text-xs sm:text-sm text-muted-foreground mb-2 uppercase tracking-luxury">
               PREÇO A PARTIR
             </div>
-            <div className="flex items-baseline gap-2">
-              <span className="text-3xl sm:text-4xl font-display font-medium">
+            <div className="flex flex-col gap-1">
+              <span className="text-3xl sm:text-4xl lg:text-3xl font-display font-medium">
                 USD {priceFrom.toLocaleString()}*
               </span>
-              <span className="text-sm text-muted-foreground">POR PESSOA, EM APTO DUPLO</span>
+              <span className="text-xs text-muted-foreground">POR PESSOA, EM APTO DUPLO</span>
             </div>
           </div>
-          <button className="w-full lg:w-auto lg:px-12 h-12 bg-foreground text-background hover:bg-foreground/90 rounded-2xl font-medium tracking-luxury transition-all duration-500 shadow-md hover:shadow-lg">
+          <button className="w-full h-12 bg-foreground text-background hover:bg-foreground/90 rounded-2xl font-medium tracking-luxury transition-all duration-500 shadow-md hover:shadow-lg">
             VEJA O ROTEIRO
           </button>
         </div>
