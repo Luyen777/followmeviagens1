@@ -66,7 +66,7 @@ const IlhasMaldivas = () => {
           )}
 
           {!loading && !error && (
-            <div className="space-y-8">
+            <div className="space-y-12 sm:space-y-8">
               {resorts.map((pkg, index) => <PackageListItem key={pkg.referenceNumber || index} {...pkg} />)}
             </div>
           )}

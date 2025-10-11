@@ -32,7 +32,7 @@ const PackageListItem = ({
 }: PackageListItemProps) => {
   return <div className="bg-card border border-border rounded-2xl overflow-hidden hover:shadow-luxury transition-all duration-500 flex flex-col lg:flex-row">
       {/* Image Section */}
-      <div className="lg:w-[34%] h-[13.6rem] lg:h-auto">
+      <div className="lg:w-[28%] h-[13.6rem] lg:h-auto">
         <img src={image} alt={title} className="w-full h-full object-cover" />
       </div>
 
