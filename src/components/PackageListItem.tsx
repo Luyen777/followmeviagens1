@@ -31,13 +31,8 @@ const PackageListItem = ({
   uniquePerk
 }: PackageListItemProps) => {
   return <div className="bg-card border border-border rounded-2xl overflow-hidden hover:shadow-luxury transition-all duration-500 flex flex-col lg:flex-row">
-      {/* Image Section */}
-      <div className="lg:w-[24%] h-[13.6rem] lg:h-full flex-shrink-0">
-        <img src={image} alt={title} className="w-full h-full object-cover" />
-      </div>
-
-      {/* Content Section - Middle */}
-      <div className="flex-1 p-6 sm:p-8 lg:pr-6">
+      {/* Content Section - Left */}
+      <div className="flex-1 p-6 sm:p-8 order-2 lg:order-1">
         <div>
           {/* Header with Title and Focus Tags */}
           <div className="mb-4">
@@ -120,23 +115,31 @@ const PackageListItem = ({
         </div>
       </div>
 
-      {/* Price and CTA Section - Right Side (Desktop) / Bottom (Mobile) */}
-      <div className="lg:w-[280px] flex-shrink-0 p-6 sm:p-8 lg:py-8 lg:px-6 border-t lg:border-t-0 lg:border-l border-border flex flex-col justify-center">
-        <div className="space-y-4">
-          <div className="text-foreground">
-            <div className="text-xs sm:text-sm text-muted-foreground mb-2 uppercase tracking-luxury">
-              PREÇO A PARTIR
+      {/* Right Column - Image + Price (Desktop) / Top on Mobile */}
+      <div className="lg:w-[320px] flex-shrink-0 flex flex-col order-1 lg:order-2 lg:border-l border-border">
+        {/* Image Section */}
+        <div className="h-[13.6rem] lg:h-[240px] flex-shrink-0">
+          <img src={image} alt={title} className="w-full h-full object-cover" />
+        </div>
+
+        {/* Price and CTA Section */}
+        <div className="p-6 sm:p-8 lg:p-6 border-t border-border flex flex-col justify-center flex-1">
+          <div className="space-y-4">
+            <div className="text-foreground">
+              <div className="text-xs sm:text-sm text-muted-foreground mb-2 uppercase tracking-luxury">
+                PREÇO A PARTIR
+              </div>
+              <div className="flex flex-col gap-1">
+                <span className="text-3xl sm:text-4xl lg:text-3xl font-display font-medium">
+                  USD {priceFrom.toLocaleString()}*
+                </span>
+                <span className="text-xs text-muted-foreground">POR PESSOA, EM APTO DUPLO</span>
+              </div>
             </div>
-            <div className="flex flex-col gap-1">
-              <span className="text-3xl sm:text-4xl lg:text-3xl font-display font-medium">
-                USD {priceFrom.toLocaleString()}*
-              </span>
-              <span className="text-xs text-muted-foreground">POR PESSOA, EM APTO DUPLO</span>
-            </div>
+            <button className="w-full h-12 bg-foreground text-background hover:bg-foreground/90 rounded-2xl font-medium tracking-luxury transition-all duration-500 shadow-md hover:shadow-lg">
+              VEJA O ROTEIRO
+            </button>
           </div>
-          <button className="w-full h-12 bg-foreground text-background hover:bg-foreground/90 rounded-2xl font-medium tracking-luxury transition-all duration-500 shadow-md hover:shadow-lg">
-            VEJA O ROTEIRO
-          </button>
         </div>
       </div>
     </div>;
