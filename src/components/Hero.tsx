@@ -40,7 +40,7 @@ const Hero = () => {
 
           {/* Action Buttons */}
           <div className="mb-12 sm:mb-16 flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-stretch sm:items-center px-4">
-            <Link to="/pacotes">
+            <Link to="/ilhas-maldivas">
               <Button variant="outline" size="lg" className="h-12 sm:h-14 px-6 sm:px-8 text-foreground border-2 border-foreground/20 bg-white/10 backdrop-blur-sm hover:bg-white/20 font-semibold w-full sm:w-auto">
                 Ver Resorts nas Maldivas
               </Button>
