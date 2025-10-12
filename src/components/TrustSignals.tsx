@@ -53,7 +53,7 @@ const TrustSignals = () => {
           <h2 style={{
           animationDelay: '0.2s',
           letterSpacing: '0.01em'
-        }} className="text-5xl sm:text-6xl font-display font-semibold text-white mb-8 tracking-tight leading-[1.1] text-balance animate-fade-in md:text-5xl">
+        }} className="sm:text-6xl font-display font-semibold text-white mb-8 tracking-tight leading-[1.1] text-balance animate-fade-in md:text-5xl text-5xl">
             Por Que Nos Escolher
           </h2>
           
