@@ -143,13 +143,22 @@ const ResortDetail = () => {
           </div>
         </section>
 
-        {/* Image Carousel */}
+        {/* Image Gallery */}
         <section className="bg-background">
           <div className="container mx-auto py-8">
-            <ResortImageCarousel 
-              images={[resort.image, ...resort.additionalImages]} 
-              title={resort.title} 
-            />
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+              {[resort.image, ...resort.additionalImages]
+                .filter(img => img && img.trim() !== '')
+                .map((image, index) => (
+                  <div key={index} className="relative aspect-[4/3] overflow-hidden rounded-2xl">
+                    <img
+                      src={image}
+                      alt={`${resort.title} - Imagem ${index + 1}`}
+                      className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+                    />
+                  </div>
+                ))}
+            </div>
           </div>
         </section>
 
