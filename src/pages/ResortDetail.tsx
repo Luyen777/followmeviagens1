@@ -143,10 +143,19 @@ const ResortDetail = () => {
           </div>
         </section>
 
-        {/* Image Gallery */}
+        {/* Image Gallery - Carousel on Mobile, Grid on Desktop */}
         <section className="bg-background">
           <div className="container mx-auto py-8">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            {/* Mobile Carousel */}
+            <div className="block lg:hidden">
+              <ResortImageCarousel 
+                images={[resort.image, ...resort.additionalImages]} 
+                title={resort.title} 
+              />
+            </div>
+            
+            {/* Desktop Grid */}
+            <div className="hidden lg:grid grid-cols-3 gap-4">
               {[resort.image, ...resort.additionalImages]
                 .filter(img => img && img.trim() !== '')
                 .map((image, index) => (
