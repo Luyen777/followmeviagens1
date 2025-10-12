@@ -143,31 +143,13 @@ const ResortDetail = () => {
           </div>
         </section>
 
-        {/* Image Gallery - Carousel on Mobile, Grid on Desktop */}
+        {/* Image Gallery - Carousel with Thumbnails */}
         <section className="bg-background">
           <div className="container mx-auto py-8">
-            {/* Mobile Carousel */}
-            <div className="block lg:hidden">
-              <ResortImageCarousel 
-                images={[resort.image, ...resort.additionalImages]} 
-                title={resort.title} 
-              />
-            </div>
-            
-            {/* Desktop Grid */}
-            <div className="hidden lg:grid grid-cols-3 gap-4">
-              {[resort.image, ...resort.additionalImages]
-                .filter(img => img && img.trim() !== '')
-                .map((image, index) => (
-                  <div key={index} className="relative aspect-[4/3] overflow-hidden rounded-2xl">
-                    <img
-                      src={image}
-                      alt={`${resort.title} - Imagem ${index + 1}`}
-                      className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
-                    />
-                  </div>
-                ))}
-            </div>
+            <ResortImageCarousel 
+              images={[resort.image, ...resort.additionalImages]} 
+              title={resort.title} 
+            />
           </div>
         </section>
 

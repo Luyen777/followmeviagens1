@@ -43,11 +43,11 @@ const ResortImageCarousel = ({ images, title }: ResortImageCarouselProps) => {
 
       {/* Thumbnail Row */}
       {validImages.length > 1 && (
-        <div className="flex gap-2 overflow-x-auto pb-2 scrollbar-hide">
-          {validImages.slice(0, 5).map((image, index) => (
+        <div className="flex gap-3 overflow-x-auto pb-2 scrollbar-hide">
+          {validImages.map((image, index) => (
             <div 
               key={index} 
-              className="relative flex-shrink-0 w-20 h-20 overflow-hidden rounded-lg border-2 border-border"
+              className="relative flex-shrink-0 w-20 h-20 md:w-24 md:h-24 lg:w-28 lg:h-28 overflow-hidden rounded-xl border-2 border-border hover:border-primary transition-colors cursor-pointer"
             >
               <img
                 src={image}
@@ -56,11 +56,6 @@ const ResortImageCarousel = ({ images, title }: ResortImageCarouselProps) => {
               />
             </div>
           ))}
-          {validImages.length > 5 && (
-            <div className="flex-shrink-0 w-20 h-20 rounded-lg border-2 border-border bg-muted flex items-center justify-center text-xs text-muted-foreground">
-              +{validImages.length - 5}
-            </div>
-          )}
         </div>
       )}
     </div>
