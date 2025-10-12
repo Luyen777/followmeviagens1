@@ -23,7 +23,7 @@ const ResortImageCarousel = ({ images, title }: ResortImageCarouselProps) => {
         <CarouselContent>
           {validImages.map((image, index) => (
             <CarouselItem key={index}>
-              <div className="relative aspect-[4/3] overflow-hidden rounded-2xl">
+              <div className="relative aspect-[4/3] lg:aspect-[21/9] overflow-hidden rounded-2xl">
                 <img
                   src={image}
                   alt={`${title} - Imagem ${index + 1}`}
