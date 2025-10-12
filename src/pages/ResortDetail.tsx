@@ -256,19 +256,6 @@ const ResortDetail = () => {
                     <MarkdownContent content={resort.dining} />
                   </div>
                 )}
-
-                {/* Additional Information */}
-                <div className="bg-card border border-border rounded-2xl p-6 md:p-8">
-                  <h2 className="text-2xl font-display font-medium text-foreground mb-6">Informações Importantes</h2>
-                  <div className="space-y-4 text-muted-foreground">
-                    <p><strong className="text-foreground">Destino:</strong> {resort.destination}</p>
-                    <p><strong className="text-foreground">Validade:</strong> {resort.validity}</p>
-                    <p><strong className="text-foreground">Referência:</strong> {resort.referenceNumber}</p>
-                    <p className="text-sm pt-4 border-t border-border">
-                      * Valores sujeitos a alteração sem aviso prévio. Consulte disponibilidade e condições especiais.
-                    </p>
-                  </div>
-                </div>
               </div>
 
               {/* Right Column - Price & Contact */}
