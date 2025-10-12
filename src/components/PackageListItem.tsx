@@ -139,10 +139,7 @@ const PackageListItem = ({
                 <span className="text-xs text-muted-foreground">POR PESSOA, EM APTO DUPLO</span>
               </div>
             </div>
-            <Link 
-              to={`/ilhas-maldivas/${slug}`}
-              className="w-full h-12 bg-foreground text-background hover:bg-foreground/90 rounded-2xl font-medium tracking-luxury transition-all duration-500 shadow-md hover:shadow-lg flex items-center justify-center"
-            >
+            <Link to={`/ilhas-maldivas/${slug}`} className="w-full h-12 bg-foreground text-background hover:bg-foreground/90 rounded-2xl font-medium tracking-luxury transition-all duration-500 shadow-md hover:shadow-lg flex items-center justify-center">
               VEJA O ROTEIRO
             </Link>
           </div>
