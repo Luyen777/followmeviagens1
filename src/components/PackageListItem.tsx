@@ -40,7 +40,7 @@ const PackageListItem = ({
           {/* Header with Title and Focus Tags */}
           <div className="mb-4">
             <div className="flex flex-wrap gap-2 mb-3">
-              {focusTags.map((tag, index) => <Badge key={index} variant="secondary" className="text-xs font-medium px-3 py-1">
+              {focusTags.map((tag, index) => <Badge key={index} variant="secondary" className="text-xs font-medium px-3 py-1 bg-fuchsia-100">
                   {tag}
                 </Badge>)}
             </div>
