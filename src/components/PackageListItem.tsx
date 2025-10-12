@@ -1,5 +1,6 @@
 import { Star, Clock, Utensils, Plane, Sparkles } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
+import { Link } from "react-router-dom";
 interface PackageListItemProps {
   title: string;
   description?: string;
@@ -14,6 +15,7 @@ interface PackageListItemProps {
   priceFrom: number;
   focusTags?: string[];
   uniquePerk?: string;
+  slug: string;
 }
 const PackageListItem = ({
   title,
@@ -28,7 +30,8 @@ const PackageListItem = ({
   referenceNumber,
   priceFrom,
   focusTags = [],
-  uniquePerk
+  uniquePerk,
+  slug
 }: PackageListItemProps) => {
   return <div className="bg-card border border-border rounded-2xl overflow-hidden hover:shadow-luxury transition-all duration-500 flex flex-col lg:flex-row">
       {/* Content Section - Left */}
@@ -136,9 +139,12 @@ const PackageListItem = ({
                 <span className="text-xs text-muted-foreground">POR PESSOA, EM APTO DUPLO</span>
               </div>
             </div>
-            <button className="w-full h-12 bg-foreground text-background hover:bg-foreground/90 rounded-2xl font-medium tracking-luxury transition-all duration-500 shadow-md hover:shadow-lg">
+            <Link 
+              to={`/ilhas-maldivas/${slug}`}
+              className="w-full h-12 bg-foreground text-background hover:bg-foreground/90 rounded-2xl font-medium tracking-luxury transition-all duration-500 shadow-md hover:shadow-lg flex items-center justify-center"
+            >
               VEJA O ROTEIRO
-            </button>
+            </Link>
           </div>
         </div>
       </div>

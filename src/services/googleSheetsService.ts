@@ -14,6 +14,7 @@ export interface PackageData {
   priceFrom: number;
   focusTags: string[];
   uniquePerk: string;
+  slug: string;
 }
 
 export async function fetchResortsFromGoogleSheets(): Promise<PackageData[]> {
@@ -35,21 +36,33 @@ export async function fetchResortsFromGoogleSheets(): Promise<PackageData[]> {
     }
 
     // Skip header row (index 0) and map data rows
-    return rows.slice(1).map((row: string[]) => ({
-      title: row[0] || '', // Nome do Resort
-      mealPlan: row[1] || '', // Plano de Refeição
-      description: row[2] || '', // Descrição Curta
-      image: row[3] || '', // Imagem link
-      classification: row[4] || '', // Classificação
-      duration: row[5] || '', // Duração
-      focusTags: row[6] ? row[6].split(',').map(tag => tag.trim()) : [], // Foco do Resort (tags)
-      flightIncluded: row[7] || '', // Transfer de Malé
-      uniquePerk: row[8] || '', // Diferencial Único
-      referenceNumber: row[9] || '', // Ref.
-      priceFrom: parseInt(row[10]) || 0, // Preço (convert to number)
-      destination: 'Maldivas', // Default value
-      validity: 'Consulte disponibilidade', // Default value
-    }));
+    return rows.slice(1).map((row: string[]) => {
+      const title = row[0] || '';
+      // Generate slug from title if not provided
+      const slug = (row[11] || title)
+        .toLowerCase()
+        .normalize('NFD')
+        .replace(/[\u0300-\u036f]/g, '')
+        .replace(/[^a-z0-9]+/g, '-')
+        .replace(/(^-|-$)/g, '');
+      
+      return {
+        title,
+        mealPlan: row[1] || '', // Plano de Refeição
+        description: row[2] || '', // Descrição Curta
+        image: row[3] || '', // Imagem link
+        classification: row[4] || '', // Classificação
+        duration: row[5] || '', // Duração
+        focusTags: row[6] ? row[6].split(',').map(tag => tag.trim()) : [], // Foco do Resort (tags)
+        flightIncluded: row[7] || '', // Transfer de Malé
+        uniquePerk: row[8] || '', // Diferencial Único
+        referenceNumber: row[9] || '', // Ref.
+        priceFrom: parseInt(row[10]) || 0, // Preço (convert to number)
+        slug, // Generated or from column 11
+        destination: 'Maldivas', // Default value
+        validity: 'Consulte disponibilidade', // Default value
+      };
+    });
   } catch (error) {
     console.error('Error fetching data from Google Sheets:', error);
     throw error;
