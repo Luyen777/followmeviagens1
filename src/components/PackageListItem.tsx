@@ -71,7 +71,7 @@ const PackageListItem = ({
                 <Clock className="w-5 h-5 text-primary" />
               </div>
               <div>
-                <div className="text-xs text-muted-foreground">Duração</div>
+                <div className="text-xs text-muted-foreground">Duração (flexível)</div>
                 <div className="text-sm font-medium text-foreground">{duration}</div>
               </div>
             </div>
