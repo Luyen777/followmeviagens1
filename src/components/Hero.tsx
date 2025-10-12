@@ -53,21 +53,21 @@ const Hero = () => {
 
           {/* Trust Badges */}
           <div className="flex flex-wrap justify-center items-center gap-2 sm:gap-3 md:gap-4 max-w-5xl mx-auto px-4">
-            <div className="flex items-center gap-1 px-2.5 py-1.5 bg-amber-500/10 rounded-full border border-amber-500/20">
-              <Award className="w-3.5 h-3.5 text-amber-600 flex-shrink-0" />
-              <span className="text-[10px] sm:text-xs font-semibold text-amber-700 whitespace-nowrap">20+ Anos</span>
+            <div className="flex items-center gap-1.5 px-2.5 sm:px-3 py-1.5 sm:py-2 bg-amber-500/10 rounded-full border border-amber-500/20">
+              <Award className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-amber-600 flex-shrink-0" />
+              <span className="text-[11px] sm:text-xs font-semibold text-amber-700 whitespace-nowrap">20+ Anos de Experiência</span>
             </div>
             <div className="hidden sm:flex items-center gap-1.5 px-3 py-2 bg-blue-500/10 rounded-full border border-blue-500/20">
               <Heart className="w-4 h-4 text-blue-600 flex-shrink-0" />
               <span className="text-xs font-semibold text-blue-700 whitespace-nowrap">200k+ Seguidores</span>
             </div>
-            <div className="flex items-center gap-1 px-2.5 py-1.5 bg-green-500/10 rounded-full border border-green-500/20">
-              <Shield className="w-3.5 h-3.5 text-green-600 flex-shrink-0" />
-              <span className="text-[10px] sm:text-xs font-semibold text-green-700 whitespace-nowrap">50+ Resorts</span>
+            <div className="flex items-center gap-1.5 px-2.5 sm:px-3 py-1.5 sm:py-2 bg-green-500/10 rounded-full border border-green-500/20">
+              <Shield className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-green-600 flex-shrink-0" />
+              <span className="text-[11px] sm:text-xs font-semibold text-green-700 whitespace-nowrap">50+ Resorts Parceiros</span>
             </div>
-            <div className="flex items-center gap-1 px-2.5 py-1.5 bg-purple-500/10 rounded-full border border-purple-500/20">
-              <Users className="w-3.5 h-3.5 text-purple-600 flex-shrink-0" />
-              <span className="text-[10px] sm:text-xs font-semibold text-purple-700 whitespace-nowrap">5000+ Clientes</span>
+            <div className="flex items-center gap-1.5 px-2.5 sm:px-3 py-1.5 sm:py-2 bg-purple-500/10 rounded-full border border-purple-500/20">
+              <Users className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-purple-600 flex-shrink-0" />
+              <span className="text-[11px] sm:text-xs font-semibold text-purple-700 whitespace-nowrap">5000+ Clientes Felizes</span>
             </div>
           </div>
         </div>
