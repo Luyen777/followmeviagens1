@@ -45,7 +45,7 @@ const Hero = () => {
                 Ver Resorts nas Maldivas
               </Button>
             </Link>
-            <Button size="lg" className="h-12 sm:h-14 px-6 sm:px-8 text-white font-semibold shadow-lg bg-green-600 hover:bg-green-700 w-full sm:w-auto">
+            <Button size="lg" className="h-12 sm:h-14 px-6 sm:px-8 text-white font-semibold shadow-lg w-full sm:w-auto bg-lime-800 hover:bg-lime-700">
               <MessageCircle className="w-5 h-5 mr-2" />
               Fale no WhatsApp
             </Button>
