@@ -96,9 +96,9 @@ const ResortDetail = () => {
     <>
       <Helmet>
         <title>{resort.title} - Pacotes para Maldivas | Luxo e Conforto</title>
-        <meta name="description" content={resort.longDescription ? resort.longDescription.substring(0, 160) : `${resort.description} Classificação ${resort.classification}. Pacotes a partir de USD ${resort.priceFrom}. Reserve sua experiência única nas Maldivas.`} />
+        <meta name="description" content={resort.aboutPackage ? resort.aboutPackage.substring(0, 160) : `${resort.description} Classificação ${resort.classification}. Pacotes a partir de USD ${resort.priceFrom}. Reserve sua experiência única nas Maldivas.`} />
         <meta property="og:title" content={`${resort.title} - Pacotes Maldivas`} />
-        <meta property="og:description" content={resort.longDescription ? resort.longDescription.substring(0, 160) : resort.description} />
+        <meta property="og:description" content={resort.aboutPackage ? resort.aboutPackage.substring(0, 160) : resort.description} />
         <meta property="og:image" content={resort.image} />
         <meta property="og:type" content="website" />
         <link rel="canonical" href={`https://yourdomain.com/ilhas-maldivas/${resort.slug}`} />
@@ -225,18 +225,11 @@ const ResortDetail = () => {
                   </div>
                 )}
 
-                {/* Long Description Section */}
-                {resort.longDescription && (
+                {/* About Package Section */}
+                {resort.aboutPackage && (
                   <div className="bg-card border border-border rounded-2xl p-6 md:p-8">
-                    <MarkdownContent content={resort.longDescription} />
-                  </div>
-                )}
-
-                {/* About Resort Section */}
-                {resort.aboutResort && (
-                  <div className="bg-card border border-border rounded-2xl p-6 md:p-8">
-                    <h2 className="text-2xl font-display font-medium text-foreground mb-6">Sobre o Resort</h2>
-                    <MarkdownContent content={resort.aboutResort} />
+                    <h2 className="text-2xl font-display font-medium text-foreground mb-6">Sobre o Pacote</h2>
+                    <MarkdownContent content={resort.aboutPackage} />
                   </div>
                 )}
 

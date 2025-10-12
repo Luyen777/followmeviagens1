@@ -15,8 +15,7 @@ export interface PackageData {
   focusTags: string[];
   uniquePerk: string;
   slug: string;
-  longDescription: string;
-  aboutResort: string;
+  aboutPackage: string;
   accommodations: string;
   experiences: string;
   dining: string;
@@ -65,12 +64,11 @@ export async function fetchResortsFromGoogleSheets(): Promise<PackageData[]> {
         referenceNumber: row[9] || '', // Ref.
         priceFrom: parseInt(row[10]) || 0, // Preço (convert to number)
         slug, // Generated or from column 11
-        longDescription: row[12] || '', // Descrição Longa (Markdown)
-        aboutResort: row[13] || '', // Sobre o Resort (Markdown)
-        accommodations: row[14] || '', // Acomodações (Markdown)
-        experiences: row[15] || '', // Experiências (Markdown)
-        dining: row[16] || '', // Gastronomia (Markdown)
-        additionalImages: row[17] ? row[17].split(',').map(url => url.trim()) : [], // Imagens Adicionais (comma-separated URLs)
+        aboutPackage: row[12] || '', // Sobre o pacote (Markdown) - Column M
+        accommodations: row[13] || '', // Acomodações (Markdown) - Column N
+        experiences: row[14] || '', // Experiências (Markdown) - Column O
+        dining: row[15] || '', // Gastronomia (Markdown) - Column P
+        additionalImages: row[16] ? row[16].split(',').map(url => url.trim()) : [], // Imagens (comma-separated URLs) - Column Q
         destination: 'Maldivas', // Default value
         validity: 'Consulte disponibilidade', // Default value
       };
