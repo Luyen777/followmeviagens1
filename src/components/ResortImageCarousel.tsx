@@ -12,10 +12,14 @@ interface ResortImageCarouselProps {
 }
 
 const ResortImageCarousel = ({ images, title }: ResortImageCarouselProps) => {
+  // Filter out empty strings and ensure we have valid images
+  const validImages = images.filter(img => img && img.trim() !== '');
+
+  
   return (
     <Carousel className="w-full">
       <CarouselContent>
-        {images.map((image, index) => (
+        {validImages.map((image, index) => (
           <CarouselItem key={index}>
             <div className="relative aspect-[16/9] md:aspect-[21/9] overflow-hidden rounded-2xl">
               <img
@@ -27,7 +31,7 @@ const ResortImageCarousel = ({ images, title }: ResortImageCarouselProps) => {
           </CarouselItem>
         ))}
       </CarouselContent>
-      {images.length > 1 && (
+      {validImages.length > 1 && (
         <>
           <CarouselPrevious className="left-4" />
           <CarouselNext className="right-4" />

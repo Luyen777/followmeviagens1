@@ -7,6 +7,7 @@ import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import ResortImageCarousel from "@/components/ResortImageCarousel";
 import ContactForm from "@/components/ContactForm";
+import MarkdownContent from "@/components/MarkdownContent";
 import { Star, Clock, Utensils, Plane, Sparkles, ChevronRight, Loader2 } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 
@@ -95,9 +96,9 @@ const ResortDetail = () => {
     <>
       <Helmet>
         <title>{resort.title} - Pacotes para Maldivas | Luxo e Conforto</title>
-        <meta name="description" content={`${resort.description} Classificação ${resort.classification}. Pacotes a partir de USD ${resort.priceFrom}. Reserve sua experiência única nas Maldivas.`} />
+        <meta name="description" content={resort.longDescription ? resort.longDescription.substring(0, 160) : `${resort.description} Classificação ${resort.classification}. Pacotes a partir de USD ${resort.priceFrom}. Reserve sua experiência única nas Maldivas.`} />
         <meta property="og:title" content={`${resort.title} - Pacotes Maldivas`} />
-        <meta property="og:description" content={resort.description} />
+        <meta property="og:description" content={resort.longDescription ? resort.longDescription.substring(0, 160) : resort.description} />
         <meta property="og:image" content={resort.image} />
         <meta property="og:type" content="website" />
         <link rel="canonical" href={`https://yourdomain.com/ilhas-maldivas/${resort.slug}`} />
@@ -145,7 +146,10 @@ const ResortDetail = () => {
         {/* Image Carousel */}
         <section className="bg-background">
           <div className="container mx-auto py-8">
-            <ResortImageCarousel images={[resort.image]} title={resort.title} />
+            <ResortImageCarousel 
+              images={[resort.image, ...resort.additionalImages]} 
+              title={resort.title} 
+            />
           </div>
         </section>
 
@@ -218,6 +222,45 @@ const ResortDetail = () => {
                         </p>
                       </div>
                     </div>
+                  </div>
+                )}
+
+                {/* Long Description Section */}
+                {resort.longDescription && (
+                  <div className="bg-card border border-border rounded-2xl p-6 md:p-8">
+                    <MarkdownContent content={resort.longDescription} />
+                  </div>
+                )}
+
+                {/* About Resort Section */}
+                {resort.aboutResort && (
+                  <div className="bg-card border border-border rounded-2xl p-6 md:p-8">
+                    <h2 className="text-2xl font-display font-medium text-foreground mb-6">Sobre o Resort</h2>
+                    <MarkdownContent content={resort.aboutResort} />
+                  </div>
+                )}
+
+                {/* Accommodations Section */}
+                {resort.accommodations && (
+                  <div className="bg-card border border-border rounded-2xl p-6 md:p-8">
+                    <h2 className="text-2xl font-display font-medium text-foreground mb-6">Acomodações</h2>
+                    <MarkdownContent content={resort.accommodations} />
+                  </div>
+                )}
+
+                {/* Experiences Section */}
+                {resort.experiences && (
+                  <div className="bg-card border border-border rounded-2xl p-6 md:p-8">
+                    <h2 className="text-2xl font-display font-medium text-foreground mb-6">Experiências & Atividades</h2>
+                    <MarkdownContent content={resort.experiences} />
+                  </div>
+                )}
+
+                {/* Dining Section */}
+                {resort.dining && (
+                  <div className="bg-card border border-border rounded-2xl p-6 md:p-8">
+                    <h2 className="text-2xl font-display font-medium text-foreground mb-6">Gastronomia</h2>
+                    <MarkdownContent content={resort.dining} />
                   </div>
                 )}
 
