@@ -38,7 +38,7 @@ const Navigation = () => {
     label: "Outros Destinos",
     href: "#destinos"
   }, {
-    label: "Pacotes",
+    label: "Lua de Mel",
     href: "#pacotes"
   }, {
     label: "Blog",
