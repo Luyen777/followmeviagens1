@@ -26,6 +26,7 @@ const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isDestinationsOpen, setIsDestinationsOpen] = useState(false);
   const [isMobileDestinationsOpen, setIsMobileDestinationsOpen] = useState(false);
+  const [closeTimeout, setCloseTimeout] = useState<NodeJS.Timeout | null>(null);
   const menuItems = [{
     label: "Buscar",
     href: "#buscar",
@@ -65,28 +66,45 @@ const Navigation = () => {
               {menuItems.filter(item => !item.mobileOnly).map(item => {
                 // Handle Outros Destinos dropdown
                 if (item.label === "Outros Destinos") {
+                  const handleMouseEnter = () => {
+                    if (closeTimeout) {
+                      clearTimeout(closeTimeout);
+                      setCloseTimeout(null);
+                    }
+                    setIsDestinationsOpen(true);
+                  };
+
+                  const handleMouseLeave = () => {
+                    const timeout = setTimeout(() => {
+                      setIsDestinationsOpen(false);
+                    }, 200); // 200ms delay before closing
+                    setCloseTimeout(timeout);
+                  };
+
                   return (
                     <div 
                       key={item.label}
                       className="relative"
-                      onMouseEnter={() => setIsDestinationsOpen(true)}
-                      onMouseLeave={() => setIsDestinationsOpen(false)}
+                      onMouseEnter={handleMouseEnter}
+                      onMouseLeave={handleMouseLeave}
                     >
                       <button className="px-4 xl:px-5 py-2 text-xs xl:text-sm font-bold text-foreground/80 hover:text-foreground uppercase tracking-wider transition-all duration-300 whitespace-nowrap flex items-center gap-1">
                         {item.label}
                         <ChevronDown className="w-3 h-3" />
                       </button>
                       {isDestinationsOpen && (
-                        <div className="absolute top-full left-0 mt-1 bg-background border border-border rounded-lg shadow-lg py-2 min-w-[200px] z-50 animate-fade-in">
-                          {destinations.map(dest => (
-                            <Link
-                              key={dest.href}
-                              to={dest.href}
-                              className="block px-4 py-2 text-sm text-foreground/80 hover:text-foreground hover:bg-foreground/5 transition-colors"
-                            >
-                              {dest.label}
-                            </Link>
-                          ))}
+                        <div className="absolute top-full left-0 pt-1 z-50">
+                          <div className="bg-background border border-border rounded-lg shadow-lg py-2 min-w-[200px] animate-fade-in">
+                            {destinations.map(dest => (
+                              <Link
+                                key={dest.href}
+                                to={dest.href}
+                                className="block px-4 py-2 text-sm text-foreground/80 hover:text-foreground hover:bg-foreground/5 transition-colors"
+                              >
+                                {dest.label}
+                              </Link>
+                            ))}
+                          </div>
                         </div>
                       )}
                     </div>
