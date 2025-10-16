@@ -15,7 +15,7 @@ const highlights = [
   {
     icon: Hotel,
     title: "Hotéis Selecionados",
-    description: "Kapama River Lodge 5⭐ no safari + Radisson Red 4⭐ em Cape Town."
+    description: "Kapama River Lodge 5 estrelas no safari + Radisson Red 4 estrelas em Cape Town."
   },
   {
     icon: Phone,

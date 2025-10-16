@@ -1,7 +1,7 @@
 import { Check, X } from "lucide-react";
 
 const included = [
-  "7 noites de hospedagem (Kapama River Lodge 5⭐ + Radisson Red 4⭐)",
+  "7 noites de hospedagem (Kapama River Lodge 5 estrelas + Radisson Red 4 estrelas)",
   "Café da manhã diário em todos os hotéis",
   "4 safáris no Kruger Park com guia especializado",
   "Transfers aeroporto-hotel-aeroporto",

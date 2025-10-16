@@ -65,13 +65,13 @@ const Pricing = () => {
                   <div className="flex items-start gap-2">
                     <Check className="h-5 w-5 text-green-600 flex-shrink-0 mt-0.5" />
                     <span className="text-sm text-muted-foreground">
-                      Kapama River Lodge 5⭐
+                      Kapama River Lodge 5 estrelas
                     </span>
                   </div>
                   <div className="flex items-start gap-2">
                     <Check className="h-5 w-5 text-green-600 flex-shrink-0 mt-0.5" />
                     <span className="text-sm text-muted-foreground">
-                      Radisson Red 4⭐ Cape Town
+                      Radisson Red 4 estrelas Cape Town
                     </span>
                   </div>
                   <div className="flex items-start gap-2">
