@@ -1,10 +1,31 @@
 import { useState } from "react";
-import { Menu, X, Phone } from "lucide-react";
+import { Menu, X, Phone, ChevronDown } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import logo from "@/assets/logo.png";
+
+const destinations = [
+  { label: "Dubai", href: "/dubai" },
+  { label: "Tailândia", href: "/tailandia" },
+  { label: "Índia", href: "/india" },
+  { label: "África do Sul", href: "/africa-do-sul" },
+  { label: "Seychelles", href: "/seychelles" },
+  { label: "Egito", href: "/egito" },
+  { label: "Vietnã", href: "/vietna" },
+  { label: "Turquia", href: "/turquia" },
+  { label: "Grécia", href: "/grecia" },
+  { label: "Bali", href: "/bali" },
+  { label: "Taiti", href: "/taiti" },
+  { label: "Austrália", href: "/australia" },
+  { label: "Nova Zelândia", href: "/nova-zelandia" },
+  { label: "Ilhas Maurício", href: "/ilhas-mauricio" },
+  { label: "Fiji", href: "/fiji" },
+  { label: "Camboja", href: "/camboja" },
+];
 const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isDestinationsOpen, setIsDestinationsOpen] = useState(false);
+  const [isMobileDestinationsOpen, setIsMobileDestinationsOpen] = useState(false);
   const menuItems = [{
     label: "Buscar",
     href: "#buscar",
@@ -41,8 +62,39 @@ const Navigation = () => {
           {/* Desktop Menu - Center */}
           <div className="hidden lg:flex items-center justify-center flex-1 px-8">
             <div className="flex items-center gap-0.5">
-              {menuItems.filter(item => !item.mobileOnly).map(item => 
-                item.href.startsWith('/') ? (
+              {menuItems.filter(item => !item.mobileOnly).map(item => {
+                // Handle Outros Destinos dropdown
+                if (item.label === "Outros Destinos") {
+                  return (
+                    <div 
+                      key={item.label}
+                      className="relative"
+                      onMouseEnter={() => setIsDestinationsOpen(true)}
+                      onMouseLeave={() => setIsDestinationsOpen(false)}
+                    >
+                      <button className="px-4 xl:px-5 py-2 text-xs xl:text-sm font-bold text-foreground/80 hover:text-foreground uppercase tracking-wider transition-all duration-300 whitespace-nowrap flex items-center gap-1">
+                        {item.label}
+                        <ChevronDown className="w-3 h-3" />
+                      </button>
+                      {isDestinationsOpen && (
+                        <div className="absolute top-full left-0 mt-1 bg-background border border-border rounded-lg shadow-lg py-2 min-w-[200px] z-50 animate-fade-in">
+                          {destinations.map(dest => (
+                            <Link
+                              key={dest.href}
+                              to={dest.href}
+                              className="block px-4 py-2 text-sm text-foreground/80 hover:text-foreground hover:bg-foreground/5 transition-colors"
+                            >
+                              {dest.label}
+                            </Link>
+                          ))}
+                        </div>
+                      )}
+                    </div>
+                  );
+                }
+                
+                // Regular menu items
+                return item.href.startsWith('/') ? (
                   <Link key={item.label} to={item.href} className="px-4 xl:px-5 py-2 text-xs xl:text-sm font-bold text-foreground/80 hover:text-foreground uppercase tracking-wider transition-all duration-300 whitespace-nowrap">
                     {item.label}
                   </Link>
@@ -50,8 +102,8 @@ const Navigation = () => {
                   <a key={item.label} href={item.href} className="px-4 xl:px-5 py-2 text-xs xl:text-sm font-bold text-foreground/80 hover:text-foreground uppercase tracking-wider transition-all duration-300 whitespace-nowrap">
                     {item.label}
                   </a>
-                )
-              )}
+                );
+              })}
             </div>
           </div>
 
@@ -77,8 +129,41 @@ const Navigation = () => {
         {/* Mobile Menu */}
         {isMenuOpen && <div className="lg:hidden py-6 border-t border-foreground/10 animate-fade-in bg-background/95 backdrop-blur-md">
             <div className="flex flex-col space-y-1">
-              {menuItems.map(item => 
-                item.href.startsWith('/') ? (
+              {menuItems.map(item => {
+                // Handle Outros Destinos expandable section
+                if (item.label === "Outros Destinos") {
+                  return (
+                    <div key={item.label}>
+                      <button
+                        onClick={() => setIsMobileDestinationsOpen(!isMobileDestinationsOpen)}
+                        className="w-full flex items-center justify-between px-4 py-3 text-foreground/70 hover:text-foreground hover:bg-foreground/10 rounded-lg transition-all duration-300 uppercase text-sm font-bold tracking-wider"
+                      >
+                        {item.label}
+                        <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${isMobileDestinationsOpen ? 'rotate-180' : ''}`} />
+                      </button>
+                      {isMobileDestinationsOpen && (
+                        <div className="pl-4 mt-1 space-y-1 animate-fade-in">
+                          {destinations.map(dest => (
+                            <Link
+                              key={dest.href}
+                              to={dest.href}
+                              onClick={() => {
+                                setIsMenuOpen(false);
+                                setIsMobileDestinationsOpen(false);
+                              }}
+                              className="block px-4 py-2 text-sm text-foreground/60 hover:text-foreground hover:bg-foreground/5 rounded-lg transition-all duration-300"
+                            >
+                              {dest.label}
+                            </Link>
+                          ))}
+                        </div>
+                      )}
+                    </div>
+                  );
+                }
+                
+                // Regular menu items
+                return item.href.startsWith('/') ? (
                   <Link key={item.label} to={item.href} onClick={() => setIsMenuOpen(false)} className="px-4 py-3 text-foreground/70 hover:text-foreground hover:bg-foreground/10 rounded-lg transition-all duration-300 uppercase text-sm font-bold tracking-wider">
                     {item.label}
                   </Link>
@@ -86,8 +171,8 @@ const Navigation = () => {
                   <a key={item.label} href={item.href} onClick={() => setIsMenuOpen(false)} className="px-4 py-3 text-foreground/70 hover:text-foreground hover:bg-foreground/10 rounded-lg transition-all duration-300 uppercase text-sm font-bold tracking-wider">
                     {item.label}
                   </a>
-                )
-              )}
+                );
+              })}
               <div className="flex flex-col space-y-3 px-4 pt-6 border-t border-foreground/10 mt-4">
                 <a href="tel:+5511999999999" className="flex items-center text-foreground/70 hover:text-foreground transition-colors duration-300 font-semibold">
                   <Phone className="w-4 h-4 mr-2" />
