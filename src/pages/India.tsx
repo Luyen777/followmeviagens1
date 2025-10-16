@@ -7,6 +7,7 @@ import ValueProposition from "@/components/india/ValueProposition";
 import PackageHighlights from "@/components/india/PackageHighlights";
 import DetailedItinerary from "@/components/india/DetailedItinerary";
 import HotelShowcase from "@/components/india/HotelShowcase";
+import Pricing from "@/components/india/Pricing";
 import Inclusions from "@/components/india/Inclusions";
 import SocialProof from "@/components/india/SocialProof";
 import ContactFormSection from "@/components/india/ContactFormSection";
@@ -45,6 +46,7 @@ const India = () => {
         <PackageHighlights />
         <DetailedItinerary />
         <HotelShowcase />
+        <Pricing />
         <Inclusions />
         <SocialProof />
         <ContactFormSection />

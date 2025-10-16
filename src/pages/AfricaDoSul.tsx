@@ -7,6 +7,7 @@ import ValueProposition from "@/components/south-africa/ValueProposition";
 import PackageHighlights from "@/components/south-africa/PackageHighlights";
 import DetailedItinerary from "@/components/south-africa/DetailedItinerary";
 import HotelShowcase from "@/components/south-africa/HotelShowcase";
+import Pricing from "@/components/south-africa/Pricing";
 import Inclusions from "@/components/south-africa/Inclusions";
 import SocialProof from "@/components/south-africa/SocialProof";
 import ContactFormSection from "@/components/south-africa/ContactFormSection";
@@ -45,6 +46,7 @@ const AfricaDoSul = () => {
         <PackageHighlights />
         <DetailedItinerary />
         <HotelShowcase />
+        <Pricing />
         <Inclusions />
         <SocialProof />
         <ContactFormSection />
