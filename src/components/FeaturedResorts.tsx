@@ -9,7 +9,7 @@ const FeaturedResorts = () => {
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-16 animate-fade-in">
           <h2 className="sm:text-5xl font-display font-medium text-foreground mb-4 sm:mb-6 tracking-tight text-balance leading-tight md:text-5xl text-4xl">
-            Momentos Inesquecíveis
+            Momentos Inesquecíveis nas Maldivas
           </h2>
           <p className="text-base sm:text-lg text-foreground/70 leading-relaxed font-light tracking-luxury">Viva experiências únicas que só as Ilhas Maldivas podem proporcionar.</p>
         </div>
@@ -23,7 +23,7 @@ const FeaturedResorts = () => {
 
         {/* CTA Button */}
         <div className="text-center">
-          <a href="/ilhas-maldivas" className="inline-flex items-center gap-2 px-8 py-4 bg-primary text-primary-foreground font-semibold rounded-full hover:bg-primary/90 transition-all duration-300 shadow-elegant hover:shadow-glow hover:scale-105">
+          <a href="/ilhas-maldivas" className="inline-flex items-center gap-2 px-8 py-4 bg-black text-white font-semibold rounded-full hover:bg-black/90 transition-all duration-300 shadow-elegant hover:shadow-glow hover:scale-105">
             <span className="text-base sm:text-lg">Descubra Todos os Resorts</span>
             <span>→</span>
           </a>
