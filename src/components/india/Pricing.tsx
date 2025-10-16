@@ -75,15 +75,8 @@ const Pricing = () => {
                 {period.options.map((option, optionIndex) => (
                   <Card 
                     key={optionIndex}
-                    className={`relative hover:shadow-xl transition-all duration-300 hover:-translate-y-2 ${
-                      option.featured ? 'border-2 border-primary' : ''
-                    }`}
+                    className="relative hover:shadow-xl transition-all duration-300 hover:-translate-y-2"
                   >
-                    {option.featured && (
-                      <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-primary text-white px-4 py-1 rounded-full text-sm font-semibold">
-                        Mais Popular
-                      </div>
-                    )}
                     <CardContent className="p-8 text-center">
                       <h4 className="text-xl font-display font-bold text-foreground mb-2">
                         {option.tier}
@@ -139,11 +132,7 @@ const Pricing = () => {
 
                       <Button 
                         onClick={scrollToContact}
-                        className={`w-full ${
-                          option.featured 
-                            ? 'bg-primary hover:bg-primary/90' 
-                            : 'bg-foreground hover:bg-foreground/90'
-                        }`}
+                        className="w-full"
                       >
                         Solicitar Orçamento
                       </Button>
