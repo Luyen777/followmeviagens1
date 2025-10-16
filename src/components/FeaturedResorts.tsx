@@ -24,7 +24,7 @@ const FeaturedResorts = () => {
       <div className="container mx-auto relative z-10 px-4">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-16 animate-fade-in">
-          <h2 className="text-4xl sm:text-5xl font-display font-medium text-foreground mb-4 sm:mb-6 tracking-tight text-balance leading-tight md:text-5xl">
+          <h2 className="sm:text-5xl font-display font-medium text-foreground mb-4 sm:mb-6 tracking-tight text-balance leading-tight md:text-5xl text-4xl">
             Momentos Inesquecíveis
           </h2>
           <p className="text-base sm:text-lg text-foreground/70 leading-relaxed font-light tracking-luxury">
@@ -35,11 +35,7 @@ const FeaturedResorts = () => {
         {/* Main Featured Image */}
         <div className="mb-12 sm:mb-16 animate-fade-in">
           <div className="relative rounded-xl overflow-hidden shadow-elegant hover:shadow-glow transition-all duration-500 hover:scale-[1.02] w-full md:w-4/5 mx-auto">
-            <img 
-              src={momentosMain} 
-              alt="Experiências únicas nas Maldivas - spa, villas sobre água, mergulho e gastronomia" 
-              className="w-full h-auto object-cover"
-            />
+            <img src={momentosMain} alt="Experiências únicas nas Maldivas - spa, villas sobre água, mergulho e gastronomia" className="w-full h-auto object-cover" />
           </div>
         </div>
 
