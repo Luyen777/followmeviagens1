@@ -34,7 +34,7 @@ const FeaturedResorts = () => {
 
         {/* Main Featured Image */}
         <div className="mb-12 sm:mb-16 animate-fade-in">
-          <div className="relative rounded-xl overflow-hidden shadow-elegant hover:shadow-glow transition-all duration-500 hover:scale-[1.02]">
+          <div className="relative rounded-xl overflow-hidden shadow-elegant hover:shadow-glow transition-all duration-500 hover:scale-[1.02] w-full md:w-4/5 mx-auto">
             <img 
               src={momentosMain} 
               alt="Experiências únicas nas Maldivas - spa, villas sobre água, mergulho e gastronomia" 
