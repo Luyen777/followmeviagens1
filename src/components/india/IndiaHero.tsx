@@ -37,15 +37,14 @@ const IndiaHero = () => {
           <Button 
             onClick={scrollToContact}
             size="lg" 
-            className="h-[60px] px-8 text-lg bg-primary hover:bg-primary/90 text-white shadow-lg"
+            className="h-[60px] px-8 text-lg bg-foreground hover:bg-foreground/90 text-white shadow-lg"
           >
             Solicitar Orçamento Personalizado
           </Button>
           <Button 
             onClick={handleWhatsAppClick}
-            variant="outline" 
             size="lg" 
-            className="h-[60px] px-8 text-lg border-2 border-white text-white hover:bg-white hover:text-foreground"
+            className="h-[60px] px-8 text-lg bg-green-700 hover:bg-green-800 text-white"
           >
             <MessageCircle className="mr-2 h-5 w-5" />
             Falar no WhatsApp
