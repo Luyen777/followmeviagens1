@@ -1,26 +1,26 @@
-import { Plane, Hotel, Utensils, MapPin } from "lucide-react";
+import { Car, Hotel, MapPin, Phone } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 
 const highlights = [
   {
-    icon: Plane,
-    title: "Voos e Transfers",
-    description: "Passagens aéreas e todos os transfers terrestres inclusos com conforto e pontualidade."
+    icon: Car,
+    title: "Transfers Inclusos",
+    description: "Recepção no aeroporto e transfers entre cidades com conforto e segurança."
   },
   {
     icon: Hotel,
-    title: "Hospedagem Premium",
-    description: "Hotéis 4-5 estrelas nos melhores locais, café da manhã incluído em todos os dias."
-  },
-  {
-    icon: Utensils,
-    title: "Experiências Gastronômicas",
-    description: "Refeições típicas selecionadas e experiências culinárias autênticas da culinária indiana."
+    title: "Hotéis Premium",
+    description: "Opções 5 e 6 estrelas em Delhi, Jaipur e Agra cuidadosamente selecionadas."
   },
   {
     icon: MapPin,
-    title: "Roteiro Completo",
-    description: "Visitas guiadas aos principais pontos turísticos do Triângulo Dourado e templos sagrados."
+    title: "Roteiro Personalizado",
+    description: "Triângulo Dourado com guias locais especializados e experiências autênticas."
+  },
+  {
+    icon: Phone,
+    title: "Suporte 24h",
+    description: "Assistência completa em português durante toda a sua viagem pela Índia."
   }
 ];
 
@@ -29,7 +29,7 @@ const PackageHighlights = () => {
     <section className="py-16 md:py-24 bg-muted/30">
       <div className="container mx-auto px-4">
         <h2 className="text-3xl md:text-4xl font-display font-bold text-center text-foreground mb-4">
-          O que está incluído no seu pacote
+          Seu roteiro completo de 7 noites inclui:
         </h2>
         <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
           Tudo planejado para você aproveitar cada momento sem preocupações

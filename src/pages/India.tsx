@@ -6,6 +6,8 @@ import IndiaHero from "@/components/india/IndiaHero";
 import ValueProposition from "@/components/india/ValueProposition";
 import PackageHighlights from "@/components/india/PackageHighlights";
 import DetailedItinerary from "@/components/india/DetailedItinerary";
+import HotelShowcase from "@/components/india/HotelShowcase";
+import Inclusions from "@/components/india/Inclusions";
 import SocialProof from "@/components/india/SocialProof";
 import ContactFormSection from "@/components/india/ContactFormSection";
 import FAQ from "@/components/india/FAQ";
@@ -14,12 +16,24 @@ const India = () => {
   return (
     <>
       <Helmet>
-        <title>Pacotes para Índia - Triângulo Dourado | Follow Me Viagens</title>
-        <meta name="description" content="Descubra a Índia com pacote completo de 10 dias incluindo Delhi, Agra, Jaipur e Udaipur. Hotéis 5 estrelas, guias especializados e experiências únicas." />
-        <meta property="og:title" content="Pacotes para Índia - Triângulo Dourado | Follow Me Viagens" />
-        <meta property="og:description" content="Viagem completa pela Índia com Taj Mahal, palácios, templos e cultura milenar. Tudo incluído com conforto e segurança." />
+        <title>Índia - Triângulo Dourado 7 Noites | Follow Me Viagens</title>
+        <meta name="description" content="Pacote completo para Índia com 7 noites incluindo Delhi, Jaipur e Agra. Hotéis 5 e 6 estrelas, guias em português, Taj Mahal e suporte 24h." />
+        <meta property="og:title" content="Índia - Triângulo Dourado 7 Noites | Follow Me Viagens" />
+        <meta property="og:description" content="Explore Delhi, Jaipur e Agra com especialistas locais. Patrimônios históricos, cultura espiritual e culinária autêntica com todo conforto." />
         <meta property="og:type" content="website" />
         <link rel="canonical" href="https://followmeviagens.com/india" />
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "TravelAction",
+            "name": "Pacote Índia - Triângulo Dourado 7 Noites",
+            "description": "Viagem completa de 7 noites pelo Triângulo Dourado indiano com hotéis premium e guias especializados",
+            "provider": {
+              "@type": "TravelAgency",
+              "name": "Follow Me Viagens"
+            }
+          })}
+        </script>
       </Helmet>
 
       <main className="min-h-screen bg-background">
@@ -30,6 +44,8 @@ const India = () => {
         <ValueProposition />
         <PackageHighlights />
         <DetailedItinerary />
+        <HotelShowcase />
+        <Inclusions />
         <SocialProof />
         <ContactFormSection />
         <FAQ />

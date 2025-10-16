@@ -26,10 +26,10 @@ const IndiaHero = () => {
       {/* Content */}
       <div className="relative z-10 container mx-auto px-4 py-20 text-center">
         <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-white mb-6 animate-fade-in">
-          Descubra a Índia - Pacote Completo 10 Dias
+          Descubra a Índia - Triângulo Dourado 7 Noites
         </h1>
         <h2 className="text-xl md:text-2xl text-white/90 mb-8 max-w-3xl mx-auto font-light animate-fade-in">
-          Experiência única com especialistas locais através do Triângulo Dourado e além
+          Explore Delhi, Jaipur e Agra com especialistas locais, hotéis premium e suporte 24h em português
         </h2>
 
         {/* CTAs */}
