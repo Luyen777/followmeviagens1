@@ -2,6 +2,7 @@ import resort1 from "@/assets/resort-1.jpg";
 import resort2 from "@/assets/resort-2.jpg";
 import resort3 from "@/assets/resort-3.jpg";
 import maldivesHero from "@/assets/maldives-hero-water.jpg";
+import momentosMain from "@/assets/momentos-inesqueciveis.png";
 const FeaturedResorts = () => {
   const moments = [{
     title: "Romance Sob as Estrelas",
@@ -29,6 +30,17 @@ const FeaturedResorts = () => {
           <p className="text-base sm:text-lg text-foreground/70 leading-relaxed font-light tracking-luxury">
             Viva experiências únicas que só as Maldivas podem proporcionar
           </p>
+        </div>
+
+        {/* Main Featured Image */}
+        <div className="mb-12 sm:mb-16 animate-fade-in">
+          <div className="relative rounded-xl overflow-hidden shadow-elegant hover:shadow-glow transition-all duration-500 hover:scale-[1.02]">
+            <img 
+              src={momentosMain} 
+              alt="Experiências únicas nas Maldivas - spa, villas sobre água, mergulho e gastronomia" 
+              className="w-full h-auto object-cover"
+            />
+          </div>
         </div>
 
         {/* Moments Grid */}
