@@ -1,5 +1,4 @@
 import momentosMain from "@/assets/momentos-inesqueciveis.png";
-
 const FeaturedResorts = () => {
   return <section id="momentos" className="py-20 sm:py-32 bg-background relative overflow-hidden">
       {/* Subtle background decoration */}
@@ -24,7 +23,7 @@ const FeaturedResorts = () => {
         {/* CTA Button */}
         <div className="text-center">
           <a href="/ilhas-maldivas" className="inline-flex items-center gap-2 px-8 py-4 bg-primary text-primary-foreground font-semibold rounded-full hover:bg-primary/90 transition-all duration-300 shadow-elegant hover:shadow-glow hover:scale-105">
-            <span className="text-base sm:text-lg">Descubra Todos os Resorts</span>
+            <span className="text-base sm:text-lg">Momentos Inesquecíveis nas Ilhas Maldivas</span>
             <span>→</span>
           </a>
         </div>
