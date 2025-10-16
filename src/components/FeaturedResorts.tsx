@@ -27,9 +27,7 @@ const FeaturedResorts = () => {
           <h2 className="sm:text-5xl font-display font-medium text-foreground mb-4 sm:mb-6 tracking-tight text-balance leading-tight md:text-5xl text-4xl">
             Momentos Inesquecíveis
           </h2>
-          <p className="text-base sm:text-lg text-foreground/70 leading-relaxed font-light tracking-luxury">
-            Viva experiências únicas que só as Maldivas podem proporcionar
-          </p>
+          <p className="text-base sm:text-lg text-foreground/70 leading-relaxed font-light tracking-luxury">Viva experiências únicas que só as Ilhas Maldivas podem proporcionar.</p>
         </div>
 
         {/* Main Featured Image */}
