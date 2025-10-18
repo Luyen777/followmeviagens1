@@ -5,7 +5,7 @@ import WhatsAppButton from "@/components/WhatsAppButton";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { useNavigate } from "react-router-dom";
-import { Calendar, MapPin, Star } from "lucide-react";
+import { Calendar, MapPin, Star, Palmtree, Mountain, Wine, Hotel, Shield, Clock } from "lucide-react";
 import southAfricaHero from "@/assets/south-africa-hero.jpg";
 
 const AfricaDoSulLanding = () => {
@@ -68,8 +68,101 @@ const AfricaDoSulLanding = () => {
           </div>
         </section>
 
+        {/* Why South Africa Section */}
+        <section className="py-16 md:py-24 bg-muted/30">
+          <div className="container mx-auto px-4">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl md:text-4xl font-display font-bold mb-4">
+                Por que escolher a África do Sul?
+              </h2>
+              <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+                Um destino que combina aventura selvagem, cultura vibrante, paisagens deslumbrantes e experiências gastronômicas de classe mundial
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
+              <div className="text-center">
+                <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-primary/10 flex items-center justify-center">
+                  <Palmtree className="w-8 h-8 text-primary" />
+                </div>
+                <h3 className="text-xl font-semibold mb-2">Safari Big Five</h3>
+                <p className="text-muted-foreground">
+                  Encontros inesquecíveis com leões, elefantes, rinocerontes, búfalos e leopardos no Kruger Park
+                </p>
+              </div>
+
+              <div className="text-center">
+                <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-primary/10 flex items-center justify-center">
+                  <Mountain className="w-8 h-8 text-primary" />
+                </div>
+                <h3 className="text-xl font-semibold mb-2">Paisagens Épicas</h3>
+                <p className="text-muted-foreground">
+                  De Cape Town e Table Mountain até a famosa Garden Route com praias e montanhas espetaculares
+                </p>
+              </div>
+
+              <div className="text-center">
+                <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-primary/10 flex items-center justify-center">
+                  <Wine className="w-8 h-8 text-primary" />
+                </div>
+                <h3 className="text-xl font-semibold mb-2">Vinícolas Premium</h3>
+                <p className="text-muted-foreground">
+                  Degustação em vinícolas premiadas de Stellenbosch e Franschhoek, entre as melhores do mundo
+                </p>
+              </div>
+
+              <div className="text-center">
+                <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-primary/10 flex items-center justify-center">
+                  <Hotel className="w-8 h-8 text-primary" />
+                </div>
+                <h3 className="text-xl font-semibold mb-2">Hospedagem de Luxo</h3>
+                <p className="text-muted-foreground">
+                  Lodges 5 estrelas, hotéis boutique e resorts exclusivos para uma experiência premium
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Trust Signals Section */}
+        <section className="py-16 bg-background">
+          <div className="container mx-auto px-4">
+            <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+              <div className="text-center">
+                <div className="w-12 h-12 mx-auto mb-3 rounded-full bg-primary/10 flex items-center justify-center">
+                  <Shield className="w-6 h-6 text-primary" />
+                </div>
+                <h3 className="font-semibold mb-2">Pacotes Completos</h3>
+                <p className="text-sm text-muted-foreground">
+                  Tudo incluído: voos, hotéis, transfers, passeios e suporte 24h
+                </p>
+              </div>
+
+              <div className="text-center">
+                <div className="w-12 h-12 mx-auto mb-3 rounded-full bg-primary/10 flex items-center justify-center">
+                  <Star className="w-6 h-6 text-primary" />
+                </div>
+                <h3 className="font-semibold mb-2">Especialistas em Luxo</h3>
+                <p className="text-sm text-muted-foreground">
+                  15+ anos criando experiências exclusivas para viajantes exigentes
+                </p>
+              </div>
+
+              <div className="text-center">
+                <div className="w-12 h-12 mx-auto mb-3 rounded-full bg-primary/10 flex items-center justify-center">
+                  <Clock className="w-6 h-6 text-primary" />
+                </div>
+                <h3 className="font-semibold mb-2">Atendimento Personalizado</h3>
+                <p className="text-sm text-muted-foreground">
+                  Consultoria dedicada para customizar seu roteiro dos sonhos
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* Packages Section */}
-        <section className="py-16 md:py-24 bg-background">
+        <section className="py-16 md:py-24 bg-muted/30">
           <div className="container mx-auto px-4">
             <div className="text-center mb-12">
               <h2 className="text-3xl md:text-4xl font-display font-bold mb-4">
