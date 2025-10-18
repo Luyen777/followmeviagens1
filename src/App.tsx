@@ -13,7 +13,9 @@ import NotFound from "./pages/NotFound";
 import Dubai from "./pages/Dubai";
 import Tailandia from "./pages/Tailandia";
 import India from "./pages/India";
-import AfricaDoSul from "./pages/AfricaDoSul";
+import AfricaDoSulLanding from "./pages/AfricaDoSulLanding";
+import AfricaDoSulSafariCapeTown from "./pages/AfricaDoSulSafariCapeTown";
+import AfricaDoSulGardenRoute from "./pages/AfricaDoSulGardenRoute";
 import Seychelles from "./pages/Seychelles";
 import Egito from "./pages/Egito";
 import Vietna from "./pages/Vietna";
@@ -45,7 +47,9 @@ const App = () => (
           <Route path="/dubai" element={<Dubai />} />
           <Route path="/tailandia" element={<Tailandia />} />
           <Route path="/india" element={<India />} />
-          <Route path="/africa-do-sul" element={<AfricaDoSul />} />
+          <Route path="/africa-do-sul" element={<AfricaDoSulLanding />} />
+          <Route path="/africa-do-sul/safari-cape-town-7-noites" element={<AfricaDoSulSafariCapeTown />} />
+          <Route path="/africa-do-sul/garden-route-explorer" element={<AfricaDoSulGardenRoute />} />
           <Route path="/seychelles" element={<Seychelles />} />
           <Route path="/egito" element={<Egito />} />
           <Route path="/vietna" element={<Vietna />} />
