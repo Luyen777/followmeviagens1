@@ -12,7 +12,8 @@ import BlogPost from "./pages/BlogPost";
 import NotFound from "./pages/NotFound";
 import Dubai from "./pages/Dubai";
 import Tailandia from "./pages/Tailandia";
-import India from "./pages/India";
+import IndiaLanding from "./pages/IndiaLanding";
+import IndiaTrianguloDourado from "./pages/IndiaTrianguloDourado";
 import AfricaDoSulLanding from "./pages/AfricaDoSulLanding";
 import AfricaDoSulSafariCapeTown from "./pages/AfricaDoSulSafariCapeTown";
 import AfricaDoSulGardenRoute from "./pages/AfricaDoSulGardenRoute";
@@ -46,7 +47,8 @@ const App = () => (
           <Route path="/blog/:slug" element={<BlogPost />} />
           <Route path="/dubai" element={<Dubai />} />
           <Route path="/tailandia" element={<Tailandia />} />
-          <Route path="/india" element={<India />} />
+          <Route path="/india" element={<IndiaLanding />} />
+          <Route path="/india/triangulo-dourado-7-noites" element={<IndiaTrianguloDourado />} />
           <Route path="/africa-do-sul" element={<AfricaDoSulLanding />} />
           <Route path="/africa-do-sul/safari-cape-town-7-noites" element={<AfricaDoSulSafariCapeTown />} />
           <Route path="/africa-do-sul/garden-route-explorer" element={<AfricaDoSulGardenRoute />} />

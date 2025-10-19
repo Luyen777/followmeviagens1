@@ -13,7 +13,7 @@ import SocialProof from "@/components/india/SocialProof";
 import ContactFormSection from "@/components/india/ContactFormSection";
 import FAQ from "@/components/india/FAQ";
 
-const India = () => {
+const IndiaTrianguloDourado = () => {
   return (
     <>
       <Helmet>
@@ -22,7 +22,7 @@ const India = () => {
         <meta property="og:title" content="Índia - Triângulo Dourado 7 Noites | Follow Me Viagens" />
         <meta property="og:description" content="Explore Delhi, Jaipur e Agra com especialistas locais. Patrimônios históricos, cultura espiritual e culinária autêntica com todo conforto." />
         <meta property="og:type" content="website" />
-        <link rel="canonical" href="https://followmeviagens.com/india" />
+        <link rel="canonical" href="https://followmeviagens.com/india/triangulo-dourado-7-noites" />
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
@@ -58,4 +58,4 @@ const India = () => {
   );
 };
 
-export default India;
+export default IndiaTrianguloDourado;
