@@ -8,35 +8,28 @@ import { useNavigate } from "react-router-dom";
 import { Calendar, MapPin, Star, Palmtree, Mountain, Wine, Hotel, Shield, Clock, Plane, ThermometerSun, FileCheck, Syringe } from "lucide-react";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import southAfricaHero from "@/assets/south-africa-hero.jpg";
-
 const AfricaDoSulLanding = () => {
   const navigate = useNavigate();
-
-  const packages = [
-    {
-      id: 1,
-      title: "Safari Kruger & Cape Town",
-      description: "Aventura selvagem no Kruger Park e charme urbano em Cape Town com hotéis premium",
-      duration: "7 noites",
-      highlights: ["Safari Big Five no Kruger", "Cape Town e Table Mountain", "Vinícolas premiadas", "Lodges 5 estrelas"],
-      priceFrom: "Consulte",
-      slug: "safari-cape-town-7-noites",
-      image: southAfricaHero
-    },
-    {
-      id: 2,
-      title: "Garden Route Explorer",
-      description: "Explore a famosa Garden Route com praias paradisíacas, vida selvagem e paisagens de tirar o fôlego",
-      duration: "10 noites",
-      highlights: ["Rota Jardim completa", "Avistamento de baleias", "Praias exclusivas", "Hospedagem boutique"],
-      priceFrom: "Consulte",
-      slug: "garden-route-explorer",
-      image: southAfricaHero
-    }
-  ];
-
-  return (
-    <>
+  const packages = [{
+    id: 1,
+    title: "Safari Kruger & Cape Town",
+    description: "Aventura selvagem no Kruger Park e charme urbano em Cape Town com hotéis premium",
+    duration: "7 noites",
+    highlights: ["Safari Big Five no Kruger", "Cape Town e Table Mountain", "Vinícolas premiadas", "Lodges 5 estrelas"],
+    priceFrom: "Consulte",
+    slug: "safari-cape-town-7-noites",
+    image: southAfricaHero
+  }, {
+    id: 2,
+    title: "Garden Route Explorer",
+    description: "Explore a famosa Garden Route com praias paradisíacas, vida selvagem e paisagens de tirar o fôlego",
+    duration: "10 noites",
+    highlights: ["Rota Jardim completa", "Avistamento de baleias", "Praias exclusivas", "Hospedagem boutique"],
+    priceFrom: "Consulte",
+    slug: "garden-route-explorer",
+    image: southAfricaHero
+  }];
+  return <>
       <Helmet>
         <title>África do Sul - Pacotes Exclusivos de Viagem | Follow Me Viagens</title>
         <meta name="description" content="Descubra a África do Sul com pacotes exclusivos: Safari no Kruger Park, Cape Town, Garden Route e muito mais. Hotéis premium e suporte 24h." />
@@ -52,10 +45,9 @@ const AfricaDoSulLanding = () => {
 
         {/* Hero Section */}
         <section className="relative min-h-[50vh] flex items-center justify-center overflow-hidden pt-20">
-          <div 
-            className="absolute inset-0 bg-cover bg-center bg-fixed" 
-            style={{ backgroundImage: `url(${southAfricaHero})` }}
-          >
+          <div className="absolute inset-0 bg-cover bg-center bg-fixed" style={{
+          backgroundImage: `url(${southAfricaHero})`
+        }}>
             <div className="absolute inset-0 bg-black/50" />
           </div>
 
@@ -146,41 +138,7 @@ const AfricaDoSulLanding = () => {
         </section>
 
         {/* Trust Signals Section */}
-        <section className="py-16 bg-background">
-          <div className="container mx-auto px-4">
-            <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
-              <div className="text-center">
-                <div className="w-12 h-12 mx-auto mb-3 rounded-full bg-primary/10 flex items-center justify-center">
-                  <Shield className="w-6 h-6 text-primary" />
-                </div>
-                <h3 className="font-semibold mb-2">Pacotes Completos</h3>
-                <p className="text-sm text-muted-foreground">
-                  Tudo incluído: voos, hotéis, transfers, passeios e suporte 24h
-                </p>
-              </div>
-
-              <div className="text-center">
-                <div className="w-12 h-12 mx-auto mb-3 rounded-full bg-primary/10 flex items-center justify-center">
-                  <Star className="w-6 h-6 text-primary" />
-                </div>
-                <h3 className="font-semibold mb-2">Especialistas em Luxo</h3>
-                <p className="text-sm text-muted-foreground">
-                  15+ anos criando experiências exclusivas para viajantes exigentes
-                </p>
-              </div>
-
-              <div className="text-center">
-                <div className="w-12 h-12 mx-auto mb-3 rounded-full bg-primary/10 flex items-center justify-center">
-                  <Clock className="w-6 h-6 text-primary" />
-                </div>
-                <h3 className="font-semibold mb-2">Atendimento Personalizado</h3>
-                <p className="text-sm text-muted-foreground">
-                  Consultoria dedicada para customizar seu roteiro dos sonhos
-                </p>
-              </div>
-            </div>
-          </div>
-        </section>
+        
 
         {/* Practical Information Section */}
         <section className="py-16 md:py-20 bg-background">
@@ -260,14 +218,9 @@ const AfricaDoSulLanding = () => {
             </div>
 
             <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
-              {packages.map((pkg) => (
-                <Card key={pkg.id} className="overflow-hidden hover:shadow-lg transition-shadow">
+              {packages.map(pkg => <Card key={pkg.id} className="overflow-hidden hover:shadow-lg transition-shadow">
                   <div className="relative h-64 overflow-hidden">
-                    <img 
-                      src={pkg.image} 
-                      alt={pkg.title}
-                      className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
-                    />
+                    <img src={pkg.image} alt={pkg.title} className="w-full h-full object-cover hover:scale-105 transition-transform duration-300" />
                   </div>
                   
                   <CardHeader>
@@ -282,12 +235,10 @@ const AfricaDoSulLanding = () => {
                     </div>
 
                     <div className="space-y-2">
-                      {pkg.highlights.map((highlight, idx) => (
-                        <div key={idx} className="flex items-start gap-2">
+                      {pkg.highlights.map((highlight, idx) => <div key={idx} className="flex items-start gap-2">
                           <Star className="h-4 w-4 text-primary mt-0.5 flex-shrink-0" />
                           <span className="text-sm">{highlight}</span>
-                        </div>
-                      ))}
+                        </div>)}
                     </div>
 
                     <div className="pt-4 border-t">
@@ -297,16 +248,11 @@ const AfricaDoSulLanding = () => {
                   </CardContent>
 
                   <CardFooter>
-                    <Button 
-                      className="w-full" 
-                      size="lg"
-                      onClick={() => navigate(`/africa-do-sul/${pkg.slug}`)}
-                    >
+                    <Button className="w-full" size="lg" onClick={() => navigate(`/africa-do-sul/${pkg.slug}`)}>
                       Ver Detalhes do Pacote
                     </Button>
                   </CardFooter>
-                </Card>
-              ))}
+                </Card>)}
             </div>
           </div>
         </section>
@@ -379,8 +325,6 @@ const AfricaDoSulLanding = () => {
 
         <Footer />
       </main>
-    </>
-  );
+    </>;
 };
-
 export default AfricaDoSulLanding;
