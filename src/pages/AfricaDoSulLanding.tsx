@@ -5,7 +5,8 @@ import WhatsAppButton from "@/components/WhatsAppButton";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { useNavigate } from "react-router-dom";
-import { Calendar, MapPin, Star, Palmtree, Mountain, Wine, Hotel, Shield, Clock } from "lucide-react";
+import { Calendar, MapPin, Star, Palmtree, Mountain, Wine, Hotel, Shield, Clock, Plane, ThermometerSun, FileCheck, Syringe } from "lucide-react";
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import southAfricaHero from "@/assets/south-africa-hero.jpg";
 
 const AfricaDoSulLanding = () => {
@@ -65,6 +66,26 @@ const AfricaDoSulLanding = () => {
             <p className="text-xl md:text-2xl text-white/90 max-w-3xl mx-auto">
               Escolha seu pacote ideal: Safari selvagem, charme urbano ou rotas panorâmicas
             </p>
+          </div>
+        </section>
+
+        {/* About Destination Section */}
+        <section className="py-16 md:py-20 bg-background">
+          <div className="container mx-auto px-4">
+            <div className="max-w-4xl mx-auto">
+              <h2 className="text-3xl md:text-4xl font-display font-bold mb-6 text-center">
+                Sobre o Destino
+              </h2>
+              <div className="prose prose-lg max-w-none text-muted-foreground">
+                <p className="text-center leading-relaxed">
+                  A África do Sul é um dos destinos mais completos do mundo, unindo natureza exuberante, vida selvagem impressionante e cultura vibrante. 
+                  Dos safáris no famoso Kruger Park, onde você pode avistar os Big Five, às paisagens cinematográficas da Garden Route, passando pelo 
+                  charme cosmopolita de Cape Town e vinícolas premiadas de Stellenbosch - cada dia é uma nova aventura. Com clima agradável na maior 
+                  parte do ano, infraestrutura de primeiro mundo e experiências que vão de praias paradisíacas a montanhas épicas, a África do Sul 
+                  encanta casais em lua de mel, famílias em busca de experiências marcantes e grupos que desejam viver o extraordinário.
+                </p>
+              </div>
+            </div>
           </div>
         </section>
 
@@ -161,6 +182,71 @@ const AfricaDoSulLanding = () => {
           </div>
         </section>
 
+        {/* Practical Information Section */}
+        <section className="py-16 md:py-20 bg-background">
+          <div className="container mx-auto px-4">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl md:text-4xl font-display font-bold mb-4">
+                Informações Práticas
+              </h2>
+              <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+                Tudo que você precisa saber antes de viajar para a África do Sul
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-5xl mx-auto">
+              <div className="bg-card p-6 rounded-lg border">
+                <div className="w-12 h-12 mx-auto mb-4 rounded-full bg-primary/10 flex items-center justify-center">
+                  <Calendar className="w-6 h-6 text-primary" />
+                </div>
+                <h3 className="font-semibold text-center mb-2">Melhor Época</h3>
+                <p className="text-sm text-muted-foreground text-center">
+                  Setembro a maio - clima perfeito para safáris e passeios
+                </p>
+              </div>
+
+              <div className="bg-card p-6 rounded-lg border">
+                <div className="w-12 h-12 mx-auto mb-4 rounded-full bg-primary/10 flex items-center justify-center">
+                  <ThermometerSun className="w-6 h-6 text-primary" />
+                </div>
+                <h3 className="font-semibold text-center mb-2">Temperatura</h3>
+                <p className="text-sm text-muted-foreground text-center">
+                  Média anual de 15-28ºC - clima agradável o ano todo
+                </p>
+              </div>
+
+              <div className="bg-card p-6 rounded-lg border">
+                <div className="w-12 h-12 mx-auto mb-4 rounded-full bg-primary/10 flex items-center justify-center">
+                  <Plane className="w-6 h-6 text-primary" />
+                </div>
+                <h3 className="font-semibold text-center mb-2">Tempo de Voo</h3>
+                <p className="text-sm text-muted-foreground text-center">
+                  ~9 horas de São Paulo - voos diretos disponíveis
+                </p>
+              </div>
+
+              <div className="bg-card p-6 rounded-lg border">
+                <div className="w-12 h-12 mx-auto mb-4 rounded-full bg-primary/10 flex items-center justify-center">
+                  <FileCheck className="w-6 h-6 text-primary" />
+                </div>
+                <h3 className="font-semibold text-center mb-2">Documentação</h3>
+                <p className="text-sm text-muted-foreground text-center">
+                  Sem visto para até 90 dias - apenas passaporte válido
+                </p>
+              </div>
+            </div>
+
+            <div className="mt-8 text-center">
+              <div className="inline-flex items-center gap-2 bg-amber-50 dark:bg-amber-950/30 border border-amber-200 dark:border-amber-800 rounded-lg px-6 py-3">
+                <Syringe className="w-5 h-5 text-amber-600" />
+                <p className="text-sm text-amber-900 dark:text-amber-200">
+                  <strong>Vacinação recomendada:</strong> Febre amarela - certificado internacional
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* Packages Section */}
         <section className="py-16 md:py-24 bg-muted/30">
           <div className="container mx-auto px-4">
@@ -221,6 +307,72 @@ const AfricaDoSulLanding = () => {
                   </CardFooter>
                 </Card>
               ))}
+            </div>
+          </div>
+        </section>
+
+        {/* FAQ Section */}
+        <section className="py-16 md:py-20 bg-background">
+          <div className="container mx-auto px-4">
+            <div className="max-w-3xl mx-auto">
+              <div className="text-center mb-12">
+                <h2 className="text-3xl md:text-4xl font-display font-bold mb-4">
+                  Perguntas Frequentes
+                </h2>
+                <p className="text-lg text-muted-foreground">
+                  Respostas para as dúvidas mais comuns sobre viagens à África do Sul
+                </p>
+              </div>
+
+              <Accordion type="single" collapsible className="w-full">
+                <AccordionItem value="item-1">
+                  <AccordionTrigger className="text-left">
+                    É seguro viajar para a África do Sul?
+                  </AccordionTrigger>
+                  <AccordionContent className="text-muted-foreground">
+                    Sim! A África do Sul é um destino seguro quando se seguem as orientações básicas de segurança. 
+                    Nossos pacotes incluem transfers privativos, hotéis em áreas seguras e suporte 24h. As principais 
+                    áreas turísticas como Cape Town, Kruger Park e Garden Route têm excelente infraestrutura e são 
+                    muito frequentadas por turistas do mundo todo.
+                  </AccordionContent>
+                </AccordionItem>
+
+                <AccordionItem value="item-2">
+                  <AccordionTrigger className="text-left">
+                    Dá para combinar a África do Sul com outros destinos?
+                  </AccordionTrigger>
+                  <AccordionContent className="text-muted-foreground">
+                    Com certeza! A África do Sul combina perfeitamente com destinos como Ilhas Maurício, Seychelles, 
+                    Moçambique e até Victoria Falls (Zimbábue/Zâmbia). Podemos criar um roteiro personalizado que 
+                    inclua praia paradisíaca após o safari, ou estender sua aventura africana. Consulte-nos para 
+                    opções de combinação.
+                  </AccordionContent>
+                </AccordionItem>
+
+                <AccordionItem value="item-3">
+                  <AccordionTrigger className="text-left">
+                    Qual moeda levar e como funciona o câmbio?
+                  </AccordionTrigger>
+                  <AccordionContent className="text-muted-foreground">
+                    A moeda oficial é o Rand Sul-Africano (ZAR). Recomendamos levar dólares americanos ou euros para 
+                    trocar no destino, onde você consegue melhores taxas. Cartões de crédito internacionais são amplamente 
+                    aceitos. Também é possível sacar rands em caixas eletrônicos. Evite trocar dinheiro em aeroportos, 
+                    pois as taxas costumam ser desfavoráveis.
+                  </AccordionContent>
+                </AccordionItem>
+
+                <AccordionItem value="item-4">
+                  <AccordionTrigger className="text-left">
+                    Quantos dias são necessários para conhecer a África do Sul?
+                  </AccordionTrigger>
+                  <AccordionContent className="text-muted-foreground">
+                    Recomendamos no mínimo 7-8 noites para aproveitar os principais destaques: 3 noites de safari no 
+                    Kruger Park e 4 noites em Cape Town e região das vinícolas. Para quem deseja incluir a Garden Route 
+                    ou outros destinos, o ideal são 10-14 noites. Nossos consultores ajudam a montar o roteiro perfeito 
+                    de acordo com seu tempo disponível.
+                  </AccordionContent>
+                </AccordionItem>
+              </Accordion>
             </div>
           </div>
         </section>
