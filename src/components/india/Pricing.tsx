@@ -1,45 +1,56 @@
 import { Check, Star, Calendar } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-const pricingPeriods = [{
-  period: "Até 30 de Setembro de 2025",
-  icon: Calendar,
-  options: [{
-    tier: "Opção A",
-    stars: 5,
-    price: "1.400",
-    description: "Hotéis 5 estrelas selecionados"
-  }, {
-    tier: "Opção B",
-    stars: 6,
-    price: "2.025",
-    description: "Hotéis 6 estrelas premium",
-    featured: true
-  }]
-}, {
-  period: "01 de Outubro de 2025 a 31 de Março de 2026",
-  icon: Calendar,
-  options: [{
-    tier: "Opção A",
-    stars: 5,
-    price: "1.995",
-    description: "Hotéis 5 estrelas selecionados"
-  }, {
-    tier: "Opção B",
-    stars: 6,
-    price: "3.505",
-    description: "Hotéis 6 estrelas premium",
-    featured: true
-  }]
-}];
+
+const pricingPeriods = [
+  {
+    period: "Até 30 de Setembro de 2025",
+    icon: Calendar,
+    options: [
+      {
+        tier: "Opção A",
+        stars: 5,
+        price: "1.400",
+        description: "Hotéis 5 estrelas selecionados"
+      },
+      {
+        tier: "Opção B",
+        stars: 6,
+        price: "2.025",
+        description: "Hotéis 6 estrelas premium",
+        featured: true
+      }
+    ]
+  },
+  {
+    period: "01 de Outubro de 2025 a 31 de Março de 2026",
+    icon: Calendar,
+    options: [
+      {
+        tier: "Opção A",
+        stars: 5,
+        price: "1.995",
+        description: "Hotéis 5 estrelas selecionados"
+      },
+      {
+        tier: "Opção B",
+        stars: 6,
+        price: "3.505",
+        description: "Hotéis 6 estrelas premium",
+        featured: true
+      }
+    ]
+  }
+];
+
 const Pricing = () => {
   const scrollToContact = () => {
     const contactSection = document.getElementById('contact');
-    contactSection?.scrollIntoView({
-      behavior: 'smooth'
-    });
+    contactSection?.scrollIntoView({ behavior: 'smooth' });
   };
-  return <section className="py-16 md:py-24 bg-gradient-to-b from-background to-muted/30">
+
+  return (
+    <section className="py-16 md:py-24 bg-gradient-to-b from-background to-muted/30">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground mb-4">
@@ -51,18 +62,30 @@ const Pricing = () => {
         </div>
 
         <div className="space-y-12 max-w-6xl mx-auto">
-          {pricingPeriods.map((period, periodIndex) => <div key={periodIndex} className="animate-fade-in">
-              
+          {pricingPeriods.map((period, periodIndex) => (
+            <div key={periodIndex} className="animate-fade-in">
+              <div className="flex items-center justify-center gap-3 mb-8">
+                <period.icon className="h-6 w-6 text-primary" />
+                <h3 className="text-2xl font-display font-bold text-foreground text-center">
+                  {period.period}
+                </h3>
+              </div>
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
-                {period.options.map((option, optionIndex) => <Card key={optionIndex} className="relative hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
+                {period.options.map((option, optionIndex) => (
+                  <Card 
+                    key={optionIndex}
+                    className="relative hover:shadow-xl transition-all duration-300 hover:-translate-y-2"
+                  >
                     <CardContent className="p-8 text-center">
                       <h4 className="text-xl font-display font-bold text-foreground mb-2">
                         {option.tier}
                       </h4>
                       
                       <div className="flex items-center justify-center gap-1 mb-4">
-                        {[...Array(option.stars)].map((_, i) => <Star key={i} className="h-4 w-4 fill-yellow-400 text-yellow-400" />)}
+                        {[...Array(option.stars)].map((_, i) => (
+                          <Star key={i} className="h-4 w-4 fill-yellow-400 text-yellow-400" />
+                        ))}
                       </div>
 
                       <p className="text-sm text-muted-foreground mb-6">
@@ -107,13 +130,18 @@ const Pricing = () => {
                         </li>
                       </ul>
 
-                      <Button onClick={scrollToContact} className="w-full">
+                      <Button 
+                        onClick={scrollToContact}
+                        className="w-full"
+                      >
                         Solicitar Orçamento
                       </Button>
                     </CardContent>
-                  </Card>)}
+                  </Card>
+                ))}
               </div>
-            </div>)}
+            </div>
+          ))}
         </div>
 
         <div className="mt-8 text-center">
@@ -122,6 +150,8 @@ const Pricing = () => {
           </p>
         </div>
       </div>
-    </section>;
+    </section>
+  );
 };
+
 export default Pricing;
