@@ -32,6 +32,8 @@ const FeaturedResorts = () => {
   const startXRef = useRef(0);
   const scrollLeftRef = useRef(0);
   const animationRef = useRef<number>();
+  const baseTimeRef = useRef(0);
+  const pausedOffsetRef = useRef(0);
 
   // Duplicate experiences for seamless infinite loop
   const duplicatedExperiences = [...experiences, ...experiences];
@@ -40,21 +42,21 @@ const FeaturedResorts = () => {
     const track = trackRef.current;
     if (!track) return;
 
-    let startTime: number | null = null;
     const scrollSpeed = 52; // pixels per second (30% faster)
 
     const animate = (timestamp: number) => {
-      if (!startTime) startTime = timestamp;
+      if (!baseTimeRef.current) baseTimeRef.current = timestamp;
       
       if (!isPaused && !isDragging) {
-        const elapsed = (timestamp - startTime) / 1000;
-        const distance = elapsed * scrollSpeed;
+        const elapsed = (timestamp - baseTimeRef.current) / 1000;
+        const distance = elapsed * scrollSpeed + pausedOffsetRef.current;
         
         // Calculate the width of one set of images
         const singleSetWidth = track.scrollWidth / 2;
         const currentScroll = distance % singleSetWidth;
         
         track.style.transform = `translateX(-${currentScroll}px)`;
+        scrollLeftRef.current = currentScroll;
       }
       
       animationRef.current = requestAnimationFrame(animate);
@@ -124,7 +126,9 @@ const FeaturedResorts = () => {
       const transform = window.getComputedStyle(track).transform;
       if (transform !== 'none') {
         const matrix = new DOMMatrix(transform);
-        scrollLeftRef.current = -matrix.m41;
+        const currentPosition = -matrix.m41;
+        pausedOffsetRef.current = currentPosition;
+        baseTimeRef.current = 0; // Reset base time to restart from current position
       }
     }
   };
@@ -183,7 +187,9 @@ const FeaturedResorts = () => {
       const transform = window.getComputedStyle(track).transform;
       if (transform !== 'none') {
         const matrix = new DOMMatrix(transform);
-        scrollLeftRef.current = -matrix.m41;
+        const currentPosition = -matrix.m41;
+        pausedOffsetRef.current = currentPosition;
+        baseTimeRef.current = 0; // Reset base time to restart from current position
       }
     }
   };
