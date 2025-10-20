@@ -29,8 +29,12 @@ const FeaturedResorts = () => {
   // Duplicate experiences array for seamless infinite loop
   const duplicatedExperiences = [...experiences, ...experiences];
 
-  const handleInteraction = () => {
+  const handlePause = () => {
     setIsPaused(true);
+  };
+
+  const handleResume = () => {
+    setIsPaused(false);
   };
 
   return (
@@ -53,9 +57,12 @@ const FeaturedResorts = () => {
         <div className="mb-12 sm:mb-16 animate-fade-in">
           <div 
             className="w-full overflow-x-auto overflow-y-hidden scrollbar-hide cursor-grab active:cursor-grabbing"
-            onMouseDown={handleInteraction}
-            onTouchStart={handleInteraction}
-            onScroll={handleInteraction}
+            onMouseDown={handlePause}
+            onMouseUp={handleResume}
+            onMouseLeave={handleResume}
+            onTouchStart={handlePause}
+            onTouchEnd={handleResume}
+            onScroll={handlePause}
           >
             <style>
               {`
@@ -69,7 +76,7 @@ const FeaturedResorts = () => {
                 }
                 
                 .scroll-animation {
-                  animation: scroll-horizontal 30s linear infinite;
+                  animation: scroll-horizontal 15s linear infinite;
                 }
                 
                 .scroll-animation.paused {
