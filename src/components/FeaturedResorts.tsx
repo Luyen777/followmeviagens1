@@ -5,6 +5,7 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
+import Autoplay from "embla-carousel-autoplay";
 
 import villasSunset from "@/assets/maldives-experiences/villa-sunset.jpg";
 import overwaterVillas from "@/assets/maldives-experiences/overwater-villas.jpg";
@@ -54,6 +55,13 @@ const FeaturedResorts = () => {
               align: "start",
               loop: true,
             }}
+            plugins={[
+              Autoplay({
+                delay: 3000,
+                stopOnInteraction: true,
+                stopOnMouseEnter: true,
+              }),
+            ]}
           >
             <CarouselContent className="-ml-2 sm:-ml-4">
               {experiences.map((experience, index) => (
