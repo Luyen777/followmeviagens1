@@ -41,7 +41,7 @@ const FeaturedResorts = () => {
     if (!track) return;
 
     let startTime: number | null = null;
-    const scrollSpeed = 40; // pixels per second
+    const scrollSpeed = 52; // pixels per second (30% faster)
 
     const animate = (timestamp: number) => {
       if (!startTime) startTime = timestamp;
