@@ -5,7 +5,6 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
-import Autoplay from "embla-carousel-autoplay";
 
 import villasSunset from "@/assets/maldives-experiences/villa-sunset.jpg";
 import overwaterVillas from "@/assets/maldives-experiences/overwater-villas.jpg";
@@ -52,20 +51,13 @@ const FeaturedResorts = () => {
           <Carousel 
             className="w-full max-w-6xl mx-auto"
             opts={{
-              align: "start",
+              align: "center",
               loop: true,
             }}
-            plugins={[
-              Autoplay({
-                delay: 3000,
-                stopOnInteraction: true,
-                stopOnMouseEnter: true,
-              }),
-            ]}
           >
-            <CarouselContent className="-ml-2 sm:-ml-4">
+            <CarouselContent className="-ml-4">
               {experiences.map((experience, index) => (
-                <CarouselItem key={index} className="pl-2 sm:pl-4 basis-[85%] sm:basis-1/2 md:basis-1/2 lg:basis-1/3">
+                <CarouselItem key={index} className="pl-4 md:basis-1/2 lg:basis-1/3">
                   <div className="relative aspect-[4/5] overflow-hidden rounded-2xl shadow-elegant hover:shadow-glow transition-all duration-500 group">
                     <img 
                       src={experience.image} 
@@ -77,8 +69,8 @@ const FeaturedResorts = () => {
                 </CarouselItem>
               ))}
             </CarouselContent>
-            <CarouselPrevious className="left-2 sm:left-0 sm:-translate-x-12 hover:scale-110 transition-transform bg-background/80 backdrop-blur-sm" />
-            <CarouselNext className="right-2 sm:right-0 sm:translate-x-12 hover:scale-110 transition-transform bg-background/80 backdrop-blur-sm" />
+            <CarouselPrevious className="left-0 -translate-x-12 hover:scale-110 transition-transform" />
+            <CarouselNext className="right-0 translate-x-12 hover:scale-110 transition-transform" />
           </Carousel>
         </div>
 
