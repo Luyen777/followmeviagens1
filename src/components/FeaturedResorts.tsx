@@ -1,11 +1,3 @@
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from "@/components/ui/carousel";
-
 import villasSunset from "@/assets/maldives-experiences/villa-sunset.jpg";
 import overwaterVillas from "@/assets/maldives-experiences/overwater-villas.jpg";
 import infinityPool from "@/assets/maldives-experiences/infinity-pool.jpg";
@@ -31,7 +23,11 @@ const experiences = [
 ];
 
 const FeaturedResorts = () => {
-  return <section id="momentos" className="py-20 sm:py-32 bg-background relative overflow-hidden">
+  // Duplicate experiences array for seamless infinite loop
+  const duplicatedExperiences = [...experiences, ...experiences];
+
+  return (
+    <section id="momentos" className="py-20 sm:py-32 bg-background relative overflow-hidden">
       {/* Subtle background decoration */}
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-muted/20 to-transparent pointer-events-none"></div>
       
@@ -46,18 +42,41 @@ const FeaturedResorts = () => {
           </p>
         </div>
 
-        {/* Luxury Carousel */}
+        {/* Continuous Infinite Scroll Carousel */}
         <div className="mb-12 sm:mb-16 animate-fade-in">
-          <Carousel 
-            className="w-full max-w-6xl mx-auto"
-            opts={{
-              align: "center",
-              loop: true,
-            }}
-          >
-            <CarouselContent className="-ml-4">
-              {experiences.map((experience, index) => (
-                <CarouselItem key={index} className="pl-4 md:basis-1/2 lg:basis-1/3">
+          <div className="w-full overflow-hidden">
+            <style>
+              {`
+                @keyframes scroll-horizontal {
+                  0% {
+                    transform: translateX(0);
+                  }
+                  100% {
+                    transform: translateX(-50%);
+                  }
+                }
+                
+                .scroll-animation {
+                  animation: scroll-horizontal 80s linear infinite;
+                }
+                
+                .scroll-animation:hover {
+                  animation-play-state: paused;
+                }
+                
+                @media (prefers-reduced-motion: reduce) {
+                  .scroll-animation {
+                    animation: none;
+                  }
+                }
+              `}
+            </style>
+            <div className="scroll-animation flex gap-4">
+              {duplicatedExperiences.map((experience, index) => (
+                <div 
+                  key={index} 
+                  className="flex-shrink-0 w-[280px] sm:w-[320px] lg:w-[360px]"
+                >
                   <div className="relative aspect-[4/5] overflow-hidden rounded-2xl shadow-elegant hover:shadow-glow transition-all duration-500 group">
                     <img 
                       src={experience.image} 
@@ -66,12 +85,10 @@ const FeaturedResorts = () => {
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                   </div>
-                </CarouselItem>
+                </div>
               ))}
-            </CarouselContent>
-            <CarouselPrevious className="left-0 -translate-x-12 hover:scale-110 transition-transform" />
-            <CarouselNext className="right-0 translate-x-12 hover:scale-110 transition-transform" />
-          </Carousel>
+            </div>
+          </div>
         </div>
 
         {/* CTA Button */}
@@ -82,6 +99,7 @@ const FeaturedResorts = () => {
           </a>
         </div>
       </div>
-    </section>;
+    </section>
+  );
 };
 export default FeaturedResorts;
