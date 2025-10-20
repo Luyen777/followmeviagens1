@@ -76,14 +76,10 @@ const FeaturedResorts = () => {
                 }
                 
                 .scroll-animation {
-                  animation: scroll-horizontal 15s linear infinite;
+                  animation: scroll-horizontal 8s linear infinite;
                 }
                 
                 .scroll-animation.paused {
-                  animation-play-state: paused;
-                }
-                
-                .scroll-animation:hover {
                   animation-play-state: paused;
                 }
                 
