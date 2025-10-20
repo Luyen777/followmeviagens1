@@ -1,10 +1,4 @@
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from "@/components/ui/carousel";
+import { useEffect, useRef, useState } from "react";
 
 import villasSunset from "@/assets/maldives-experiences/villa-sunset.jpg";
 import overwaterVillas from "@/assets/maldives-experiences/overwater-villas.jpg";
@@ -31,7 +25,177 @@ const experiences = [
 ];
 
 const FeaturedResorts = () => {
-  return <section id="momentos" className="py-20 sm:py-32 bg-background relative overflow-hidden">
+  const [isPaused, setIsPaused] = useState(false);
+  const [isDragging, setIsDragging] = useState(false);
+  const containerRef = useRef<HTMLDivElement>(null);
+  const trackRef = useRef<HTMLDivElement>(null);
+  const startXRef = useRef(0);
+  const scrollLeftRef = useRef(0);
+  const animationRef = useRef<number>();
+
+  // Duplicate experiences for seamless infinite loop
+  const duplicatedExperiences = [...experiences, ...experiences];
+
+  useEffect(() => {
+    const track = trackRef.current;
+    if (!track) return;
+
+    let startTime: number | null = null;
+    const scrollSpeed = 40; // pixels per second
+
+    const animate = (timestamp: number) => {
+      if (!startTime) startTime = timestamp;
+      
+      if (!isPaused && !isDragging) {
+        const elapsed = (timestamp - startTime) / 1000;
+        const distance = elapsed * scrollSpeed;
+        
+        // Calculate the width of one set of images
+        const singleSetWidth = track.scrollWidth / 2;
+        const currentScroll = distance % singleSetWidth;
+        
+        track.style.transform = `translateX(-${currentScroll}px)`;
+      }
+      
+      animationRef.current = requestAnimationFrame(animate);
+    };
+
+    animationRef.current = requestAnimationFrame(animate);
+
+    return () => {
+      if (animationRef.current) {
+        cancelAnimationFrame(animationRef.current);
+      }
+    };
+  }, [isPaused, isDragging]);
+
+  const handleMouseDown = (e: React.MouseEvent) => {
+    setIsDragging(true);
+    setIsPaused(true);
+    startXRef.current = e.pageX;
+    const track = trackRef.current;
+    if (track) {
+      const transform = window.getComputedStyle(track).transform;
+      if (transform !== 'none') {
+        const matrix = new DOMMatrix(transform);
+        scrollLeftRef.current = -matrix.m41;
+      }
+    }
+    if (containerRef.current) {
+      containerRef.current.style.cursor = 'grabbing';
+    }
+  };
+
+  const handleMouseMove = (e: React.MouseEvent) => {
+    if (!isDragging) return;
+    e.preventDefault();
+    const x = e.pageX;
+    const walk = (startXRef.current - x);
+    const track = trackRef.current;
+    if (track) {
+      const singleSetWidth = track.scrollWidth / 2;
+      let newScroll = scrollLeftRef.current + walk;
+      
+      // Loop the scroll position
+      if (newScroll >= singleSetWidth) {
+        newScroll = newScroll % singleSetWidth;
+        scrollLeftRef.current = newScroll;
+        startXRef.current = x;
+      } else if (newScroll < 0) {
+        newScroll = singleSetWidth + (newScroll % singleSetWidth);
+        scrollLeftRef.current = newScroll;
+        startXRef.current = x;
+      }
+      
+      track.style.transform = `translateX(-${scrollLeftRef.current + walk}px)`;
+    }
+  };
+
+  const handleMouseUp = () => {
+    setIsDragging(false);
+    setIsPaused(false);
+    if (containerRef.current) {
+      containerRef.current.style.cursor = 'grab';
+    }
+    
+    // Sync the scroll position for smooth resume
+    const track = trackRef.current;
+    if (track) {
+      const transform = window.getComputedStyle(track).transform;
+      if (transform !== 'none') {
+        const matrix = new DOMMatrix(transform);
+        scrollLeftRef.current = -matrix.m41;
+      }
+    }
+  };
+
+  const handleMouseLeave = () => {
+    if (isDragging) {
+      handleMouseUp();
+    }
+  };
+
+  const handleTouchStart = (e: React.TouchEvent) => {
+    setIsDragging(true);
+    setIsPaused(true);
+    startXRef.current = e.touches[0].pageX;
+    const track = trackRef.current;
+    if (track) {
+      const transform = window.getComputedStyle(track).transform;
+      if (transform !== 'none') {
+        const matrix = new DOMMatrix(transform);
+        scrollLeftRef.current = -matrix.m41;
+      }
+    }
+  };
+
+  const handleTouchMove = (e: React.TouchEvent) => {
+    if (!isDragging) return;
+    const x = e.touches[0].pageX;
+    const walk = (startXRef.current - x);
+    const track = trackRef.current;
+    if (track) {
+      const singleSetWidth = track.scrollWidth / 2;
+      let newScroll = scrollLeftRef.current + walk;
+      
+      // Loop the scroll position
+      if (newScroll >= singleSetWidth) {
+        newScroll = newScroll % singleSetWidth;
+        scrollLeftRef.current = newScroll;
+        startXRef.current = x;
+      } else if (newScroll < 0) {
+        newScroll = singleSetWidth + (newScroll % singleSetWidth);
+        scrollLeftRef.current = newScroll;
+        startXRef.current = x;
+      }
+      
+      track.style.transform = `translateX(-${scrollLeftRef.current + walk}px)`;
+    }
+  };
+
+  const handleTouchEnd = () => {
+    setIsDragging(false);
+    setIsPaused(false);
+    
+    // Sync the scroll position for smooth resume
+    const track = trackRef.current;
+    if (track) {
+      const transform = window.getComputedStyle(track).transform;
+      if (transform !== 'none') {
+        const matrix = new DOMMatrix(transform);
+        scrollLeftRef.current = -matrix.m41;
+      }
+    }
+  };
+
+  const togglePause = () => {
+    if (!isDragging) {
+      setIsPaused(!isPaused);
+    }
+  };
+
+  return (
+    <section id="momentos" className="py-20 sm:py-32 bg-background relative overflow-hidden">
       {/* Subtle background decoration */}
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-muted/20 to-transparent pointer-events-none"></div>
       
@@ -46,32 +210,45 @@ const FeaturedResorts = () => {
           </p>
         </div>
 
-        {/* Luxury Carousel */}
+        {/* Infinite Scroll Carousel */}
         <div className="mb-12 sm:mb-16 animate-fade-in">
-          <Carousel 
-            className="w-full max-w-6xl mx-auto"
-            opts={{
-              align: "start",
-              loop: true,
-            }}
+          <div
+            ref={containerRef}
+            className="relative w-full overflow-hidden cursor-grab select-none"
+            onMouseDown={handleMouseDown}
+            onMouseMove={handleMouseMove}
+            onMouseUp={handleMouseUp}
+            onMouseLeave={handleMouseLeave}
+            onTouchStart={handleTouchStart}
+            onTouchMove={handleTouchMove}
+            onTouchEnd={handleTouchEnd}
+            onClick={togglePause}
           >
-            <CarouselContent className="-ml-2 sm:-ml-4">
-              {experiences.map((experience, index) => (
-                <CarouselItem key={index} className="pl-2 sm:pl-4 basis-[85%] sm:basis-1/2 md:basis-1/2 lg:basis-1/3">
+            <div
+              ref={trackRef}
+              className="flex gap-4 sm:gap-6 will-change-transform"
+              style={{
+                width: 'fit-content',
+              }}
+            >
+              {duplicatedExperiences.map((experience, index) => (
+                <div
+                  key={index}
+                  className="flex-shrink-0 w-[280px] sm:w-[320px] md:w-[380px]"
+                >
                   <div className="relative aspect-[4/5] overflow-hidden rounded-2xl shadow-elegant hover:shadow-glow transition-all duration-500 group">
                     <img 
                       src={experience.image} 
                       alt={experience.alt}
-                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 pointer-events-none"
+                      draggable="false"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                   </div>
-                </CarouselItem>
+                </div>
               ))}
-            </CarouselContent>
-            <CarouselPrevious className="left-2 sm:left-0 sm:-translate-x-12 hover:scale-110 transition-transform bg-background/80 backdrop-blur-sm" />
-            <CarouselNext className="right-2 sm:right-0 sm:translate-x-12 hover:scale-110 transition-transform bg-background/80 backdrop-blur-sm" />
-          </Carousel>
+            </div>
+          </div>
         </div>
 
         {/* CTA Button */}
@@ -82,6 +259,8 @@ const FeaturedResorts = () => {
           </a>
         </div>
       </div>
-    </section>;
+    </section>
+  );
 };
+
 export default FeaturedResorts;
