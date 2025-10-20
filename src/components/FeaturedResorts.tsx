@@ -5,7 +5,7 @@ import overwaterVillas from "@/assets/maldives-experiences/overwater-villas.jpg"
 import infinityPool from "@/assets/maldives-experiences/infinity-pool.jpg";
 import spaTreatment from "@/assets/maldives-experiences/spa-treatment.jpg";
 import diningExperience from "@/assets/maldives-experiences/dining-experience.jpg";
-import gourmetCuisine from "@/assets/maldives-experiences/gourmet-cuisine.jpg";
+import luxuryBathroom from "@/assets/maldives-experiences/luxury-bathroom.jpg";
 import snorkeling from "@/assets/maldives-experiences/snorkeling.jpg";
 import beachWedding from "@/assets/maldives-experiences/beach-wedding.jpg";
 import romanticDinner from "@/assets/maldives-experiences/romantic-dinner.jpg";
@@ -14,7 +14,7 @@ import luxuryBath from "@/assets/maldives-experiences/luxury-bath.jpg";
 const experiences = [
   { image: overwaterVillas, alt: "Villas sobre água com design luxuoso" },
   { image: infinityPool, alt: "Piscina infinita com vista para o oceano turquesa" },
-  { image: gourmetCuisine, alt: "Gastronomia gourmet e culinária internacional" },
+  { image: luxuryBathroom, alt: "Banheiro de luxo com vista para o mar" },
   { image: beachWedding, alt: "Cerimônias românticas na praia paradisíaca" },
   { image: spaTreatment, alt: "Tratamentos de spa relaxantes e rejuvenescedores" },
   { image: diningExperience, alt: "Experiências gastronômicas em ambientes únicos" },
