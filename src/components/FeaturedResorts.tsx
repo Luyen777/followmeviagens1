@@ -1,3 +1,4 @@
+import React from "react";
 import villasSunset from "@/assets/maldives-experiences/villa-sunset.jpg";
 import overwaterVillas from "@/assets/maldives-experiences/overwater-villas.jpg";
 import infinityPool from "@/assets/maldives-experiences/infinity-pool.jpg";
@@ -23,8 +24,14 @@ const experiences = [
 ];
 
 const FeaturedResorts = () => {
+  const [isPaused, setIsPaused] = React.useState(false);
+  
   // Duplicate experiences array for seamless infinite loop
   const duplicatedExperiences = [...experiences, ...experiences];
+
+  const handleInteraction = () => {
+    setIsPaused(true);
+  };
 
   return (
     <section id="momentos" className="py-20 sm:py-32 bg-background relative overflow-hidden">
@@ -44,7 +51,12 @@ const FeaturedResorts = () => {
 
         {/* Continuous Infinite Scroll Carousel */}
         <div className="mb-12 sm:mb-16 animate-fade-in">
-          <div className="w-full overflow-hidden">
+          <div 
+            className="w-full overflow-x-auto overflow-y-hidden scrollbar-hide cursor-grab active:cursor-grabbing"
+            onMouseDown={handleInteraction}
+            onTouchStart={handleInteraction}
+            onScroll={handleInteraction}
+          >
             <style>
               {`
                 @keyframes scroll-horizontal {
@@ -57,11 +69,24 @@ const FeaturedResorts = () => {
                 }
                 
                 .scroll-animation {
-                  animation: scroll-horizontal 80s linear infinite;
+                  animation: scroll-horizontal 30s linear infinite;
+                }
+                
+                .scroll-animation.paused {
+                  animation-play-state: paused;
                 }
                 
                 .scroll-animation:hover {
                   animation-play-state: paused;
+                }
+                
+                .scrollbar-hide::-webkit-scrollbar {
+                  display: none;
+                }
+                
+                .scrollbar-hide {
+                  -ms-overflow-style: none;
+                  scrollbar-width: none;
                 }
                 
                 @media (prefers-reduced-motion: reduce) {
@@ -71,7 +96,7 @@ const FeaturedResorts = () => {
                 }
               `}
             </style>
-            <div className="scroll-animation flex gap-4">
+            <div className={`scroll-animation flex gap-4 ${isPaused ? 'paused' : ''}`}>
               {duplicatedExperiences.map((experience, index) => (
                 <div 
                   key={index} 
