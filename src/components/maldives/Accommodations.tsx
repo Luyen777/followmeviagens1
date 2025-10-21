@@ -1,6 +1,6 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Bed, Ruler, Users } from "lucide-react";
-import overwaterVilla from "@/assets/maldives-experiences/overwater-villas.jpg";
+import intercontinentalBathroom from "@/assets/maldives-experiences/intercontinental-bathroom.jpg";
 
 const Accommodations = () => {
   return (
@@ -74,8 +74,8 @@ const Accommodations = () => {
 
           <div className="order-1 md:order-2">
             <img
-              src={overwaterVilla}
-              alt="Overwater Pool Villa - Villa sobre água com piscina privativa e vista para a lagoa cristalina"
+              src={intercontinentalBathroom}
+              alt="Overwater Pool Villa - Banheiro luxuoso em planta aberta com banheira de imersão e vista panorâmica do oceano"
               className="w-full h-[500px] object-cover rounded-2xl shadow-xl"
             />
           </div>
