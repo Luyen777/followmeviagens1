@@ -185,15 +185,8 @@ const Navigation = () => {
             </a>
           </div>
 
-          {/* Mobile Menu Button & WhatsApp - Right */}
-          <div className="flex items-center justify-end gap-2 lg:hidden">
-            <button 
-              onClick={handleWhatsAppClick}
-              className="flex items-center justify-center w-10 h-10 rounded-full bg-foreground/10 hover:bg-foreground/20 transition-colors duration-300"
-              aria-label="Fale conosco no WhatsApp"
-            >
-              <MessageCircle className="w-5 h-5 text-foreground" />
-            </button>
+          {/* Mobile Menu Button - Right */}
+          <div className="flex items-center justify-end lg:hidden">
             <button onClick={() => setIsMenuOpen(!isMenuOpen)} className="p-2 rounded-lg hover:bg-foreground/10 transition-colors duration-300" aria-label="Toggle menu">
               {isMenuOpen ? <X className="w-6 h-6 text-foreground" /> : <Menu className="w-6 h-6 text-foreground" />}
             </button>
