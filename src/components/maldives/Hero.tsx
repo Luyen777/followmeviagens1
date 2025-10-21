@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { MessageCircle } from "lucide-react";
-import maldivesHero from "@/assets/maldives-hero-water.jpg";
+import maldivesHero from "@/assets/maldives-hero.jpg";
 
 const Hero = () => {
   const handleWhatsAppClick = () => {
