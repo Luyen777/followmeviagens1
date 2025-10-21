@@ -53,7 +53,7 @@ const Navigation = () => {
     href: "#sobre"
   }, {
     label: "Contato",
-    href: "#contato"
+    href: "/#contato"
   }];
   return <nav className="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md border-b border-white/20 shadow-sm">
       <div className="container mx-auto px-4 lg:px-6">
