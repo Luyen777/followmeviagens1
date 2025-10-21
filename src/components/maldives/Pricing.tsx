@@ -1,17 +1,16 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Calendar, DollarSign, CreditCard } from "lucide-react";
-
 const scrollToContact = () => {
   const contactSection = document.getElementById('contact');
   if (contactSection) {
-    contactSection.scrollIntoView({ behavior: 'smooth' });
+    contactSection.scrollIntoView({
+      behavior: 'smooth'
+    });
   }
 };
-
 const Pricing = () => {
-  return (
-    <section className="py-20 px-4 sm:px-6 lg:px-8 bg-background">
+  return <section className="py-20 px-4 sm:px-6 lg:px-8 bg-background">
       <div className="max-w-4xl mx-auto">
         <header className="text-center mb-12">
           <h2 className="text-3xl sm:text-4xl font-display font-light text-foreground mb-4">
@@ -40,11 +39,7 @@ const Pricing = () => {
                 <p><strong className="text-foreground">Noite extra:</strong> Consulte disponibilidade</p>
                 <p><strong className="text-foreground">Período:</strong> Consulte datas disponíveis</p>
               </div>
-              <Button 
-                onClick={scrollToContact}
-                className="w-full mt-6"
-                size="lg"
-              >
+              <Button onClick={scrollToContact} className="w-full mt-6" size="lg">
                 Solicitar Orçamento
               </Button>
             </CardContent>
@@ -56,7 +51,7 @@ const Pricing = () => {
                 <Calendar className="w-6 h-6 text-primary" />
                 <CardTitle className="text-2xl">Alta Temporada</CardTitle>
               </div>
-              <CardDescription>Feriados e férias escolares</CardDescription>
+              <CardDescription>Dezembro até Abril</CardDescription>
             </CardHeader>
             <CardContent>
               <div className="mb-6">
@@ -67,11 +62,7 @@ const Pricing = () => {
                 <p><strong className="text-foreground">Noite extra:</strong> Consulte disponibilidade</p>
                 <p><strong className="text-foreground">Período:</strong> Consulte datas disponíveis</p>
               </div>
-              <Button 
-                onClick={scrollToContact}
-                className="w-full mt-6"
-                size="lg"
-              >
+              <Button onClick={scrollToContact} className="w-full mt-6" size="lg">
                 Solicitar Orçamento
               </Button>
             </CardContent>
@@ -144,8 +135,6 @@ const Pricing = () => {
           </Card>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default Pricing;
