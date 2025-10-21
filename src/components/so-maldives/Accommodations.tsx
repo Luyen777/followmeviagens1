@@ -1,5 +1,6 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Bed, Ruler, Users } from "lucide-react";
+import soMaldivesVilla from "@/assets/so-maldives-villa.jpg";
 
 const Accommodations = () => {
   return (
@@ -77,8 +78,8 @@ const Accommodations = () => {
 
           <div className="order-1 md:order-2">
             <img
-              src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?q=80&w=2670"
-              alt="Overwater Pool Villa - Villa luxuosa sobre as águas com piscina infinita privativa e design contemporâneo"
+              src={soMaldivesVilla}
+              alt="SO/ Maldives Overwater Pool Villa - Villa luxuosa com piscina infinita privativa listrada e design contemporâneo sobre águas cristalinas"
               className="w-full h-[300px] sm:h-[400px] md:h-[500px] object-cover rounded-2xl shadow-xl"
             />
           </div>
