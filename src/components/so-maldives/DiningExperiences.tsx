@@ -64,17 +64,17 @@ const DiningExperiences = () => {
           })}
         </div>
 
-        <Card className="bg-gradient-primary text-white">
+        <Card className="bg-primary/5 border-primary/20">
           <CardHeader>
-            <CardTitle className="text-center text-white">
+            <CardTitle className="text-center text-foreground">
               Experiências Gastronômicas Especiais
             </CardTitle>
           </CardHeader>
           <CardContent>
-            <ul className="space-y-3 text-white">
+            <ul className="space-y-3">
               {specialExperiences.map((experience, index) => (
-                <li key={index} className="flex items-start gap-3">
-                  <span className="mt-1">✦</span>
+                <li key={index} className="flex items-start gap-3 text-foreground">
+                  <span className="text-primary mt-1">✦</span>
                   <span>{experience}</span>
                 </li>
               ))}
