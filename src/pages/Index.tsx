@@ -3,6 +3,7 @@ import Hero from "@/components/Hero";
 import FeaturedResorts from "@/components/FeaturedResorts";
 import Testimonials from "@/components/Testimonials";
 import TrustSignals from "@/components/TrustSignals";
+import ContactFormSection from "@/components/ContactFormSection";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import Footer from "@/components/Footer";
 
@@ -14,6 +15,7 @@ const Index = () => {
       <FeaturedResorts />
       <TrustSignals />
       <Testimonials />
+      <ContactFormSection />
       <WhatsAppButton />
       <Footer />
     </div>
