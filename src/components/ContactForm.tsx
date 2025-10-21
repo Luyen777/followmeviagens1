@@ -57,27 +57,42 @@ const ContactForm = ({ resortName }: ContactFormProps) => {
   });
 
   const submitToGoogleSheets = async (data: ContactFormData) => {
-    const response = await fetch(FORM_WEBHOOK_URL, {
-      redirect: "follow",
-      method: 'POST',
-      headers: {
-        'Content-Type': 'text/plain;charset=utf-8',
-      },
-      body: JSON.stringify({
+    try {
+      console.log('Submitting to Google Sheets...', FORM_WEBHOOK_URL);
+      
+      const payload = {
         name: data.name,
         email: data.email,
         phone: data.phone,
         message: data.message,
         resortName,
         sourcePage: window.location.href,
-      }),
-    });
+      };
+      
+      console.log('Payload:', payload);
+      
+      const response = await fetch(FORM_WEBHOOK_URL, {
+        redirect: "follow",
+        method: 'POST',
+        headers: {
+          'Content-Type': 'text/plain;charset=utf-8',
+        },
+        body: JSON.stringify(payload),
+      });
 
-    if (!response.ok) {
-      throw new Error('Failed to submit to Google Sheets');
+      console.log('Response status:', response.status);
+      const result = await response.text();
+      console.log('Response body:', result);
+
+      if (!response.ok) {
+        throw new Error(`Failed to submit: ${response.status} ${result}`);
+      }
+
+      return JSON.parse(result);
+    } catch (error) {
+      console.error('Submission error:', error);
+      throw error;
     }
-
-    return response.json();
   };
 
   const onSubmit = async (data: ContactFormData) => {
