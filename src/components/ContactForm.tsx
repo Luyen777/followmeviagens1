@@ -121,7 +121,7 @@ const ContactForm = ({ resortName }: ContactFormProps) => {
             name="name"
             render={({ field }) => (
               <FormItem>
-                <FormLabel>Nome Completo</FormLabel>
+                <FormLabel>Nome</FormLabel>
                 <FormControl>
                   <Input 
                     placeholder="Seu nome" 
