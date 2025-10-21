@@ -52,7 +52,7 @@ const ContactForm = ({ resortName }: ContactFormProps) => {
       name: "",
       email: "",
       phone: "",
-      message: `Olá! Gostaria de mais informações sobre ${resortName}.`,
+      message: "",
     },
   });
 
