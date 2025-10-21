@@ -77,7 +77,7 @@ const PackageListItem = ({
       </div>
 
       {/* Info Section - Third on Mobile, First on Desktop */}
-      <div className="flex-1 order-3 lg:order-1 p-6 sm:p-8">
+      <div className="flex-1 order-3 lg:order-1 p-6 sm:p-8 lg:flex lg:flex-col lg:justify-center">
         {/* Title for Desktop only */}
         <div className="hidden lg:block mb-4">
           <div className="flex flex-wrap gap-2 mb-3">
