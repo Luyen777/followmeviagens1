@@ -35,13 +35,13 @@ const PackageListItem = ({
 }: PackageListItemProps) => {
   return <div className="bg-card border border-border rounded-2xl overflow-hidden hover:shadow-luxury transition-all duration-500 flex flex-col lg:flex-row">
       {/* Title Section - First on Mobile */}
-      <div className="order-1 lg:hidden p-6 sm:p-8 pb-0">
+      <div className="order-1 lg:hidden p-6 sm:p-8 pb-4">
         <div className="flex flex-wrap gap-2 mb-3">
           {focusTags.map((tag, index) => <Badge key={index} variant="secondary" className="text-xs font-medium px-3 py-1 bg-zinc-100">
               {tag}
             </Badge>)}
         </div>
-        <h3 className="text-2xl sm:text-3xl font-display font-medium text-foreground mb-2 tracking-tight">
+        <h3 className="text-3xl sm:text-4xl font-display font-medium text-foreground mb-3 tracking-tight leading-tight">
           {title}
         </h3>
         {description && <p className="text-muted-foreground text-sm leading-relaxed">
@@ -51,7 +51,7 @@ const PackageListItem = ({
 
       {/* Image Section - Second on Mobile */}
       <div className="order-2 lg:order-2 lg:w-[320px] flex-shrink-0 lg:border-l border-border">
-        <div className="h-[13.6rem] lg:h-[240px]">
+        <div className="h-[200px] lg:h-[240px]">
           <img src={image} alt={title} className="w-full h-full object-cover" />
         </div>
       </div>
