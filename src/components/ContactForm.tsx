@@ -15,6 +15,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
 import { Send, Loader2 } from "lucide-react";
+import { FORM_WEBHOOK_URL } from "@/config/googleSheets";
 
 const contactSchema = z.object({
   name: z.string()
@@ -55,6 +56,29 @@ const ContactForm = ({ resortName }: ContactFormProps) => {
     },
   });
 
+  const submitToGoogleSheets = async (data: ContactFormData) => {
+    const response = await fetch(FORM_WEBHOOK_URL, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        name: data.name,
+        email: data.email,
+        phone: data.phone,
+        message: data.message,
+        resortName,
+        sourcePage: window.location.href,
+      }),
+    });
+
+    if (!response.ok) {
+      throw new Error('Failed to submit to Google Sheets');
+    }
+
+    return response.json();
+  };
+
   const onSubmit = async (data: ContactFormData) => {
     try {
       setIsSubmitting(true);
@@ -62,28 +86,18 @@ const ContactForm = ({ resortName }: ContactFormProps) => {
       // Validate data one more time before sending
       const validatedData = contactSchema.parse(data);
       
-      // Encode message for WhatsApp
-      const whatsappMessage = encodeURIComponent(
-        `*Nova solicitação de contato*\n\n` +
-        `*Resort:* ${resortName}\n` +
-        `*Nome:* ${validatedData.name}\n` +
-        `*Email:* ${validatedData.email}\n` +
-        `*Telefone:* ${validatedData.phone}\n` +
-        `*Mensagem:* ${validatedData.message}`
-      );
-      
-      // Open WhatsApp
-      window.open(`https://wa.me/5511999999999?text=${whatsappMessage}`, "_blank");
+      // Submit to Google Sheets
+      await submitToGoogleSheets(validatedData);
       
       toast({
-        title: "Mensagem enviada!",
+        title: "Solicitação enviada com sucesso!",
         description: "Em breve entraremos em contato com você.",
       });
       
       form.reset();
     } catch (error) {
       toast({
-        title: "Erro ao enviar mensagem",
+        title: "Erro ao enviar solicitação",
         description: "Por favor, tente novamente.",
         variant: "destructive",
       });
