@@ -32,6 +32,16 @@ const Navigation = () => {
     window.open("https://wa.link/followmeviagens", "_blank");
   };
   
+  const handleContactClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault();
+    if (window.location.pathname !== '/') {
+      window.location.href = '/#contato';
+    } else {
+      document.getElementById('contato')?.scrollIntoView({ behavior: 'smooth' });
+    }
+    setIsMenuOpen(false);
+  };
+  
   const menuItems = [{
     label: "Buscar",
     href: "#buscar",
@@ -121,6 +131,10 @@ const Navigation = () => {
                   <Link key={item.label} to={item.href} className="px-4 xl:px-5 py-2 text-xs xl:text-sm font-bold text-foreground/80 hover:text-foreground uppercase tracking-wider transition-all duration-300 whitespace-nowrap">
                     {item.label}
                   </Link>
+                ) : item.label === "Contato" ? (
+                  <a key={item.label} href={item.href} onClick={handleContactClick} className="px-4 xl:px-5 py-2 text-xs xl:text-sm font-bold text-foreground/80 hover:text-foreground uppercase tracking-wider transition-all duration-300 whitespace-nowrap">
+                    {item.label}
+                  </a>
                 ) : (
                   <a key={item.label} href={item.href} className="px-4 xl:px-5 py-2 text-xs xl:text-sm font-bold text-foreground/80 hover:text-foreground uppercase tracking-wider transition-all duration-300 whitespace-nowrap">
                     {item.label}
@@ -202,6 +216,10 @@ const Navigation = () => {
                   <Link key={item.label} to={item.href} onClick={() => setIsMenuOpen(false)} className="px-4 py-3 text-foreground/70 hover:text-foreground hover:bg-foreground/10 rounded-lg transition-all duration-300 uppercase text-sm font-bold tracking-wider">
                     {item.label}
                   </Link>
+                ) : item.label === "Contato" ? (
+                  <a key={item.label} href={item.href} onClick={handleContactClick} className="px-4 py-3 text-foreground/70 hover:text-foreground hover:bg-foreground/10 rounded-lg transition-all duration-300 uppercase text-sm font-bold tracking-wider">
+                    {item.label}
+                  </a>
                 ) : (
                   <a key={item.label} href={item.href} onClick={() => setIsMenuOpen(false)} className="px-4 py-3 text-foreground/70 hover:text-foreground hover:bg-foreground/10 rounded-lg transition-all duration-300 uppercase text-sm font-bold tracking-wider">
                     {item.label}
