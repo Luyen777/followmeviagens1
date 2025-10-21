@@ -173,7 +173,7 @@ const Navigation = () => {
           <div className="hidden lg:flex items-center justify-end gap-4 xl:gap-6 flex-shrink-0">
             <button 
               onClick={handleWhatsAppClick}
-              className="flex items-center justify-center w-10 h-10 rounded-full bg-foreground/10 hover:bg-foreground/20 transition-colors duration-300"
+              className="hidden lg:flex items-center justify-center w-10 h-10 rounded-full bg-foreground/10 hover:bg-foreground/20 transition-colors duration-300"
               aria-label="Fale conosco no WhatsApp"
             >
               <MessageCircle className="w-5 h-5 text-foreground" />
