@@ -58,9 +58,10 @@ const ContactForm = ({ resortName }: ContactFormProps) => {
 
   const submitToGoogleSheets = async (data: ContactFormData) => {
     const response = await fetch(FORM_WEBHOOK_URL, {
+      redirect: "follow",
       method: 'POST',
       headers: {
-        'Content-Type': 'application/json',
+        'Content-Type': 'text/plain;charset=utf-8',
       },
       body: JSON.stringify({
         name: data.name,
