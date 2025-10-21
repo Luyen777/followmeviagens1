@@ -8,8 +8,7 @@ import southAfricaHero from "@/assets/south-africa-hero.jpg";
 
 const AfricaDoSulGardenRoute = () => {
   const handleWhatsAppClick = () => {
-    const message = encodeURIComponent("Olá! Gostaria de saber mais sobre o pacote Garden Route Explorer para África do Sul.");
-    window.open(`https://wa.me/5511999999999?text=${message}`, '_blank');
+    window.open("https://wa.link/followmeviagens", '_blank');
   };
 
   return (

@@ -18,8 +18,7 @@ const WhatsAppButton = () => {
   }, []);
 
   const handleWhatsAppClick = () => {
-    const message = encodeURIComponent("Olá! Gostaria de saber mais sobre pacotes para as Maldivas.");
-    window.open(`https://wa.me/5511999999999?text=${message}`, "_blank");
+    window.open("https://wa.link/followmeviagens", "_blank");
   };
 
   return (

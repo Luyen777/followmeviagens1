@@ -3,8 +3,7 @@ import { Check, MessageCircle } from "lucide-react";
 import indiaHero from "@/assets/india-hero.jpg";
 const IndiaHero = () => {
   const handleWhatsAppClick = () => {
-    const message = encodeURIComponent("Olá! Gostaria de saber mais sobre os pacotes para a Índia.");
-    window.open(`https://wa.me/5511999999999?text=${message}`, '_blank');
+    window.open("https://wa.link/followmeviagens", '_blank');
   };
   const scrollToContact = () => {
     const contactSection = document.getElementById('contact');

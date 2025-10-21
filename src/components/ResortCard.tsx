@@ -21,6 +21,10 @@ const ResortCard = ({
   description,
   inclusions
 }: ResortCardProps) => {
+  const handleWhatsAppClick = () => {
+    window.open("https://wa.link/followmeviagens", "_blank");
+  };
+  
   return <Card className="overflow-hidden group border-border hover:shadow-luxury transition-all duration-500 rounded-3xl bg-card backdrop-blur-sm">
       {/* Image */}
       <div className="relative h-64 sm:h-80 overflow-hidden">
@@ -80,7 +84,7 @@ const ResortCard = ({
         <Button variant="outline" className="flex-1 text-xs sm:text-sm">
           Ver Detalhes
         </Button>
-        <Button variant="primary" className="flex-1 text-xs sm:text-sm bg-foreground hover:bg-foreground/90">
+        <Button onClick={handleWhatsAppClick} variant="primary" className="flex-1 text-xs sm:text-sm bg-foreground hover:bg-foreground/90">
           WhatsApp
         </Button>
       </CardFooter>
