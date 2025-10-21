@@ -49,10 +49,30 @@ const PackageListItem = ({
           </p>}
       </div>
 
-      {/* Image Section - Second on Mobile */}
-      <div className="order-2 lg:order-2 lg:w-[320px] flex-shrink-0 lg:border-l border-border">
-        <div className="h-[200px] lg:h-[240px]">
+      {/* Image Section - Second on Mobile, moves to right on Desktop */}
+      <div className="order-2 lg:order-2 lg:w-[360px] flex-shrink-0 lg:border-l border-border">
+        <div className="h-[200px] lg:h-[280px]">
           <img src={image} alt={title} className="w-full h-full object-cover" />
+        </div>
+        
+        {/* Price and CTA Section - Desktop only (directly under image) */}
+        <div className="hidden lg:block p-6 border-t border-border">
+          <div className="space-y-4">
+            <div className="text-foreground">
+              <div className="text-xs text-muted-foreground mb-2 uppercase tracking-luxury">
+                PREÇO A PARTIR
+              </div>
+              <div className="flex flex-col gap-1">
+                <span className="text-3xl font-display font-medium">
+                  USD {priceFrom.toLocaleString()}*
+                </span>
+                <span className="text-xs text-muted-foreground">POR PESSOA, EM APTO DUPLO</span>
+              </div>
+            </div>
+            <Link to={`/ilhas-maldivas/${slug}`} className="w-full h-12 bg-foreground text-background hover:bg-foreground/90 rounded-2xl font-medium tracking-luxury transition-all duration-500 shadow-md hover:shadow-lg flex items-center justify-center">
+              VEJA O ROTEIRO
+            </Link>
+          </div>
         </div>
       </div>
 
@@ -135,15 +155,15 @@ const PackageListItem = ({
         </div>
       </div>
 
-      {/* Price and CTA Section - Last on Mobile */}
-      <div className="order-4 lg:order-2 lg:w-[320px] flex-shrink-0 p-6 sm:p-8 lg:p-6 border-t lg:border-t-0 lg:border-l border-border flex flex-col justify-center">
+      {/* Price and CTA Section - Mobile only */}
+      <div className="order-4 lg:hidden p-6 sm:p-8 border-t border-border">
         <div className="space-y-4">
           <div className="text-foreground">
             <div className="text-xs sm:text-sm text-muted-foreground mb-2 uppercase tracking-luxury">
               PREÇO A PARTIR
             </div>
             <div className="flex flex-col gap-1">
-              <span className="text-3xl sm:text-4xl lg:text-3xl font-display font-medium">
+              <span className="text-3xl sm:text-4xl font-display font-medium">
                 USD {priceFrom.toLocaleString()}*
               </span>
               <span className="text-xs text-muted-foreground">POR PESSOA, EM APTO DUPLO</span>
