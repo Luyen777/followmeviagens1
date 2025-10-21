@@ -4,13 +4,33 @@ import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import Hero from "@/components/maldives/Hero";
 import ValueProposition from "@/components/maldives/ValueProposition";
-import Accommodations from "@/components/maldives/Accommodations";
-import DiningExperiences from "@/components/maldives/DiningExperiences";
+import ImageCarousel from "@/components/maldives/ImageCarousel";
 import Activities from "@/components/maldives/Activities";
-import Pricing from "@/components/maldives/Pricing";
+import DiningExperiences from "@/components/maldives/DiningExperiences";
+import Accommodations from "@/components/maldives/Accommodations";
 import Inclusions from "@/components/maldives/Inclusions";
+import Pricing from "@/components/maldives/Pricing";
 import ContactFormSection from "@/components/maldives/ContactFormSection";
 import FAQ from "@/components/maldives/FAQ";
+
+// Import resort images
+import overwaterVillas from "@/assets/maldives-experiences/overwater-villas.jpg";
+import luxuryBathroom from "@/assets/maldives-experiences/luxury-bathroom.jpg";
+import spaTreatment from "@/assets/maldives-experiences/spa-treatment.jpg";
+import diningExperience from "@/assets/maldives-experiences/dining-experience.jpg";
+import snorkeling from "@/assets/maldives-experiences/snorkeling.jpg";
+import beachWedding from "@/assets/maldives-experiences/beach-wedding.jpg";
+import romanticDinner from "@/assets/maldives-experiences/romantic-dinner.jpg";
+
+const resortImages = [
+  { src: overwaterVillas, alt: "Villas sobre água com design luxuoso e piscina privativa" },
+  { src: luxuryBathroom, alt: "Banheiro em planta aberta com banheira de imersão e vista para o oceano" },
+  { src: spaTreatment, alt: "Tratamentos de spa relaxantes no AVI Spa overwater" },
+  { src: diningExperience, alt: "Experiências gastronômicas exclusivas em ambientes únicos" },
+  { src: snorkeling, alt: "Snorkeling em recifes de coral vibrantes com vida marinha abundante" },
+  { src: beachWedding, alt: "Cerimônias românticas na praia com pôr do sol tropical" },
+  { src: romanticDinner, alt: "Jantares românticos à beira-mar sob as estrelas" },
+];
 
 const InterContinentalMaldives = () => {
   return (
@@ -57,11 +77,12 @@ const InterContinentalMaldives = () => {
         
         <Hero />
         <ValueProposition />
-        <Accommodations />
-        <DiningExperiences />
+        <ImageCarousel images={resortImages} />
         <Activities />
-        <Pricing />
+        <DiningExperiences />
+        <Accommodations />
         <Inclusions />
+        <Pricing />
         <ContactFormSection />
         <FAQ />
 
