@@ -22,6 +22,7 @@ const Hero = () => {
           alt="SO/ Maldives"
           className="w-full h-full object-cover"
         />
+        <div className="absolute inset-0 bg-black/40" />
       </div>
       
       <div className="relative z-10 max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
