@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Menu, X, Phone, ChevronDown } from "lucide-react";
+import { Menu, X, MessageCircle, ChevronDown } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import logo from "@/assets/logo.png";
@@ -27,6 +27,11 @@ const Navigation = () => {
   const [isDestinationsOpen, setIsDestinationsOpen] = useState(false);
   const [isMobileDestinationsOpen, setIsMobileDestinationsOpen] = useState(false);
   const [closeTimeout, setCloseTimeout] = useState<NodeJS.Timeout | null>(null);
+  
+  const handleWhatsAppClick = () => {
+    window.open("https://wa.link/followmeviagens", "_blank");
+  };
+  
   const menuItems = [{
     label: "Buscar",
     href: "#buscar",
@@ -127,13 +132,18 @@ const Navigation = () => {
 
           {/* Contact Info & CTA - Right */}
           <div className="hidden lg:flex items-center justify-end gap-4 xl:gap-6 flex-shrink-0">
-            <a href="tel:+5511999999999" className="flex items-center text-xs xl:text-sm font-semibold text-foreground/70 hover:text-foreground transition-colors duration-300">
-              <Phone className="w-4 h-4 mr-1.5" />
-              <span className="whitespace-nowrap">(11) 99999-9999</span>
+            <button 
+              onClick={handleWhatsAppClick}
+              className="flex items-center justify-center w-10 h-10 rounded-full bg-foreground/10 hover:bg-foreground/20 transition-colors duration-300"
+              aria-label="Fale conosco no WhatsApp"
+            >
+              <MessageCircle className="w-5 h-5 text-foreground" />
+            </button>
+            <a href="#contato">
+              <Button variant="primary" size="default" className="shadow-luxury whitespace-nowrap text-xs xl:text-sm px-4 xl:px-6 bg-slate-950 hover:bg-slate-800">
+                Solicitar Orçamento
+              </Button>
             </a>
-            <Button variant="primary" size="default" className="shadow-luxury whitespace-nowrap text-xs xl:text-sm px-4 xl:px-6 bg-slate-950 hover:bg-slate-800">
-              Solicitar Orçamento
-            </Button>
           </div>
 
           {/* Mobile Menu Button - Right */}
@@ -192,13 +202,18 @@ const Navigation = () => {
                 );
               })}
               <div className="flex flex-col space-y-3 px-4 pt-6 border-t border-foreground/10 mt-4">
-                <a href="tel:+5511999999999" className="flex items-center text-foreground/70 hover:text-foreground transition-colors duration-300 font-semibold">
-                  <Phone className="w-4 h-4 mr-2" />
-                  <span>(11) 99999-9999</span>
+                <button 
+                  onClick={handleWhatsAppClick}
+                  className="flex items-center justify-center gap-2 py-3 px-4 rounded-lg bg-foreground/10 hover:bg-foreground/20 transition-colors duration-300 font-semibold text-foreground"
+                >
+                  <MessageCircle className="w-5 h-5" />
+                  <span>Falar no WhatsApp</span>
+                </button>
+                <a href="#contato" onClick={() => setIsMenuOpen(false)}>
+                  <Button variant="primary" className="w-full">
+                    Solicitar Orçamento
+                  </Button>
                 </a>
-                <Button variant="primary" className="w-full">
-                  Solicitar Orçamento
-                </Button>
               </div>
             </div>
           </div>}
