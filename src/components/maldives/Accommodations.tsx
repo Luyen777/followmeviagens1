@@ -76,7 +76,7 @@ const Accommodations = () => {
             <img
               src={intercontinentalBathroom}
               alt="Overwater Pool Villa - Banheiro luxuoso em planta aberta com banheira de imersão e vista panorâmica do oceano"
-              className="w-full h-[500px] object-cover rounded-2xl shadow-xl"
+              className="w-full h-[300px] sm:h-[400px] md:h-[500px] object-cover rounded-2xl shadow-xl"
             />
           </div>
         </div>
