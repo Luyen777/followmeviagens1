@@ -41,7 +41,7 @@ const Hero = () => {
           <Button 
             onClick={scrollToContact} 
             size="lg" 
-            className="h-[60px] px-8 text-lg bg-transparent hover:bg-white/10 text-white shadow-lg border-2 border-yellow-500 hover:border-yellow-400"
+            className="h-[60px] px-8 text-lg bg-black/30 hover:bg-black/40 text-white shadow-lg border-2 border-yellow-500 hover:border-yellow-400"
           >
             Solicitar Orçamento Personalizado
           </Button>
