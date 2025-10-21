@@ -1,92 +1,141 @@
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { CreditCard, Calendar, Users } from "lucide-react";
+import { Calendar, DollarSign, CreditCard } from "lucide-react";
+
+const scrollToContact = () => {
+  const contactSection = document.getElementById('contact-form');
+  if (contactSection) {
+    contactSection.scrollIntoView({
+      behavior: 'smooth'
+    });
+  }
+};
 
 const Pricing = () => {
-  const scrollToContact = () => {
-    const contactSection = document.getElementById('contact-form');
-    if (contactSection) {
-      contactSection.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
-
   return (
-    <section className="py-20 px-4 sm:px-6 lg:px-8">
+    <section className="py-20 px-4 sm:px-6 lg:px-8 bg-background">
       <div className="max-w-4xl mx-auto">
         <header className="text-center mb-12">
           <h2 className="text-3xl sm:text-4xl font-display font-light text-foreground mb-4">
-            Valores e Formas de Pagamento
+            Valores & Formas de Pagamento
           </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Condições especiais e flexibilidade para seu pacote dos sonhos
+          <p className="text-lg text-muted-foreground">
+            Pacote 5 dias (4 noites) por pessoa em Overwater Pool Villa
           </p>
         </header>
 
-        <Card className="border-primary/20 mb-8">
-          <CardHeader className="text-center">
-            <CardTitle className="text-2xl">Consulte Valores Personalizados</CardTitle>
-          </CardHeader>
-          <CardContent className="space-y-6">
-            <p className="text-center text-muted-foreground">
-              Os valores variam de acordo com a temporada, número de noites e configuração da viagem. 
-              Entre em contato para um orçamento personalizado.
-            </p>
-            
-            <div className="grid sm:grid-cols-3 gap-4">
-              <div className="flex flex-col items-center gap-2 p-4 bg-muted/30 rounded-lg">
+        <div className="grid md:grid-cols-2 gap-6 mb-12">
+          <Card className="hover:shadow-lg transition-shadow duration-300">
+            <CardHeader>
+              <div className="flex items-center gap-3 mb-2">
                 <Calendar className="w-6 h-6 text-primary" />
-                <span className="text-sm font-medium text-foreground">Datas Flexíveis</span>
-                <span className="text-xs text-muted-foreground text-center">Melhores tarifas para temporada baixa</span>
+                <CardTitle className="text-2xl">Baixa Temporada</CardTitle>
               </div>
-              
-              <div className="flex flex-col items-center gap-2 p-4 bg-muted/30 rounded-lg">
-                <Users className="w-6 h-6 text-primary" />
-                <span className="text-sm font-medium text-foreground">Pacotes Personalizados</span>
-                <span className="text-xs text-muted-foreground text-center">Adaptamos ao seu perfil</span>
+              <CardDescription>Maio até Novembro</CardDescription>
+            </CardHeader>
+            <CardContent>
+              <div className="mb-6">
+                <p className="text-3xl font-bold text-foreground mb-2">Consulte valores</p>
+                <p className="text-sm text-muted-foreground">Preço por pessoa</p>
               </div>
-              
-              <div className="flex flex-col items-center gap-2 p-4 bg-muted/30 rounded-lg">
-                <CreditCard className="w-6 h-6 text-primary" />
-                <span className="text-sm font-medium text-foreground">Parcelamento</span>
-                <span className="text-xs text-muted-foreground text-center">Condições facilitadas</span>
+              <div className="space-y-2 text-sm text-muted-foreground">
+                <p><strong className="text-foreground">Noite extra:</strong> Consulte disponibilidade</p>
+                <p><strong className="text-foreground">Período:</strong> Consulte datas disponíveis</p>
               </div>
-            </div>
-
-            <div className="text-center pt-4">
-              <Button 
-                size="lg" 
-                onClick={scrollToContact}
-                className="bg-gradient-primary hover:opacity-90"
-              >
-                Solicitar Orçamento Personalizado
+              <Button onClick={scrollToContact} className="w-full mt-6" size="lg">
+                Solicitar Orçamento
               </Button>
-            </div>
-          </CardContent>
-        </Card>
+            </CardContent>
+          </Card>
 
-        <div className="bg-muted/30 rounded-xl p-6">
-          <h3 className="font-medium text-foreground mb-4 flex items-center gap-2">
-            <CreditCard className="w-5 h-5 text-primary" />
-            Formas de Pagamento
-          </h3>
-          <ul className="space-y-2 text-muted-foreground">
-            <li className="flex items-start gap-2">
-              <span className="text-primary mt-1">•</span>
-              <span>Parcelamento em até 12x no cartão de crédito</span>
-            </li>
-            <li className="flex items-start gap-2">
-              <span className="text-primary mt-1">•</span>
-              <span>Transferência bancária com desconto especial</span>
-            </li>
-            <li className="flex items-start gap-2">
-              <span className="text-primary mt-1">•</span>
-              <span>Condições especiais para pagamento antecipado</span>
-            </li>
-            <li className="flex items-start gap-2">
-              <span className="text-primary mt-1">•</span>
-              <span>Reserva garantida com sinal de 30%</span>
-            </li>
-          </ul>
+          <Card className="hover:shadow-lg transition-shadow duration-300 border-primary/50">
+            <CardHeader>
+              <div className="flex items-center gap-3 mb-2">
+                <Calendar className="w-6 h-6 text-primary" />
+                <CardTitle className="text-2xl">Alta Temporada</CardTitle>
+              </div>
+              <CardDescription>Dezembro até Abril</CardDescription>
+            </CardHeader>
+            <CardContent>
+              <div className="mb-6">
+                <p className="text-3xl font-bold text-foreground mb-2">Consulte valores</p>
+                <p className="text-sm text-muted-foreground">Preço por pessoa</p>
+              </div>
+              <div className="space-y-2 text-sm text-muted-foreground">
+                <p><strong className="text-foreground">Noite extra:</strong> Consulte disponibilidade</p>
+                <p><strong className="text-foreground">Período:</strong> Consulte datas disponíveis</p>
+              </div>
+              <Button onClick={scrollToContact} className="w-full mt-6" size="lg">
+                Solicitar Orçamento
+              </Button>
+            </CardContent>
+          </Card>
+        </div>
+
+        <div className="space-y-6">
+          <Card>
+            <CardHeader>
+              <div className="flex items-center gap-3">
+                <DollarSign className="w-6 h-6 text-primary" />
+                <CardTitle className="text-xl">Condições de Pagamento</CardTitle>
+              </div>
+            </CardHeader>
+            <CardContent className="space-y-4">
+              <div className="flex items-start gap-3">
+                <span className="text-primary font-bold mt-1">1.</span>
+                <div>
+                  <p className="font-medium text-foreground">Entrada de 20%</p>
+                  <p className="text-sm text-muted-foreground">
+                    Transferência bancária ao confirmar a reserva
+                  </p>
+                </div>
+              </div>
+              <div className="flex items-start gap-3">
+                <span className="text-primary font-bold mt-1">2.</span>
+                <div>
+                  <p className="font-medium text-foreground">80% restante até 30 dias antes da viagem</p>
+                  <p className="text-sm text-muted-foreground">
+                    Quitação antecipada para garantir sua reserva
+                  </p>
+                </div>
+              </div>
+              <div className="flex items-start gap-3">
+                <span className="text-primary font-bold mt-1">3.</span>
+                <div>
+                  <p className="font-medium text-foreground">Parcelamento em até 10x</p>
+                  <p className="text-sm text-muted-foreground">
+                    Opções flexíveis de pagamento disponíveis
+                  </p>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+
+          <Card>
+            <CardHeader>
+              <div className="flex items-center gap-3">
+                <CreditCard className="w-6 h-6 text-primary" />
+                <CardTitle className="text-xl">Política de Cancelamento</CardTitle>
+              </div>
+            </CardHeader>
+            <CardContent>
+              <div className="flex items-start gap-3">
+                <span className="text-primary font-bold mt-1">•</span>
+                <div>
+                  <p className="font-medium text-foreground">
+                    Cancelamento até 30 dias antes da viagem
+                  </p>
+                  <p className="text-sm text-muted-foreground">
+                    Reembolso de 80% do valor pago
+                  </p>
+                </div>
+              </div>
+              <p className="text-sm text-muted-foreground mt-4 pt-4 border-t border-border">
+                <strong className="text-foreground">Importante:</strong> Valores sujeitos a alteração 
+                conforme disponibilidade e temporada. Entre em contato para cotação atualizada.
+              </p>
+            </CardContent>
+          </Card>
         </div>
       </div>
     </section>
