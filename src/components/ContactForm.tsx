@@ -14,7 +14,7 @@ import {
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
-import { Send, Loader2 } from "lucide-react";
+import { Send, Loader2, MessageCircle } from "lucide-react";
 import { FORM_WEBHOOK_URL } from "@/config/googleSheets";
 
 const contactSchema = z.object({
@@ -45,6 +45,10 @@ interface ContactFormProps {
 const ContactForm = ({ resortName }: ContactFormProps) => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const { toast } = useToast();
+
+  const handleWhatsAppClick = () => {
+    window.open("https://wa.link/followmeviagens", "_blank");
+  };
 
   const form = useForm<ContactFormData>({
     resolver: zodResolver(contactSchema),
@@ -211,6 +215,16 @@ const ContactForm = ({ resortName }: ContactFormProps) => {
                 Enviar Solicitação
               </>
             )}
+          </Button>
+          
+          <Button 
+            type="button"
+            variant="outline"
+            onClick={handleWhatsAppClick}
+            className="w-full h-12 rounded-2xl font-medium tracking-luxury transition-all duration-500"
+          >
+            <MessageCircle className="w-4 h-4 mr-2" />
+            Contato direto por WhatsApp
           </Button>
         </form>
       </Form>
