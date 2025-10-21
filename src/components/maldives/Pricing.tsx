@@ -28,7 +28,7 @@ const Pricing = () => {
                 <Calendar className="w-6 h-6 text-primary" />
                 <CardTitle className="text-2xl">Baixa Temporada</CardTitle>
               </div>
-              <CardDescription>Melhor custo-benefício</CardDescription>
+              <CardDescription>Maio até Novembro</CardDescription>
             </CardHeader>
             <CardContent>
               <div className="mb-6">
