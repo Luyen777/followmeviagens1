@@ -1,6 +1,6 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Menu, X, MessageCircle, ChevronDown } from "lucide-react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import logo from "@/assets/logo.png";
 
@@ -27,6 +27,8 @@ const Navigation = () => {
   const [isDestinationsOpen, setIsDestinationsOpen] = useState(false);
   const [isMobileDestinationsOpen, setIsMobileDestinationsOpen] = useState(false);
   const [closeTimeout, setCloseTimeout] = useState<NodeJS.Timeout | null>(null);
+  const navigate = useNavigate();
+  const location = useLocation();
   
   const handleWhatsAppClick = () => {
     window.open("https://wa.link/followmeviagens", "_blank");
@@ -34,13 +36,36 @@ const Navigation = () => {
   
   const handleContactClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
     e.preventDefault();
-    if (window.location.pathname !== '/') {
-      window.location.href = '/#contato';
-    } else {
-      document.getElementById('contato')?.scrollIntoView({ behavior: 'smooth' });
-    }
     setIsMenuOpen(false);
+    
+    if (location.pathname !== '/') {
+      navigate('/#contato');
+      // Small delay to ensure navigation completes before scrolling
+      setTimeout(() => {
+        const element = document.getElementById('contato');
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      }, 100);
+    } else {
+      const element = document.getElementById('contato');
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    }
   };
+  
+  // Handle scroll to hash on navigation
+  useEffect(() => {
+    if (location.hash === '#contato') {
+      setTimeout(() => {
+        const element = document.getElementById('contato');
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      }, 100);
+    }
+  }, [location]);
   
   const menuItems = [{
     label: "Buscar",
