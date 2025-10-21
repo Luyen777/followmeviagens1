@@ -1,6 +1,19 @@
+import { Button } from "@/components/ui/button";
+import { MessageCircle } from "lucide-react";
 import maldivesHero from "@/assets/maldives-hero-latest.avif";
 
 const Hero = () => {
+  const handleWhatsAppClick = () => {
+    window.open("https://wa.link/followmeviagens", '_blank');
+  };
+
+  const scrollToContact = () => {
+    const contactSection = document.getElementById('contact');
+    contactSection?.scrollIntoView({
+      behavior: 'smooth'
+    });
+  };
+
   return (
     <section className="relative h-[90vh] flex items-center justify-center overflow-hidden">
       <div className="absolute inset-0 z-0">
@@ -22,9 +35,28 @@ const Hero = () => {
         <p className="text-xl sm:text-2xl text-white/90 max-w-3xl mx-auto leading-relaxed mb-4">
           Paraíso exclusivo no Atol de Raa
         </p>
-        <p className="text-base sm:text-lg text-white/80 max-w-2xl mx-auto">
+        <p className="text-base sm:text-lg text-white/80 max-w-2xl mx-auto mb-8">
           Pacote 5 dias | Overwater Pool Villa | Café da manhã e aperitivos incluídos
         </p>
+
+        {/* CTAs */}
+        <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in">
+          <Button 
+            onClick={scrollToContact} 
+            size="lg" 
+            className="h-[60px] px-8 text-lg bg-transparent hover:bg-white/10 text-white shadow-lg border-2 border-yellow-500 hover:border-yellow-400"
+          >
+            Solicitar Orçamento Personalizado
+          </Button>
+          <Button 
+            onClick={handleWhatsAppClick} 
+            size="lg" 
+            className="h-[60px] px-8 text-lg bg-green-700 hover:bg-green-800 text-white"
+          >
+            <MessageCircle className="mr-2 h-5 w-5" />
+            Falar no WhatsApp
+          </Button>
+        </div>
       </div>
     </section>
   );
