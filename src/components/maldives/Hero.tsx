@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { MessageCircle } from "lucide-react";
+import heroBackground from "@/assets/maldives-hero-gradient.jpg";
 
 const Hero = () => {
   const handleWhatsAppClick = () => {
@@ -14,9 +15,14 @@ const Hero = () => {
   };
 
   return (
-    <section className="relative h-[90vh] flex items-center justify-center overflow-hidden bg-gradient-to-br from-blue-950 via-blue-900 to-teal-900">
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-blue-800/20 via-transparent to-transparent" />
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_right,_var(--tw-gradient-stops))] from-teal-700/20 via-transparent to-transparent" />
+    <section className="relative h-[90vh] flex items-center justify-center overflow-hidden">
+      <div className="absolute inset-0 z-0">
+        <img
+          src={heroBackground}
+          alt="InterContinental Maldives Maamunagau Resort"
+          className="w-full h-full object-cover"
+        />
+      </div>
       
       <div className="relative z-10 max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
         <h1 className="text-5xl sm:text-6xl lg:text-7xl font-display font-light text-white mb-6 tracking-tight leading-tight">
