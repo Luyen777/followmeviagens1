@@ -59,7 +59,7 @@ const Hero = ({ image, name, subtitle, location, transferTime, rating, highlight
           <Button 
             onClick={scrollToPricing} 
             size="lg" 
-            className="w-full sm:w-auto h-[50px] sm:h-[60px] px-6 sm:px-8 text-base sm:text-lg bg-black/30 hover:bg-black/40 text-white shadow-lg border-2 border-yellow-500 hover:border-yellow-400"
+            className="w-full sm:w-auto h-[50px] sm:h-[60px] px-6 sm:px-8 text-base sm:text-lg bg-black/70 hover:bg-black/80 text-white shadow-lg border-2 border-yellow-500 hover:border-yellow-400"
           >
             Solicitar Orçamento Personalizado
           </Button>
