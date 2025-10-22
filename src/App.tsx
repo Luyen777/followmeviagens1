@@ -8,6 +8,7 @@ import Index from "./pages/Index";
 import IlhasMaldivas from "./pages/IlhasMaldivas";
 import InterContinentalMaldives from "./pages/InterContinentalMaldives";
 import SOMaldives from "./pages/SOMaldives";
+import AdaaranSelect from "./pages/AdaaranSelect";
 import ResortDetail from "./pages/ResortDetail";
 import Blog from "./pages/Blog";
 import BlogPost from "./pages/BlogPost";
@@ -46,6 +47,7 @@ const App = () => (
           <Route path="/ilhas-maldivas" element={<IlhasMaldivas />} />
           <Route path="/ilhas-maldivas/intercontinental" element={<InterContinentalMaldives />} />
           <Route path="/ilhas-maldivas/so-maldives" element={<SOMaldives />} />
+          <Route path="/ilhas-maldivas/adaaran-select" element={<AdaaranSelect />} />
           <Route path="/ilhas-maldivas/:slug" element={<ResortDetail />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/blog/:slug" element={<BlogPost />} />
