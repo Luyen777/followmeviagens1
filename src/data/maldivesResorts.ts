@@ -886,5 +886,252 @@ export const maldivesResorts: Record<string, ResortData> = {
         alt: "Ilha privativa Gulhifushi para piqueniques exclusivos"
       }
     ]
+  },
+  "anantara-kihavah": {
+    slug: "anantara-kihavah",
+    name: "Anantara Kihavah Maldives Villas",
+    rating: 5.5,
+    location: "Kihavah Huravalhi, Atol de Baa, Reserva da Biosfera UNESCO",
+    transferTime: "35 minutos de hidroavião ou 20 minutos de voo doméstico + 30 minutos de lancha",
+    heroImage: "/src/assets/maldives-hero.jpg",
+    heroTitle: "Anantara Kihavah Maldives Villas",
+    heroSubtitle: "Resort 5,5 Estrelas Ultra-Luxuoso no Atol de Baa",
+    heroHighlights: [
+      "80 villas com piscina privativa (a partir de 258m²)",
+      "Restaurante subaquático SEA com adega de 450 rótulos",
+      "Único observatório sobre a água das Maldivas (SKY)",
+      "House reef 'Golden Wall' premiado",
+      "Serviço de mordomo 24h para cada villa"
+    ],
+    seoTitle: "Anantara Kihavah Maldives Villas - Resort 5,5 Estrelas Ultra-Luxuoso | Pacotes 2025",
+    seoDescription: "Anantara Kihavah: resort ultra-luxuoso 5,5 estrelas no Atol de Baa com restaurante subaquático, observatório SKY, house reef premiado e serviço de mordomo 24h.",
+    about: "O Anantara Kihavah Maldives Villas é um resort 5,5 estrelas ultra-luxuoso localizado na ilha privativa de Kihavah Huravalhi, no Atol de Baa, Reserva da Biosfera UNESCO. Situado a 35 minutos de hidroavião ou 20 minutos de voo doméstico + 30 minutos de lancha de Malé, o resort oferece 80 villas e residences com piscina privativa (a partir de 258m²), sendo 42 sobre a água. Destaque mundial pelo restaurante subaquático SEA com adega submersa de 450 rótulos, o único observatório sobre a água das Maldivas (SKY), e o excepcional house reef 'Golden Wall' considerado um dos melhores pontos de mergulho do país. O resort possui uma das piscinas infinitas mais longas das Maldivas (49m), spa overwater premiado, trampoline park, rock climbing wall, e cinema sob as estrelas. Serviço de mordomo 24h (Villa Host) para cada acomodação.",
+    sections: [
+      {
+        id: "inclusions",
+        title: "Inclusões do Pacote",
+        type: "list",
+        items: [
+          { description: "Acesso ao lounge VIP de hidroavião em Malé (com bebidas e Wi-Fi gratuito)" },
+          { description: "Serviço de Villa Host (mordomo) 24 horas" },
+          { description: "Equipamentos de snorkeling gratuitos" },
+          { description: "Bicicletas personalizadas para adultos e crianças" },
+          { description: "Acesso a 3 academias equipadas com Technogym" },
+          { description: "Piscina infinita de 49m (uma das mais longas das Maldivas)" },
+          { description: "Sessões de yoga, meditação, stretch and tone em grupo" },
+          { description: "Wi-Fi gratuito em todas as áreas" },
+          { description: "Cinema sob as estrelas" },
+          { description: "Sunshine Butlers na piscina (suco fresco, toalhas frias, limpeza de óculos de sol, massagem nas costas de 5min)" },
+          { description: "Spice Spoons Cooking Classes (aulas de culinária tailandesa e maldívia gratuitas)" },
+          { description: "Entretenimento ao vivo e performances culturais" }
+        ]
+      },
+      {
+        id: "honeymoon",
+        title: "Benefícios para Lua de Mel",
+        subtitle: "Dentro de 12 meses do casamento, certidão necessária",
+        type: "list",
+        items: [
+          { description: "Welcome amenity especial" },
+          { description: "Garrafa de champagne na chegada" },
+          { description: "Ritual de banho com velas e pétalas de rosas uma noite durante a estadia" },
+          { description: "Decoração de cama com pétalas" },
+          { description: "Pacote Honeymoon & Romance (4+ noites): Inclui café da manhã e jantar diários + Dining by Design privativo na praia + champagne breakfast na villa + sessão de stargazing compartilhada + Slumber Guru Ritual romântico" }
+        ]
+      },
+      {
+        id: "activities-free",
+        title: "Atividades Gratuitas",
+        type: "two-column",
+        items: [
+          {
+            title: "Esportes Aquáticos",
+            description: "Snorkeling no house reef 'Golden Wall' (2km de extensão, tartarugas hawksbill, arraias, tubarões de recife, moreia), caiaques, stand-up paddle, catamarã"
+          },
+          {
+            title: "Thiththi Boli Kids' Club",
+            description: "Para crianças de 4-12 anos (10h-18h): treasure hunts, Marine Biologist Programme, cooking classes, artes maldívias, cinema, pamper experience com spa"
+          },
+          {
+            title: "Entretenimento",
+            description: "Trampoline park, cinema sob as estrelas com filmes clássicos e blockbusters, recreation area (bilhar, tênis de mesa, xadrez gigante, Jenga)"
+          },
+          {
+            title: "Wellness & Fitness",
+            description: "Sessões de yoga, meditação e fitness em grupo, quadras de tênis, badminton, vôlei de praia"
+          },
+          {
+            title: "Experiências Culturais",
+            description: "Spice Spoons Cooking Classes (culinária tailandesa e maldívia), performances culturais"
+          },
+          {
+            title: "SKY Observatory",
+            description: "Stargazing no observatório sobre a água (único nas Maldivas) com telescópio potente"
+          }
+        ]
+      },
+      {
+        id: "activities-paid",
+        title: "Atividades com Custo Extra",
+        type: "two-column",
+        items: [
+          {
+            title: "Mergulho",
+            description: "PADI 5 estrelas certificado, Discover Scuba Diving, cursos completos, safaris de mergulho"
+          },
+          {
+            title: "Esportes Motorizados",
+            description: "Jetpack, Seabob, jet ski, parasailing (Chute Me), wakeboard"
+          },
+          {
+            title: "Pesca",
+            description: "Big game fishing, pesca tradicional dhoni, pesca noturna"
+          },
+          {
+            title: "Excursões",
+            description: "Dolphin Discovery cruise, visita a Hanifaru Bay (maio-novembro, mantas e tubarões-baleia), island hopping, local island tours, Hawksbill Turtle Quest snorkel (2h)"
+          },
+          {
+            title: "Muay Thai Boxing",
+            description: "Primeiro e único resort nas Maldivas a oferecer (com ring profissional e instrutor), sessões familiares disponíveis"
+          },
+          {
+            title: "Anantara Spa",
+            description: "6 suítes overwater sobre o oceano, 2 salas abertas para massagens tailandesas, sauna, sala de vapor, piscinas quentes e frias, Cocoon Medi Spa, salão de beleza e cabeleireiro, deck de relaxamento com cold plunge pool"
+          },
+          {
+            title: "Coral Adoption Programme",
+            description: "Patrocínio USD $185 | Patrocínio + plantio pessoal de coral: preço sob consulta"
+          },
+          {
+            title: "Experiências Especiais",
+            description: "Dining by Design (jantares privativos), private island picnics, cruzeiros de iate de luxo, degustação de vinhos envelhecidos subaquaticamente (USD $2.455++ para 2 pessoas)"
+          }
+        ]
+      },
+      {
+        id: "dining",
+        title: "Experiências Gastronômicas",
+        type: "cards",
+        items: [
+          {
+            title: "SEA - Underwater Restaurant",
+            description: "Restaurante subaquático 6m abaixo da superfície com paredes curvas de vidro com vista 360° para o recife (tartarugas, mantas, tubarões, peixes-palhaço). Adega subaquática com mais de 450 rótulos de 24 países (votada melhor adega subaquática do mundo). Menu de frutos do mar premium. Crédito de USD $50 por pessoa em HB/FB para jantar. Almoço de 4 pratos à la carte (incluído em alguns pacotes promocionais)."
+          },
+          {
+            title: "FIRE - Japanese Teppanyaki",
+            description: "Cozinha japonesa com teppanyaki ao vivo e grelhados premium. Crédito de USD $50 por pessoa em HB/FB."
+          },
+          {
+            title: "SALT - Fine Asiatic Restaurant",
+            description: "19 variedades de sais raros do planeta com Salt Sommelier para auxiliar na escolha dos temperos. Cozinha asiática sofisticada."
+          },
+          {
+            title: "SKY - Rooftop Bar & Observatory",
+            description: "Bar no rooftop com vista panorâmica do Atol de Baa. Observatório astronômico (único nas Maldivas sobre a água) com telescópio potente para stargazing sessions com Sky Guru. Coquetéis exclusivos ao pôr do sol."
+          },
+          {
+            title: "Plates - International Buffet",
+            description: "Café da manhã buffet (incluído em todos os meal plans). Jantares temáticos noturnos selecionados: árabe, europeu, frutos do mar, BBQ, internacional. Estações ao vivo."
+          },
+          {
+            title: "SPICE - Asian Fusion",
+            description: "Menu à la carte com seleção de 3 pratos. Incluído em HB e FB."
+          },
+          {
+            title: "Manzaru - Beachfront Casual Dining",
+            description: "Almoço casual à beira-mar (12h-17h). Menu à la carte de 2 pratos para FB. Opções leves e descontraídas."
+          },
+          {
+            title: "Experiências Especiais",
+            description: "Dining by Design - Jantares privativos na praia, underwater ou localizações exclusivas. Wine Pairing Dinners - Jantares harmonizados. Michelin Star Dinners - Eventos especiais com chefs estrelados. Cinema Under the Stars - Jantar durante sessão de cinema ao ar livre."
+          }
+        ]
+      }
+    ],
+    accommodations: {
+      title: "Villas sobre a Água",
+      description: "Todas as villas possuem piscina privativa, Villa Host 24h e acesso direto ao recife.",
+      types: [
+        {
+          name: "Over Water Pool Villa",
+          size: "258m²",
+          beds: "1 cama king-size",
+          maxOccupancy: "2 adultos + 2 crianças",
+          features: [
+            "Suspensa sobre lagoa cristalina turquesa",
+            "Piscina privativa e sundeck sobre a água",
+            "Banheiro ao ar livre com banheira whirlpool com fundo de vidro (vista para vida marinha)",
+            "Acesso direto ao recife 'Golden Wall'",
+            "Villa Host 24h",
+            "Bicicletas privativas",
+            "Ar-condicionado e TV flat-screen via satélite",
+            "Docking station iPod, máquina de café, minibar",
+            "Adega climatizada e cofre para laptop",
+            "Roupa de cama e toalhas premium",
+            "Amenities Elemis e sistema de som Bose",
+            "Serviço de streaming (Netflix) e Blu-ray player",
+            "Pillow e scent menus",
+            "Produtos hipoalergênicos disponíveis"
+          ]
+        }
+      ]
+    },
+    pricing: {
+      seasons: [
+        {
+          name: "Consulte valores e disponibilidade",
+          period: "Ano todo",
+          priceText: "Entre em contato para orçamento personalizado"
+        }
+      ],
+      paymentTerms: [
+        "Condições de pagamento flexíveis",
+        "Parcelamento disponível",
+        "Consulte nossa equipe para mais detalhes"
+      ],
+      cancellationPolicy: "Políticas de cancelamento variam de acordo com a temporada e tipo de tarifa contratada. Consulte condições específicas no momento da reserva.",
+      notes: "Valores sujeitos a alteração sem aviso prévio. Taxas de serviço e impostos locais não inclusos."
+    },
+    faqs: [
+      {
+        question: "Como chegar ao Anantara Kihavah?",
+        answer: "O resort está localizado a 35 minutos de hidroavião de Malé ou 20 minutos de voo doméstico + 30 minutos de lancha. O transfer é incluído em alguns pacotes ou pode ser contratado separadamente."
+      },
+      {
+        question: "O que torna o restaurante SEA especial?",
+        answer: "O SEA é um restaurante subaquático localizado 6 metros abaixo da superfície, com paredes curvas de vidro oferecendo vista 360° para o recife. Possui também uma adega subaquática com mais de 450 rótulos de 24 países, votada a melhor do mundo."
+      },
+      {
+        question: "O que é o SKY Observatory?",
+        answer: "É o único observatório sobre a água das Maldivas, localizado no rooftop. Conta com telescópio potente e sessões de stargazing com Sky Guru, além de servir coquetéis ao pôr do sol."
+      },
+      {
+        question: "Quais são os benefícios para lua de mel?",
+        answer: "Casais em lua de mel (dentro de 12 meses do casamento) recebem welcome amenity, champagne, ritual de banho romântico e decoração especial. Pacotes de 4+ noites incluem café da manhã e jantar diários, Dining by Design na praia, champagne breakfast e experiências exclusivas."
+      },
+      {
+        question: "O que é o house reef 'Golden Wall'?",
+        answer: "É um recife de 2km de extensão considerado um dos melhores pontos de mergulho das Maldivas. Abriga tartarugas hawksbill, arraias, tubarões de recife, moreias e diversas espécies marinhas. Todas as villas sobre a água têm acesso direto."
+      },
+      {
+        question: "O resort oferece atividades para crianças?",
+        answer: "Sim, o Thiththi Boli Kids' Club atende crianças de 4-12 anos das 10h às 18h com treasure hunts, Marine Biologist Programme, cooking classes, artes maldívias, cinema e experiências de spa."
+      },
+      {
+        question: "O que é o serviço de Villa Host?",
+        answer: "Cada villa possui um mordomo dedicado disponível 24 horas para atender todas as necessidades dos hóspedes, desde arranjos de refeições até experiências personalizadas."
+      },
+      {
+        question: "Quais experiências únicas o resort oferece?",
+        answer: "Além do restaurante subaquático e observatório, o resort oferece degustação de vinhos envelhecidos no oceano, Muay Thai Boxing (único nas Maldivas), Coral Adoption Programme, e diversos jantares privativos em localizações exclusivas."
+      }
+    ],
+    images: [
+      {
+        src: "/src/assets/maldives-hero.jpg",
+        alt: "Anantara Kihavah Maldives Villas vista aérea"
+      }
+    ]
   }
 };
