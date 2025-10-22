@@ -1,33 +1,14 @@
 import { Bed, Waves, Home } from "lucide-react";
 
 const Accommodations = () => {
-  const villaTypes = [
-    {
-      name: "Ocean Villas",
-      icon: Waves,
-      features: [
-        "Sobre a lagoa com deck privativo",
-        "Acesso direto ao mar para snorkeling",
-        "Sala de estar separada",
-        "Serviço personalizado exclusivo",
-        "Opções sunrise ou sunset",
-        "Exclusivo para adultos (ideal para surfistas)",
-        "Máxima privacidade"
-      ]
-    },
-    {
-      name: "Beach Villas",
-      icon: Home,
-      features: [
-        "Localizadas na praia com jardim tropical",
-        "Acesso direto à areia branca",
-        "Terraço privativo com espreguiçadeiras",
-        "Ducha externa no jardim",
-        "Ideal para famílias",
-        "Próximo ao Kids Club",
-        "Vista para jardins exuberantes"
-      ]
-    }
+  const villaFeatures = [
+    "Sobre a lagoa com deck privativo",
+    "Acesso direto ao mar para snorkeling",
+    "Sala de estar separada",
+    "Serviço personalizado exclusivo",
+    "Opções sunrise ou sunset",
+    "Exclusivo para adultos (ideal para surfistas)",
+    "Máxima privacidade"
   ];
 
   const amenities = [
@@ -57,31 +38,26 @@ const Accommodations = () => {
           </p>
         </div>
 
-        {/* Villa Types */}
-        <div className="grid lg:grid-cols-2 gap-8 max-w-6xl mx-auto mb-12">
-          {villaTypes.map((villa, index) => (
-            <div 
-              key={index}
-              className="bg-muted/30 rounded-3xl p-8 border border-border hover:shadow-lg transition-all duration-300"
-            >
-              <div className="flex items-center gap-3 mb-6">
-                <div className="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center">
-                  <villa.icon className="w-7 h-7 text-primary" />
-                </div>
-                <h3 className="text-2xl font-semibold text-foreground">
-                  {villa.name}
-                </h3>
+        {/* Ocean Villas */}
+        <div className="max-w-4xl mx-auto mb-12">
+          <div className="bg-muted/30 rounded-3xl p-8 border border-border hover:shadow-lg transition-all duration-300">
+            <div className="flex items-center gap-3 mb-6">
+              <div className="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center">
+                <Waves className="w-7 h-7 text-primary" />
               </div>
-              <ul className="space-y-3">
-                {villa.features.map((feature, idx) => (
-                  <li key={idx} className="flex items-start gap-3">
-                    <span className="w-1.5 h-1.5 rounded-full bg-primary mt-2 flex-shrink-0"></span>
-                    <span className="text-foreground/80">{feature}</span>
-                  </li>
-                ))}
-              </ul>
+              <h3 className="text-2xl font-semibold text-foreground">
+                Ocean Villas
+              </h3>
             </div>
-          ))}
+            <ul className="grid sm:grid-cols-2 gap-3">
+              {villaFeatures.map((feature, idx) => (
+                <li key={idx} className="flex items-start gap-3">
+                  <span className="w-1.5 h-1.5 rounded-full bg-primary mt-2 flex-shrink-0"></span>
+                  <span className="text-foreground/80">{feature}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
 
         {/* Amenities */}
