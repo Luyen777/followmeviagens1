@@ -12,11 +12,7 @@ export interface ResortData {
   heroHighlights: string[];
   seoTitle: string;
   seoDescription: string;
-  valueProps: Array<{
-    icon: string;
-    title: string;
-    description: string;
-  }>;
+  about: string;
   sections: Array<{
     id: string;
     title: string;
@@ -76,28 +72,7 @@ export const maldivesResorts: Record<string, ResortData> = {
     heroHighlights: ["Serviço de Mordomo 24/7", "Reserva UNESCO", "67 Villas com Piscina"],
     seoTitle: "Amilla Maldives Resort - Ultra-Luxo 5★ Baa Atoll | Follow Me Viagens",
     seoDescription: "Resort 5 estrelas ultra-luxuoso no Baa Atoll, Reserva da Biosfera UNESCO. 67 villas espaçosas com piscina privativa, serviço de mordomo personalizado, proximidade com Hanifaru Bay e compromisso com sustentabilidade.",
-    valueProps: [
-      {
-        icon: "Crown",
-        title: "Serviço Ultra-Luxuoso",
-        description: "Mordomo pessoal (Katheeb) 24/7 para cada villa, membro da Small Luxury Hotels, villas de 220m² a 2.400m² com piscinas privativas e máximo conforto."
-      },
-      {
-        icon: "Palmtree",
-        title: "Reserva da Biosfera UNESCO",
-        description: "Localizado no Atol de Baa, uma das maiores ilhas privadas das Maldivas com 23,5 hectares e mais de 70% de selva tropical preservada."
-      },
-      {
-        icon: "Fish",
-        title: "Hanifaru Bay & House Reef",
-        description: "Proximidade com Hanifaru Bay para observação de mantas e tubarões-baleia, além de excepcional house reef para snorkeling com biólogo marinho."
-      },
-      {
-        icon: "Leaf",
-        title: "Sustentabilidade Certificada",
-        description: "EarthCheck Silver Certification, jardins orgânicos próprios que abastecem os restaurantes e compromisso genuíno com o meio ambiente."
-      }
-    ],
+    about: "O Amilla Maldives Resort and Residences é um resort 5 estrelas ultra-luxuoso localizado no Atol de Baa, Reserva da Biosfera UNESCO, a 30-35 minutos de hidroavião do Aeroporto Internacional de Malé. Membro da prestigiada Small Luxury Hotels of the World, o resort ocupa uma das maiores ilhas privadas das Maldivas com 23,5 hectares e mais de 70% de selva tropical preservada.\n\nCom apenas 67 villas espaçosas (220m² a 2.400m²), todas equipadas com piscina privativa e serviço de mordomo pessoal (Katheeb) disponível 24/7, o Amilla oferece uma experiência verdadeiramente exclusiva. O resort destaca-se pela proximidade com Hanifaru Bay para observação de mantas e tubarões-baleia, excepcional house reef para snorkeling com biólogo marinho, e compromisso genuíno com sustentabilidade certificado pela EarthCheck Silver Certification.\n\nCom 8 restaurantes e bares de classe mundial, incluindo culinária japonesa, italiana, indiana e grega, jardins orgânicos próprios que abastecem os restaurantes, e experiências únicas como o Amilla Glamping em bolha transparente, o resort combina luxo sofisticado com respeito ao meio ambiente, criando o cenário perfeito para viajantes exigentes que buscam exclusividade e autenticidade.",
     sections: [
       {
         id: "inclusions",
@@ -358,28 +333,7 @@ export const maldivesResorts: Record<string, ResortData> = {
     heroHighlights: ["All Inclusive Premium", "Transfer de Lancha 30min", "Surf & Snorkeling"],
     seoTitle: "Adaaran Select Hudhuranfushi - Resort All Inclusive 4★ | Follow Me Viagens",
     seoDescription: "Resort 4 estrelas all inclusive no North Malé Atoll, a 30 minutos de Malé. Ideal para casais, famílias e surfistas com acesso ao Lohis. Melhor custo-benefício das Maldivas com snorkeling, kids club e esportes gratuitos.",
-    valueProps: [
-      {
-        icon: "DollarSign",
-        title: "Melhor Custo-Benefício",
-        description: "Resort 4 estrelas all inclusive com preços acessíveis, ideal para famílias e casais que buscam experiência completa nas Maldivas sem comprometer o orçamento."
-      },
-      {
-        icon: "Waves",
-        title: "Paraíso para Surfistas",
-        description: "Acesso exclusivo ao lendário surf spot Lohis, uma das melhores ondas das Maldivas. Packages especiais e Ocean Villas exclusivas para surfistas."
-      },
-      {
-        icon: "UtensilsCrossed",
-        title: "All Inclusive Completo",
-        description: "Todas as refeições, bebidas alcoólicas e não alcoólicas, esportes aquáticos e terrestres incluídos. Sem surpresas na conta no final da viagem."
-      },
-      {
-        icon: "Users",
-        title: "Ideal para Famílias",
-        description: "Kids Club gratuito, playground, piscinas infantis e atividades supervisionadas. Beach villas espaçosas ideais para famílias com crianças."
-      }
-    ],
+    about: "O Adaaran Select Hudhuranfushi é um resort 4 estrelas all inclusive localizado no North Malé Atoll, a apenas 30 minutos de lancha rápida do Aeroporto Internacional de Malé. Reconhecido como um dos melhores resorts de custo-benefício das Maldivas, oferece uma experiência completa com todas as refeições, bebidas (alcoólicas e não alcoólicas), esportes aquáticos e terrestres incluídos.\n\nO resort destaca-se pelo acesso exclusivo ao lendário surf spot Lohis, considerado uma das melhores ondas das Maldivas, com packages especiais e Ocean Villas dedicadas para surfistas. Para famílias, conta com Kids Club gratuito, playground, piscinas infantis e ampla variedade de atividades supervisionadas em beach villas espaçosas.\n\nCom instalações recém-renovadas, o Adaaran Select oferece a maior diversidade esportiva entre resorts 4 estrelas das Maldivas, incluindo snorkeling no house reef, centro de mergulho PADI 5★, Spa Mandara com tratamentos balineses, e diversas atividades de entretenimento diário. Ideal para casais, famílias e surfistas que buscam experiência autêntica nas Maldivas sem comprometer o orçamento.",
     sections: [
       {
         id: "activities",
@@ -615,28 +569,7 @@ export const maldivesResorts: Record<string, ResortData> = {
     heroHighlights: ["110 Villas Espaçosas", "Acesso a 7+ Restaurantes", "Ilha Privativa Gulhifushi"],
     seoTitle: "Anantara Dhigu Maldives - Resort 5★ Family-Friendly | Follow Me Viagens",
     seoDescription: "Resort 5 estrelas family-friendly no Atol Sul de Malé com 110 villas, acesso ao Anantara Veli adults-only, 7+ restaurantes, spa sobre a água, ilha privativa e excelente kids club.",
-    valueProps: [
-      {
-        icon: "Users",
-        title: "Dois Resorts em Um",
-        description: "Acesso privilegiado ao resort irmão Anantara Veli (adults-only) através de ponte conectada, permitindo desfrutar de 7+ restaurantes e facilidades premium."
-      },
-      {
-        icon: "Waves",
-        title: "Spa & Atividades Aquáticas",
-        description: "Spa sobre a água com 6 salas de tratamento, escola de surf Tropicsurf, centro de mergulho PADI 5 estrelas Aquafanatics e esportes aquáticos completos."
-      },
-      {
-        icon: "UtensilsCrossed",
-        title: "Experiências Gastronômicas",
-        description: "7+ restaurantes entre os dois resorts: tailandês autêntico, grelhados premium, japonês teppanyaki, buffets internacionais e jantares privativos Designer Dining."
-      },
-      {
-        icon: "Palmtree",
-        title: "Ilha Privativa Gulhifushi",
-        description: "Ilha exclusiva para piqueniques com food truck (12h-16h) e tiki bar (10h-17h), acessível por pontão ou caiaque para experiências únicas."
-      }
-    ],
+    about: "O Anantara Dhigu Maldives Resort é um resort 5 estrelas family-friendly localizado na ilha de Dhigufinolhu no Atol Sul de Malé, a apenas 30-35 minutos de lancha rápida do Aeroporto Internacional de Malé. O resort oferece 110 villas espaçosas, entre villas na praia e suítes sobre a água, todas com vista para o nascer ou pôr do sol. Possui acesso privilegiado ao resort irmão Anantara Veli (adults-only) através de uma ponte conectada, permitindo que os hóspedes desfrutem de mais de 7 restaurantes entre as duas propriedades. Destaca-se pelo spa sobre a água, escola de surf Tropicsurf, centro de esportes aquáticos Aquafanatics (PADI 5 estrelas), ilha privativa de piquenique Gulhifushi, e excelente kids club. Transferências disponíveis 24 horas por dia.",
     sections: [
       {
         id: "inclusions",

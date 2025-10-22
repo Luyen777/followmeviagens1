@@ -4,7 +4,7 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import Hero from "@/components/resort-template/Hero";
-import ValueProposition from "@/components/resort-template/ValueProposition";
+import AboutSection from "@/components/resort-template/AboutSection";
 import ContentSection from "@/components/resort-template/ContentSection";
 import AccommodationSection from "@/components/resort-template/AccommodationSection";
 import PricingSection from "@/components/resort-template/PricingSection";
@@ -68,7 +68,7 @@ const MaldivesResortTemplate = () => {
             highlights={resort.heroHighlights}
           />
           
-          <ValueProposition items={resort.valueProps} />
+          <AboutSection content={resort.about} />
           
           <ImageCarousel images={resort.images} />
           
