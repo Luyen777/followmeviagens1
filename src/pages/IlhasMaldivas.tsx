@@ -5,7 +5,6 @@ import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import PackageListItem from "@/components/PackageListItem";
 import { fetchResortsFromGoogleSheets, type PackageData } from "@/services/googleSheetsService";
-import { maldivesResorts } from "@/data/maldivesResorts";
 
 
 const IlhasMaldivas = () => {
@@ -17,33 +16,8 @@ const IlhasMaldivas = () => {
     const loadResorts = async () => {
       setLoading(true);
       try {
-        const sheetsData = await fetchResortsFromGoogleSheets();
-        
-        // Convert maldivesResorts to PackageData format
-        const localResorts: PackageData[] = Object.entries(maldivesResorts).map(([slug, resort]) => ({
-          title: resort.name,
-          description: resort.about.substring(0, 150) + '...',
-          image: resort.heroImage,
-          duration: '5 a 14 noites',
-          destination: 'Maldivas',
-          flightIncluded: resort.transferTime,
-          validity: 'Consulte disponibilidade',
-          classification: `${resort.rating} Estrelas`,
-          mealPlan: 'Café da manhã incluso',
-          referenceNumber: slug.toUpperCase(),
-          priceFrom: 0,
-          focusTags: [],
-          uniquePerk: resort.heroHighlights[0] || '',
-          slug: slug,
-          aboutPackage: resort.about,
-          accommodations: '',
-          experiences: '',
-          dining: '',
-          additionalImages: resort.images.map(img => img.src),
-        }));
-        
-        // Combine both data sources
-        setResorts([...sheetsData, ...localResorts]);
+        const data = await fetchResortsFromGoogleSheets();
+        setResorts(data);
       } catch (err) {
         setError('Erro ao carregar resorts. Por favor, tente novamente.');
         console.error('Error loading resorts:', err);
