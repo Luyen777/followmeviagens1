@@ -1,4 +1,4 @@
-import { DollarSign, Waves, UtensilsCrossed, Users, LucideIcon } from "lucide-react";
+import { DollarSign, Waves, UtensilsCrossed, Users, Crown, Palmtree, Fish, Leaf, LucideIcon } from "lucide-react";
 
 interface ValueProp {
   icon: string;
@@ -15,6 +15,10 @@ const iconMap: Record<string, LucideIcon> = {
   Waves,
   UtensilsCrossed,
   Users,
+  Crown,
+  Palmtree,
+  Fish,
+  Leaf,
 };
 
 const ValueProposition = ({ items }: ValuePropositionProps) => {
