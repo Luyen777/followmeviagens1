@@ -44,7 +44,7 @@ const FeaturedResorts = () => {
     const track = trackRef.current;
     if (!track) return;
 
-    const scrollSpeed = 52; // pixels per second (30% faster)
+    const scrollSpeed = 57.2; // pixels per second (10% faster than previous)
 
     const animate = (timestamp: number) => {
       if (!baseTimeRef.current) baseTimeRef.current = timestamp;
