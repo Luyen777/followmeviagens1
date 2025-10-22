@@ -557,37 +557,37 @@ Comodidades:
         id: "inclusions",
         type: "text",
         title: "Inclusões do pacote (All Inclusive)",
-        content: "Café da manhã, almoço e jantar buffet no Banyan Restaurant\n\nSeleção de bebidas alcoólicas/não alcoólicas nos bares selecionados (inclusive drinks, cervejas, refrigerantes e sucos)\n\nSnacks, sorvetes, petiscos e chá da tarde\n\nMinibar abastecido diariamente (água, cerveja, refrigerante; algumas tarifas)\n\nEquipamento para snorkeling e esportes não motorizados (caiaque, windsurf, SUP)\n\nBicicletas para explorar a ilha\n\nAtividades recreativas: tênis, squash, badminton, vôlei, futebol de areia, tênis de mesa\n\nAcademia e aulas fitness em grupo (yoga, alongamento)\n\nKids club & playground para crianças\n\nPiscina central (adulto e infantil), serviço de praia/piscina\n\nWi-Fi gratuito nas áreas públicas\n\nShow noturno, música ao vivo e eventos culturais semanais\n\nArrumação diária/turn down, amenities de boas-vindas\n\nTraslado de lancha regular (pago à parte em maioria dos planos)\n\nServiço de concierge para excursões e reservas"
+        content: "- Café da manhã, almoço e jantar buffet no Banyan Restaurant\n- Seleção de bebidas alcoólicas/não alcoólicas nos bares selecionados (inclusive drinks, cervejas, refrigerantes e sucos)\n- Snacks, sorvetes, petiscos e chá da tarde\n- Minibar abastecido diariamente (água, cerveja, refrigerante; algumas tarifas)\n- Equipamento para snorkeling e esportes não motorizados (caiaque, windsurf, SUP)\n- Bicicletas para explorar a ilha\n- Atividades recreativas: tênis, squash, badminton, vôlei, futebol de areia, tênis de mesa\n- Academia e aulas fitness em grupo (yoga, alongamento)\n- Kids club & playground para crianças\n- Piscina central (adulto e infantil), serviço de praia/piscina\n- Wi-Fi gratuito nas áreas públicas\n- Show noturno, música ao vivo e eventos culturais semanais\n- Arrumação diária/turn down, amenities de boas-vindas\n- Traslado de lancha regular (pago à parte em maioria dos planos)\n- Serviço de concierge para excursões e reservas"
       },
       {
         id: "dining",
         type: "text",
         title: "Restaurantes & Bares",
-        content: "Banyan Restaurant (buffet internacional, todas as refeições)\n\nSunset Restaurant (sobre a água, frutos do mar e jantares especiais)\n\nLohis Wave (bar do surf, ambiente descontraído, drinks e snacks)\n\nHiyala Bar (principal bar central junto à piscina, drinks 24h)\n\nBeach Bar (lanches, drinks à beira-mar)\n\nRoom service 24h (pago à parte)\n\nTemas semanais: noites maldivas, seafood BBQ, noites asiáticas\n\nJantares privados na praia e piqueniques sob consulta/custo\n\nGastronomia: internacional, pratos maldivianos, frutos do mar frescos, asiático, snacks e pizzas, dietas especiais sob solicitação."
+        content: "- Banyan Restaurant (buffet internacional, todas as refeições)\n- Sunset Restaurant (sobre a água, frutos do mar e jantares especiais)\n- Lohis Wave (bar do surf, ambiente descontraído, drinks e snacks)\n- Hiyala Bar (principal bar central junto à piscina, drinks 24h)\n- Beach Bar (lanches, drinks à beira-mar)\n- Room service 24h (pago à parte)\n- Temas semanais: noites maldivas, seafood BBQ, noites asiáticas\n- Jantares privados na praia e piqueniques sob consulta/custo\n- Gastronomia: internacional, pratos maldivianos, frutos do mar frescos, asiático, snacks e pizzas, dietas especiais sob solicitação"
       },
       {
         id: "accommodation",
         type: "text",
         title: "Acomodação",
-        content: "Villas com ar-condicionado, minibar, smart TV, amenities premium, cofre, máquina de chá/café, ducha interna/externa e terraço\n\nOcean Villas: deck sobre a lagoa, acesso direto ao mar, sala de estar e serviço personalizado para adultos, opções sunrise/sunset\n\nmenu de travesseiros, Wi-Fi, room service pago, amenidades kids e berço/cama extra sob reserva\n\nDiferenciais: excelente privacidade nas villas, localização privilegiada para surfe, ótimo house reef para snorkeling e amplos jardins tropicais."
+        content: "- Villas com ar-condicionado, minibar, smart TV, amenities premium, cofre, máquina de chá/café, ducha interna/externa e terraço\n- Ocean Villas: deck sobre a lagoa, acesso direto ao mar, sala de estar e serviço personalizado para adultos, opções sunrise/sunset\n- Menu de travesseiros, Wi-Fi, room service pago, amenidades kids e berço/cama extra sob reserva\n- Diferenciais: excelente privacidade nas villas, localização privilegiada para surfe, ótimo house reef para snorkeling e amplos jardins tropicais"
       },
       {
         id: "free-activities",
         type: "text",
         title: "Atividades gratuitas",
-        content: "Snorkeling (house reef + equipamento gratuito)\n\nCaiaque, windsurf, SUP, pedalinho\n\nTênis, squash, badminton, futebol de areia, vôlei de praia\n\nBicicletas para explorar toda a ilha\n\nPiscina adulto e infantil\n\nKids Club e playground\n\nAulas de yoga, fitness center\n\nShows noturnos temáticos, música ao vivo, eventos culturais\n\nEntretenimento e programação semanal, happy hour de drinks"
+        content: "- Snorkeling (house reef + equipamento gratuito)\n- Caiaque, windsurf, SUP, pedalinho\n- Tênis, squash, badminton, futebol de areia, vôlei de praia\n- Bicicletas para explorar toda a ilha\n- Piscina adulto e infantil\n- Kids Club e playground\n- Aulas de yoga, fitness center\n- Shows noturnos temáticos, música ao vivo, eventos culturais\n- Entretenimento e programação semanal, happy hour de drinks"
       },
       {
         id: "paid-activities",
         type: "text",
         title: "Atividades com custo extra",
-        content: "Mergulho PADI 5* (batismo, cursos, snorkel guiado, night dive)\n\nEsportes motorizados: jet ski, seabob, kite/windsurf, wakeboard, parasailing\n\nSpa Mandara: tratamentos balineses, massagem, beauty, wellness\n\nSurf (acesso restrito/reserva para Lohis, aluguel pranchas, aulas pros)\n\nExcursões: sandbank picnic, pesca, island hopping, cruzeiro sunset, dolphin tour\n\nJantares privativos, degustação de vinhos, masterclasses culinária\n\nBabysitting, sessões de fotos\n\nSurf: destino top para surfistas (Lohis), com packages exclusivos, acesso limitado (reserva obrigatória alta temporada)."
+        content: "- Mergulho PADI 5* (batismo, cursos, snorkel guiado, night dive)\n- Esportes motorizados: jet ski, seabob, kite/windsurf, wakeboard, parasailing\n- Spa Mandara: tratamentos balineses, massagem, beauty, wellness\n- Surf (acesso restrito/reserva para Lohis, aluguel pranchas, aulas pros)\n- Excursões: sandbank picnic, pesca, island hopping, cruzeiro sunset, dolphin tour\n- Jantares privativos, degustação de vinhos, masterclasses culinária\n- Babysitting, sessões de fotos\n- Surf: destino top para surfistas (Lohis), com packages exclusivos, acesso limitado (reserva obrigatória alta temporada)"
       },
       {
         id: "highlights",
         type: "text",
         title: "Diferenciais",
-        content: "Surf spot Lohis: referência nacional, adultos only nas Ocean Villas, excelente snorkeling, maior diversidade esportiva entre resorts 4* das Maldivas, spa Mandara e jardins exuberantes."
+        content: "Surf spot Lohis: referência nacional para surf, Ocean Villas exclusivas para adultos, excelente snorkeling no house reef, maior diversidade esportiva entre resorts 4* das Maldivas, spa Mandara de alto padrão e jardins tropicais exuberantes."
       }
     ],
     accommodations: {
