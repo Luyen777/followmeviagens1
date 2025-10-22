@@ -69,11 +69,11 @@ const MaldivesResortTemplate = () => {
           
           <AboutSection content={resort.about} />
           
-          {resort.sections.map((section) => (
+          {resort.sections.map((section, index) => (
             section.type === 'text' ? (
               <TextSection
                 key={section.id}
-                id={section.id}
+                id={`section-${index}`}
                 title={section.title}
                 content={section.content || ''}
               />
