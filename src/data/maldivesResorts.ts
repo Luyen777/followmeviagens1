@@ -269,18 +269,24 @@ export const maldivesResorts: Record<string, ResortData> = {
     pricing: {
       seasons: [
         {
-          name: "Consulte Valores",
-          period: "Ano todo",
+          name: "Baixa Temporada",
+          period: "Maio a Outubro",
           priceText: "Sob consulta",
-          priceSubtext: "Preço por pessoa em acomodação dupla"
+          priceSubtext: "7 noites em Reef Water Pool Villa com café da manhã"
+        },
+        {
+          name: "Alta Temporada",
+          period: "Novembro a Abril",
+          priceText: "Sob consulta",
+          priceSubtext: "7 noites em Reef Water Pool Villa com café da manhã"
         }
       ],
       paymentTerms: [
         "Entrada de 20% via transferência bancária ao confirmar a reserva",
         "80% restante até 30 dias antes da viagem",
-        "Parcelamento disponível - consulte condições especiais"
+        "Parcelamento disponível em até 10 parcelas sem juros no cartão de crédito"
       ],
-      cancellationPolicy: "Política de cancelamento varia conforme a temporada e tipo de villa. Consulte condições detalhadas.",
+      cancellationPolicy: "Cancelamento com até 30 dias de antecedência: reembolso de 80% do valor pago. Cancelamentos com menos de 30 dias não têm direito a reembolso.",
       notes: "Menores de 2 anos: traslado gratuito e refeições gratuitas. Acima de 12 anos: tarifa adulto. Kids Club gratuito (4-12 anos)."
     },
     faqs: [
