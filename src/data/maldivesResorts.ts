@@ -554,146 +554,46 @@ Comodidades:
     about: "O Adaaran Select Hudhuranfushi é um resort 4 estrelas all inclusive localizado no North Malé Atoll, a apenas 30 minutos de lancha rápida do Aeroporto Internacional de Malé. Reconhecido como um dos melhores resorts de custo-benefício das Maldivas, oferece uma experiência completa com todas as refeições, bebidas (alcoólicas e não alcoólicas), esportes aquáticos e terrestres incluídos.\n\nO resort destaca-se pelo acesso exclusivo ao lendário surf spot Lohis, considerado uma das melhores ondas das Maldivas, com packages especiais e Ocean Villas dedicadas para surfistas. Para famílias, conta com Kids Club gratuito, playground, piscinas infantis e ampla variedade de atividades supervisionadas em beach villas espaçosas.\n\nCom instalações recém-renovadas, o Adaaran Select oferece a maior diversidade esportiva entre resorts 4 estrelas das Maldivas, incluindo snorkeling no house reef, centro de mergulho PADI 5★, Spa Mandara com tratamentos balineses, e diversas atividades de entretenimento diário. Ideal para casais, famílias e surfistas que buscam experiência autêntica nas Maldivas sem comprometer o orçamento.",
     sections: [
       {
-        id: "activities",
-        title: "Atividades & Experiências",
-        subtitle: "A maior diversidade esportiva entre resorts 4 estrelas das Maldivas, com atividades para todos os perfis",
-        type: "two-column",
-        items: [
-          {
-            title: "Incluído no All Inclusive",
-            icon: "Heart",
-            badge: "Grátis",
-            items: [
-              "Snorkeling com equipamento gratuito no house reef",
-              "Esportes aquáticos: caiaque, windsurf, SUP, pedalinho",
-              "Esportes terrestres: tênis, squash, badminton, futebol, vôlei",
-              "Bicicletas para explorar toda a ilha",
-              "Piscina adulto e infantil com serviço de praia",
-              "Kids Club e playground completos",
-              "Aulas de yoga e fitness center",
-              "Shows noturnos, música ao vivo e eventos culturais",
-              "Happy hour de drinks e entretenimento semanal"
-            ]
-          },
-          {
-            title: "Atividades Premium",
-            icon: "Waves",
-            items: [
-              "Mergulho PADI 5★: batismo, cursos, night dive",
-              "Esportes motorizados: jet ski, seabob, kite, wakeboard, parasailing",
-              "Spa Mandara: tratamentos balineses, massagens, wellness",
-              "Surf no Lohis: aluguel de pranchas, aulas com profissionais",
-              "Excursões: sandbank picnic, pesca, island hopping, dolphin tour",
-              "Jantares privativos na praia e degustação de vinhos",
-              "Masterclasses de culinária e sessões de fotos profissionais"
-            ]
-          }
-        ]
+        id: "inclusions",
+        type: "text",
+        title: "Inclusões do pacote (All Inclusive)",
+        content: "Café da manhã, almoço e jantar buffet no Banyan Restaurant\n\nSeleção de bebidas alcoólicas/não alcoólicas nos bares selecionados (inclusive drinks, cervejas, refrigerantes e sucos)\n\nSnacks, sorvetes, petiscos e chá da tarde\n\nMinibar abastecido diariamente (água, cerveja, refrigerante; algumas tarifas)\n\nEquipamento para snorkeling e esportes não motorizados (caiaque, windsurf, SUP)\n\nBicicletas para explorar a ilha\n\nAtividades recreativas: tênis, squash, badminton, vôlei, futebol de areia, tênis de mesa\n\nAcademia e aulas fitness em grupo (yoga, alongamento)\n\nKids club & playground para crianças\n\nPiscina central (adulto e infantil), serviço de praia/piscina\n\nWi-Fi gratuito nas áreas públicas\n\nShow noturno, música ao vivo e eventos culturais semanais\n\nArrumação diária/turn down, amenities de boas-vindas\n\nTraslado de lancha regular (pago à parte em maioria dos planos)\n\nServiço de concierge para excursões e reservas"
       },
       {
         id: "dining",
-        title: "Gastronomia All Inclusive",
-        subtitle: "Experiências gastronômicas variadas com culinária internacional, pratos maldivinos autênticos e frutos do mar frescos",
-        type: "cards",
-        items: [
-          {
-            title: "Banyan Restaurant",
-            description: "Restaurante principal com buffet variado servindo café da manhã, almoço e jantar. Culinária internacional com opções locais maldivinas.",
-            badge: "Incluído"
-          },
-          {
-            title: "Sunset Restaurant",
-            description: "Restaurante overwater especializado em frutos do mar frescos e jantares especiais românticos com vista para o pôr do sol."
-          },
-          {
-            title: "Lohis Wave",
-            description: "Ambiente descontraído junto ao surf spot, servindo drinks tropicais, cervejas geladas e snacks durante todo o dia.",
-            badge: "Incluído"
-          },
-          {
-            title: "Hiyala Bar",
-            description: "Bar central junto à piscina, aberto 24 horas com ampla seleção de drinks, coquetéis e bebidas premium.",
-            badge: "Incluído"
-          },
-          {
-            title: "Beach Bar",
-            description: "Lanches, petiscos e drinks tropicais servidos à beira-mar com vista para as águas cristalinas.",
-            badge: "Incluído"
-          }
-        ]
+        type: "text",
+        title: "Restaurantes & Bares",
+        content: "Banyan Restaurant (buffet internacional, todas as refeições)\n\nSunset Restaurant (sobre a água, frutos do mar e jantares especiais)\n\nLohis Wave (bar do surf, ambiente descontraído, drinks e snacks)\n\nHiyala Bar (principal bar central junto à piscina, drinks 24h)\n\nBeach Bar (lanches, drinks à beira-mar)\n\nRoom service 24h (pago à parte)\n\nTemas semanais: noites maldivas, seafood BBQ, noites asiáticas\n\nJantares privados na praia e piqueniques sob consulta/custo\n\nGastronomia: internacional, pratos maldivianos, frutos do mar frescos, asiático, snacks e pizzas, dietas especiais sob solicitação."
       },
       {
-        id: "inclusions",
-        title: "All Inclusive Premium",
-        subtitle: "Tudo que você precisa para aproveitar ao máximo sua experiência nas Maldivas, sem preocupações",
-        type: "list",
-        items: [
-          {
-            title: "Refeições & Bebidas",
-            items: [
-              "Café da manhã, almoço e jantar no buffet internacional",
-              "Snacks, lanches e sorvetes durante todo o dia",
-              "Bebidas alcoólicas e não alcoólicas ilimitadas",
-              "Chá da tarde com petiscos",
-              "Água mineral, refrigerantes e sucos naturais"
-            ]
-          },
-          {
-            title: "Esportes & Atividades",
-            items: [
-              "Equipamentos de snorkeling gratuitos",
-              "Esportes aquáticos não motorizados (caiaque, SUP, windsurf)",
-              "Esportes terrestres (tênis, badminton, vôlei, futebol)",
-              "Bicicletas para explorar a ilha",
-              "Aulas de yoga e fitness center"
-            ]
-          },
-          {
-            title: "Entretenimento & Serviços",
-            items: [
-              "Shows noturnos e música ao vivo",
-              "Kids Club com atividades supervisionadas",
-              "Wi-Fi gratuito em todo o resort",
-              "Toalhas de praia e piscina",
-              "Impostos e taxas governamentais"
-            ]
-          }
-        ]
+        id: "accommodation",
+        type: "text",
+        title: "Acomodação",
+        content: "Villas com ar-condicionado, minibar, smart TV, amenities premium, cofre, máquina de chá/café, ducha interna/externa e terraço\n\nOcean Villas: deck sobre a lagoa, acesso direto ao mar, sala de estar e serviço personalizado para adultos, opções sunrise/sunset\n\nmenu de travesseiros, Wi-Fi, room service pago, amenidades kids e berço/cama extra sob reserva\n\nDiferenciais: excelente privacidade nas villas, localização privilegiada para surfe, ótimo house reef para snorkeling e amplos jardins tropicais."
+      },
+      {
+        id: "free-activities",
+        type: "text",
+        title: "Atividades gratuitas",
+        content: "Snorkeling (house reef + equipamento gratuito)\n\nCaiaque, windsurf, SUP, pedalinho\n\nTênis, squash, badminton, futebol de areia, vôlei de praia\n\nBicicletas para explorar toda a ilha\n\nPiscina adulto e infantil\n\nKids Club e playground\n\nAulas de yoga, fitness center\n\nShows noturnos temáticos, música ao vivo, eventos culturais\n\nEntretenimento e programação semanal, happy hour de drinks"
+      },
+      {
+        id: "paid-activities",
+        type: "text",
+        title: "Atividades com custo extra",
+        content: "Mergulho PADI 5* (batismo, cursos, snorkel guiado, night dive)\n\nEsportes motorizados: jet ski, seabob, kite/windsurf, wakeboard, parasailing\n\nSpa Mandara: tratamentos balineses, massagem, beauty, wellness\n\nSurf (acesso restrito/reserva para Lohis, aluguel pranchas, aulas pros)\n\nExcursões: sandbank picnic, pesca, island hopping, cruzeiro sunset, dolphin tour\n\nJantares privativos, degustação de vinhos, masterclasses culinária\n\nBabysitting, sessões de fotos\n\nSurf: destino top para surfistas (Lohis), com packages exclusivos, acesso limitado (reserva obrigatória alta temporada)."
+      },
+      {
+        id: "highlights",
+        type: "text",
+        title: "Diferenciais",
+        content: "Surf spot Lohis: referência nacional, adultos only nas Ocean Villas, excelente snorkeling, maior diversidade esportiva entre resorts 4* das Maldivas, spa Mandara e jardins exuberantes."
       }
     ],
     accommodations: {
-      title: "Acomodações Renovadas",
-      description: "Villas recém-reformadas em 2023, combinando conforto moderno com charme tropical",
-      types: [
-        {
-          name: "Ocean Villa",
-          size: "90m²",
-          beds: "1 King ou 2 Twin",
-          maxOccupancy: "2 adultos (exclusivo)",
-          features: [
-            "Localizada sobre a água com deck privativo",
-            "Banheiro aberto com vista para o oceano",
-            "Acesso direto ao mar para snorkeling",
-            "Ideal para surfistas com acesso ao Lohis",
-            "Ar-condicionado, ventilador de teto, minibar",
-            "Máquina de café, cofre, secador de cabelo"
-          ]
-        },
-        {
-          name: "Beach Villa",
-          size: "75m²",
-          beds: "1 King ou 2 Twin + sofá-cama",
-          maxOccupancy: "3 adultos ou 2 adultos + 2 crianças",
-          features: [
-            "Acesso direto à praia de areia branca",
-            "Terraço privativo com espreguiçadeiras",
-            "Banheiro semi-aberto com chuveiro externo",
-            "Ideal para famílias e casais",
-            "Ar-condicionado, ventilador de teto, minibar",
-            "Máquina de café, cofre, secador de cabelo"
-          ]
-        }
-      ]
+      title: "",
+      description: "",
+      types: []
     },
     pricing: {
       seasons: [
