@@ -78,7 +78,7 @@ const Navigation = () => {
     label: "Outros Destinos",
     href: "#destinos"
   }, {
-    label: "Lua de Mel",
+    label: "Promoções",
     href: "#pacotes"
   }, {
     label: "Blog",
