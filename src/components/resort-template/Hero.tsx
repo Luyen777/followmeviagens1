@@ -1,0 +1,77 @@
+import { MessageCircle } from "lucide-react";
+import { Button } from "@/components/ui/button";
+
+interface HeroProps {
+  image: string;
+  name: string;
+  subtitle: string;
+  location: string;
+  transferTime: string;
+  rating: number;
+  highlights: string[];
+}
+
+const Hero = ({ image, name, subtitle, location, transferTime, rating, highlights }: HeroProps) => {
+  const handleWhatsAppClick = () => {
+    window.open("https://wa.me/5511971324865", "_blank");
+  };
+
+  const scrollToPricing = () => {
+    document.getElementById("precos")?.scrollIntoView({ behavior: "smooth" });
+  };
+
+  return (
+    <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden">
+      <div className="absolute inset-0 z-0">
+        <img src={image} alt={name} className="w-full h-full object-cover scale-105" />
+        <div className="absolute inset-0 bg-gradient-to-b from-background/95 via-background/90 to-background/95"></div>
+      </div>
+
+      <div className="relative z-10 container mx-auto px-4 text-center">
+        <div className="inline-flex items-center gap-2 bg-primary/10 backdrop-blur-sm px-4 py-2 rounded-full mb-6">
+          <span className="text-primary font-semibold">{location}</span>
+          <span className="text-foreground/60">•</span>
+          <span className="text-foreground/80">{transferTime}</span>
+          <span className="text-foreground/60">•</span>
+          <span className="text-foreground/80">{"⭐".repeat(rating)}</span>
+        </div>
+
+        <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-display font-medium text-foreground mb-6 leading-tight">
+          {name}
+        </h1>
+
+        <p className="text-lg sm:text-xl text-foreground/80 max-w-3xl mx-auto mb-8 leading-relaxed">
+          {subtitle}
+        </p>
+
+        <div className="flex flex-wrap justify-center gap-3 mb-10">
+          {highlights.map((highlight, index) => (
+            <span
+              key={index}
+              className="px-4 py-2 bg-background/80 backdrop-blur-sm rounded-full text-sm font-medium text-foreground border border-border"
+            >
+              {highlight}
+            </span>
+          ))}
+        </div>
+
+        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+          <Button onClick={scrollToPricing} size="lg" className="text-base px-8 py-6">
+            Ver Pacotes e Preços
+          </Button>
+          <Button
+            onClick={handleWhatsAppClick}
+            variant="outline"
+            size="lg"
+            className="text-base px-8 py-6 bg-background/80 backdrop-blur-sm"
+          >
+            <MessageCircle className="mr-2 h-5 w-5" />
+            Falar com Especialista
+          </Button>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default Hero;
