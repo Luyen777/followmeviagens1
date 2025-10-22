@@ -4,14 +4,9 @@ import { Button } from "@/components/ui/button";
 interface HeroProps {
   image: string;
   name: string;
-  subtitle: string;
-  location: string;
-  transferTime: string;
-  rating: number;
-  highlights: string[];
 }
 
-const Hero = ({ image, name, subtitle, location, transferTime, rating, highlights }: HeroProps) => {
+const Hero = ({ image, name }: HeroProps) => {
   const handleWhatsAppClick = () => {
     window.open("https://wa.me/5511971324865", "_blank");
   };
@@ -28,24 +23,9 @@ const Hero = ({ image, name, subtitle, location, transferTime, rating, highlight
       </div>
 
       <div className="relative z-10 container mx-auto px-4 text-center">
-        <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-display font-medium text-foreground mb-6 leading-tight">
+        <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-display font-medium text-foreground mb-12 leading-tight">
           {name}
         </h1>
-
-        <p className="text-lg sm:text-xl text-foreground/80 max-w-3xl mx-auto mb-8 leading-relaxed">
-          {subtitle}
-        </p>
-
-        <div className="flex flex-wrap justify-center gap-3 mb-10">
-          {highlights.map((highlight, index) => (
-            <span
-              key={index}
-              className="px-4 py-2 bg-background/80 backdrop-blur-sm rounded-full text-sm font-medium text-foreground border border-border"
-            >
-              {highlight}
-            </span>
-          ))}
-        </div>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
           <Button 

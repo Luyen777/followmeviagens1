@@ -61,11 +61,6 @@ const MaldivesResortTemplate = () => {
           <Hero
             image={resort.heroImage}
             name={resort.name}
-            subtitle={resort.heroSubtitle}
-            location={resort.location}
-            transferTime={resort.transferTime}
-            rating={resort.rating}
-            highlights={resort.heroHighlights}
           />
           
           <AboutSection content={resort.about} />
