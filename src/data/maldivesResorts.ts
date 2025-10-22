@@ -985,46 +985,20 @@ export const maldivesResorts: Record<string, ResortData> = {
         id: "dining",
         title: "Experiências Gastronômicas",
         subtitle: "Restaurantes premiados e o único observatório sobre a água das Maldivas",
-        type: "cards",
+        type: "list",
         items: [
           {
-            title: "SEA - Underwater Restaurant",
-            description: "Restaurante subaquático 6m abaixo da superfície com paredes curvas de vidro com vista 360° para o recife (tartarugas, mantas, tubarões, peixes-palhaço). Adega subaquática com mais de 450 rótulos de 24 países (votada melhor adega subaquática do mundo). Menu de frutos do mar premium. Crédito de USD $50 por pessoa em HB/FB para jantar.",
-            badge: "Signature"
-          },
-          {
-            title: "FIRE - Japanese Teppanyaki",
-            description: "Cozinha japonesa com teppanyaki ao vivo e grelhados premium. Crédito de USD $50 por pessoa em HB/FB.",
-            badge: "Japonês"
-          },
-          {
-            title: "SALT - Fine Asiatic Restaurant",
-            description: "19 variedades de sais raros do planeta com Salt Sommelier para auxiliar na escolha dos temperos. Cozinha asiática sofisticada.",
-            badge: "Asiático"
-          },
-          {
-            title: "SKY - Rooftop Bar & Observatory",
-            description: "Bar no rooftop com vista panorâmica do Atol de Baa. Observatório astronômico (único nas Maldivas sobre a água) com telescópio potente para stargazing sessions com Sky Guru. Coquetéis exclusivos ao pôr do sol.",
-            badge: "Observatório"
-          },
-          {
-            title: "Plates - International Buffet",
-            description: "Café da manhã buffet (incluído em todos os meal plans). Jantares temáticos noturnos selecionados: árabe, europeu, frutos do mar, BBQ, internacional. Estações ao vivo.",
-            badge: "Incluído"
-          },
-          {
-            title: "SPICE - Asian Fusion",
-            description: "Menu à la carte com seleção de 3 pratos. Incluído em HB e FB.",
-            badge: "Incluído HB/FB"
-          },
-          {
-            title: "Manzaru - Beachfront Casual Dining",
-            description: "Almoço casual à beira-mar (12h-17h). Menu à la carte de 2 pratos para FB. Opções leves e descontraídas.",
-            badge: "Beach"
-          },
-          {
-            title: "Experiências Especiais",
-            description: "Dining by Design - Jantares privativos na praia, underwater ou localizações exclusivas. Wine Pairing Dinners - Jantares harmonizados. Michelin Star Dinners - Eventos especiais com chefs estrelados. Cinema Under the Stars - Jantar durante sessão de cinema ao ar livre."
+            title: "Restaurantes e Bares",
+            items: [
+              "SEA - Underwater Restaurant: Restaurante subaquático 6m abaixo da superfície com paredes curvas de vidro com vista 360° para o recife. Adega subaquática com mais de 450 rótulos de 24 países (votada melhor adega subaquática do mundo). Crédito de USD $50 por pessoa em HB/FB para jantar.",
+              "FIRE - Japanese Teppanyaki: Cozinha japonesa com teppanyaki ao vivo e grelhados premium. Crédito de USD $50 por pessoa em HB/FB.",
+              "SALT - Fine Asiatic Restaurant: 19 variedades de sais raros do planeta com Salt Sommelier para auxiliar na escolha dos temperos. Cozinha asiática sofisticada.",
+              "SKY - Rooftop Bar & Observatory: Bar no rooftop com vista panorâmica do Atol de Baa. Observatório astronômico (único nas Maldivas sobre a água) com telescópio potente para stargazing sessions com Sky Guru.",
+              "Plates - International Buffet: Café da manhã buffet (incluído em todos os meal plans). Jantares temáticos noturnos selecionados: árabe, europeu, frutos do mar, BBQ, internacional.",
+              "SPICE - Asian Fusion: Menu à la carte com seleção de 3 pratos. Incluído em HB e FB.",
+              "Manzaru - Beachfront Casual Dining: Almoço casual à beira-mar (12h-17h). Menu à la carte de 2 pratos para FB.",
+              "Experiências Especiais: Dining by Design (jantares privativos na praia, underwater ou localizações exclusivas), Wine Pairing Dinners, Michelin Star Dinners, Cinema Under the Stars."
+            ]
           }
         ]
       }
