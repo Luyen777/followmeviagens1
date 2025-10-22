@@ -28,14 +28,6 @@ const Hero = ({ image, name, subtitle, location, transferTime, rating, highlight
       </div>
 
       <div className="relative z-10 container mx-auto px-4 text-center">
-        <div className="inline-flex items-center gap-2 bg-primary/10 backdrop-blur-sm px-4 py-2 rounded-full mb-6">
-          <span className="text-primary font-semibold">{location}</span>
-          <span className="text-foreground/60">•</span>
-          <span className="text-foreground/80">{transferTime}</span>
-          <span className="text-foreground/60">•</span>
-          <span className="text-foreground/80">{"⭐".repeat(rating)}</span>
-        </div>
-
         <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-display font-medium text-foreground mb-6 leading-tight">
           {name}
         </h1>
@@ -59,7 +51,7 @@ const Hero = ({ image, name, subtitle, location, transferTime, rating, highlight
           <Button 
             onClick={scrollToPricing} 
             size="lg" 
-            className="w-full sm:w-auto h-[50px] sm:h-[60px] px-6 sm:px-8 text-base sm:text-lg bg-black/70 hover:bg-black/80 text-white shadow-lg border-2 border-yellow-500 hover:border-yellow-400"
+            className="w-full sm:w-auto h-[50px] sm:h-[60px] px-6 sm:px-8 text-base sm:text-lg bg-black hover:bg-black/90 text-white shadow-lg border-2 border-yellow-500 hover:border-yellow-400"
           >
             Solicitar Orçamento Personalizado
           </Button>
