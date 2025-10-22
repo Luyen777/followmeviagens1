@@ -1060,18 +1060,25 @@ export const maldivesResorts: Record<string, ResortData> = {
     pricing: {
       seasons: [
         {
-          name: "Consulte valores e disponibilidade",
-          period: "Ano todo",
-          priceText: "Entre em contato para orçamento personalizado"
+          name: "Baixa Temporada",
+          period: "Maio a Outubro",
+          priceText: "Sob consulta",
+          priceSubtext: "7 noites em Over Water Pool Villa com café da manhã"
+        },
+        {
+          name: "Alta Temporada",
+          period: "Novembro a Abril",
+          priceText: "Sob consulta",
+          priceSubtext: "7 noites em Over Water Pool Villa com café da manhã"
         }
       ],
       paymentTerms: [
-        "Condições de pagamento flexíveis",
-        "Parcelamento disponível",
-        "Consulte nossa equipe para mais detalhes"
+        "Entrada de 20% via transferência bancária ao confirmar a reserva",
+        "80% restante até 30 dias antes da viagem",
+        "Parcelamento disponível em até 10 parcelas sem juros no cartão de crédito"
       ],
-      cancellationPolicy: "Políticas de cancelamento variam de acordo com a temporada e tipo de tarifa contratada. Consulte condições específicas no momento da reserva.",
-      notes: "Valores sujeitos a alteração sem aviso prévio. Taxas de serviço e impostos locais não inclusos."
+      cancellationPolicy: "Cancelamento com até 30 dias de antecedência: reembolso de 80% do valor pago. Cancelamentos com menos de 30 dias não têm direito a reembolso.",
+      notes: "Transfer de hidroavião (35 min) ou voo doméstico + lancha não inclusos no pacote base. Crianças menores de 12 anos: consulte condições especiais. Villa Host 24h incluído em todas as acomodações."
     },
     faqs: [
       {
