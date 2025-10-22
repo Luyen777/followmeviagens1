@@ -6,7 +6,6 @@ import WhatsAppButton from "@/components/WhatsAppButton";
 import Hero from "@/components/resort-template/Hero";
 import AboutSection from "@/components/resort-template/AboutSection";
 import TextSection from "@/components/resort-template/TextSection";
-import AccommodationSection from "@/components/resort-template/AccommodationSection";
 import PricingSection from "@/components/resort-template/PricingSection";
 import FAQSection from "@/components/resort-template/FAQSection";
 import ResortImageCarousel from "@/components/ResortImageCarousel";
@@ -80,12 +79,6 @@ const MaldivesResortTemplate = () => {
               />
             ) : null
           ))}
-          
-          <AccommodationSection
-            title={resort.accommodations.title}
-            description={resort.accommodations.description}
-            types={resort.accommodations.types}
-          />
           
           <PricingSection
             seasons={resort.pricing.seasons}

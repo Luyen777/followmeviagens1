@@ -1,3 +1,5 @@
+import MarkdownContent from "@/components/MarkdownContent";
+
 interface TextSectionProps {
   id: string;
   title: string;
@@ -5,6 +7,19 @@ interface TextSectionProps {
 }
 
 const TextSection = ({ id, title, content }: TextSectionProps) => {
+  // Convert simple hyphens to proper markdown bullets
+  const formattedContent = content
+    .split('\n')
+    .map(line => {
+      const trimmed = line.trim();
+      // Convert "- " at start to markdown bullet
+      if (trimmed.startsWith('- ')) {
+        return trimmed.replace(/^- /, '• ');
+      }
+      return line;
+    })
+    .join('\n');
+
   return (
     <section id={id} className="py-20 px-4 sm:px-6 lg:px-8 bg-background">
       <div className="max-w-4xl mx-auto">
@@ -14,9 +29,9 @@ const TextSection = ({ id, title, content }: TextSectionProps) => {
           </h2>
         </header>
         
-        <div className="prose prose-lg max-w-none text-muted-foreground">
-          <div className="text-lg leading-relaxed whitespace-pre-line text-center sm:text-left">
-            {content}
+        <div className="prose prose-lg max-w-none">
+          <div className="text-lg leading-relaxed whitespace-pre-line text-foreground/80 space-y-4">
+            {formattedContent}
           </div>
         </div>
       </div>

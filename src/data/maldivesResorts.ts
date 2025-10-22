@@ -181,76 +181,49 @@ Experiências Gastronômicas Especiais:
 - White Room Private Dining (jantar personalizado em ambiente branco)
 - Themed nights e jantares românticos
 - Room Service 24h`
+      },
+      {
+        id: "acomodacao",
+        title: "Acomodação",
+        type: "text",
+        content: `Villas sobre a água:
+
+- Ocean Villa (108m²): sobre a lagoa, piscina privativa, terraço coberto, acesso ao mar
+- Sunset Ocean Suite (172m²): vista premiada para o pôr do sol, piscina privativa 16m, lounge externo, sala de estar separada
+- Sunset Lagoon Suite: opções familiares disponíveis, piscina privativa
+- Ayada Royal Ocean Suite (318m²): categoria máxima de luxo, sala de jantar, 2 quartos, piscina infinita, deck panorâmico
+
+Comodidades:
+
+- Piscina privativa (5-16m)
+- King-size bed
+- Banheiro aberto com amenities premium
+- Espaço para refeições ao ar livre
+- Menu de travesseiros
+- Nespresso, minibar
+- Smart TV, Bose sound system, Wi-Fi premium
+- Berço ou cama extra sob solicitação
+- Serviço de mordomo (butler) 24h`
       }
     ],
     accommodations: {
       title: "Acomodação",
-      description: "Villas espaçosas com piscina privativa e serviço de mordomo",
-      types: [
-        {
-          name: "Ocean Villa",
-          size: "108m²",
-          beds: "King-size bed",
-          maxOccupancy: "2 adultos + 2 crianças",
-          features: [
-            "Sobre a lagoa com acesso ao mar",
-            "Piscina privativa",
-            "Terraço coberto",
-            "Banheiro aberto com amenities premium",
-            "Serviço de mordomo (butler) 24h"
-          ]
-        },
-        {
-          name: "Sunset Ocean Suite",
-          size: "172m²",
-          beds: "King-size bed",
-          maxOccupancy: "3 adultos",
-          features: [
-            "Vista premiada para o pôr do sol",
-            "Piscina privativa 16m",
-            "Lounge externo",
-            "Sala de estar separada",
-            "Espaço para refeições ao ar livre",
-            "Serviço de mordomo (butler) 24h"
-          ]
-        },
-        {
-          name: "Sunset Lagoon Suite",
-          size: "Variável",
-          beds: "King-size bed ou configuração familiar",
-          maxOccupancy: "Famílias",
-          features: [
-            "Opções familiares disponíveis",
-            "Piscina privativa",
-            "Vista para o pôr do sol",
-            "Berço ou cama extra sob solicitação",
-            "Serviço de mordomo (butler) 24h"
-          ]
-        },
-        {
-          name: "Ayada Royal Ocean Suite",
-          size: "318m²",
-          beds: "2 quartos",
-          maxOccupancy: "6 pessoas",
-          features: [
-            "Categoria máxima de luxo",
-            "Sala de jantar",
-            "2 quartos com banheiros privativos",
-            "Piscina infinita",
-            "Deck panorâmico",
-            "Smart TV e Bose sound system",
-            "Serviço de mordomo (butler) 24h"
-          ]
-        }
-      ]
+      description: "",
+      types: []
     },
     pricing: {
       seasons: [
         {
-          name: "Consulte valores",
-          period: "Ano todo",
-          priceText: "Solicitar orçamento",
-          priceSubtext: "Preços variam conforme temporada e disponibilidade"
+          name: "Baixa Temporada",
+          period: "Maio - Outubro",
+          priceText: "Sob consulta",
+          priceSubtext: "Melhores tarifas do ano"
+        },
+        {
+          name: "Alta Temporada",
+          period: "Novembro - Abril",
+          priceText: "Sob consulta",
+          priceSubtext: "Clima ideal e melhor visibilidade"
         }
       ],
       paymentTerms: [
