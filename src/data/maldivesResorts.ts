@@ -912,135 +912,115 @@ export const maldivesResorts: Record<string, ResortData> = {
         title: "Inclusões do Pacote",
         type: "list",
         items: [
-          { description: "Acesso ao lounge VIP de hidroavião em Malé (com bebidas e Wi-Fi gratuito)" },
-          { description: "Serviço de Villa Host (mordomo) 24 horas" },
-          { description: "Equipamentos de snorkeling gratuitos" },
-          { description: "Bicicletas personalizadas para adultos e crianças" },
-          { description: "Acesso a 3 academias equipadas com Technogym" },
-          { description: "Piscina infinita de 49m (uma das mais longas das Maldivas)" },
-          { description: "Sessões de yoga, meditação, stretch and tone em grupo" },
-          { description: "Wi-Fi gratuito em todas as áreas" },
-          { description: "Cinema sob as estrelas" },
-          { description: "Sunshine Butlers na piscina (suco fresco, toalhas frias, limpeza de óculos de sol, massagem nas costas de 5min)" },
-          { description: "Spice Spoons Cooking Classes (aulas de culinária tailandesa e maldívia gratuitas)" },
-          { description: "Entretenimento ao vivo e performances culturais" }
-        ]
-      },
-      {
-        id: "honeymoon",
-        title: "Benefícios para Lua de Mel",
-        subtitle: "Dentro de 12 meses do casamento, certidão necessária",
-        type: "list",
-        items: [
-          { description: "Welcome amenity especial" },
-          { description: "Garrafa de champagne na chegada" },
-          { description: "Ritual de banho com velas e pétalas de rosas uma noite durante a estadia" },
-          { description: "Decoração de cama com pétalas" },
-          { description: "Pacote Honeymoon & Romance (4+ noites): Inclui café da manhã e jantar diários + Dining by Design privativo na praia + champagne breakfast na villa + sessão de stargazing compartilhada + Slumber Guru Ritual romântico" }
-        ]
-      },
-      {
-        id: "activities-free",
-        title: "Atividades Gratuitas",
-        type: "two-column",
-        items: [
           {
-            title: "Esportes Aquáticos",
-            description: "Snorkeling no house reef 'Golden Wall' (2km de extensão, tartarugas hawksbill, arraias, tubarões de recife, moreia), caiaques, stand-up paddle, catamarã"
+            title: "Serviços e Comodidades Incluídas",
+            items: [
+              "Acesso ao lounge VIP de hidroavião em Malé (com bebidas e Wi-Fi gratuito)",
+              "Serviço de Villa Host (mordomo) 24 horas",
+              "Equipamentos de snorkeling gratuitos",
+              "Bicicletas personalizadas para adultos e crianças",
+              "Acesso a 3 academias equipadas com Technogym",
+              "Piscina infinita de 49m (uma das mais longas das Maldivas)",
+              "Sessões de yoga, meditação, stretch and tone em grupo",
+              "Wi-Fi gratuito em todas as áreas",
+              "Cinema sob as estrelas",
+              "Sunshine Butlers na piscina (suco fresco, toalhas frias, limpeza de óculos de sol, massagem nas costas de 5min)",
+              "Spice Spoons Cooking Classes (aulas de culinária tailandesa e maldívia gratuitas)",
+              "Entretenimento ao vivo e performances culturais"
+            ]
           },
           {
-            title: "Thiththi Boli Kids' Club",
-            description: "Para crianças de 4-12 anos (10h-18h): treasure hunts, Marine Biologist Programme, cooking classes, artes maldívias, cinema, pamper experience com spa"
-          },
-          {
-            title: "Entretenimento",
-            description: "Trampoline park, cinema sob as estrelas com filmes clássicos e blockbusters, recreation area (bilhar, tênis de mesa, xadrez gigante, Jenga)"
-          },
-          {
-            title: "Wellness & Fitness",
-            description: "Sessões de yoga, meditação e fitness em grupo, quadras de tênis, badminton, vôlei de praia"
-          },
-          {
-            title: "Experiências Culturais",
-            description: "Spice Spoons Cooking Classes (culinária tailandesa e maldívia), performances culturais"
-          },
-          {
-            title: "SKY Observatory",
-            description: "Stargazing no observatório sobre a água (único nas Maldivas) com telescópio potente"
+            title: "Benefícios para Lua de Mel",
+            items: [
+              "Dentro de 12 meses do casamento, certidão necessária",
+              "Welcome amenity especial",
+              "Garrafa de champagne na chegada",
+              "Ritual de banho com velas e pétalas de rosas uma noite durante a estadia",
+              "Decoração de cama com pétalas",
+              "Pacote Honeymoon & Romance (4+ noites): Inclui café da manhã e jantar diários + Dining by Design privativo na praia + champagne breakfast na villa + sessão de stargazing compartilhada + Slumber Guru Ritual romântico"
+            ]
           }
         ]
       },
       {
-        id: "activities-paid",
-        title: "Atividades com Custo Extra",
+        id: "activities",
+        title: "Atividades & Experiências",
+        subtitle: "Diversidade de experiências no Atol de Baa, Reserva da Biosfera UNESCO",
         type: "two-column",
         items: [
           {
-            title: "Mergulho",
-            description: "PADI 5 estrelas certificado, Discover Scuba Diving, cursos completos, safaris de mergulho"
+            title: "Atividades Gratuitas",
+            icon: "Heart",
+            badge: "Incluído",
+            items: [
+              "Snorkeling no house reef 'Golden Wall' (2km de extensão, tartarugas hawksbill, arraias, tubarões de recife, moreia)",
+              "Caiaques, stand-up paddle, catamarã",
+              "Thiththi Boli Kids' Club (4-12 anos, 10h-18h): treasure hunts, Marine Biologist Programme, cooking classes, artes maldívias, cinema, pamper experience com spa",
+              "Trampoline park",
+              "Cinema sob as estrelas com filmes clássicos e blockbusters",
+              "Spice Spoons Cooking Classes (culinária tailandesa e maldívia)",
+              "Sessões de yoga, meditação e fitness em grupo",
+              "Quadras de tênis, badminton, vôlei de praia",
+              "Recreation area (bilhar, tênis de mesa, xadrez gigante, Jenga)",
+              "Stargazing no SKY Observatory (observatório sobre a água com telescópio potente)"
+            ]
           },
           {
-            title: "Esportes Motorizados",
-            description: "Jetpack, Seabob, jet ski, parasailing (Chute Me), wakeboard"
-          },
-          {
-            title: "Pesca",
-            description: "Big game fishing, pesca tradicional dhoni, pesca noturna"
-          },
-          {
-            title: "Excursões",
-            description: "Dolphin Discovery cruise, visita a Hanifaru Bay (maio-novembro, mantas e tubarões-baleia), island hopping, local island tours, Hawksbill Turtle Quest snorkel (2h)"
-          },
-          {
-            title: "Muay Thai Boxing",
-            description: "Primeiro e único resort nas Maldivas a oferecer (com ring profissional e instrutor), sessões familiares disponíveis"
-          },
-          {
-            title: "Anantara Spa",
-            description: "6 suítes overwater sobre o oceano, 2 salas abertas para massagens tailandesas, sauna, sala de vapor, piscinas quentes e frias, Cocoon Medi Spa, salão de beleza e cabeleireiro, deck de relaxamento com cold plunge pool"
-          },
-          {
-            title: "Coral Adoption Programme",
-            description: "Patrocínio USD $185 | Patrocínio + plantio pessoal de coral: preço sob consulta"
-          },
-          {
-            title: "Experiências Especiais",
-            description: "Dining by Design (jantares privativos), private island picnics, cruzeiros de iate de luxo, degustação de vinhos envelhecidos subaquaticamente (USD $2.455++ para 2 pessoas)"
+            title: "Atividades Premium",
+            icon: "Sparkles",
+            items: [
+              "Mergulho: PADI 5 estrelas certificado, Discover Scuba Diving, cursos completos, safaris de mergulho",
+              "Esportes Motorizados: Jetpack, Seabob, jet ski, parasailing (Chute Me), wakeboard",
+              "Pesca: Big game fishing, pesca tradicional dhoni, pesca noturna",
+              "Excursões: Dolphin Discovery cruise, visita a Hanifaru Bay (maio-novembro, mantas e tubarões-baleia), island hopping, local island tours, Hawksbill Turtle Quest snorkel (2h)",
+              "Muay Thai Boxing: Primeiro e único resort nas Maldivas a oferecer (com ring profissional e instrutor), sessões familiares disponíveis",
+              "Anantara Spa overwater: 6 suítes sobre o oceano, 2 salas abertas para massagens tailandesas, sauna, sala de vapor, piscinas quentes e frias, Cocoon Medi Spa, salão de beleza e cabeleireiro, deck de relaxamento com cold plunge pool",
+              "Coral Adoption Programme (HARP): Patrocínio USD $185 | Patrocínio + plantio pessoal de coral: preço sob consulta",
+              "Experiências especiais: Dining by Design (jantares privativos), private island picnics, cruzeiros de iate de luxo, degustação de vinhos envelhecidos subaquaticamente (USD $2.455++ para 2 pessoas)"
+            ]
           }
         ]
       },
       {
         id: "dining",
         title: "Experiências Gastronômicas",
+        subtitle: "Restaurantes premiados e o único observatório sobre a água das Maldivas",
         type: "cards",
         items: [
           {
             title: "SEA - Underwater Restaurant",
-            description: "Restaurante subaquático 6m abaixo da superfície com paredes curvas de vidro com vista 360° para o recife (tartarugas, mantas, tubarões, peixes-palhaço). Adega subaquática com mais de 450 rótulos de 24 países (votada melhor adega subaquática do mundo). Menu de frutos do mar premium. Crédito de USD $50 por pessoa em HB/FB para jantar. Almoço de 4 pratos à la carte (incluído em alguns pacotes promocionais)."
+            description: "Restaurante subaquático 6m abaixo da superfície com paredes curvas de vidro com vista 360° para o recife (tartarugas, mantas, tubarões, peixes-palhaço). Adega subaquática com mais de 450 rótulos de 24 países (votada melhor adega subaquática do mundo). Menu de frutos do mar premium. Crédito de USD $50 por pessoa em HB/FB para jantar.",
+            badge: "Signature"
           },
           {
             title: "FIRE - Japanese Teppanyaki",
-            description: "Cozinha japonesa com teppanyaki ao vivo e grelhados premium. Crédito de USD $50 por pessoa em HB/FB."
+            description: "Cozinha japonesa com teppanyaki ao vivo e grelhados premium. Crédito de USD $50 por pessoa em HB/FB.",
+            badge: "Japonês"
           },
           {
             title: "SALT - Fine Asiatic Restaurant",
-            description: "19 variedades de sais raros do planeta com Salt Sommelier para auxiliar na escolha dos temperos. Cozinha asiática sofisticada."
+            description: "19 variedades de sais raros do planeta com Salt Sommelier para auxiliar na escolha dos temperos. Cozinha asiática sofisticada.",
+            badge: "Asiático"
           },
           {
             title: "SKY - Rooftop Bar & Observatory",
-            description: "Bar no rooftop com vista panorâmica do Atol de Baa. Observatório astronômico (único nas Maldivas sobre a água) com telescópio potente para stargazing sessions com Sky Guru. Coquetéis exclusivos ao pôr do sol."
+            description: "Bar no rooftop com vista panorâmica do Atol de Baa. Observatório astronômico (único nas Maldivas sobre a água) com telescópio potente para stargazing sessions com Sky Guru. Coquetéis exclusivos ao pôr do sol.",
+            badge: "Observatório"
           },
           {
             title: "Plates - International Buffet",
-            description: "Café da manhã buffet (incluído em todos os meal plans). Jantares temáticos noturnos selecionados: árabe, europeu, frutos do mar, BBQ, internacional. Estações ao vivo."
+            description: "Café da manhã buffet (incluído em todos os meal plans). Jantares temáticos noturnos selecionados: árabe, europeu, frutos do mar, BBQ, internacional. Estações ao vivo.",
+            badge: "Incluído"
           },
           {
             title: "SPICE - Asian Fusion",
-            description: "Menu à la carte com seleção de 3 pratos. Incluído em HB e FB."
+            description: "Menu à la carte com seleção de 3 pratos. Incluído em HB e FB.",
+            badge: "Incluído HB/FB"
           },
           {
             title: "Manzaru - Beachfront Casual Dining",
-            description: "Almoço casual à beira-mar (12h-17h). Menu à la carte de 2 pratos para FB. Opções leves e descontraídas."
+            description: "Almoço casual à beira-mar (12h-17h). Menu à la carte de 2 pratos para FB. Opções leves e descontraídas.",
+            badge: "Beach"
           },
           {
             title: "Experiências Especiais",

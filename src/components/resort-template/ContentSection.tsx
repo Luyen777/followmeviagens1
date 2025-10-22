@@ -1,4 +1,4 @@
-import { Heart, Waves, UtensilsCrossed, Check, LucideIcon } from "lucide-react";
+import { Heart, Waves, UtensilsCrossed, Check, Sparkles, LucideIcon } from "lucide-react";
 
 interface ContentItem {
   title?: string;
@@ -23,6 +23,7 @@ const iconMap: Record<string, LucideIcon> = {
   Waves,
   UtensilsCrossed,
   Check,
+  Sparkles,
 };
 
 const ContentSection = ({ id, title, subtitle, type, items = [], content, background = 'default' }: ContentSectionProps) => {
@@ -44,7 +45,7 @@ const ContentSection = ({ id, title, subtitle, type, items = [], content, backgr
           <div className="grid lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
             {items.map((item, index) => {
               const Icon = item.icon ? iconMap[item.icon] : null;
-              const badgeColor = item.badge === 'Grátis' ? 'bg-green-500/10 text-green-700' : 'bg-primary/10 text-primary';
+              const badgeColor = (item.badge === 'Grátis' || item.badge === 'Incluído') ? 'bg-green-500/10 text-green-700' : 'bg-primary/10 text-primary';
               
               return (
                 <div key={index} className="bg-muted/30 rounded-3xl p-8 border border-border">
