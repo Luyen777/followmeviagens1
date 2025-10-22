@@ -56,17 +56,20 @@ const Hero = ({ image, name, subtitle, location, transferTime, rating, highlight
         </div>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-          <Button onClick={scrollToPricing} size="lg" className="text-base px-8 py-6">
-            Ver Pacotes e Preços
+          <Button 
+            onClick={scrollToPricing} 
+            size="lg" 
+            className="w-full sm:w-auto h-[50px] sm:h-[60px] px-6 sm:px-8 text-base sm:text-lg bg-black/30 hover:bg-black/40 text-white shadow-lg border-2 border-yellow-500 hover:border-yellow-400"
+          >
+            Solicitar Orçamento Personalizado
           </Button>
-          <Button
-            onClick={handleWhatsAppClick}
-            variant="outline"
-            size="lg"
-            className="text-base px-8 py-6 bg-background/80 backdrop-blur-sm"
+          <Button 
+            onClick={handleWhatsAppClick} 
+            size="lg" 
+            className="w-full sm:w-auto h-[50px] sm:h-[60px] px-6 sm:px-8 text-base sm:text-lg bg-green-700 hover:bg-green-800 text-white"
           >
             <MessageCircle className="mr-2 h-5 w-5" />
-            Falar com Especialista
+            Falar no WhatsApp
           </Button>
         </div>
       </div>
