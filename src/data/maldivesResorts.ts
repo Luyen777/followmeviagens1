@@ -293,171 +293,81 @@ Comodidades:
     about: "O Amilla Maldives Resort and Residences é um resort 5 estrelas ultra-luxuoso localizado no Atol de Baa, Reserva da Biosfera UNESCO, a 30-35 minutos de hidroavião do Aeroporto Internacional de Malé. Membro da prestigiada Small Luxury Hotels of the World, o resort ocupa uma das maiores ilhas privadas das Maldivas com 23,5 hectares e mais de 70% de selva tropical preservada.\n\nCom apenas 67 villas espaçosas (220m² a 2.400m²), todas equipadas com piscina privativa e serviço de mordomo pessoal (Katheeb) disponível 24/7, o Amilla oferece uma experiência verdadeiramente exclusiva. O resort destaca-se pela proximidade com Hanifaru Bay para observação de mantas e tubarões-baleia, excepcional house reef para snorkeling com biólogo marinho, e compromisso genuíno com sustentabilidade certificado pela EarthCheck Silver Certification.\n\nCom 8 restaurantes e bares de classe mundial, incluindo culinária japonesa, italiana, indiana e grega, jardins orgânicos próprios que abastecem os restaurantes, e experiências únicas como o Amilla Glamping em bolha transparente, o resort combina luxo sofisticado com respeito ao meio ambiente, criando o cenário perfeito para viajantes exigentes que buscam exclusividade e autenticidade.",
     sections: [
       {
-        id: "inclusions",
-        title: "Inclusões do Pacote",
-        subtitle: "Experiência ultra-luxuosa com serviço personalizado e comodidades premium incluídas",
-        type: "list",
-        items: [
-          {
-            title: "Refeições & Serviços",
-            items: [
-              "Café da manhã buffet e à la carte no Fresh Restaurant",
-              "Água mineral e chás gourmet na villa",
-              "Coquetel de boas-vindas semanal",
-              "Arrumação duas vezes ao dia e turndown service noturno"
-            ]
-          },
-          {
-            title: "Atividades & Equipamentos",
-            items: [
-              "Equipamentos de snorkeling, stand-up paddle e caiaques gratuitos",
-              "Bicicletas personalizadas para cada hóspede",
-              "Snorkeling guiado no house reef com biólogo marinho",
-              "Sessões de yoga e meditação no Javvu Spa",
-              "Acesso a 3 academias equipadas (incluindo Jungle Gymnasium)"
-            ]
-          },
-          {
-            title: "Serviços Exclusivos",
-            items: [
-              "Serviço de mordomo pessoal (Katheeb) 24/7 para cada villa",
-              "Wi-Fi gratuito em toda a ilha",
-              "Entretenimento: música ao vivo, dança tradicional Bodu Beru, cinema ao ar livre"
-            ]
-          },
-          {
-            title: "Benefícios para Lua de Mel (4+ noites)",
-            items: [
-              "Champagne de cortesia",
-              "Romantic turndown service",
-              "30 minutos extras em tratamento de spa",
-              "7+ noites: Excursão surpresa + jantar romântico na praia + floating breakfast"
-            ]
-          }
-        ]
+        id: "section-1",
+        title: "Inclusões do pacote",
+        type: "text",
+        content: `- Café da manhã buffet e à la carte no Fresh Restaurant
+- Serviço de mordomo pessoal (Katheeb) 24/7 para cada villa
+- Equipamentos de snorkeling, stand-up paddle e caiaques gratuitos
+- Bicicletas personalizadas para cada hóspede
+- Acesso a 3 academias equipadas (incluindo Jungle Gymnasium)
+- Sessões de yoga e meditação no Javvu Spa
+- Snorkeling guiado no house reef com biólogo marinho
+- Wi-Fi gratuito em toda a ilha
+- Água mineral e chás gourmet na villa
+- Arrumação duas vezes ao dia e turndown service noturno
+- Coquetel de boas-vindas semanal
+- Entretenimento (música ao vivo, dança tradicional Bodu Beru, cinema ao ar livre)
+
+Benefícios para Lua de Mel (4+ noites):
+- Champagne de cortesia
+- Romantic turndown service
+- 30 minutos extras em tratamento de spa
+- 7+ noites: Excursão surpresa + jantar romântico na praia + floating breakfast`
       },
       {
-        id: "activities",
-        title: "Atividades & Experiências",
-        subtitle: "Diversidade de atividades em uma das maiores ilhas privadas das Maldivas",
-        type: "two-column",
-        items: [
-          {
-            title: "Atividades Gratuitas",
-            icon: "Heart",
-            badge: "Incluído",
-            items: [
-              "Esportes aquáticos não motorizados (caiaque, SUP, snorkeling)",
-              "Programa Mini Marine Biologists para crianças (4-13 anos)",
-              "Sultan's Village Kids Club (4-12 anos, 9h-17h diariamente)",
-              "Quadras de tênis, badminton, vôlei de praia e futebol",
-              "Treinamento de futebol em grupo (6x/semana)",
-              "Sala de jogos (bilhar, ping-pong, xadrez)",
-              "Workshops criativos (Alchemy Bar, culinária, mixologia, fotografia)",
-              "Teen programme (DJ, aerial hoop, PlayStation 4)"
-            ]
-          },
-          {
-            title: "Atividades Premium",
-            icon: "Sparkles",
-            items: [
-              "Esportes motorizados: Jet ski (USD $150++ - 20min), wakeboard/water ski (USD $65-80++)",
-              "Mergulho: A partir de USD $25++ por mergulho, equipamento completo USD $34++",
-              "Excursões: Dolphin cruise (USD $1.200++), snorkeling safari (USD $700-1.200++)",
-              "Pesca tradicional (USD $700-850++), big game fishing (USD $1.200-2.200++)",
-              "Visita a Hanifaru Bay para observação de mantas e tubarões-baleia (sazonal)",
-              "Javvu Spa: Tratamentos a partir de USD $175 (60min), massagem para casal (USD $550 - 90min)",
-              "Amilla Glamping em bolha transparente (USD $750-1.000++ por noite)",
-              "Jantar privativo na praia (Dine by Design), piquenique em banco de areia"
-            ]
-          }
-        ]
+        id: "section-2",
+        title: "Atividades e gastronomia",
+        type: "text",
+        content: `Atividades Gratuitas:
+- Esportes aquáticos não motorizados (caiaque, SUP, snorkeling)
+- Programa Mini Marine Biologists para crianças (4-13 anos)
+- Sultan's Village Kids Club (4-12 anos, 9h-17h diariamente)
+- Quadras de tênis, badminton, vôlei de praia e futebol
+- Treinamento de futebol em grupo (6x/semana)
+- Sala de jogos (bilhar, ping-pong, xadrez)
+- Workshops criativos (Alchemy Bar, culinária, mixologia, fotografia)
+- Teen programme (DJ, aerial hoop, PlayStation 4)
+
+Atividades com Custo Extra:
+- Esportes motorizados: Jet ski (USD $150++ - 20min), wakeboard/water ski (USD $65-80++), subwing (USD $65++)
+- Mergulho: A partir de USD $25++ por mergulho, equipamento completo USD $34++
+- Excursões: Dolphin cruise (USD $1.200++), snorkeling safari (USD $700-1.200++), pesca tradicional (USD $700-850++), big game fishing (USD $1.200-2.200++), visita a Hanifaru Bay (sazonal)
+- Javvu Spa: Tratamentos a partir de USD $175 (60min), programas signature com medicina herbal maldívia (Dhivehi Beys), massagem para casal sob as estrelas (USD $550 - 90min)
+- Experiências especiais: Amilla Glamping em bolha transparente (USD $750-1.000++ por noite com pacotes wellness ou romance), jantar privativo na praia (Dine by Design), piquenique em banco de areia
+
+Restaurantes:
+- Feeling Koi - Japonês contemporâneo sobre a água com sunset bar no rooftop
+- Barolo - Italiano autêntico do Piemonte
+- East - Sul da Índia com especialidades tandoor
+- Tessera - Grego mediterrâneo
+- Fresh - Buffet internacional (café da manhã incluso, jantares temáticos)
+- Emperor Beach Club - Casual na areia com noites temáticas 3x/semana
+- Joe's Pizza - Pizzas artesanais
+- Chill'd Café - Opções leves
+
+Bares: Sunset Bar (rooftop), Baa Bar, The Cellar Door (adega premium), Baazaar Bar (piscina)`
       },
       {
-        id: "dining",
-        title: "Gastronomia de Classe Mundial",
-        subtitle: "8 restaurantes e bares com culinária internacional e jardins orgânicos próprios",
-        type: "cards",
-        items: [
-          {
-            title: "Feeling Koi",
-            description: "Japonês contemporâneo sobre a água com sunset bar no rooftop, oferecendo sushi premium e experiências gastronômicas asiáticas.",
-            badge: "Japonês"
-          },
-          {
-            title: "Barolo",
-            description: "Autêntica culinária italiana do Piemonte com massas artesanais, risottos e vinhos selecionados da região.",
-            badge: "Italiano"
-          },
-          {
-            title: "East",
-            description: "Especialidades do Sul da Índia com tandoor autêntico, curries aromáticos e pratos tradicionais indianos.",
-            badge: "Indiano"
-          },
-          {
-            title: "Tessera",
-            description: "Culinária grega mediterrânea com ingredientes frescos, frutos do mar e sabores do Mediterrâneo.",
-            badge: "Grego"
-          },
-          {
-            title: "Fresh Restaurant",
-            description: "Buffet internacional com café da manhã incluso e jantares temáticos variados, usando produtos dos jardins orgânicos.",
-            badge: "Incluído"
-          },
-          {
-            title: "Emperor Beach Club",
-            description: "Ambiente casual na areia com noites temáticas 3x/semana, ideal para almoços descontraídos e sunset drinks.",
-            badge: "Beach Club"
-          },
-          {
-            title: "Joe's Pizza & Chill'd Café",
-            description: "Pizzas artesanais em forno a lenha e opções leves no café, perfeito para refeições informais.",
-            badge: "Casual"
-          },
-          {
-            title: "Bares Premium",
-            description: "Sunset Bar (rooftop), Baa Bar, The Cellar Door (adega premium com vinhos raros), Baazaar Bar (piscina)."
-          }
-        ]
+        id: "section-3",
+        title: "Acomodação",
+        type: "text",
+        content: `Villas sobre a Água:
+- Reef Water Pool Villa (220m²) - 1 quarto, piscina 9,5m, suspensa sobre recife de coral, acesso direto para snorkeling, capacidade 2 adultos + 2 crianças
+- Lagoon Water Pool Villa (280m²) - 1 ou 2 quartos, piscina expansiva, sobre lagoa turquesa, deck espaçoso
+
+Comodidades em todas as villas: Piscina privativa (9,5-20m), cama king-size, banheira para dois, chuveiro ao ar livre, deck com espreguiçadeiras, TV 42" com Blu-Ray, sistema de som Bose, iPad de controle, máquina Nespresso, mini-bar e adega, amenities orgânicos premium, rede na praia, ar-condicionado individual. Berços, monitores de bebê e cadeiras altas disponíveis sob solicitação.
+
+Política de Crianças:
+- Menores de 2 anos: traslado gratuito, refeições gratuitas
+- Acima de 12 anos: tarifa adulto
+- Kids Club gratuito (4-12 anos), programa Mini Marine Biologists gratuito`
       }
     ],
     accommodations: {
-      title: "Villas Ultra-Luxuosas sobre a Água",
-      description: "Acomodações espaçosas de 220m² a 2.400m² com piscinas privativas e acesso direto ao mar",
-      types: [
-        {
-          name: "Reef Water Pool Villa",
-          size: "220m²",
-          beds: "1 King",
-          maxOccupancy: "2 adultos + 2 crianças",
-          features: [
-            "Piscina privativa de 9,5m suspensa sobre recife de coral",
-            "Acesso direto para snorkeling no house reef",
-            "Banheira para dois e chuveiro ao ar livre",
-            "Deck espaçoso com espreguiçadeiras e rede na praia",
-            "TV 42\" com Blu-Ray, sistema de som Bose, iPad de controle",
-            "Máquina Nespresso, mini-bar e adega climatizada",
-            "Amenities orgânicos premium e serviço de mordomo 24/7",
-            "Ar-condicionado individual e ventilação natural"
-          ]
-        },
-        {
-          name: "Lagoon Water Pool Villa",
-          size: "280m²",
-          beds: "1 ou 2 quartos King",
-          maxOccupancy: "4 adultos ou 2 adultos + 2 crianças",
-          features: [
-            "Piscina expansiva privativa sobre lagoa turquesa",
-            "Configuração de 1 ou 2 quartos para famílias",
-            "Deck espaçoso com área de estar e jantar ao ar livre",
-            "Banheira para dois e chuveiro ao ar livre",
-            "TV 42\" com Blu-Ray, sistema de som Bose, iPad de controle",
-            "Máquina Nespresso, mini-bar e adega climatizada",
-            "Amenities orgânicos premium e serviço de mordomo 24/7",
-            "Berços, monitores de bebê e cadeiras altas disponíveis"
-          ]
-        }
-      ]
+      title: "",
+      description: "",
+      types: []
     },
     pricing: {
       seasons: [
