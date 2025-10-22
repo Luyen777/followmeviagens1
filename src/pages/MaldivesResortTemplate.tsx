@@ -5,11 +5,11 @@ import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import Hero from "@/components/resort-template/Hero";
 import AboutSection from "@/components/resort-template/AboutSection";
-import ContentSection from "@/components/resort-template/ContentSection";
+import TextSection from "@/components/resort-template/TextSection";
 import AccommodationSection from "@/components/resort-template/AccommodationSection";
 import PricingSection from "@/components/resort-template/PricingSection";
 import FAQSection from "@/components/resort-template/FAQSection";
-import ImageCarousel from "@/components/adaaran-select/ImageCarousel";
+import ResortImageCarousel from "@/components/ResortImageCarousel";
 import ContactFormSection from "@/components/adaaran-select/ContactFormSection";
 import { maldivesResorts } from "@/data/maldivesResorts";
 
@@ -63,21 +63,22 @@ const MaldivesResortTemplate = () => {
             name={resort.name}
           />
           
+          <ResortImageCarousel
+            images={resort.images.map(img => img.src)}
+            title={resort.name}
+          />
+          
           <AboutSection content={resort.about} />
           
-          <ImageCarousel images={resort.images} />
-          
-          {resort.sections.map((section, index) => (
-            <ContentSection
-              key={section.id}
-              id={section.id}
-              title={section.title}
-              subtitle={section.subtitle}
-              type={section.type}
-              items={section.items}
-              content={section.content}
-              background={index % 2 === 0 ? 'default' : 'muted'}
-            />
+          {resort.sections.map((section) => (
+            section.type === 'text' ? (
+              <TextSection
+                key={section.id}
+                id={section.id}
+                title={section.title}
+                content={section.content || ''}
+              />
+            ) : null
           ))}
           
           <AccommodationSection
