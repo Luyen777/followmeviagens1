@@ -1,5 +1,6 @@
 import { MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import heroImage from "@/assets/maldives-hero-latest.avif";
 
 const Hero = () => {
   const handleWhatsAppClick = () => {
@@ -10,13 +11,8 @@ const Hero = () => {
     <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden">
       {/* Background with gradient overlay */}
       <div className="absolute inset-0 z-0">
+        <img src={heroImage} alt="Adaaran Select Hudhuranfushi - Maldivas" className="w-full h-full object-cover scale-105" />
         <div className="absolute inset-0 bg-gradient-to-b from-background/95 via-background/90 to-background/95"></div>
-        <div 
-          className="absolute inset-0 bg-cover bg-center scale-105"
-          style={{
-            backgroundImage: `url('https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?q=80&w=2670')`,
-          }}
-        />
       </div>
 
       {/* Content */}
