@@ -9,7 +9,7 @@ const AboutSection = ({ content }: { content: string }) => {
         </header>
         
         <div className="prose prose-lg max-w-none text-muted-foreground">
-          <p className="text-lg leading-relaxed whitespace-pre-line">
+          <p className="text-lg leading-relaxed whitespace-pre-line text-center sm:text-left">
             {content}
           </p>
         </div>
