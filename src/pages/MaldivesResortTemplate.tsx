@@ -10,10 +10,6 @@ import PricingSection from "@/components/resort-template/PricingSection";
 import FAQSection from "@/components/resort-template/FAQSection";
 import ResortImageCarousel from "@/components/ResortImageCarousel";
 import ContactFormSection from "@/components/adaaran-select/ContactFormSection";
-import Activities from "@/components/adaaran-select/Activities";
-import DiningExperiences from "@/components/adaaran-select/DiningExperiences";
-import Accommodations from "@/components/adaaran-select/Accommodations";
-import Inclusions from "@/components/adaaran-select/Inclusions";
 import { maldivesResorts } from "@/data/maldivesResorts";
 
 const MaldivesResortTemplate = () => {
@@ -73,29 +69,16 @@ const MaldivesResortTemplate = () => {
           
           <AboutSection content={resort.about} />
           
-          {resort.sections.map((section, index) => {
-            switch (section.type) {
-              case 'two-column':
-                return <Activities key={section.id} />;
-              case 'cards':
-                return <DiningExperiences key={section.id} />;
-              case 'list':
-                return <Inclusions key={section.id} />;
-              case 'text':
-                return (
-                  <TextSection
-                    key={section.id}
-                    id={`section-${index}`}
-                    title={section.title}
-                    content={section.content || ''}
-                  />
-                );
-              default:
-                return null;
-            }
-          })}
-          
-          {resort.accommodations && <Accommodations />}
+          {resort.sections.map((section, index) => (
+            section.type === 'text' ? (
+              <TextSection
+                key={section.id}
+                id={`section-${index}`}
+                title={section.title}
+                content={section.content || ''}
+              />
+            ) : null
+          ))}
           
           <PricingSection
             seasons={resort.pricing.seasons}
