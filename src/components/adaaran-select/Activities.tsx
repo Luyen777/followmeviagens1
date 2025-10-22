@@ -88,9 +88,10 @@ const Activities = () => {
                 Destino Top para Surfistas
               </h3>
               <p className="text-foreground/70 leading-relaxed">
-                O resort oferece acesso ao famoso surf spot <strong>Lohis</strong>, referência mundial com ondas perfeitas. 
-                Packages exclusivos disponíveis, com acesso limitado garantindo a melhor experiência. 
-                Reserva obrigatória na alta temporada. Ocean Villas são exclusivas para adultos surfistas.
+                O resort oferece acesso ao famoso surf spot <strong>Lohis</strong>, referência nacional com ondas perfeitas. 
+                Packages exclusivos disponíveis, com acesso limitado garantindo a melhor experiência (reserva obrigatória na alta temporada). 
+                Ocean Villas são exclusivas para adultos (adultos only nas Ocean Villas), com excelente snorkeling no house reef. 
+                Maior diversidade esportiva entre resorts 4★ das Maldivas, spa Mandara e jardins exuberantes.
               </p>
             </div>
           </div>

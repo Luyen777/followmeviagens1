@@ -15,12 +15,14 @@ const Accommodations = () => {
     "Ar-condicionado com controle individual",
     "Smart TV com canais internacionais",
     "Minibar abastecido diariamente",
-    "Máquina de chá e café Nespresso",
+    "Máquina de chá e café",
     "Amenities premium de banheiro",
     "Ducha interna e externa",
     "Cofre digital",
-    "Menu de travesseiros para conforto personalizado",
+    "Terraço privativo",
+    "Menu de travesseiros",
     "Wi-Fi gratuito",
+    "Room service (pago à parte)",
     "Amenidades especiais para crianças (sob reserva)",
     "Berço e cama extra disponíveis",
     "Arrumação diária e turn down service"
@@ -84,7 +86,7 @@ const Accommodations = () => {
         <div className="mt-8 max-w-4xl mx-auto bg-primary/5 rounded-2xl p-6 border border-primary/20">
           <p className="text-center text-foreground/70 leading-relaxed">
             <strong className="text-foreground">Diferenciais:</strong> Excelente privacidade nas villas, localização privilegiada para surf no Lohis, 
-            house reef espetacular para snorkeling e amplos jardins tropicais em 83 acres de natureza preservada.
+            ótimo house reef para snorkeling e amplos jardins tropicais.
           </p>
         </div>
       </div>

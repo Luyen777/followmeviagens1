@@ -36,12 +36,13 @@ const DiningExperiences = () => {
 
   const features = [
     "Temas semanais: noites maldivinas, seafood BBQ, noites asiáticas",
-    "Jantares privados na praia sob consulta",
-    "Room service 24h disponível (custo adicional)",
+    "Jantares privados na praia e piqueniques sob consulta/custo",
+    "Room service 24h (pago à parte)",
     "Snacks, sorvetes e chá da tarde incluídos",
     "Seleção completa de bebidas alcoólicas e não alcoólicas",
-    "Opções para dietas especiais sob solicitação",
-    "Minibar abastecido diariamente (em tarifas selecionadas)"
+    "Gastronomia: internacional, pratos maldivianos, frutos do mar frescos, asiático, snacks e pizzas",
+    "Dietas especiais sob solicitação",
+    "Minibar abastecido diariamente (algumas tarifas)"
   ];
 
   return (
