@@ -1445,10 +1445,16 @@ Política de Crianças:
     pricing: {
       seasons: [
         {
-          name: "Sob Consulta",
-          period: "Ano todo",
-          priceText: "Consulte-nos para tarifas",
-          priceSubtext: "Preços personalizados de acordo com temporada"
+          name: "Baixa Temporada",
+          period: "Maio - Outubro",
+          priceText: "Sob consulta",
+          priceSubtext: "Melhores tarifas do ano"
+        },
+        {
+          name: "Alta Temporada",
+          period: "Novembro - Abril",
+          priceText: "Sob consulta",
+          priceSubtext: "Clima ideal e melhor visibilidade"
         }
       ],
       paymentTerms: [
