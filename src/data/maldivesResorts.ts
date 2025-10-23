@@ -389,7 +389,7 @@ Política de Crianças:
         "80% restante até 30 dias antes da viagem",
         "Parcelamento disponível em até 10 parcelas sem juros no cartão de crédito"
       ],
-      cancellationPolicy: "Cancelamento com até 30 dias de antecedência: reembolso de 80% do valor pago. Cancelamentos com menos de 30 dias não têm direito a reembolso.",
+      cancellationPolicy: "Cancelamento com até 30 dias de antecedência: reembolso de 80% do valor pago.",
       notes: "Menores de 2 anos: traslado gratuito e refeições gratuitas. Acima de 12 anos: tarifa adulto. Kids Club gratuito (4-12 anos)."
     },
     faqs: [
@@ -750,7 +750,7 @@ Política de Crianças:
         "80% restante até 30 dias antes da viagem",
         "Parcelamento disponível em até 10 parcelas sem juros no cartão de crédito"
       ],
-      cancellationPolicy: "Cancelamento com até 30 dias de antecedência: reembolso de 80% do valor pago. Cancelamentos com menos de 30 dias não têm direito a reembolso.",
+      cancellationPolicy: "Cancelamento com até 30 dias de antecedência: reembolso de 80% do valor pago.",
       notes: "Política de Crianças: Menores de 12 anos comem gratuitamente seguindo o meal plan dos pais (menu infantil), máximo 2 crianças por família. Crianças até 12 anos: 50% desconto nos traslados. Menores de 2 anos: traslados e refeições gratuitas. Babysitting disponível a partir de 3 meses (custo adicional)."
     },
     faqs: [
@@ -990,7 +990,7 @@ Comodidades: Ar-condicionado, TV flat-screen via satélite, docking station iPod
         "80% restante até 30 dias antes da viagem",
         "Parcelamento disponível em até 10 parcelas sem juros no cartão de crédito"
       ],
-      cancellationPolicy: "Cancelamento com até 30 dias de antecedência: reembolso de 80% do valor pago. Cancelamentos com menos de 30 dias não têm direito a reembolso.",
+      cancellationPolicy: "Cancelamento com até 30 dias de antecedência: reembolso de 80% do valor pago.",
       notes: "Transfer de hidroavião (35 min) ou voo doméstico + lancha não inclusos no pacote base. Crianças menores de 12 anos: consulte condições especiais. Villa Host 24h incluído em todas as acomodações."
     },
     faqs: [
@@ -1366,7 +1366,7 @@ Política de Crianças:
         "80% restante até 30 dias antes da viagem",
         "Parcelamento disponível em até 10 parcelas sem juros no cartão de crédito"
       ],
-      cancellationPolicy: "Cancelamento com até 30 dias de antecedência: reembolso de 80% do valor pago. Cancelamentos com menos de 30 dias não têm direito a reembolso.",
+      cancellationPolicy: "Cancelamento com até 30 dias de antecedência: reembolso de 80% do valor pago.",
       notes: "Crianças de 0-12 anos: estadia e refeições gratuitas quando acomodadas com os pais (máximo 2 crianças por villa). Kids Club Play by COMO gratuito para crianças de 4-12 anos."
     },
     faqs: [
