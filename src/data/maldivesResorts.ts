@@ -2541,18 +2541,7 @@ Comodidades na Villa:
 - Welcome drink e frutas frescas na chegada
 - Concierge multilíngue e serviços expressos
 - Entretenimento noturno, excursões e atividades especiais
-- Arrumação duas vezes ao dia, serviço noturno
-
-Comodidades na Villa:
-
-- Piscina privativa em todas as Beach Villas, Family Bungalows e algumas Water Villas
-- Amplo espaço ao ar livre (novas Beach Villas: até 285 m² de área externa, piscina de 36 m²)
-- Vista para oceano, lagoa, sunrise ou sunset (de acordo com categoria)
-- Banheiro interno e jardim externo com ducha, algumas unidades com sala de família
-- Cama king-size, daybed, mesa de jantar, walk-in closet
-- Café, chá, minibar, água mineral renovada todos os dias
-- TV, Wi-Fi premium, amenities de banho de luxo
-- Serviço de quarto 24h`
+- Arrumação duas vezes ao dia, serviço noturno`
       },
       {
         id: "activities",
@@ -2610,6 +2599,17 @@ Planos de refeição: café da manhã incluso (demais refeições à la carte/su
         content: `Villas:
 
 - Water Villa/Suite: deck sobre a lagoa, piscina ou plunge pool privativa em metade delas, amplo living, banheiro premium, escada direta para o mar, sunset/sunrise views
+
+Comodidades na Villa:
+
+- Piscina privativa em todas as Beach Villas, Family Bungalows e algumas Water Villas
+- Amplo espaço ao ar livre (novas Beach Villas: até 285 m² de área externa, piscina de 36 m²)
+- Vista para oceano, lagoa, sunrise ou sunset (de acordo com categoria)
+- Banheiro interno e jardim externo com ducha, algumas unidades com sala de família
+- Cama king-size, daybed, mesa de jantar, walk-in closet
+- Café, chá, minibar, água mineral renovada todos os dias
+- TV, Wi-Fi premium, amenities de banho de luxo
+- Serviço de quarto 24h
 
 Política para crianças e diferenciais:
 
