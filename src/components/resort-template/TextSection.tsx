@@ -79,7 +79,7 @@ const TextSection = ({ id, title, content }: TextSectionProps) => {
             <div key={idx}>
               {/* Subsection heading */}
               {section.heading && (
-                <h3 className="text-xl sm:text-2xl font-body font-semibold text-foreground mb-6 tracking-tight">
+                <h3 className="text-2xl sm:text-3xl font-display font-semibold text-foreground mb-8 mt-8 first:mt-0 tracking-tight">
                   {section.heading}
                 </h3>
               )}
