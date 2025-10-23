@@ -840,127 +840,135 @@ Política de Crianças:
     sections: [
       {
         id: "inclusions",
-        title: "Inclusões do Pacote",
-        type: "list",
-        items: [
-          {
-            title: "Serviços e Comodidades Incluídas",
-            items: [
-              "Acesso ao lounge VIP de hidroavião em Malé (com bebidas e Wi-Fi gratuito)",
-              "Serviço de Villa Host (mordomo) 24 horas",
-              "Equipamentos de snorkeling gratuitos",
-              "Bicicletas personalizadas para adultos e crianças",
-              "Acesso a 3 academias equipadas com Technogym",
-              "Piscina infinita de 49m (uma das mais longas das Maldivas)",
-              "Sessões de yoga, meditação, stretch and tone em grupo",
-              "Wi-Fi gratuito em todas as áreas",
-              "Cinema sob as estrelas",
-              "Sunshine Butlers na piscina (suco fresco, toalhas frias, limpeza de óculos de sol, massagem nas costas de 5min)",
-              "Spice Spoons Cooking Classes (aulas de culinária tailandesa e maldívia gratuitas)",
-              "Entretenimento ao vivo e performances culturais"
-            ]
-          },
-          {
-            title: "Benefícios para Lua de Mel",
-            items: [
-              "Dentro de 12 meses do casamento, certidão necessária",
-              "Welcome amenity especial",
-              "Garrafa de champagne na chegada",
-              "Ritual de banho com velas e pétalas de rosas uma noite durante a estadia",
-              "Decoração de cama com pétalas",
-              "Pacote Honeymoon & Romance (4+ noites): Inclui café da manhã e jantar diários + Dining by Design privativo na praia + champagne breakfast na villa + sessão de stargazing compartilhada + Slumber Guru Ritual romântico"
-            ]
-          }
-        ]
+        title: "Inclusões do pacote",
+        type: "text",
+        content: `- Acesso ao lounge VIP de hidroavião em Malé (com bebidas e Wi-Fi gratuito)
+- Serviço de Villa Host (mordomo) 24 horas
+- Equipamentos de snorkeling gratuitos
+- Bicicletas personalizadas para adultos e crianças
+- Acesso a 3 academias equipadas com Technogym
+- Piscina infinita de 49m (uma das mais longas das Maldivas)
+- Sessões de yoga, meditação, stretch and tone em grupo
+- Wi-Fi gratuito em todas as áreas
+- Cinema sob as estrelas
+- Sunshine Butlers na piscina (suco fresco, toalhas frias, limpeza de óculos de sol, massagem nas costas de 5min)
+- Spice Spoons Cooking Classes (aulas de culinária tailandesa e maldívia gratuitas)
+- Entretenimento ao vivo e performances culturais
+
+Benefícios para Lua de Mel (dentro de 12 meses do casamento, certidão necessária):
+
+- Welcome amenity especial
+- Garrafa de champagne na chegada
+- Ritual de banho com velas e pétalas de rosas uma noite durante a estadia
+- Decoração de cama com pétalas
+- Pacote Honeymoon & Romance (4+ noites): Inclui café da manhã e jantar diários + Dining by Design privativo na praia + champagne breakfast na villa + sessão de stargazing compartilhada + Slumber Guru Ritual romântico`
       },
       {
         id: "activities",
-        title: "Atividades & Experiências",
-        subtitle: "Diversidade de experiências no Atol de Baa, Reserva da Biosfera UNESCO",
-        type: "two-column",
-        items: [
-          {
-            title: "Atividades Gratuitas",
-            icon: "Heart",
-            badge: "Incluído",
-            items: [
-              "Snorkeling no house reef 'Golden Wall' (2km de extensão, tartarugas hawksbill, arraias, tubarões de recife, moreia)",
-              "Caiaques, stand-up paddle, catamarã",
-              "Thiththi Boli Kids' Club (4-12 anos, 10h-18h): treasure hunts, Marine Biologist Programme, cooking classes, artes maldívias, cinema, pamper experience com spa",
-              "Trampoline park",
-              "Cinema sob as estrelas com filmes clássicos e blockbusters",
-              "Spice Spoons Cooking Classes (culinária tailandesa e maldívia)",
-              "Sessões de yoga, meditação e fitness em grupo",
-              "Quadras de tênis, badminton, vôlei de praia",
-              "Recreation area (bilhar, tênis de mesa, xadrez gigante, Jenga)",
-              "Stargazing no SKY Observatory (observatório sobre a água com telescópio potente)"
-            ]
-          },
-          {
-            title: "Atividades Premium",
-            icon: "Sparkles",
-            items: [
-              "Mergulho: PADI 5 estrelas certificado, Discover Scuba Diving, cursos completos, safaris de mergulho",
-              "Esportes Motorizados: Jetpack, Seabob, jet ski, parasailing (Chute Me), wakeboard",
-              "Pesca: Big game fishing, pesca tradicional dhoni, pesca noturna",
-              "Excursões: Dolphin Discovery cruise, visita a Hanifaru Bay (maio-novembro, mantas e tubarões-baleia), island hopping, local island tours, Hawksbill Turtle Quest snorkel (2h)",
-              "Muay Thai Boxing: Primeiro e único resort nas Maldivas a oferecer (com ring profissional e instrutor), sessões familiares disponíveis",
-              "Anantara Spa overwater: 6 suítes sobre o oceano, 2 salas abertas para massagens tailandesas, sauna, sala de vapor, piscinas quentes e frias, Cocoon Medi Spa, salão de beleza e cabeleireiro, deck de relaxamento com cold plunge pool",
-              "Coral Adoption Programme (HARP): Patrocínio USD $185 | Patrocínio + plantio pessoal de coral: preço sob consulta",
-              "Experiências especiais: Dining by Design (jantares privativos), private island picnics, cruzeiros de iate de luxo, degustação de vinhos envelhecidos subaquaticamente (USD $2.455++ para 2 pessoas)"
-            ]
-          }
-        ]
+        title: "Atividades e gastronomia",
+        type: "text",
+        content: `Atividades Gratuitas:
+
+- Snorkeling no house reef "Golden Wall" (2km de extensão, tartarugas hawksbill, arraias, tubarões de recife, moreia)
+- Caiaques, stand-up paddle, catamarã
+- Thiththi Boli Kids' Club (4-12 anos, 10h-18h): treasure hunts, Marine Biologist Programme, cooking classes, artes maldívias, cinema, pamper experience com spa
+- Trampoline park
+- Cinema sob as estrelas com filmes clássicos e blockbusters
+- Spice Spoons Cooking Classes (culinária tailandesa e maldívia)
+- Sessões de yoga, meditação e fitness em grupo
+- Quadras de tênis, badminton, vôlei de praia
+- Recreation area (bilhar, tênis de mesa, xadrez gigante, Jenga)
+- Stargazing no SKY Observatory (observatório sobre a água com telescópio potente)
+
+Atividades com Custo Extra:
+
+- Mergulho: PADI 5 estrelas certificado, Discover Scuba Diving, cursos completos, safaris de mergulho
+- Esportes motorizados: Jetpack, Seabob, jet ski, parasailing (Chute Me), wakeboard
+- Pesca: Big game fishing, pesca tradicional dhoni, pesca noturna
+- Excursões: Dolphin Discovery cruise, visita a Hanifaru Bay (maio-novembro, mantas e tubarões-baleia), island hopping, local island tours, Hawksbill Turtle Quest snorkel (2h)
+- Muay Thai Boxing: Primeiro e único resort nas Maldivas a oferecer (com ring profissional e instrutor), sessões familiares disponíveis
+- Anantara Spa overwater: 6 suítes sobre o oceano, 2 salas abertas para massagens tailandesas, sauna, sala de vapor, piscinas quentes e frias, Cocoon Medi Spa, salão de beleza e cabeleireiro, deck de relaxamento overwater com cold plunge pool
+- Coral Adoption Programme (HARP): Patrocínio USD $185 | Patrocínio + plantio pessoal de coral: preço sob consulta
+- Experiências especiais: Dining by Design (jantares privativos), private island picnics, cruzeiros de iate de luxo, degustação de vinhos envelhecidos subaquaticamente (USD $2.455++ para 2 pessoas)
+
+Restaurantes:
+
+SEA - Underwater Restaurant (Signature)
+
+- Restaurante subaquático 6m abaixo da superfície
+- Paredes curvas de vidro com vista 360° para o recife (tartarugas, mantas, tubarões, peixes-palhaço)
+- Adega subaquática com mais de 450 rótulos de 24 países (votada melhor adega subaquática do mundo)
+- Degustação de vinhos envelhecidos no oceano (Dom Pérignon 2008, Cervaro della Sala Chardonnay 2018)
+- Menu de frutos do mar premium
+- Crédito de USD $50 por pessoa em HB/FB para jantar
+- Almoço de 4 pratos à la carte (incluído em alguns pacotes promocionais)
+
+FIRE - Japanese Teppanyaki
+
+- Cozinha japonesa com teppanyaki ao vivo
+- Grelhados premium
+- Crédito de USD $50 por pessoa em HB/FB
+
+SALT - Fine Asiatic Restaurant
+
+- 19 variedades de sais raros do planeta
+- Salt Sommelier para auxiliar na escolha dos temperos
+- Cozinha asiática sofisticada
+
+SKY - Rooftop Bar & Observatory
+
+- Bar no rooftop com vista panorâmica do Atol de Baa
+- Observatório astronômico (único nas Maldivas sobre a água)
+- Telescópio potente para stargazing sessions com Sky Guru
+- Coquetéis exclusivos ao pôr do sol
+
+Plates - International Buffet
+
+- Café da manhã buffet (incluído em todos os meal plans)
+- Jantares temáticos noturnos selecionados: árabe, europeu, frutos do mar, BBQ, internacional
+- Estações ao vivo
+
+SPICE - Asian Fusion
+
+- Menu à la carte com seleção de 3 pratos
+- Incluído em HB e FB
+
+Manzaru - Beachfront Casual Dining
+
+- Almoço casual à beira-mar (12h-17h)
+- Menu à la carte de 2 pratos para FB
+- Opções leves e descontraídas
+
+Experiências Gastronômicas Especiais:
+
+- Dining by Design - Jantares privativos na praia, underwater ou localizações exclusivas
+- Wine Pairing Dinners - Jantares harmonizados
+- Michelin Star Dinners - Eventos especiais com chefs estrelados
+- Cinema Under the Stars - Jantar durante sessão de cinema ao ar livre`
       },
       {
-        id: "dining",
-        title: "Experiências Gastronômicas",
-        subtitle: "Restaurantes premiados e o único observatório sobre a água das Maldivas",
-        type: "list",
-        items: [
-          {
-            title: "Restaurantes e Bares",
-            items: [
-              "SEA - Underwater Restaurant: Restaurante subaquático 6m abaixo da superfície com paredes curvas de vidro com vista 360° para o recife. Adega subaquática com mais de 450 rótulos de 24 países (votada melhor adega subaquática do mundo). Crédito de USD $50 por pessoa em HB/FB para jantar.",
-              "FIRE - Japanese Teppanyaki: Cozinha japonesa com teppanyaki ao vivo e grelhados premium. Crédito de USD $50 por pessoa em HB/FB.",
-              "SALT - Fine Asiatic Restaurant: 19 variedades de sais raros do planeta com Salt Sommelier para auxiliar na escolha dos temperos. Cozinha asiática sofisticada.",
-              "SKY - Rooftop Bar & Observatory: Bar no rooftop com vista panorâmica do Atol de Baa. Observatório astronômico (único nas Maldivas sobre a água) com telescópio potente para stargazing sessions com Sky Guru.",
-              "Plates - International Buffet: Café da manhã buffet (incluído em todos os meal plans). Jantares temáticos noturnos selecionados: árabe, europeu, frutos do mar, BBQ, internacional.",
-              "SPICE - Asian Fusion: Menu à la carte com seleção de 3 pratos. Incluído em HB e FB.",
-              "Manzaru - Beachfront Casual Dining: Almoço casual à beira-mar (12h-17h). Menu à la carte de 2 pratos para FB.",
-              "Experiências Especiais: Dining by Design (jantares privativos na praia, underwater ou localizações exclusivas), Wine Pairing Dinners, Michelin Star Dinners, Cinema Under the Stars."
-            ]
-          }
-        ]
+        id: "acomodacao",
+        title: "Acomodação",
+        type: "text",
+        content: `Villas sobre a Água (Over Water Pool Villas):
+
+Over Water Pool Villa (258m²)
+
+- Suspensa sobre lagoa cristalina turquesa
+- Piscina privativa e sundeck sobre a água
+- Banheiro ao ar livre com banheira whirlpool com fundo de vidro (vista para vida marinha)
+- Acesso direto ao recife "Golden Wall"
+- Villa Host 24h
+- Bicicletas privativas
+- Cama king-size
+
+Comodidades: Ar-condicionado, TV flat-screen via satélite, docking station iPod, máquina de café, minibar, adega climatizada, cofre para laptop, roupa de cama e toalhas premium, amenities Elemis, sistema de som Bose, serviço de streaming (Netflix), Blu-ray player, telefone, pillow e scent menus, produtos hipoalergênicos disponíveis.`
       }
     ],
     accommodations: {
-      title: "Villas sobre a Água",
-      description: "Todas as villas possuem piscina privativa, Villa Host 24h e acesso direto ao recife.",
-      types: [
-        {
-          name: "Over Water Pool Villa",
-          size: "258m²",
-          beds: "1 cama king-size",
-          maxOccupancy: "2 adultos + 2 crianças",
-          features: [
-            "Suspensa sobre lagoa cristalina turquesa",
-            "Piscina privativa e sundeck sobre a água",
-            "Banheiro ao ar livre com banheira whirlpool com fundo de vidro (vista para vida marinha)",
-            "Acesso direto ao recife 'Golden Wall'",
-            "Villa Host 24h",
-            "Bicicletas privativas",
-            "Ar-condicionado e TV flat-screen via satélite",
-            "Docking station iPod, máquina de café, minibar",
-            "Adega climatizada e cofre para laptop",
-            "Roupa de cama e toalhas premium",
-            "Amenities Elemis e sistema de som Bose",
-            "Serviço de streaming (Netflix) e Blu-ray player",
-            "Pillow e scent menus",
-            "Produtos hipoalergênicos disponíveis"
-          ]
-        }
-      ]
+      title: "",
+      description: "",
+      types: []
     },
     pricing: {
       seasons: [
