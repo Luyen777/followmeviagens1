@@ -3640,7 +3640,7 @@ Diferenciais e Destaques:
         id: "activities",
         title: "Atividades e Gastronomia",
         type: "text",
-        content: `Atividades e Facilidades Gratuitas
+        content: `Atividades e Facilidades Gratuitas:
 
 - Snorkeling (equipamento incluso) em house reef duplo, recife a 10-30m da praia; golfinhos, tartarugas, arraias, tubarões, possibilidade de whale shark
 - Uso de bicicletas, caiaque, SUP e pedalinho
@@ -3654,7 +3654,7 @@ Diferenciais e Destaques:
 - Aulas de culinária e mixologia (sob programação)
 - Happy hour diária
 
-Atividades com Custo Extra
+Atividades com Custo Extra:
 
 - Esportes motorizados: jet ski, seabob, parasail, wakeboard
 - Mergulho PADI 5*: cursos completos, saídas guiadas, night dive, batismo
@@ -3665,7 +3665,7 @@ Atividades com Custo Extra
 - Degustação de vinhos, workshops de cocktail, experiências privadas
 - Babysitting e sessão de fotos profissional
 
-Restaurantes & Bares
+Restaurantes & Bares:
 
 - Matheefaru: principal (internacional, buffet/à la carte, café e jantar)
 - Samsara Asian Fusion: asiático contemporâneo sobre a água
@@ -3681,11 +3681,11 @@ Restaurantes & Bares
         id: "accommodation",
         title: "Acomodação",
         type: "text",
-        content: `Deluxe Water Villa
+        content: `Deluxe Water Villa:
 
 190m², sobre a água, amplo deck, banheira panorâmica, acesso direto à lagoa
 
-Comodidades nas Villas
+Comodidades nas Villas:
 
 - Villas (praia ou sobre a água), entre 176m² e 1.400m², as maiores das Maldivas
 - Piscina privativa em todas as categorias superiores
@@ -3702,7 +3702,7 @@ Comodidades nas Villas
         id: "kids-and-highlights",
         title: "Política para Crianças e Diferenciais",
         type: "text",
-        content: `Política para Crianças
+        content: `Política para Crianças:
 
 - Até 2 crianças até 12 anos grátis (acompanhadas por adultos, mesmo plano de refeições)
 - Kids Club gratuito (atividades até 12 anos); teen club (game room, esportes, sunset tour)
@@ -3711,7 +3711,7 @@ Comodidades nas Villas
 - Villas família com playground privativo, espaços para adolescentes
 - Piscina splash infantil, parque, programação kids temática
 
-Diferenciais do Resort
+Diferenciais do Resort:
 
 - Marina própria (primeira das Maldivas), fly fishing (exclusivo), campo de golfe/putting green
 - Resort referência em privacidade, área de esqui aquático exclusiva, house reef duplo e excelente spa
