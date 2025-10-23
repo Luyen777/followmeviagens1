@@ -601,231 +601,134 @@ Política de Crianças:
     sections: [
       {
         id: "inclusions",
-        title: "Inclusões do Pacote",
-        subtitle: "Experiência completa com serviços premium e atividades incluídas",
-        type: "list",
-        items: [
-          {
-            title: "Refeições & Serviços",
-            items: [
-              "Café da manhã buffet internacional no Fushi Café (7h-11h)",
-              "Recepção em lounge privativo no aeroporto com bebidas de cortesia",
-              "Toalhas frias e água gelada durante o traslado de lancha",
-              "Wi-Fi gratuito em todo o resort"
-            ]
-          },
-          {
-            title: "Atividades & Equipamentos",
-            items: [
-              "Equipamentos de snorkeling gratuitos",
-              "Caiaques e stand-up paddle",
-              "Sessões de yoga em grupo diariamente",
-              "Cinema sob as estrelas",
-              "Entretenimento ao vivo (música, performances culturais)"
-            ]
-          },
-          {
-            title: "Facilidades Premium",
-            items: [
-              "Acesso a academia equipada com Technogym",
-              "Piscina infinita",
-              "Acesso à ilha privativa Gulhifushi com food truck e tiki bar",
-              "Transferências disponíveis 24 horas por dia"
-            ]
-          },
-          {
-            title: "Benefícios para Lua de Mel (4+ noites)",
-            items: [
-              "Garrafa de champagne na chegada",
-              "Seleção de chocolates artesanais do chef",
-              "Decoração romântica no quarto",
-              "50% desconto no traslado para a noiva (ou gratuito conforme período)",
-              "Certificado de casamento necessário (máximo 12 meses)"
-            ]
-          },
-          {
-            title: "Pacote Honeymoon Romance in Paradise (3+ noites)",
-            items: [
-              "Acomodação de luxo com café da manhã e jantar diários",
-              "Cruzeiro ao pôr do sol para observação de golfinhos (casal)",
-              "Tratamento signature para casal no Anantara Spa",
-              "Designer Dining privativo",
-              "Experiência de coquetel no Yellow Fin Club",
-              "Garrafa de champagne e arranjo de pétalas de rosa"
-            ]
-          }
-        ]
+        title: "Inclusões do pacote",
+        type: "text",
+        content: `- Café da manhã buffet internacional no Fushi Café (7h-11h)
+- Recepção em lounge privativo no aeroporto com bebidas de cortesia
+- Toalhas frias e água gelada durante o traslado de lancha
+- Uso de equipamentos de snorkeling
+- Caiaques e stand-up paddle
+- Acesso a academia equipada com Technogym
+- Piscina infinita
+- Sessões de yoga em grupo diariamente
+- Acesso à ilha privativa Gulhifushi com food truck e tiki bar
+- Cinema sob as estrelas
+- Entretenimento ao vivo (música, performances culturais)
+- Wi-Fi gratuito
+
+Benefícios para Lua de Mel (mínimo 4 noites):
+
+- Garrafa de champagne na chegada
+- Seleção de chocolates artesanais do chef
+- Decoração romântica no quarto
+- 50% de desconto no traslado para a noiva (ou traslado gratuito conforme período)
+- Certificado de casamento necessário (máximo 12 meses após o evento)
+
+Pacote Honeymoon Romance in Paradise (3+ noites):
+
+- Acomodação de luxo com café da manhã e jantar diários
+- Um cruzeiro ao pôr do sol para observação de golfinhos (casal)
+- Um tratamento signature para casal no Anantara Spa
+- Um Designer Dining privativo
+- Experiência de coquetel no Yellow Fin Club
+- Garrafa de champagne e arranjo de pétalas de rosa na chegada`
       },
       {
         id: "activities",
-        title: "Atividades & Experiências",
-        subtitle: "Diversidade de atividades para famílias, casais e aventureiros",
-        type: "two-column",
-        items: [
-          {
-            title: "Atividades Gratuitas",
-            icon: "Heart",
-            badge: "Incluído",
-            items: [
-              "Snorkeling na lagoa com equipamentos inclusos",
-              "Caiaques e stand-up paddle",
-              "Dhoni Kids Club (9h-17h) com atividades artísticas, corrida de caranguejos, pintura de cocos, aulas de pizza",
-              "Spice Spoons Cooking School (aulas de culinária maldívia e tailandesa)",
-              "Tênis (quartas-feiras 19h-20h)",
-              "Badminton e vôlei de praia",
-              "Petanque, futebol de mesa, mesa de bilhar",
-              "Sessões de yoga e fitness em grupo (3x por dia)",
-              "Acesso à ilha Gulhifushi com food truck (12h-16h) e tiki bar (10h-17h)"
-            ]
-          },
-          {
-            title: "Atividades Premium",
-            icon: "Sparkles",
-            items: [
-              "Mergulho com Aquafanatics: Discover Programme para iniciantes (lagoa até 12m), cursos PADI Open Water, safaris de mergulho",
-              "Esportes motorizados: Jet ski, flyboarding, parasailing, wakeboard, kneeboard, water ski, fun rides (doughnuts)",
-              "Aulas de surf com Tropicsurf",
-              "Vela: Catamarã, windsurf, kitesurf",
-              "Anantara Spa sobre a água: 6 salas de tratamento sobre o oceano, 2 salas para massagens tailandesas, sauna, sala de vapor, piscinas quentes e frias, salão de beleza (10h-19h)",
-              "Designer Dining (jantares privativos na praia ou dhoni tradicional), wine dinner",
-              "Cruzeiros ao pôr do sol, pesca, passeios de iate",
-              "Tours de snorkeling guiados, coral adoption programme (USD $185 patrocínio / USD $247 patrocínio + plantio)",
-              "Teen Activities: tênis amigável, aulas de surf, aventuras de barco com fundo de vidro"
-            ]
-          }
-        ]
+        title: "Atividades e gastronomia",
+        type: "text",
+        content: `Atividades Gratuitas:
+
+- Snorkeling na lagoa (equipamentos inclusos)
+- Caiaques e SUP
+- Dhoni Kids Club (para crianças, 9h-17h) com atividades artísticas, corrida de caranguejos, pintura de cocos, aulas de pizza
+- Spice Spoons Cooking School (aulas de culinária maldívia e tailandesa)
+- Tênis (quartas-feiras 19h-20h)
+- Badminton e vôlei de praia
+- Petanque, futebol de mesa, mesa de bilhar
+- Sessões de yoga e fitness em grupo (3x por dia incluídas no direct booking)
+- Acesso à ilha Gulhifushi com food truck (12h-16h) e tiki bar (10h-17h)
+
+Atividades com Custo Extra:
+
+- Mergulho com Aquafanatics: Discover Programme para iniciantes (lagoa até 12m), cursos PADI Open Water, safaris de mergulho meio dia/dia completo
+- Esportes aquáticos motorizados: Jet ski, flyboarding, parasailing, wakeboard, kneeboard, water ski, fun rides (doughnuts)
+- Surf school: Aulas de surf com Tropicsurf
+- Vela: Catamarã, windsurf, kitesurf
+- Anantara Spa (sobre a água): 6 salas de tratamento sobre o oceano, 2 salas abertas para massagens tailandesas, sauna, sala de vapor, piscinas quentes e frias, salão de beleza. Horário: 10h-19h. Cancela com 24h de antecedência
+- Experiências especiais: Designer Dining (jantares privativos na praia ou dhoni tradicional), wine dinner, cruzeiros ao pôr do sol, pesca, passeios de iate, tours de snorkeling guiados, coral adoption programme (USD $185 patrocínio / USD $247 patrocínio + plantio)
+- Teen Activities: Tênis amigável, aulas de surf, aventuras de barco com fundo de vidro
+
+Restaurantes:
+
+No Anantara Dhigu:
+
+- Fushi Café - Buffet internacional, café da manhã (7h-11h) e jantares temáticos (18h30-22h): noite maldívia com performance Boduberu (domingo), festa do Oriente Médio (terça, USD $120++ incluído em HB/FB), buffet internacional
+- Sea.Fire.Salt - Grelhados premium e frutos do mar frescos à beira-mar, almoço e jantar (12h30-15h30 / 18h30-22h). Suplemento USD $60 por pessoa em HB/FB
+- Aqua Bar - Bar à beira da piscina, almoço leve (12h-16h), drinks ao pôr do sol, ambiente descontraído, vista para tubarões de recife circulando
+
+No Anantara Veli (acesso via pontão - 2 minutos):
+
+- Baan Huraa - Tailandês autêntico sobre a lagoa, casa de teca tradicional, pratos para compartilhar, jantar (18h30-22h). Suplemento USD $60 em HB/FB
+- 73 Degrees - Buffet internacional oceanfront, café da manhã e jantares temáticos
+- Origami - Japonês moderno com teppanyaki, sushi e sashimi (não incluído em HB/FB, pago separadamente)
+- Dhoni Bar - Bar à beira da piscina (somente adultos 18+), tapas e coquetéis (10h-meia-noite), almoço leve (12h-16h), jantar (18h30-22h)
+- Cumin - Cozinha do Sul da Ásia e Índia, especiarias do Oceano Índico, café da manhã (7h-11h) e jantar (18h30-22h)
+
+Experiências Gastronômicas Especiais:
+
+- Designer Dining by Anantara - Jantares privativos na praia, em dhoni tradicional ou localização personalizada
+- Gulhifushi Picnic Island - Ilha privativa com food truck (12h-16h) e tiki bar (10h-17h), acessível por pontão ou caiaque`
       },
       {
-        id: "dining",
-        title: "Gastronomia entre Dois Resorts",
-        subtitle: "7+ restaurantes com culinária internacional entre Anantara Dhigu e Anantara Veli",
-        type: "cards",
-        items: [
-          {
-            title: "Fushi Café",
-            description: "Buffet internacional no Dhigu. Café da manhã (7h-11h) e jantares temáticos (18h30-22h): noite maldívia com Boduberu (domingo), festa do Oriente Médio (terça, USD $120++), buffet internacional.",
-            badge: "Dhigu"
-          },
-          {
-            title: "Sea.Fire.Salt",
-            description: "Grelhados premium e frutos do mar frescos à beira-mar. Almoço e jantar (12h30-15h30 / 18h30-22h). Suplemento USD $60 por pessoa em HB/FB.",
-            badge: "Dhigu"
-          },
-          {
-            title: "Aqua Bar",
-            description: "Bar à beira da piscina no Dhigu. Almoço leve (12h-16h), drinks ao pôr do sol, ambiente descontraído com vista para tubarões de recife circulando.",
-            badge: "Dhigu"
-          },
-          {
-            title: "Baan Huraa",
-            description: "Tailandês autêntico sobre a lagoa no Veli, casa de teca tradicional, pratos para compartilhar, jantar (18h30-22h). Suplemento USD $60 em HB/FB.",
-            badge: "Veli"
-          },
-          {
-            title: "73 Degrees",
-            description: "Buffet internacional oceanfront no Veli. Café da manhã e jantares temáticos variados.",
-            badge: "Veli"
-          },
-          {
-            title: "Origami",
-            description: "Japonês moderno com teppanyaki, sushi e sashimi no Veli. Não incluído em HB/FB, pago separadamente.",
-            badge: "Veli"
-          },
-          {
-            title: "Dhoni Bar",
-            description: "Bar à beira da piscina no Veli (somente adultos 18+). Tapas e coquetéis (10h-meia-noite), almoço leve (12h-16h), jantar (18h30-22h).",
-            badge: "Veli - 18+"
-          },
-          {
-            title: "Cumin",
-            description: "Cozinha do Sul da Ásia e Índia no Veli, especiarias do Oceano Índico. Café da manhã (7h-11h) e jantar (18h30-22h).",
-            badge: "Veli"
-          },
-          {
-            title: "Designer Dining",
-            description: "Experiências gastronômicas privativas na praia, em dhoni tradicional ou localização personalizada. Jantares românticos sob medida.",
-            badge: "Especial"
-          },
-          {
-            title: "Gulhifushi Picnic Island",
-            description: "Ilha privativa com food truck (12h-16h) e tiki bar (10h-17h), acessível por pontão ou caiaque para piqueniques únicos.",
-            badge: "Ilha Privativa"
-          }
-        ]
+        id: "acomodacao",
+        title: "Acomodação",
+        type: "text",
+        content: `Sunrise Beach Pool Villa
+
+- Todas as comodidades da Sunrise Beach Villa
+- Piscina privativa de 9m
+- Ideal para famílias
+
+Sunset Beach Pool Villa
+
+- Todas as comodidades da Sunset Beach Villa
+- Piscina privativa de 9m
+- Vista espetacular para o pôr do sol
+
+Two Bedroom Family Beach Pool Villa (220m²)
+
+- Capacidade: 4 adultos ou 2 adultos + 3 crianças
+- 2 quartos (1 king + configurações flexíveis)
+- Piscina privativa de 9m
+- Banheiro infantil em miniatura
+- Sala de estar espaçosa
+- Mesa de jantar
+- Ideal para famílias
+
+Sunrise Over Water Suite (85m²)
+
+- Capacidade: 2 adultos + 1 criança
+- Suspensa sobre águas cristalinas
+- Janelas do chão ao teto
+- Deck privativo para observar o nascer do sol
+- Painéis de vidro no piso do banheiro para visualizar vida marinha
+
+Comodidades em todas as villas: TV via satélite, minibar, frigobar, ventilador de teto, ar-condicionado, banheiro privativo, banheira/chuveiro combinado, varanda/terraço, filmes no quarto, roupões infantis e chinelos (para famílias), berços e camas extras gratuitas, serviço de lavanderia 50% off para crianças até 12 anos.
+
+Política de Crianças:
+
+- Menores de 12 anos: comem gratuitamente seguindo o meal plan dos pais (menu infantil)
+- Máximo 2 crianças por família
+- Crianças até 12 anos: 50% desconto nos traslados
+- Menores de 2 anos: traslados gratuitos, refeições gratuitas
+- Babysitting disponível a partir de 3 meses (custo adicional)`
       }
     ],
     accommodations: {
-      title: "Villas Espaçosas na Praia e Sobre a Água",
-      description: "110 villas com vista para o nascer ou pôr do sol, todas com comodidades premium",
-      types: [
-        {
-          name: "Sunrise Beach Pool Villa",
-          size: "N/D",
-          beds: "1 King",
-          maxOccupancy: "N/D",
-          features: [
-            "Piscina privativa de 9m",
-            "Vista para o nascer do sol",
-            "Ideal para famílias",
-            "TV via satélite, minibar, frigobar",
-            "Ventilador de teto e ar-condicionado",
-            "Banheira/chuveiro combinado",
-            "Varanda/terraço privativo",
-            "Roupões e chinelos",
-            "Berços e camas extras gratuitas"
-          ]
-        },
-        {
-          name: "Sunset Beach Pool Villa",
-          size: "N/D",
-          beds: "1 King",
-          maxOccupancy: "N/D",
-          features: [
-            "Piscina privativa de 9m",
-            "Vista espetacular para o pôr do sol",
-            "TV via satélite, minibar, frigobar",
-            "Ventilador de teto e ar-condicionado",
-            "Banheira/chuveiro combinado",
-            "Varanda/terraço privativo",
-            "Filmes no quarto",
-            "Roupões infantis e chinelos (para famílias)",
-            "Serviço de lavanderia 50% off para crianças até 12 anos"
-          ]
-        },
-        {
-          name: "Two Bedroom Family Beach Pool Villa",
-          size: "220m²",
-          beds: "2 quartos: 1 King + configurações flexíveis",
-          maxOccupancy: "4 adultos ou 2 adultos + 3 crianças",
-          features: [
-            "Piscina privativa de 9m",
-            "Banheiro infantil em miniatura",
-            "Sala de estar espaçosa",
-            "Mesa de jantar",
-            "Ideal para famílias",
-            "TV via satélite, minibar, frigobar",
-            "Ar-condicionado e ventilação",
-            "Roupões infantis e chinelos",
-            "Berços e camas extras gratuitas"
-          ]
-        },
-        {
-          name: "Sunrise Over Water Suite",
-          size: "85m²",
-          beds: "1 King",
-          maxOccupancy: "2 adultos + 1 criança",
-          features: [
-            "Suspensa sobre águas cristalinas",
-            "Janelas do chão ao teto",
-            "Deck privativo para observar o nascer do sol",
-            "Painéis de vidro no piso do banheiro para visualizar vida marinha",
-            "TV via satélite, minibar",
-            "Ar-condicionado",
-            "Banheira/chuveiro combinado",
-            "Varanda/terraço sobre a água"
-          ]
-        }
-      ]
+      title: "",
+      description: "",
+      types: []
     },
     pricing: {
       seasons: [
