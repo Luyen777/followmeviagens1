@@ -3221,14 +3221,6 @@ Opções de Bares:
 - Bares do CROSSROADS (AI têm acesso limitado, ver regras)
 - Copa bar privativo nas Pool Villas
 
-Restaurantes Principais:
-
-- Sessions
-- The Elephant & The Butterfly
-- Hard Rock Café Maldives
-- Pool Bar
-- Marina Village (parceria em AI, sob consulta de plano)
-
 Experiências Gastronômicas Especiais:
 
 - In Villa Dining 24h
