@@ -4753,16 +4753,22 @@ Os valores estão sujeitos a alteração sem aviso prévio. Consulte-nos para ob
     pricing: {
       seasons: [
         {
-          name: "Sob consulta",
-          period: "Ano todo",
+          name: "Baixa Temporada",
+          period: "Maio a Outubro",
+          priceText: "Sob consulta",
+          priceSubtext: "por pessoa, por noite, all inclusive"
+        },
+        {
+          name: "Alta Temporada",
+          period: "Novembro a Abril",
           priceText: "Sob consulta",
           priceSubtext: "por pessoa, por noite, all inclusive"
         }
       ],
       paymentTerms: [
-        "Sinal de 20% na confirmação da reserva",
-        "Saldo de 80% até 30 dias antes da viagem",
-        "Parcelamento em até 10x sem juros no cartão de crédito (saldo)"
+        "Entrada de 20% via transferência bancária ao confirmar a reserva",
+        "80% restante até 30 dias antes da viagem",
+        "Parcelamento disponível em até 10 parcelas sem juros no cartão de crédito"
       ],
       cancellationPolicy: "Cancelamento com até 30 dias de antecedência: reembolso de 80% do valor pago.",
       notes: "Os valores estão sujeitos a alteração sem aviso prévio. Consulte-nos para obter cotações atualizadas e disponibilidade."
