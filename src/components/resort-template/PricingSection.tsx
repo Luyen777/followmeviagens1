@@ -99,9 +99,6 @@ const PricingSection = ({
                 <span className="text-primary font-bold mt-1">•</span>
                 <p className="text-foreground/80 leading-[1.7] font-light">{cancellationPolicy}</p>
               </div>
-              {notes && <p className="text-sm text-muted-foreground mt-4 pt-4 border-t border-border font-light">
-                  <strong className="text-foreground font-medium">Importante:</strong> {notes}
-                </p>}
             </CardContent>
           </Card>
         </div>
