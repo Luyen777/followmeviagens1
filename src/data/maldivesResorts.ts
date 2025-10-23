@@ -4701,28 +4701,6 @@ Diferenciais do resort:
 - Programas sustentáveis e atendimento personalizado
 - Duas ilhas interligadas por ponte sobre o house reef
 - 290 villas distribuídas entre as duas ilhas`
-      },
-      {
-        id: "pricing",
-        title: "Valores & Formas de Pagamento",
-        type: "text",
-        content: `Valores:
-
-Os preços variam conforme a temporada, tipo de acomodação e duração da estadia. Entre em contato para obter uma cotação personalizada e atualizada.
-
-Formas de Pagamento:
-
-- Sinal de 20% na confirmação da reserva
-- Saldo de 80% até 30 dias antes da viagem
-- Parcelamento em até 10x sem juros no cartão de crédito (saldo)
-
-Política de Cancelamento:
-
-Cancelamento com até 30 dias de antecedência: reembolso de 80% do valor pago.
-
-Observações:
-
-Os valores estão sujeitos a alteração sem aviso prévio. Consulte-nos para obter cotações atualizadas e disponibilidade.`
       }
     ],
     accommodations: {
