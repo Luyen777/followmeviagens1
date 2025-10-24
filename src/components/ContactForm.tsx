@@ -221,10 +221,10 @@ const ContactForm = ({ resortName }: ContactFormProps) => {
             type="button"
             variant="outline"
             onClick={handleWhatsAppClick}
-            className="w-full h-12 rounded-2xl font-medium tracking-luxury transition-all duration-500"
+            className="w-full h-12 rounded-2xl font-medium tracking-luxury transition-all duration-500 text-sm sm:text-base px-4"
           >
-            <MessageCircle className="w-4 h-4 mr-2" />
-            Contato direto por WhatsApp
+            <MessageCircle className="w-4 h-4 sm:w-5 sm:h-5 mr-1.5 sm:mr-2 flex-shrink-0" />
+            <span className="truncate">Contato direto por WhatsApp</span>
           </Button>
         </form>
       </Form>
