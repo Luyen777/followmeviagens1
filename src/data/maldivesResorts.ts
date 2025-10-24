@@ -20,6 +20,7 @@ import patinaMaldives from "./resorts/patina-maldives";
 import radissonBlu from "./resorts/radisson-blu";
 import sixSensesKanuhura from "./resorts/six-senses-kanuhura";
 import sixSensesLaamu from "./resorts/six-senses-laamu";
+import siyamWorld from "./resorts/siyam-world";
 import adaaranBeachVillasAerial from "@/assets/adaaran-select/beach-villas-aerial.jpg";
 import adaaranBuffetRestaurant from "@/assets/adaaran-select/buffet-restaurant.jpg";
 import adaaranSunsetVillaInterior from "@/assets/adaaran-select/sunset-villa-interior.jpg";
@@ -7569,5 +7570,6 @@ Diferenciais do resort:
   [patinaMaldives.slug]: patinaMaldives,
   [radissonBlu.slug]: radissonBlu,
   [sixSensesKanuhura.slug]: sixSensesKanuhura,
-  [sixSensesLaamu.slug]: sixSensesLaamu
+  [sixSensesLaamu.slug]: sixSensesLaamu,
+  [siyamWorld.slug]: siyamWorld
 };
