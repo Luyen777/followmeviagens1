@@ -16,6 +16,7 @@ import adaaranOverwaterVillasAerial from "@/assets/adaaran-select/overwater-vill
 
 // New modular imports (add new resorts here)
 import oneAndOnlyReethiRah from "./resorts/one-and-only-reethi-rah";
+import patinaMaldives from "./resorts/patina-maldives";
 import adaaranBeachVillasAerial from "@/assets/adaaran-select/beach-villas-aerial.jpg";
 import adaaranBuffetRestaurant from "@/assets/adaaran-select/buffet-restaurant.jpg";
 import adaaranSunsetVillaInterior from "@/assets/adaaran-select/sunset-villa-interior.jpg";
@@ -7561,5 +7562,6 @@ Diferenciais do resort:
     ]
   },
   // New modular resorts (from individual files)
-  [oneAndOnlyReethiRah.slug]: oneAndOnlyReethiRah
+  [oneAndOnlyReethiRah.slug]: oneAndOnlyReethiRah,
+  [patinaMaldives.slug]: patinaMaldives
 };
