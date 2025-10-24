@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Check, MessageCircle } from "lucide-react";
-import indiaHero from "@/assets/india-hero.jpg";
+import indiaHero from "@/assets/india-hero.avif";
 const IndiaHero = () => {
   const handleWhatsAppClick = () => {
     window.open("https://wa.link/followmeviagens", '_blank');
