@@ -1,4 +1,14 @@
 import heroImage from "@/assets/maldives-hero-latest.avif";
+import adaaranOverwaterVillasAerial from "@/assets/adaaran-select/overwater-villas-aerial.jpg";
+import adaaranBeachVillasAerial from "@/assets/adaaran-select/beach-villas-aerial.jpg";
+import adaaranBuffetRestaurant from "@/assets/adaaran-select/buffet-restaurant.jpg";
+import adaaranSunsetVillaInterior from "@/assets/adaaran-select/sunset-villa-interior.jpg";
+import adaaranDivingCoralReef from "@/assets/adaaran-select/diving-coral-reef.jpg";
+import adaaranVillaBathroomOceanView from "@/assets/adaaran-select/villa-bathroom-ocean-view.jpg";
+import adaaranMainRestaurantInterior from "@/assets/adaaran-select/main-restaurant-interior.jpg";
+import adaaranSunsetWaterVillaRoom from "@/assets/adaaran-select/sunset-water-villa-room.jpg";
+import adaaranResortAerialPool from "@/assets/adaaran-select/resort-aerial-pool.jpg";
+import adaaranIslandAerialView from "@/assets/adaaran-select/island-aerial-view.jpg";
 
 export interface ResortData {
   slug: string;
@@ -556,32 +566,44 @@ Política de Crianças:
     ],
     images: [
       {
-        src: "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?q=80&w=2670",
-        alt: "Adaaran Select Hudhuranfushi - Vista aérea das ocean villas sobre águas cristalinas"
+        src: adaaranOverwaterVillasAerial,
+        alt: "Adaaran Select Hudhuranfushi - Vista aérea das ocean villas sobre águas cristalinas turquesa"
       },
       {
-        src: "https://images.unsplash.com/photo-1573843981267-be1999ff37cd?q=80&w=2574",
-        alt: "Adaaran Select - Beach villas com acesso direto à praia de areia branca"
+        src: adaaranBeachVillasAerial,
+        alt: "Beach villas com acesso direto à praia de areia branca nas Maldivas"
       },
       {
-        src: "https://images.unsplash.com/photo-1571896349842-33c89424de2d?q=80&w=2680",
-        alt: "Interior moderno e confortável das villas recém-renovadas"
+        src: adaaranBuffetRestaurant,
+        alt: "Buffet internacional do restaurante principal com variedade gastronômica"
       },
       {
-        src: "https://images.unsplash.com/photo-1540555700478-4be289fbecef?q=80&w=2670",
-        alt: "Piscina principal do resort com área para adultos e crianças"
+        src: adaaranSunsetVillaInterior,
+        alt: "Interior elegante e moderno das sunset villas recém-renovadas"
       },
       {
-        src: "https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=2670",
-        alt: "Sunset Restaurant - experiências gastronômicas sobre a água"
+        src: adaaranDivingCoralReef,
+        alt: "Mergulho e snorkeling no house reef com corais coloridos e vida marinha abundante"
       },
       {
-        src: "https://images.unsplash.com/photo-1544551763-46a013bb70d5?q=80&w=2670",
-        alt: "Snorkeling no house reef com vida marinha abundante"
+        src: adaaranVillaBathroomOceanView,
+        alt: "Banheiro luxuoso das villas com vista panorâmica para o oceano Índico"
       },
       {
-        src: "https://images.unsplash.com/photo-1505142468610-359e7d316be0?q=80&w=2626",
-        alt: "Surf no famoso spot Lohis com ondas perfeitas"
+        src: adaaranMainRestaurantInterior,
+        alt: "Restaurante principal do Adaaran Select com ambiente sofisticado e aconchegante"
+      },
+      {
+        src: adaaranSunsetWaterVillaRoom,
+        alt: "Quarto espaçoso das water villas com vista para o pôr do sol"
+      },
+      {
+        src: adaaranResortAerialPool,
+        alt: "Vista aérea do resort mostrando piscina principal e área de lazer"
+      },
+      {
+        src: adaaranIslandAerialView,
+        alt: "Panorama aéreo completo da ilha Hudhuranfushi nas Maldivas"
       }
     ]
   },
