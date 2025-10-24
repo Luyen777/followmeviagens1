@@ -48,9 +48,9 @@ const Hero = ({
           <Button onClick={scrollToPricing} size="lg" className="w-auto min-w-[280px] h-12 sm:h-[60px] px-4 sm:px-8 text-sm sm:text-lg bg-black hover:bg-black/90 text-white shadow-lg border-2 border-yellow-500 hover:border-yellow-400">
             Solicitar Orçamento Personalizado
           </Button>
-          <Button onClick={handleWhatsAppClick} size="lg" className="w-auto min-w-[280px] h-12 sm:h-[60px] px-4 sm:px-8 text-sm sm:text-lg bg-green-700 hover:bg-green-800 text-white relative">
-            <MessageCircle className="absolute left-4 h-4 w-4 sm:h-5 sm:w-5" />
-            <span className="mx-auto">Falar no WhatsApp</span>
+          <Button onClick={handleWhatsAppClick} size="lg" className="w-auto min-w-[280px] h-12 sm:h-[60px] px-4 sm:px-8 text-sm sm:text-lg bg-green-700 hover:bg-green-800 text-white">
+            <MessageCircle className="mr-2 h-4 w-4 sm:h-5 sm:w-5" />
+            Falar no WhatsApp
           </Button>
         </div>
       </div>
