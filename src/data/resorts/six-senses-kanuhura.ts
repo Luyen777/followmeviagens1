@@ -1,4 +1,5 @@
 import { ResortData } from "../types";
+import heroImage from "@/assets/maldives-hero-latest.avif";
 
 export const sixSensesKanuhura: ResortData = {
   slug: "six-senses-kanuhura",
@@ -6,7 +7,7 @@ export const sixSensesKanuhura: ResortData = {
   rating: 5,
   location: "Lhaviyani Atoll",
   transferTime: "40 minutos de hidroavião",
-  heroImage: "https://images.unsplash.com/photo-1573843981267-be1999ff37cd?q=80&w=2940",
+  heroImage: heroImage,
   heroTitle: "Six Senses Kanuhura",
   heroSubtitle: "Luxo eco-chique em uma das ilhas mais exclusivas das Maldivas",
   heroHighlights: [
@@ -146,24 +147,23 @@ Cada villa conta com serviço de mordomo (GEM), amenities premium, bicicletas pr
       {
         name: "Baixa Temporada",
         period: "Maio a Outubro",
-        priceText: "A partir de R$ 4.500",
-        priceSubtext: "por noite, casal, meia pensão"
+        priceText: "Sob consulta",
+        priceSubtext: "por pessoa, por noite, meia pensão"
       },
       {
         name: "Alta Temporada",
         period: "Novembro a Abril",
-        priceText: "A partir de R$ 6.500",
-        priceSubtext: "por noite, casal, meia pensão"
+        priceText: "Sob consulta",
+        priceSubtext: "por pessoa, por noite, meia pensão"
       }
     ],
     paymentTerms: [
-      "30% de entrada na reserva",
-      "70% restante até 60 dias antes do check-in",
-      "Parcelamento em até 10x sem juros no cartão",
-      "Traslado de hidroavião com custo adicional ou incluso em pacotes promocionais"
+      "Entrada de 20% via transferência bancária ao confirmar a reserva",
+      "80% restante até 30 dias antes da viagem",
+      "Parcelamento disponível em até 10 parcelas sem juros no cartão de crédito"
     ],
-    cancellationPolicy: "Cancelamento gratuito até 60 dias antes do check-in. Entre 60 e 30 dias: multa de 50%. Menos de 30 dias: multa de 100%.",
-    notes: "Preços sujeitos a alteração conforme disponibilidade e época do ano. Consulte condições especiais para pacotes de lua de mel, aniversários e estadias prolongadas."
+    cancellationPolicy: "Cancelamento com até 30 dias de antecedência: reembolso de 80% do valor pago.",
+    notes: "Os valores estão sujeitos a alteração sem aviso prévio. Consulte-nos para obter cotações atualizadas e disponibilidade."
   },
   faqs: [
     {
@@ -193,27 +193,27 @@ Cada villa conta com serviço de mordomo (GEM), amenities premium, bicicletas pr
   ],
   images: [
     {
-      src: "https://images.unsplash.com/photo-1573843981267-be1999ff37cd?q=80&w=2940",
+      src: heroImage,
       alt: "Six Senses Kanuhura - Vista aérea do resort"
     },
     {
-      src: "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?q=80&w=2940",
+      src: heroImage,
       alt: "Overwater Villa com piscina privativa"
     },
     {
-      src: "https://images.unsplash.com/photo-1540541338287-41700207dee6?q=80&w=2940",
+      src: heroImage,
       alt: "Vista sunset das villas sobre a água"
     },
     {
-      src: "https://images.unsplash.com/photo-1571896349842-33c89424de2d?q=80&w=2940",
+      src: heroImage,
       alt: "Praia de areia branca e lagoa azul-turquesa"
     },
     {
-      src: "https://images.unsplash.com/photo-1578683010236-d716f9a3f461?q=80&w=2940",
+      src: heroImage,
       alt: "Interior luxuoso da villa"
     },
     {
-      src: "https://images.unsplash.com/photo-1445019980597-93fa8acb246c?q=80&w=2940",
+      src: heroImage,
       alt: "Experiência gastronômica gourmet"
     }
   ]
