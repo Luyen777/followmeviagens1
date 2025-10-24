@@ -6,6 +6,8 @@ import WhatsAppButton from "@/components/WhatsAppButton";
 import Hero from "@/components/resort-template/Hero";
 import AboutSection from "@/components/resort-template/AboutSection";
 import TextSection from "@/components/resort-template/TextSection";
+import ContentSection from "@/components/resort-template/ContentSection";
+import AccommodationSection from "@/components/resort-template/AccommodationSection";
 import PricingSection from "@/components/resort-template/PricingSection";
 import FAQSection from "@/components/resort-template/FAQSection";
 import ResortImageCarousel from "@/components/ResortImageCarousel";
@@ -69,16 +71,40 @@ const MaldivesResortTemplate = () => {
           
           <AboutSection content={resort.about} />
           
-          {resort.sections.map((section, index) => (
-            section.type === 'text' ? (
-              <TextSection
-                key={section.id}
-                id={`section-${index}`}
-                title={section.title}
-                content={section.content || ''}
-              />
-            ) : null
-          ))}
+          {resort.sections.map((section, index) => {
+            if (section.type === 'text') {
+              return (
+                <TextSection
+                  key={section.id}
+                  id={section.id}
+                  title={section.title}
+                  content={section.content || ''}
+                />
+              );
+            } else if (section.type === 'list' || section.type === 'cards' || section.type === 'two-column') {
+              return (
+                <ContentSection
+                  key={section.id}
+                  id={section.id}
+                  title={section.title}
+                  subtitle={section.subtitle}
+                  type={section.type}
+                  items={section.items}
+                  content={section.content}
+                  background={index % 2 === 1 ? 'muted' : 'default'}
+                />
+              );
+            }
+            return null;
+          })}
+          
+          {resort.accommodations && (
+            <AccommodationSection
+              title={resort.accommodations.title}
+              description={resort.accommodations.description}
+              types={resort.accommodations.types}
+            />
+          )}
           
           <PricingSection
             seasons={resort.pricing.seasons}
