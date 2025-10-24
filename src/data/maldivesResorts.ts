@@ -6313,7 +6313,7 @@ Serviços exclusivos:
         id: "inclusions",
         title: "Inclusões do Pacote (All Inclusive)",
         type: "text",
-        content: `O plano All Inclusive do Kuredhivaru oferece uma experiência completa:
+        content: `Incluído:
 
 - Lounge VIP no terminal de hidroavião
 - Café da manhã buffet no restaurante ONU Marché
@@ -6490,19 +6490,16 @@ Diferenciais do resort:
     pricing: {
       seasons: [
         {
-          name: "Alta Temporada",
-          period: "Dezembro a Março",
-          priceText: "Consulte valores"
-        },
-        {
-          name: "Temporada Intermediária",
-          period: "Abril, Julho a Agosto",
-          priceText: "Consulte valores"
-        },
-        {
           name: "Baixa Temporada",
-          period: "Maio a Junho, Setembro a Novembro",
-          priceText: "Consulte valores"
+          period: "Maio a Outubro",
+          priceText: "Sob consulta",
+          priceSubtext: "por pessoa, por noite, all inclusive"
+        },
+        {
+          name: "Alta Temporada",
+          period: "Novembro a Abril",
+          priceText: "Sob consulta",
+          priceSubtext: "por pessoa, por noite, all inclusive"
         }
       ],
       paymentTerms: [
