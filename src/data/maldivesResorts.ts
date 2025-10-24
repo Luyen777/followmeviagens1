@@ -6295,7 +6295,7 @@ Serviços exclusivos:
     rating: 6,
     location: "Atol Noonu",
     transferTime: "45 minutos de hidroavião",
-    heroImage: "https://images.unsplash.com/photo-1540541338287-41700207dee6?q=80&w=2670",
+    heroImage: heroImage,
     heroTitle: "Kuredhivaru Maldives",
     heroSubtitle: "Luxo e Privacidade no Atol Noonu",
     heroHighlights: [
@@ -6492,29 +6492,25 @@ Diferenciais do resort:
         {
           name: "Alta Temporada",
           period: "Dezembro a Março",
-          priceText: "Consulte valores",
-          priceSubtext: "Melhores condições climáticas"
+          priceText: "Consulte valores"
         },
         {
           name: "Temporada Intermediária",
           period: "Abril, Julho a Agosto",
-          priceText: "Consulte valores",
-          priceSubtext: "Ótima relação custo-benefício"
+          priceText: "Consulte valores"
         },
         {
           name: "Baixa Temporada",
           period: "Maio a Junho, Setembro a Novembro",
-          priceText: "Consulte valores",
-          priceSubtext: "Melhores tarifas disponíveis"
+          priceText: "Consulte valores"
         }
       ],
       paymentTerms: [
-        "Entrada de 30% na confirmação da reserva",
-        "Saldo restante em até 30 dias antes do check-in",
-        "Parcelamento em até 10x sem juros no cartão de crédito",
-        "Condições especiais para pagamento à vista"
+        "Entrada de 20% via transferência bancária ao confirmar a reserva",
+        "80% restante até 30 dias antes da viagem",
+        "Parcelamento disponível em até 10 parcelas sem juros no cartão de crédito"
       ],
-      cancellationPolicy: "Cancelamento gratuito até 60 dias antes do check-in. Entre 59 e 30 dias: reembolso de 50% do valor pago. Menos de 30 dias: sem reembolso. Políticas especiais podem ser aplicadas em períodos de alta temporada.",
+      cancellationPolicy: "Cancelamento com até 30 dias de antecedência: reembolso de 80% do valor pago.",
       notes: "Os valores estão sujeitos a alteração sem aviso prévio. Consulte-nos para obter cotações atualizadas e disponibilidade."
     },
     faqs: [
@@ -6545,7 +6541,7 @@ Diferenciais do resort:
     ],
     images: [
       {
-        src: "https://images.unsplash.com/photo-1540541338287-41700207dee6?q=80&w=2670",
+        src: heroImage,
         alt: "Vista aérea do Kuredhivaru Resort"
       },
       {
