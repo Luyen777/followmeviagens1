@@ -7543,5 +7543,204 @@ Diferenciais do resort:
         alt: "Yoga pavilhão ao amanhecer"
       }
     ]
+  },
+  "one-and-only-reethi-rah": {
+    slug: "one-and-only-reethi-rah",
+    name: "One&Only Reethi Rah",
+    rating: 5,
+    location: "North Malé Atoll",
+    transferTime: "45-55 minutos de lancha rápida do aeroporto de Malé",
+    heroImage: heroImage,
+    heroTitle: "One&Only Reethi Rah",
+    heroSubtitle: "Um dos resorts mais luxuosos das Maldivas em ilha privada de 44 hectares",
+    heroHighlights: ["12 Praias Privadas", "Ilha de 44 Hectares", "Jean-Michel Gathy Design"],
+    seoTitle: "One&Only Reethi Rah - Resort Ultra Luxo 5★ | Follow Me Viagens",
+    seoDescription: "Um dos mais icônicos resorts das Maldivas, na ilha privada de Reethi Rah com 44 hectares, 12 praias, design de Jean-Michel Gathy, 7 restaurantes e máxima privacidade.",
+    about: "One&Only Reethi Rah é considerado um dos mais luxuosos e icônicos resorts das Maldivas, localizado na ilha privada de Reethi Rah, no North Malé Atoll, a cerca de 45-55 minutos do aeroporto de Malé, acessível por lancha rápida, iate de luxo ou hidroavião. A ilha é uma das maiores do arquipélago, com 44 hectares, rodeada por 12 praias de areia fina e lagoas azul-turquesa. O resort foi projetado por Jean-Michel Gathy e é referência global, sendo eleito um dos melhores resorts do Oceano Índico e África em 2025. Reethi Rah significa \"ilha linda\" em Dhivehi, e entrega máximo espaço, privacidade e elegância em cada ponto do hotel.",
+    sections: [
+      {
+        id: "inclusions",
+        title: "Inclusões do Pacote",
+        type: "text",
+        content: `- Bicicletas privativas na villa para circulação
+- Serviço de mordomo (butler) em todas as categorias
+- Wi-Fi premium em toda a ilha
+- Acesso a todas as praias e piscinas do resort
+- Uso do fitness center, quadras de tênis, campo de futebol FIFA, rock climbing
+- Participação nas aulas de yoga no pavilhão sobre as águas
+- Snorkeling livre no house reef (equipamento incluso nas villas)
+- Atividades de arte, cerâmica e workshops
+- Traslado de buggy interno
+- Kids Clubs (KidsOnly para crianças de 4-9 anos; OneTribe para 9-11 anos)
+- Lounge de chegada/partida
+- Amenities premium, minibar abastecido, máquina de chá/café Nespresso
+- Arrumação 2x/dia e serviço noturno
+- Welcome amenities e chá de boas-vindas
+- Biblioteca, salão de jogos, boutique de compras
+- Concierge multilíngue e serviço 24h`
+      },
+      {
+        id: "activities",
+        title: "Atividades e Gastronomia",
+        type: "text",
+        content: `Atividades:
+- Esportes aquáticos: snorkeling, caiaque, SUP, windsurf, pedalinho, excursões guiadas
+- Mergulho PADI 5* (cursos e saídas para snorkel/diving em reefs do atol)
+- Spa One&Only: terapias holísticas, massagens balinesas, sauna, piscina de vitalidade, tratamentos masculino (Barber+Blade)
+- Piscinas: piscina principal (freeform), lap pool
+- Futebol, tênis, academia ampla, atividades wellness/yoga
+- Passeios de barco ou dhoni privativo, pesca esportiva, sandbank picnic, dolphin cruise, tours para ilhas próximas
+- Atividades culturais e criativas: arte, cerâmica, workshops com artistas
+- KidsOnly e OneTribe: programa completo com snorkel, culinária, esportes aquáticos, festas, artes e games
+- Cinema open-air, música ao vivo, festas temáticas e programas semanais
+
+Gastronomia (7 restaurantes e bares):
+- Botanica: orgânico garden-to-fork
+- Rabarbaro: italiano sofisticado
+- Hoshi: japonês contemporâneo
+- Fanditha: árabe/mediterrâneo à beira-mar
+- Tapasake: fusion asiático e grelhados no sunset
+- Aqua e Beach Club: drinks, petiscos e refeições leves
+- Rah Bar: drinks tropicais e snacks, ponto de sunset
+- Room service 24h
+- Experiências especiais: jantares privados na vila/praia, floating breakfast, degustação de vinhos, sandbank dinner, gastronomia kids e menus vegetarianos/vegan
+- Adega de vinhos premiada, masterclasses e eventos de chef convidados`
+      },
+      {
+        id: "accommodation",
+        title: "Acomodação",
+        type: "text",
+        content: `Bangalô sobre as águas com piscina privativa:
+
+O resort possui 8 conjuntos de Water Villas ultra privativas (cada conjunto com 4 villas), conectadas por passarelas exclusivas e separadas do restante da ilha. As Water Villas contam com piscina infinita privativa, deck panorâmico, acesso direto à lagoa, banheiro de luxo com banheira de imersão, iluminação personalizada, cama king-size, salão, minibar completo, bicicletas e serviço de mordomo 24h. A experiência foca na privacidade e integração completa com o oceano, ideal para casais ou quem busca exclusividade máxima.
+
+Kids até 12 anos free com pais em promoções; berço/cama extra grátis por demanda`
+      }
+    ],
+    accommodations: {
+      title: "Acomodações de Luxo",
+      description: "Water Villas ultra privativas com piscina infinita e acesso direto à lagoa",
+      types: [
+        {
+          name: "Water Villa com Piscina Privativa",
+          size: "Ampla metragem",
+          beds: "1 cama king-size",
+          maxOccupancy: "3 adultos ou 2 adultos + 2 crianças",
+          features: [
+            "Piscina infinita privativa",
+            "Deck panorâmico sobre a lagoa",
+            "Acesso direto à água",
+            "Banheiro de luxo com banheira de imersão",
+            "Iluminação personalizada",
+            "Salão privativo",
+            "Minibar completo",
+            "Máquina Nespresso",
+            "Bicicletas privativas",
+            "Serviço de mordomo 24h",
+            "Smart TV e Wi-Fi premium",
+            "Ar-condicionado"
+          ]
+        }
+      ]
+    },
+    pricing: {
+      seasons: [
+        {
+          name: "Baixa Temporada",
+          period: "Maio a Outubro",
+          priceText: "Sob consulta",
+          priceSubtext: "por pessoa, por noite, all inclusive"
+        },
+        {
+          name: "Alta Temporada",
+          period: "Novembro a Abril",
+          priceText: "Sob consulta",
+          priceSubtext: "por pessoa, por noite, all inclusive"
+        }
+      ],
+      paymentTerms: [
+        "Entrada de 20% via transferência bancária ao confirmar a reserva",
+        "80% restante até 30 dias antes da viagem",
+        "Parcelamento disponível em até 10 parcelas sem juros no cartão de crédito"
+      ],
+      cancellationPolicy: "Cancelamento com até 30 dias de antecedência: reembolso de 80% do valor pago.",
+      notes: "Os valores estão sujeitos a alteração sem aviso prévio. Consulte-nos para obter cotações atualizadas e disponibilidade."
+    },
+    faqs: [
+      {
+        question: "Qual é o tempo de traslado do aeroporto até o resort?",
+        answer: "O traslado leva de 45 a 55 minutos de lancha rápida do Aeroporto Internacional de Malé até o One&Only Reethi Rah. Também está disponível hidroavião ou iate de luxo."
+      },
+      {
+        question: "O resort é adequado para famílias com crianças?",
+        answer: "Sim, o resort é excelente para famílias. Possui Kids Clubs dedicados (KidsOnly para 4-9 anos e OneTribe para 9-11 anos), menus infantis, amenities kids, praias amplas e seguras, piscinas, e atividades supervisionadas. Kids até 12 anos podem ficar gratuitamente com os pais em promoções."
+      },
+      {
+        question: "O que está incluído no pacote?",
+        answer: "Incluído: bicicletas privativas, butler service 24h, Wi-Fi premium, acesso a todas as praias e piscinas, fitness center, quadras de tênis e futebol, rock climbing, yoga, snorkeling livre, Kids Clubs, lounge de chegada/partida, minibar, amenities premium e muito mais."
+      },
+      {
+        question: "Quais atividades estão disponíveis?",
+        answer: "Gratuitas: snorkeling, caiaque, SUP, windsurf, yoga, fitness center, tênis, futebol FIFA, rock climbing, arte, cerâmica, Kids Clubs. Com custo extra: mergulho PADI 5*, spa completo, passeios de dhoni, pesca esportiva, sandbank picnic, dolphin cruise, jantares privativos."
+      },
+      {
+        question: "O resort possui spa?",
+        answer: "Sim, o One&Only Spa oferece terapias holísticas, massagens balinesas, sauna, piscina de vitalidade e tratamentos masculinos exclusivos (Barber+Blade). É um dos spas mais renomados das Maldivas."
+      },
+      {
+        question: "Quantos restaurantes o resort possui?",
+        answer: "O resort possui 7 restaurantes e bares: Botanica (orgânico), Rabarbaro (italiano), Hoshi (japonês), Fanditha (árabe/mediterrâneo), Tapasake (fusion asiático), Aqua e Beach Club, e Rah Bar. Todos com gastronomia premiada e experiências únicas."
+      },
+      {
+        question: "O que diferencia o One&Only Reethi Rah?",
+        answer: "É um dos resorts mais luxuosos e icônicos das Maldivas, com 44 hectares de ilha privada, 12 praias exclusivas, design de Jean-Michel Gathy, Water Villas ultra privativas, 7 restaurantes premiados, spa renomado, máxima privacidade e serviço de mordomo em todas as categorias. Eleito um dos melhores resorts do Oceano Índico e África."
+      },
+      {
+        question: "Todas as villas têm piscina privativa?",
+        answer: "Sim, as Water Villas do One&Only Reethi Rah possuem piscina infinita privativa com vista panorâmica para a lagoa, garantindo total privacidade e luxo."
+      }
+    ],
+    images: [
+      {
+        src: heroImage,
+        alt: "Vista aérea do One&Only Reethi Rah"
+      },
+      {
+        src: "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?q=80&w=2670",
+        alt: "Water Villa com piscina privativa"
+      },
+      {
+        src: "https://images.unsplash.com/photo-1571896349842-33c89424de2d?q=80&w=2680",
+        alt: "Deck privativo sobre a lagoa"
+      },
+      {
+        src: "https://images.unsplash.com/photo-1559827260-dc66d52bef19?q=80&w=2670",
+        alt: "One&Only Spa"
+      },
+      {
+        src: "https://images.unsplash.com/photo-1544551763-46a013bb70d5?q=80&w=2670",
+        alt: "Piscina principal do resort"
+      },
+      {
+        src: "https://images.unsplash.com/photo-1600891964092-4316c288032e?q=80&w=2670",
+        alt: "Restaurante à beira-mar"
+      },
+      {
+        src: "https://images.unsplash.com/photo-1540541338287-41700207dee6?q=80&w=2670",
+        alt: "Snorkeling no house reef"
+      },
+      {
+        src: "https://images.unsplash.com/photo-1600298881974-6be191ceeda1?q=80&w=2670",
+        alt: "Kids Club"
+      },
+      {
+        src: "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?q=80&w=2670",
+        alt: "Experiência gastronômica"
+      },
+      {
+        src: "https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=2670",
+        alt: "Yoga pavilhão sobre as águas"
+      }
+    ]
   }
 };
