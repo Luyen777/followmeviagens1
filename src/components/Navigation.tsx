@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Menu, X, MessageCircle, ChevronDown } from "lucide-react";
+import { Menu, X, MessageCircle, ChevronDown, Instagram } from "lucide-react";
 import { Link, useNavigate, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import logo from "@/assets/logo-new.png";
@@ -32,6 +32,10 @@ const Navigation = () => {
   
   const handleWhatsAppClick = () => {
     window.open("https://wa.link/followmeviagens", "_blank");
+  };
+  
+  const handleInstagramClick = () => {
+    window.open("https://www.instagram.com/followmeviagens", "_blank");
   };
   
   const handleContactClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
@@ -178,6 +182,13 @@ const Navigation = () => {
             >
               <MessageCircle className="w-5 h-5 text-foreground" />
             </button>
+            <button 
+              onClick={handleInstagramClick}
+              className="hidden lg:flex items-center justify-center w-10 h-10 rounded-full bg-foreground/10 hover:bg-foreground/20 transition-colors duration-300"
+              aria-label="Siga-nos no Instagram"
+            >
+              <Instagram className="w-5 h-5 text-foreground" />
+            </button>
             <a href="#contato">
               <Button variant="primary" size="default" className="shadow-luxury whitespace-nowrap text-xs xl:text-sm px-4 xl:px-6 bg-slate-950 hover:bg-slate-800">
                 Solicitar Orçamento
@@ -251,6 +262,13 @@ const Navigation = () => {
                 >
                   <MessageCircle className="w-5 h-5" />
                   <span>Falar no WhatsApp</span>
+                </button>
+                <button 
+                  onClick={handleInstagramClick}
+                  className="flex items-center justify-center gap-2 py-3 px-4 rounded-lg bg-foreground/10 hover:bg-foreground/20 transition-colors duration-300 font-semibold text-foreground"
+                >
+                  <Instagram className="w-5 h-5" />
+                  <span>Seguir no Instagram</span>
                 </button>
                 <a href="#contato" onClick={() => setIsMenuOpen(false)}>
                   <Button variant="primary" className="w-full">
