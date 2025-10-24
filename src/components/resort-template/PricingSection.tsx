@@ -37,9 +37,7 @@ const PricingSection = ({
             Valores & Formas de Pagamento
           </h2>
           <div className="h-[2px] w-20 mx-auto bg-gradient-to-r from-transparent via-accent to-transparent opacity-60 rounded-full mb-4"></div>
-          <p className="text-lg text-muted-foreground font-light">
-            Pacotes all inclusive com as melhores condições
-          </p>
+          <p className="text-lg text-muted-foreground font-light">Pacotes completos com as melhores condições</p>
         </header>
 
         <div className="grid md:grid-cols-2 gap-6 mb-12">
