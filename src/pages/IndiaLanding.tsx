@@ -8,6 +8,7 @@ import { useNavigate } from "react-router-dom";
 import { Calendar, Star, Landmark, Heart, Utensils, Hotel, Shield, Clock, Plane, ThermometerSun, FileCheck, Syringe } from "lucide-react";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import indiaHero from "@/assets/india-landing-hero.jpg";
+import indiaTrianguloPackage from "@/assets/india-triangulo-package.avif";
 
 const IndiaLanding = () => {
   const navigate = useNavigate();
@@ -26,7 +27,7 @@ const IndiaLanding = () => {
       ],
       priceFrom: "Consulte",
       slug: "triangulo-dourado-7-noites",
-      image: indiaHero
+      image: indiaTrianguloPackage
     },
     {
       id: 2,
