@@ -7,7 +7,7 @@ import { Button } from "@/components/ui/button";
 import { useNavigate } from "react-router-dom";
 import { Calendar, Star, Landmark, Heart, Utensils, Hotel, Shield, Clock, Plane, ThermometerSun, FileCheck, Syringe } from "lucide-react";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
-import indiaHero from "@/assets/india-hero.jpg";
+import indiaHero from "@/assets/india-landing-hero.avif";
 
 const IndiaLanding = () => {
   const navigate = useNavigate();
