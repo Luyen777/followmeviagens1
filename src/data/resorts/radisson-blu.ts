@@ -46,29 +46,32 @@ const radissonBlu: ResortData = {
       type: "text",
       content: `Atividades:
 
-Snorkeling livre na house reef, famosos pontos de tubarão-baleia e vida marinha próxima
-
-Mergulho PADI, cursos e saídas guiadas
-
-Esportes aquáticos motorizados (jet ski, wakeboard) sob custo extra
-
-Passeios privativos: dolphin cruise, sandbank picnic, pesca oceânica, sunset tour
-
-Spa completo: tratamentos, hidroterapia, sauna (hóspedes acima de 16 anos)
-
-Fitness center 24h, yoga pavilhão, aulas coletivas
-
-Kids club profissional, playground e programação kids/família
-
-Salão de jogos, biblioteca, experiências culturais, cinema ao ar livre
+- Snorkeling livre na house reef, famosos pontos de tubarão-baleia e vida marinha próxima
+- Mergulho PADI, cursos e saídas guiadas
+- Esportes aquáticos motorizados (jet ski, wakeboard) sob custo extra
+- Passeios privativos: dolphin cruise, sandbank picnic, pesca oceânica, sunset tour
+- Spa completo: tratamentos, hidroterapia, sauna (hóspedes acima de 16 anos)
+- Fitness center 24h, yoga pavilhão, aulas coletivas
+- Kids club profissional, playground e programação kids/família
+- Salão de jogos, biblioteca, experiências culturais, cinema ao ar livre
 
 Gastronomia:
 
-Restaurantes buffet e à la carte no resort: internacional, asiático, frutos do mar, grill, pratos maldivianos
+Restaurantes:
 
-Room service e jantares privados: floating breakfast, sandbank dinner, BBQ à beira da praia
+- Buffet internacional
+- Asiático à la carte
+- Frutos do mar
+- Grill
+- Pratos maldivianos
 
-Bares na praia e à beira da piscina com cocktails autorais`
+Experiências Especiais:
+
+- Room service 24h
+- Floating breakfast
+- Sandbank dinner
+- BBQ à beira da praia
+- Bares na praia e à beira da piscina com cocktails autorais`
     },
     {
       id: "accommodations-text",
