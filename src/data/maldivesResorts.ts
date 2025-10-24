@@ -5397,5 +5397,306 @@ Para Casais:
         alt: "Centro marinho - restauração de corais"
       }
     ]
+  },
+  "jw-marriott-maldives": {
+    slug: "jw-marriott-maldives",
+    name: "JW Marriott Maldives Resort & Spa",
+    rating: 6,
+    location: "Ilha Vagaru, Atol Shaviyani",
+    transferTime: "Hidroavião 1h de Malé",
+    heroImage: heroImage,
+    heroTitle: "JW Marriott Maldives Resort & Spa",
+    heroSubtitle: "Resort 6 estrelas com kids club premiado e 61 villas com piscina privativa",
+    heroHighlights: ["Kids Club Premiado", "7 Restaurantes", "Spa Sobre a Água"],
+    seoTitle: "JW Marriott Maldives Resort & Spa - Resort 6★ | Follow Me Viagens",
+    seoDescription: "Resort 6 estrelas no Atol Shaviyani com 61 villas privadas com piscina, kids club ímpar, 7 restaurantes, spa sobre a água e excelente house reef. Perfeito para famílias e casais.",
+    about: "JW Marriott Maldives Resort & Spa é um resort de luxo 6 estrelas localizado na exclusiva ilha Vagaru, no Atol Shaviyani, a cerca de 1 hora de hidroavião de Malé. Tem perfil sofisticado e familiar, com 61 villas privadas (praia e sobre a água, incluindo residências duplex) todas com piscina privativa, arquitetura que remete aos barcos Dhoni e amplo espaço. Destaca-se pelo serviço personalizado, kids club ímpar, gastronomia premiada, spa sobre a água e experiências tailor-made para casais, famílias e grupos exigentes.",
+    sections: [
+      {
+        id: "inclusions",
+        title: "Inclusões do Pacote (All Inclusive ou Meia Pensão)",
+        type: "text",
+        content: `Incluído:
+
+- Café da manhã no Aailaa (buffet/à la carte), incluso em todos os planos
+- Almoço e jantar à la carte em diversos restaurantes
+- Bebidas alcoólicas e não-alcoólicas selecionadas (planos AI)
+- Room service 24h (varia conforme tarifa)
+- Minibar completo, reabastecido diariamente
+- Experiências kids/família: Little Griffins Kids Club (atividades, jogos, splash pool, oficinas, programas educativos), biblioteca, playground, sala de jogos
+- Wi-Fi premium em toda a ilha
+- Piscinas principais (três ao ar livre, uma infantil)
+- Snorkeling, caiaque, stand-up paddle, bicicletas
+- Fitness center 24h com aulas de ioga, pilates e personal
+- Quadras esportivas (tênis, vôlei de praia, futebol), tênis de mesa, bilhar
+- Bicicletas para adultos/crianças
+- Amenities kids: chinelo, livros, cardápio infantil, berço/cama extra sob demanda
+- Spa by JW (seis salas duplas e suíte exclusiva, tratamentos Babor, salão)
+- Serviço de mordomo/villa host 24h em algumas categorias
+- Arrumação duas vezes ao dia
+- Concierge multilíngue, welcome drink, amenities chegada
+- Traslado hidroavião (aprox. USD $700-800/pessoa ida e volta)`
+      },
+      {
+        id: "gastronomy",
+        title: "Gastronomia",
+        type: "text",
+        content: `7 Restaurantes e Bares:
+
+- **Aailaa:** Internacional, café da manhã/à la carte
+- **Fiamma:** Italiano, pratos à lenha
+- **Hashi:** Asiático/japonês
+- **Shio:** Steakhouse e frutos do mar premium
+- **Kaashi:** Tailandês à beira-mar
+- **Wabi Sabi:** Carta de saquês e cocktails
+- **Wine Room:** Degustações privativas
+
+Experiências gastronômicas:
+
+- Floating breakfast
+- Degustação de vinhos
+- Private sandbank BBQ
+- Noite Maldivian
+- Jantares especiais na praia
+- Room service 24h
+
+Menu kids em todos os restaurantes, opções vegetarianas/vegan, seleção de vinhos e drinks internacionais`
+      },
+      {
+        id: "activities",
+        title: "Atividades",
+        type: "text",
+        content: `Atividades gratuitas:
+
+- Snorkeling guiado, caiaque, stand-up paddle, equipamentos para esportes aquáticos não motorizados
+- Aula de ioga e pilates, sessões fitness no pavilhão aberto ou academia
+- Quadras de tênis, tênis de praia, futebol, programas diários de bem-estar
+- Kids club e splash pool, sala de jogos, playground, caça ao tesouro, oficinas de arte e culinária para crianças
+- Noite de cinema ao ar livre, festas temáticas, eventos culturais semanais
+- Biblioteca, passeio de bicicleta na ilha
+
+Atividades com custo extra:
+
+- Mergulho PADI (batismo, cursos, saídas guiadas)
+- Esportes motorizados: jet ski, seabob, wakeboard, pesca esportiva
+- Passeios privados: iate, cruzeiro pôr do sol, snorkeling com golfinhos, visitas a ilha local/banco de areia
+- Tratamentos e day spa (massagens, terapias Babor, ritmos do sono, casal)
+- Gastronomia privativa (jantar na villa/praia, degustação chef's table)
+- Babysitting e atividades para teens
+- Sessão de fotos, experiências honeymoon`
+      },
+      {
+        id: "wellness",
+        title: "Wellness & Spa",
+        type: "text",
+        content: `Spa by JW:
+
+Spa sobre a água com seis salas duplas e suíte exclusiva, oferecendo tratamentos premium Babor, terapias holísticas, massagens, salão de beleza e programas de bem-estar personalizados.
+
+Fitness & Bem-estar:
+
+- Fitness center 24h equipado com tecnologia de ponta
+- Aulas diárias de ioga e pilates em pavilhão aberto
+- Personal trainer disponível
+- Programas de bem-estar e mindfulness`
+      },
+      {
+        id: "families",
+        title: "Famílias e Diferenciais",
+        type: "text",
+        content: `Little Griffins Kids Club:
+
+Kids Club premiado com programação completa incluindo atividades, jogos, splash pool, oficinas criativas, programas educativos e muito mais.
+
+Facilidades para Famílias:
+
+- Menu infantil em todos os restaurantes
+- Amenities baby: berço, cama extra sob demanda
+- Babysitter disponível (custo extra)
+- Villas de 2 quartos e residências exclusivas
+- Piscina infantil e splash park
+- Programa especial para teens
+- Oficinas criativas e educativas
+
+Diferenciais do resort:
+
+- Arquitetura inspirada nos barcos Dhoni tradicionais
+- Design moderno integrado à natureza
+- Piscinas privativas em todas as villas
+- Excelente house reef para snorkeling
+- Práticas eco-friendly e sustentáveis
+- Serviços multilíngues
+- Excelência Marriott`
+      }
+    ],
+    accommodations: {
+      title: "Acomodações de Luxo",
+      description: "Todas as 61 villas oferecem piscina privativa, design inspirado em barcos Dhoni, amplo espaço e privacidade excepcional.",
+      types: [
+        {
+          name: "Overwater Pool Villa",
+          size: "Até 274m²",
+          beds: "King-size",
+          maxOccupancy: "2 adultos + 2 crianças",
+          features: [
+            "Piscina infinita privativa",
+            "Terraço amplo com espreguiçadeiras",
+            "Banheira imersa com vista",
+            "Cama king-size premium",
+            "Minibar e máquina Nespresso",
+            "Menu de travesseiros",
+            "Smart TV",
+            "Amenities de banho premium",
+            "Bicicletas particulares",
+            "Arrumação duas vezes ao dia"
+          ]
+        },
+        {
+          name: "Duplex Overwater Pool Villa",
+          size: "Residência de dois andares",
+          beds: "King-size (múltiplas)",
+          maxOccupancy: "4-6 pessoas",
+          features: [
+            "Dois andares exclusivos",
+            "Piscina privativa infinita",
+            "Múltiplos terraços",
+            "Sala de estar e jantar",
+            "Banheiros duplos com banheiras",
+            "Camas king-size",
+            "Minibar completo",
+            "Máquina Nespresso",
+            "Smart TVs em ambos os níveis",
+            "Bicicletas particulares",
+            "Ideal para famílias e grupos"
+          ]
+        },
+        {
+          name: "Beach Pool Villa",
+          size: "Consultar",
+          beds: "King-size",
+          maxOccupancy: "2 adultos + 2 crianças",
+          features: [
+            "Acesso direto à praia",
+            "Piscina privativa",
+            "Terraço amplo",
+            "Sala de banho com banheira",
+            "Cama king-size",
+            "Minibar e Nespresso",
+            "Amenities premium",
+            "Bicicletas particulares",
+            "Arrumação duas vezes ao dia"
+          ]
+        },
+        {
+          name: "Residências de 2 Quartos",
+          size: "Ampla",
+          beds: "King-size (múltiplas)",
+          maxOccupancy: "4-6 pessoas",
+          features: [
+            "Dois quartos independentes",
+            "Piscina privativa",
+            "Sala de estar ampla",
+            "Terraços múltiplos",
+            "Banheiros completos",
+            "Minibar e comodidades",
+            "Amenities kids disponíveis",
+            "Espaço para até 4-6 pessoas",
+            "Serviço personalizado"
+          ]
+        }
+      ]
+    },
+    pricing: {
+      seasons: [
+        {
+          name: "Temporada Regular",
+          period: "Maio a Outubro",
+          priceText: "Consulte valores",
+          priceSubtext: "Condições especiais e pacotes personalizados disponíveis"
+        },
+        {
+          name: "Alta Temporada",
+          period: "Novembro a Abril",
+          priceText: "Consulte valores",
+          priceSubtext: "Melhor época para visitar as Maldivas"
+        }
+      ],
+      paymentTerms: [
+        "Parcelamento facilitado em até 10x sem juros no cartão de crédito",
+        "Condições especiais para pagamento antecipado",
+        "Pacotes personalizados conforme perfil do cliente",
+        "Flexibilidade de datas e planos (meia pensão ou all inclusive)"
+      ],
+      cancellationPolicy: "Política de cancelamento varia conforme a tarifa contratada. Consulte condições específicas no momento da reserva.",
+      notes: "Valores incluem hospedagem, traslados de hidroavião, plano alimentar conforme escolhido e todas as inclusões descritas. Atividades extras e tratamentos de spa têm custos adicionais."
+    },
+    faqs: [
+      {
+        question: "Como é o acesso ao JW Marriott Maldives?",
+        answer: "O acesso é feito por hidroavião privado saindo de Malé, com duração aproximada de 1 hora. O traslado custa cerca de USD $700-800 por pessoa (ida e volta) e oferece vistas espetaculares do arquipélago."
+      },
+      {
+        question: "O resort é adequado para famílias com crianças?",
+        answer: "Sim! O JW Marriott Maldives é especialmente preparado para famílias, com Kids Club premiado (Little Griffins), splash pool infantil, playground, sala de jogos, oficinas criativas, menu kids em todos os restaurantes, amenities especiais e possibilidade de babysitter. Há também villas de 2 quartos e residências ideais para famílias."
+      },
+      {
+        question: "Quais são as opções de plano alimentar?",
+        answer: "O resort oferece meia pensão (café da manhã e jantar) ou all inclusive, com 7 restaurantes e bares, incluindo Aailaa (internacional), Fiamma (italiano), Hashi (asiático), Shio (steakhouse), Kaashi (tailandês), Wabi Sabi (bar de saquês) e Wine Room. Todas as opções incluem menu kids e experiências gastronômicas como floating breakfast e jantares na praia."
+      },
+      {
+        question: "Que atividades estão incluídas?",
+        answer: "Estão inclusos: snorkeling, caiaque, stand-up paddle, bicicletas, aulas de ioga e pilates, academia 24h, quadras esportivas (tênis, vôlei, futebol), kids club completo, cinema ao ar livre, festas temáticas e eventos culturais. Atividades como mergulho PADI, jet ski, passeios privativos e tratamentos de spa têm custo extra."
+      },
+      {
+        question: "Há spa no resort?",
+        answer: "Sim, o Spa by JW é sobre a água e conta com seis salas duplas, uma suíte exclusiva, tratamentos premium Babor, massagens, terapias holísticas e salão de beleza. Ideal para relaxamento e bem-estar durante a estadia."
+      },
+      {
+        question: "O que diferencia o JW Marriott Maldives?",
+        answer: "O resort combina luxo sofisticado Marriott com arquitetura inspirada nos barcos Dhoni tradicionais, kids club premiado, 7 restaurantes de alto nível, spa sobre a água, villas espaçosas com piscina privativa e excelente house reef para snorkeling. É uma escolha perfeita tanto para famílias quanto para casais."
+      },
+      {
+        question: "Qual a melhor época para visitar?",
+        answer: "A alta temporada (novembro a abril) oferece clima mais seco e ensolarado, ideal para aproveitar praias e atividades aquáticas. A temporada regular (maio a outubro) pode ter chuvas ocasionais, mas conta com tarifas mais acessíveis e menos movimento."
+      },
+      {
+        question: "Como funciona o serviço de mordomo?",
+        answer: "Algumas categorias de villas incluem serviço de mordomo/villa host 24h, que cuida de todos os detalhes da sua estadia, desde reservas de restaurantes até arranjos especiais e experiências personalizadas."
+      }
+    ],
+    images: [
+      {
+        src: "https://images.unsplash.com/photo-1540541338287-41700207dee6?q=80&w=2670",
+        alt: "JW Marriott Maldives - vista aérea"
+      },
+      {
+        src: "https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=2670",
+        alt: "Overwater Pool Villa - sobre a água"
+      },
+      {
+        src: "https://images.unsplash.com/photo-1571896349842-33c89424de2d?q=80&w=2680",
+        alt: "Spa by JW - sobre a água"
+      },
+      {
+        src: "https://images.unsplash.com/photo-1540555700478-4be289fbecef?q=80&w=2670",
+        alt: "Aailaa Restaurant - café da manhã"
+      },
+      {
+        src: "https://images.unsplash.com/photo-1559827260-dc66d52bef19?q=80&w=2670",
+        alt: "Restaurante asiático Hashi"
+      },
+      {
+        src: "https://images.unsplash.com/photo-1544551763-46a013bb70d5?q=80&w=2670",
+        alt: "Little Griffins Kids Club"
+      },
+      {
+        src: "https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?q=80&w=2680",
+        alt: "Villa com piscina privativa"
+      },
+      {
+        src: "https://images.unsplash.com/photo-1580541631950-7282082b53ce?q=80&w=2670",
+        alt: "House reef - snorkeling"
+      }
+    ]
   }
 };
