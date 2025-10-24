@@ -112,54 +112,6 @@ Crianças:
 - Menu kids, berço/cama extra sem custo (sob consulta)`
     }
   ],
-  accommodations: {
-    title: "Acomodações de Luxo Sobre a Água",
-    description: "Todas as villas oferecem privacidade excepcional, design sustentável de ponta e comodidades ultra premium para uma estadia memorável.",
-    types: [
-      {
-        name: "Overwater Villa 1 Quarto",
-        size: "410 m²",
-        beds: "King-size",
-        maxOccupancy: "2 adultos + 2 crianças",
-        features: [
-          "Piscina privativa grande",
-          "Escorregador direto para a lagoa",
-          "Deck amplo com espreguiçadeiras",
-          "Terraço sobre a água com daybed",
-          "Teto retrátil sobre a cama para ver as estrelas",
-          "Salas de jantar interna/externa",
-          "Banheiro spa com banheira de imersão",
-          "Sistema avançado de automação",
-          "Amenities orgânicos premium",
-          "Minibar reabastecido",
-          "Barefoot Butler 24h",
-          "Bicicletas privativas",
-          "Wi-Fi premium"
-        ]
-      },
-      {
-        name: "Overwater Villa 2-4 Quartos",
-        size: "até 1.200 m²",
-        beds: "King-size em todos os quartos",
-        maxOccupancy: "até 8 adultos",
-        features: [
-          "Piscina privativa para natação",
-          "Escorregador direto para a lagoa",
-          "Mini-ginásio privativo",
-          "Closet amplo",
-          "Múltiplas salas de estar e jantar",
-          "Teto retrátil sobre a cama master",
-          "Banheiros spa em todos os quartos",
-          "Sistema avançado de automação",
-          "Amenities orgânicos premium",
-          "Minibar reabastecido",
-          "Barefoot Butler 24h",
-          "Bicicletas privativas",
-          "Máxima privacidade e exclusividade"
-        ]
-      }
-    ]
-  },
   pricing: {
     seasons: [
       {
