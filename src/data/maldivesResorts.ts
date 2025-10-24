@@ -19,6 +19,7 @@ import oneAndOnlyReethiRah from "./resorts/one-and-only-reethi-rah";
 import patinaMaldives from "./resorts/patina-maldives";
 import radissonBlu from "./resorts/radisson-blu";
 import sixSensesKanuhura from "./resorts/six-senses-kanuhura";
+import sixSensesLaamu from "./resorts/six-senses-laamu";
 import adaaranBeachVillasAerial from "@/assets/adaaran-select/beach-villas-aerial.jpg";
 import adaaranBuffetRestaurant from "@/assets/adaaran-select/buffet-restaurant.jpg";
 import adaaranSunsetVillaInterior from "@/assets/adaaran-select/sunset-villa-interior.jpg";
@@ -7567,5 +7568,6 @@ Diferenciais do resort:
   [oneAndOnlyReethiRah.slug]: oneAndOnlyReethiRah,
   [patinaMaldives.slug]: patinaMaldives,
   [radissonBlu.slug]: radissonBlu,
-  [sixSensesKanuhura.slug]: sixSensesKanuhura
+  [sixSensesKanuhura.slug]: sixSensesKanuhura,
+  [sixSensesLaamu.slug]: sixSensesLaamu
 };
