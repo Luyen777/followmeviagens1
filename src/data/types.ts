@@ -25,7 +25,7 @@ export interface ResortData {
     }>;
     content?: string;
   }>;
-  accommodations?: {
+  accommodations: {
     title: string;
     description: string;
     types: Array<{
