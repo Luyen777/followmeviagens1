@@ -23,19 +23,19 @@ const intercontinentalMaldives: ResortData = {
       type: "text",
       content: `O pacote InterContinental Maldives inclui:
 
-**Gastronomia:**
+Gastronomia:
 - Café da manhã diário completo das 07:00 às 11:00 no Café Umi
 - Chá da tarde diário das 15:00 às 17:00 no The Retreat ou The Collective
 - Aperitivo das 17:00 às 19:00 no The Collective & The Retreat ou das 18:30 às 19:00 no Sunset Bar
 - Refrescos durante todo o dia no The Retreat e Pool Bar das 11:00 às 18:00
 
-**Transfer & Serviços:**
+Transfer & Serviços:
 - Transfer privado de e para o terminal de hidroavião
 - Check-in na vila
 - Serviço de mordomo 24 horas
 - Wi-Fi gratuito nas vilas e áreas públicas
 
-**Atividades & Facilidades:**
+Atividades & Facilidades:
 - Bicicletas disponíveis durante a estadia
 - Esportes aquáticos não motorizados (caiaque, prancha de remo e windsurf)
 - Equipamentos de snorkeling
@@ -52,25 +52,25 @@ const intercontinentalMaldives: ResortData = {
       type: "text",
       content: `O InterContinental Maldives oferece 5 restaurantes principais e 3 bares:
 
-**Restaurantes:**
+Restaurantes:
 
-**Café Umi** - Restaurante durante todo o dia com influência japonesa e experiência teppanyaki interativa
+Café Umi - Restaurante durante todo o dia com influência japonesa e experiência teppanyaki interativa
 
-**Fish Market** - Conceito "do oceano ao prato" onde você escolhe frutos do mar frescos
+Fish Market - Conceito "do oceano ao prato" onde você escolhe frutos do mar frescos
 
-**The Lighthouse** - Especialidades mediterrâneas com vistas panorâmicas
+The Lighthouse - Especialidades mediterrâneas com vistas panorâmicas
 
-**The Collective** - Pizzas artesanais
+The Collective - Pizzas artesanais
 
-**The Retreat** - Santuário exclusivo para adultos com vistas da lagoa
+The Retreat - Santuário exclusivo para adultos com vistas da lagoa
 
-**Bares:**
+Bares:
 
-**Sunset Bar** - Cocktails com vista para o pôr do sol
+Sunset Bar - Cocktails com vista para o pôr do sol
 
-**Pool Bar** - Bebidas à beira da piscina
+Pool Bar - Bebidas à beira da piscina
 
-**Gelato Bar** - Sorvetes artesanais`
+Gelato Bar - Sorvetes artesanais`
     },
     {
       id: "activities",
@@ -79,26 +79,26 @@ const intercontinentalMaldives: ResortData = {
       type: "text",
       content: `O resort oferece uma ampla variedade de atividades para todos os gostos:
 
-**Esportes Aquáticos:**
+Esportes Aquáticos:
 - Snorkeling
 - Mergulho
 - Windsurf
 - Caiaque
 - Stand-up paddle
 
-**Bem-estar:**
+Bem-estar:
 - AVI Spa overwater com massagens e tratamentos
 
-**Fitness:**
+Fitness:
 - Centro de fitness 24h
 - Aulas de yoga e pilates
 
-**Recreação:**
+Recreação:
 - Kids Club
 - Parque infantil
 - Sala de jogos
 
-**Experiências Especiais:**
+Experiências Especiais:
 - Cruzeiro para observação de golfinhos
 - Aula de culinária maldívia
 - Centro de Descoberta Marinha: Filmes educacionais e colaboração com a Manta Trust Foundation`
