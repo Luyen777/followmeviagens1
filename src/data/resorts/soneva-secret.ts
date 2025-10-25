@@ -175,3 +175,5 @@ export const sonevaSecret: ResortData = {
     }
   ]
 };
+
+export default sonevaSecret;
