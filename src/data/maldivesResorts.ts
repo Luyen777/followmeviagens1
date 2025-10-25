@@ -22,6 +22,7 @@ import sixSensesKanuhura from "./resorts/six-senses-kanuhura";
 import sixSensesLaamu from "./resorts/six-senses-laamu";
 import siyamWorld from "./resorts/siyam-world";
 import sonevaJani from "./resorts/soneva-jani";
+import sonevaFushi from "./resorts/soneva-fushi";
 import adaaranBeachVillasAerial from "@/assets/adaaran-select/beach-villas-aerial.jpg";
 import adaaranBuffetRestaurant from "@/assets/adaaran-select/buffet-restaurant.jpg";
 import adaaranSunsetVillaInterior from "@/assets/adaaran-select/sunset-villa-interior.jpg";
@@ -7573,5 +7574,6 @@ Diferenciais do resort:
   [sixSensesKanuhura.slug]: sixSensesKanuhura,
   [sixSensesLaamu.slug]: sixSensesLaamu,
   [siyamWorld.slug]: siyamWorld,
-  [sonevaJani.slug]: sonevaJani
+  [sonevaJani.slug]: sonevaJani,
+  [sonevaFushi.slug]: sonevaFushi
 };
