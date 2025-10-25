@@ -125,26 +125,25 @@ Room service 24h, floating breakfast, jantares privativos, experiências na vill
   pricing: {
     seasons: [
       {
-        name: 'Temporada Regular',
-        period: 'Maio a Outubro',
-        priceText: 'A partir de US$ 3.200',
-        priceSubtext: 'por noite, para 2 pessoas'
+        name: "Baixa Temporada",
+        period: "Maio a Outubro",
+        priceText: "Sob consulta",
+        priceSubtext: "por pessoa, por noite"
       },
       {
-        name: 'Alta Temporada',
-        period: 'Novembro a Abril',
-        priceText: 'A partir de US$ 3.800',
-        priceSubtext: 'por noite, para 2 pessoas'
+        name: "Alta Temporada",
+        period: "Novembro a Abril",
+        priceText: "Sob consulta",
+        priceSubtext: "por pessoa, por noite"
       }
     ],
     paymentTerms: [
-      'Entrada de 30% no ato da reserva',
-      'Saldo restante até 60 dias antes da viagem',
-      'Parcelamento em até 10x sem juros no cartão de crédito (consulte condições)',
-      'Desconto especial para pagamento à vista'
+      "Entrada de 20% via transferência bancária ao confirmar a reserva",
+      "80% restante até 30 dias antes da viagem",
+      "Parcelamento disponível em até 10 parcelas sem juros no cartão de crédito"
     ],
-    cancellationPolicy: 'Cancelamento gratuito até 60 dias antes do check-in. Entre 60 e 30 dias: reembolso de 50%. Menos de 30 dias: sem reembolso.',
-    notes: 'Valores sujeitos a alteração conforme disponibilidade e temporada. Consulte-nos para cotação personalizada.'
+    cancellationPolicy: "Cancelamento com até 30 dias de antecedência: reembolso de 80% do valor pago.",
+    notes: "Os valores estão sujeitos a alteração sem aviso prévio. Consulte-nos para obter cotações atualizadas e disponibilidade. Kids até 11 anos grátis no mesmo regime dos pais em datas/promos especiais."
   },
   faqs: [
     {
@@ -174,28 +173,44 @@ Room service 24h, floating breakfast, jantares privativos, experiências na vill
   ],
   images: [
     {
-      src: 'https://images.unsplash.com/photo-1540541338287-41700207dee6',
-      alt: 'The Nautilus Maldives - Vista aérea das casas sobre a água'
+      src: heroImage,
+      alt: "The Nautilus Maldives - Vista aérea do resort"
     },
     {
-      src: 'https://images.unsplash.com/photo-1559827260-dc66d52bef19',
-      alt: 'The Nautilus Maldives - Interior da beach house'
+      src: "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?q=80&w=2670",
+      alt: "Ocean House com piscina infinita privativa"
     },
     {
-      src: 'https://images.unsplash.com/photo-1582719478250-c89cae4dc85b',
-      alt: 'The Nautilus Maldives - Piscina privativa com vista oceano'
+      src: "https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=2670",
+      alt: "Deck privativo sobre a lagoa"
     },
     {
-      src: 'https://images.unsplash.com/photo-1584132967334-10e028bd69f7',
-      alt: 'The Nautilus Maldives - Restaurante sobre a água'
+      src: "https://images.unsplash.com/photo-1571896349842-33c89424de2d?q=80&w=2680",
+      alt: "Solasta Spa - tratamentos personalizados sobre a água"
     },
     {
-      src: 'https://images.unsplash.com/photo-1566073771259-6a8506099945',
-      alt: 'The Nautilus Maldives - Deck privativo ao pôr do sol'
+      src: "https://images.unsplash.com/photo-1540555700478-4be289fbecef?q=80&w=2670",
+      alt: "Zeytoun - restaurante mediterrâneo sobre o mar"
     },
     {
-      src: 'https://images.unsplash.com/photo-1571896349842-33c89424de2d',
-      alt: 'The Nautilus Maldives - Spa treatment sobre a água'
+      src: "https://images.unsplash.com/photo-1559827260-dc66d52bef19?q=80&w=2670",
+      alt: "Ocaso - latino-asiático à beira-mar"
+    },
+    {
+      src: "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?q=80&w=2670",
+      alt: "Experiências gastronômicas personalizadas"
+    },
+    {
+      src: "https://images.unsplash.com/photo-1580541631950-7282082b53ce?q=80&w=2670",
+      alt: "House reef no Baa Atoll UNESCO"
+    },
+    {
+      src: "https://images.unsplash.com/photo-1587502536785-89fba1def866?q=80&w=2670",
+      alt: "Kids Club e programação educativa"
+    },
+    {
+      src: "https://images.unsplash.com/photo-1540541338287-41700207dee6?q=80&w=2670",
+      alt: "Design boêmio-chique inspirado na concha nautilus"
     }
   ]
 };
