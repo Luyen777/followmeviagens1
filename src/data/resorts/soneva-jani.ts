@@ -172,32 +172,25 @@ Para Famílias:
   pricing: {
     seasons: [
       {
-        name: "Alta Temporada",
-        period: "20 Dez a 10 Jan",
-        priceText: "sob consulta",
-        priceSubtext: "por pessoa em acomodação dupla (mínimo 7 noites)"
-      },
-      {
-        name: "Temporada Intermediária",
-        period: "Jul a Ago / Feriados",
-        priceText: "sob consulta",
-        priceSubtext: "por pessoa em acomodação dupla"
-      },
-      {
         name: "Baixa Temporada",
-        period: "Demais períodos",
-        priceText: "sob consulta",
-        priceSubtext: "por pessoa em acomodação dupla"
+        period: "Maio a Outubro",
+        priceText: "Sob consulta",
+        priceSubtext: "por pessoa, por noite"
+      },
+      {
+        name: "Alta Temporada",
+        period: "Novembro a Abril",
+        priceText: "Sob consulta",
+        priceSubtext: "por pessoa, por noite"
       }
     ],
     paymentTerms: [
-      "Sinal de 30% na confirmação",
-      "Saldo em até 60 dias antes do check-in",
-      "Parcelamento em até 10x sem juros no cartão",
-      "Boleto bancário aceito (à vista)"
+      "Entrada de 20% via transferência bancária ao confirmar a reserva",
+      "80% restante até 30 dias antes da viagem",
+      "Parcelamento disponível em até 10 parcelas sem juros no cartão de crédito"
     ],
-    cancellationPolicy: "Cancelamento com reembolso integral até 60 dias antes do check-in. Entre 60 e 30 dias: retenção de 50%. Menos de 30 dias: não reembolsável.",
-    notes: "Valores sujeitos a alteração sem aviso prévio. Consulte disponibilidade e condições especiais para lua de mel."
+    cancellationPolicy: "Cancelamento com até 30 dias de antecedência: reembolso de 80% do valor pago.",
+    notes: "Os valores estão sujeitos a alteração sem aviso prévio. Consulte-nos para obter cotações atualizadas e disponibilidade. Kids até 11 anos grátis no mesmo regime dos pais em datas/promos especiais."
   },
   faqs: [
     {
