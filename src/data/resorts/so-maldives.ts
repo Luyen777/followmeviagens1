@@ -20,95 +20,82 @@ const soMaldives: ResortData = {
       id: "inclusions",
       title: "Inclusões do Pacote",
       subtitle: "Atividades e facilidades gratuitas durante a estadia",
-      type: "list",
-      items: [
-        {
-          items: [
-            "Esportes aquáticos não motorizados: Caiaque, Stand-up paddleboard, Equipamento de windsurf (exceto aulas), Equipamento de snorkeling",
-            "Uso básico de catamarã (apenas para velejadores certificados)",
-            "Aluguel gratuito de bicicletas",
-            "Acesso à academia (24 horas)",
-            "Piscinas (externa e infinita)",
-            "Kids Club 'The Nest' (idades 4-11)",
-            "Teens Club 'The Zone' (idades 12-16)",
-            "Vôlei de praia, bocha, futebol",
-            "Transfer gratuito para CROSSROADS (transfers diários para destino integrado)",
-            "Acesso à sauna e sala de vapor",
-            "Entretenimento noturno (noites de cinema, eventos com DJ, apresentações culturais)"
-          ]
-        }
-      ]
+      type: "text",
+      content: `O pacote SO/ Maldives inclui:
+
+**Esportes Aquáticos Não Motorizados:**
+- Caiaque
+- Stand-up paddleboard
+- Equipamento de windsurf (exceto aulas)
+- Equipamento de snorkeling
+- Uso básico de catamarã (apenas para velejadores certificados)
+
+**Facilidades:**
+- Aluguel gratuito de bicicletas
+- Acesso à academia (24 horas)
+- Piscinas (externa e infinita)
+- Acesso à sauna e sala de vapor
+
+**Atividades & Entretenimento:**
+- Kids Club "The Nest" (idades 4-11)
+- Teens Club "The Zone" (idades 12-16)
+- Vôlei de praia, bocha, futebol
+- Entretenimento noturno (noites de cinema, eventos com DJ, apresentações culturais)
+
+**Transfer:**
+- Transfer gratuito para CROSSROADS (transfers diários para destino integrado)`
     },
     {
       id: "dining",
       title: "Gastronomia",
       subtitle: "Três restaurantes assinatura com proposta gastronômica diversificada",
-      type: "cards",
-      items: [
-        {
-          title: "The Citronelle Club",
-          description: "Restaurante durante todo o dia com fusão Pan-Asiática. Ambiente zen frente à praia com design asiático. Cozinha aberta com woks e pratos como bacalhau enegrecido e costelas de cordeiro agridoce. Extensa oferta de dim sum e pratos leves como spring rolls de rúcula.",
-          icon: "UtensilsCrossed"
-        },
-        {
-          title: "Lazuli Beach Club",
-          description: "Menu mediterrâneo e opções saudáveis. Ambiente de beach club sofisticado com charme da Côte d'Azur. Pratos como robalo grelhado, molho de pepino e espetadas de vegetais. Churrascos temáticos, pop-ups e festas de paella. Cocktails vibrantes pensados para compartilhar.",
-          icon: "Wine"
-        },
-        {
-          title: "Hadaba",
-          description: "Restaurante assinatura com culinária levantina. Localizado na ponta costeira do resort em dois andares. Especialidades do Golfo da Arábia ao Mediterrâneo. Pão Laffa fresco assado no 'Saj' personalizado. Especiais diários de ceviche e icônico Cordeiro Shawarma de cozimento lento.",
-          icon: "Sparkles"
-        },
-        {
-          title: "Experiências Gastronômicas Especiais",
-          description: "Floating Breakfast - Café da manhã flutuante na piscina privada | Private Dining - Jantar privado romântico à luz de velas | In-Room Dining - Serviço de quarto gourmet | Carrinho de cocktails - Preparação de drinks tableside no Hadaba",
-          icon: "Sparkles"
-        }
-      ]
+      type: "text",
+      content: `O SO/ Maldives oferece três restaurantes assinatura:
+
+**The Citronelle Club**
+Restaurante durante todo o dia com fusão Pan-Asiática. Ambiente zen frente à praia com design asiático. Cozinha aberta com woks e pratos como bacalhau enegrecido e costelas de cordeiro agridoce. Extensa oferta de dim sum e pratos leves como spring rolls de rúcula.
+
+**Lazuli Beach Club**
+Menu mediterrâneo e opções saudáveis. Ambiente de beach club sofisticado com charme da Côte d'Azur. Pratos como robalo grelhado, molho de pepino e espetadas de vegetais. Churrascos temáticos, pop-ups e festas de paella. Cocktails vibrantes pensados para compartilhar.
+
+**Hadaba**
+Restaurante assinatura com culinária levantina. Localizado na ponta costeira do resort em dois andares. Especialidades do Golfo da Arábia ao Mediterrâneo. Pão Laffa fresco assado no 'Saj' personalizado. Especiais diários de ceviche e icônico Cordeiro Shawarma de cozimento lento.
+
+**Experiências Gastronômicas Especiais:**
+- Floating Breakfast - Café da manhã flutuante na piscina privada
+- Private Dining - Jantar privado romântico à luz de velas
+- In-Room Dining - Serviço de quarto gourmet
+- Carrinho de cocktails - Preparação de drinks tableside no Hadaba`
     },
     {
       id: "activities",
       title: "Atividades com Custo Extra",
       subtitle: "Experiências aquáticas e aventuras terrestres em ambiente paradisíaco",
-      type: "cards",
-      items: [
-        {
-          title: "Esportes Aquáticos Motorizados",
-          icon: "Waves",
-          items: [
-            "Jet ski: $150-200 por sessão",
-            "X-Jetblade: Preços premium",
-            "Wakeboard/Wake foil: $125 por 15 minutos",
-            "Aulas de kite surf: $150 por hora",
-            "Wing-surfer: $95 por hora"
-          ]
-        },
-        {
-          title: "Excursões e Passeios",
-          icon: "Ship",
-          items: [
-            "Tours de snorkeling: $50-600 (dependendo da experiência)",
-            "Passeio para ver golfinhos: $175",
-            "Passeio do pôr do sol: $175",
-            "Visita a ilhas locais: $150",
-            "Tour pela cidade de Malé: $150"
-          ]
-        },
-        {
-          title: "Wellness & Spa",
-          icon: "Sparkles",
-          items: [
-            "Moringa Rejuvenate Facial (60min): $220",
-            "Aromatherapy Candle Massage (60/90min): $210/$270",
-            "After Sun Soothing (60min): $175",
-            "Curated Spa Day (180min): $420",
-            "Holistic Treatment (150min): $420",
-            "Glow Session para casal (120min): $650",
-            "Facilities Edition (120min): $50 - Acesso completo às instalações (Steam room, sauna, Vitality Pool)"
-          ]
-        }
-      ]
+      type: "text",
+      content: `Além das atividades inclusas, o resort oferece experiências premium:
+
+**Esportes Aquáticos Motorizados:**
+- Jet ski: $150-200 por sessão
+- X-Jetblade: Preços premium
+- Wakeboard/Wake foil: $125 por 15 minutos
+- Aulas de kite surf: $150 por hora
+- Wing-surfer: $95 por hora
+
+**Excursões e Passeios:**
+- Tours de snorkeling: $50-600 (dependendo da experiência)
+- Passeio para ver golfinhos: $175
+- Passeio do pôr do sol: $175
+- Visita a ilhas locais: $150
+- Tour pela cidade de Malé: $150
+
+**Wellness & Spa:**
+- Moringa Rejuvenate Facial (60min): $220
+- Aromatherapy Candle Massage (60/90min): $210/$270
+- After Sun Soothing (60min): $175
+- Curated Spa Day (180min): $420
+- Holistic Treatment (150min): $420
+- Glow Session para casal (120min): $650
+- Facilities Edition (120min): $50 - Acesso completo às instalações (Steam room, sauna, Vitality Pool)`
     },
   ],
   accommodations: {

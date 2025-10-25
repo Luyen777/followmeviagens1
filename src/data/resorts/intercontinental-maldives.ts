@@ -20,129 +20,88 @@ const intercontinentalMaldives: ResortData = {
       id: "inclusions",
       title: "Inclusões do Pacote",
       subtitle: "Tudo que você precisa saber sobre as inclusões do pacote",
-      type: "list",
-      items: [
-        {
-          items: [
-            "Café da manhã diário completo das 07:00 às 11:00 no Café Umi",
-            "Chá da tarde diário das 15:00 às 17:00 no The Retreat ou The Collective",
-            "Aperitivo das 17:00 às 19:00 no The Collective & The Retreat ou das 18:30 às 19:00 no Sunset Bar",
-            "Refrescos durante todo o dia no The Retreat e Pool Bar das 11:00 às 18:00",
-            "Transfer privado de e para o terminal de hidroavião",
-            "Check-in na vila",
-            "Serviço de mordomo 24 horas",
-            "Bicicletas disponíveis durante a estadia",
-            "Esportes aquáticos não motorizados (caiaque, prancha de remo e windsurf)",
-            "Equipamentos de snorkeling",
-            "Aulas semanais de yoga, pilates e respiração profunda",
-            "Centro de fitness 24 horas",
-            "Acesso aos clubes infantis indoor e outdoor",
-            "Tênis de mesa",
-            "Sessão de fotos de 30 minutos no resort",
-            "Wi-Fi gratuito nas vilas e áreas públicas"
-          ]
-        }
-      ]
+      type: "text",
+      content: `O pacote InterContinental Maldives inclui:
+
+**Gastronomia:**
+- Café da manhã diário completo das 07:00 às 11:00 no Café Umi
+- Chá da tarde diário das 15:00 às 17:00 no The Retreat ou The Collective
+- Aperitivo das 17:00 às 19:00 no The Collective & The Retreat ou das 18:30 às 19:00 no Sunset Bar
+- Refrescos durante todo o dia no The Retreat e Pool Bar das 11:00 às 18:00
+
+**Transfer & Serviços:**
+- Transfer privado de e para o terminal de hidroavião
+- Check-in na vila
+- Serviço de mordomo 24 horas
+- Wi-Fi gratuito nas vilas e áreas públicas
+
+**Atividades & Facilidades:**
+- Bicicletas disponíveis durante a estadia
+- Esportes aquáticos não motorizados (caiaque, prancha de remo e windsurf)
+- Equipamentos de snorkeling
+- Aulas semanais de yoga, pilates e respiração profunda
+- Centro de fitness 24 horas
+- Tênis de mesa
+- Acesso aos clubes infantis indoor e outdoor
+- Sessão de fotos de 30 minutos no resort`
     },
     {
       id: "dining",
       title: "Gastronomia de Excelência",
       subtitle: "5 restaurantes gourmet e 3 bares para experiências culinárias memoráveis",
-      type: "cards",
-      items: [
-        {
-          title: "Café Umi",
-          description: "Restaurante durante todo o dia com influência japonesa e experiência teppanyaki interativa",
-          icon: "UtensilsCrossed"
-        },
-        {
-          title: "Fish Market",
-          description: "Conceito 'do oceano ao prato' onde você escolhe frutos do mar frescos",
-          icon: "UtensilsCrossed"
-        },
-        {
-          title: "The Lighthouse",
-          description: "Especialidades mediterrâneas com vistas panorâmicas",
-          icon: "UtensilsCrossed"
-        },
-        {
-          title: "The Collective",
-          description: "Pizzas artesanais",
-          icon: "UtensilsCrossed"
-        },
-        {
-          title: "The Retreat",
-          description: "Santuário exclusivo para adultos com vistas da lagoa",
-          icon: "UtensilsCrossed"
-        },
-        {
-          title: "Sunset Bar",
-          description: "Cocktails com vista para o pôr do sol",
-          icon: "Wine"
-        },
-        {
-          title: "Pool Bar",
-          description: "Bebidas à beira da piscina",
-          icon: "Wine"
-        },
-        {
-          title: "Gelato Bar",
-          description: "Sorvetes artesanais",
-          icon: "IceCream"
-        }
-      ]
+      type: "text",
+      content: `O InterContinental Maldives oferece 5 restaurantes principais e 3 bares:
+
+**Restaurantes:**
+
+**Café Umi** - Restaurante durante todo o dia com influência japonesa e experiência teppanyaki interativa
+
+**Fish Market** - Conceito "do oceano ao prato" onde você escolhe frutos do mar frescos
+
+**The Lighthouse** - Especialidades mediterrâneas com vistas panorâmicas
+
+**The Collective** - Pizzas artesanais
+
+**The Retreat** - Santuário exclusivo para adultos com vistas da lagoa
+
+**Bares:**
+
+**Sunset Bar** - Cocktails com vista para o pôr do sol
+
+**Pool Bar** - Bebidas à beira da piscina
+
+**Gelato Bar** - Sorvetes artesanais`
     },
     {
       id: "activities",
       title: "Atividades Disponíveis",
       subtitle: "Aventuras aquáticas, relaxamento e experiências únicas nas Maldivas",
-      type: "cards",
-      items: [
-        {
-          title: "Esportes Aquáticos",
-          icon: "Waves",
-          items: [
-            "Snorkeling",
-            "Mergulho",
-            "Windsurf",
-            "Caiaque",
-            "Stand-up paddle"
-          ]
-        },
-        {
-          title: "Bem-estar",
-          icon: "Sparkles",
-          items: [
-            "AVI Spa overwater com massagens e tratamentos"
-          ]
-        },
-        {
-          title: "Fitness",
-          icon: "Dumbbell",
-          items: [
-            "Centro de fitness 24h",
-            "Aulas de yoga e pilates"
-          ]
-        },
-        {
-          title: "Recreação",
-          icon: "Users",
-          items: [
-            "Kids Club",
-            "Parque infantil",
-            "Sala de jogos"
-          ]
-        },
-        {
-          title: "Experiências Especiais",
-          icon: "Sparkles",
-          items: [
-            "Cruzeiro para observação de golfinhos",
-            "Aula de culinária maldívia",
-            "Centro de Descoberta Marinha: Filmes educacionais e colaboração com a Manta Trust Foundation"
-          ]
-        }
-      ]
+      type: "text",
+      content: `O resort oferece uma ampla variedade de atividades para todos os gostos:
+
+**Esportes Aquáticos:**
+- Snorkeling
+- Mergulho
+- Windsurf
+- Caiaque
+- Stand-up paddle
+
+**Bem-estar:**
+- AVI Spa overwater com massagens e tratamentos
+
+**Fitness:**
+- Centro de fitness 24h
+- Aulas de yoga e pilates
+
+**Recreação:**
+- Kids Club
+- Parque infantil
+- Sala de jogos
+
+**Experiências Especiais:**
+- Cruzeiro para observação de golfinhos
+- Aula de culinária maldívia
+- Centro de Descoberta Marinha: Filmes educacionais e colaboração com a Manta Trust Foundation`
     },
   ],
   accommodations: {
