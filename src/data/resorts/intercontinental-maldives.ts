@@ -1,4 +1,4 @@
-import type { ResortData } from '../types';
+import type { ResortData } from "../types";
 import heroImage from "@/assets/maldives-hero-gradient.jpg";
 import intercontinentalBathroom from "@/assets/maldives-experiences/intercontinental-bathroom.jpg";
 
@@ -13,8 +13,10 @@ const intercontinentalMaldives: ResortData = {
   heroSubtitle: "Paraíso exclusivo no Atol de Raa",
   heroHighlights: ["5 Restaurantes Gourmet", "Spa Premiado", "Lagoa Privativa"],
   seoTitle: "InterContinental Maldives Maamunagau Resort - Pacote Completo | Follow Me Viagens",
-  seoDescription: "Resort de luxo no Atol de Raa com villas overwater, 5 restaurantes gourmet, spa premiado e lagoa privativa. Pacote all-inclusive com mordomo 24h e transfer de hidroavião incluído.",
-  about: "O InterContinental Maldives Maamunagau Resort é um paraíso exclusivo localizado no Atol de Raa, acessível por um voo panorâmico de hidroavião de 35 minutos desde Malé. Este resort de luxo oferece uma experiência inesquecível com suas villas overwater e beach villas elegantemente projetadas, cercadas por águas cristalinas e recifes de coral vibrantes.\n\nCom seis restaurantes gourmet, um spa premiado e uma lagoa privativa perfeita para snorkeling e mergulho, o InterContinental combina sofisticação contemporânea com a beleza natural intocada das Maldivas, criando o cenário ideal para lua de mel, celebrações especiais ou simplesmente momentos de puro relaxamento tropical.",
+  seoDescription:
+    "Resort de luxo no Atol de Raa com villas overwater, 5 restaurantes gourmet, spa premiado e lagoa privativa. Pacote all-inclusive com mordomo 24h e transfer de hidroavião incluído.",
+  about:
+    "O InterContinental Maldives Maamunagau Resort é um paraíso exclusivo localizado no Atol de Raa, acessível por um voo panorâmico de hidroavião de 35 minutos desde Malé. Este resort de luxo oferece uma experiência inesquecível com suas villas overwater e beach villas elegantemente projetadas, cercadas por águas cristalinas e recifes de coral vibrantes.\n\nCom seis restaurantes gourmet, um spa premiado e uma lagoa privativa perfeita para snorkeling e mergulho, o InterContinental combina sofisticação contemporânea com a beleza natural intocada das Maldivas, criando o cenário ideal para lua de mel, celebrações especiais ou simplesmente momentos de puro relaxamento tropical.",
   sections: [
     {
       id: "inclusions",
@@ -38,7 +40,7 @@ const intercontinentalMaldives: ResortData = {
 - Acesso aos clubes infantis indoor e outdoor
 - Tênis de mesa
 - Sessão de fotos de 30 minutos no resort
-- Wi-Fi gratuito nas vilas e áreas públicas`
+- Wi-Fi gratuito nas vilas e áreas públicas`,
     },
     {
       id: "dining",
@@ -59,7 +61,7 @@ Bares:
 
 - Sunset Bar - Cocktails com vista para o pôr do sol
 - Pool Bar - Bebidas à beira da piscina
-- Gelato Bar - Sorvetes artesanais`
+- Gelato Bar - Sorvetes artesanais`,
     },
     {
       id: "activities",
@@ -90,7 +92,7 @@ Recreação:
 Experiências Especiais:
 - Cruzeiro para observação de golfinhos
 - Aula de culinária maldívia
-- Centro de Descoberta Marinha: Filmes educacionais e colaboração com a Manta Trust Foundation`
+- Centro de Descoberta Marinha: Filmes educacionais e colaboração com a Manta Trust Foundation`,
     },
   ],
   accommodations: {
@@ -106,98 +108,107 @@ Experiências Especiais:
           "Banheiro em planta aberta",
           "Piscina infinita privada",
           "Daybed acolchoado",
-          "Área de jantar ao ar livre"
-        ]
-      }
-    ]
+          "Área de jantar ao ar livre",
+        ],
+      },
+    ],
   },
   pricing: {
     seasons: [
       {
         name: "Baixa Temporada",
         period: "Maio até Novembro",
-        priceText: "Consulte valores",
-        priceSubtext: "Preço por pessoa"
+        priceText: "U$ 1200",
+        priceSubtext: "Preço por pessoa",
       },
       {
         name: "Alta Temporada",
         period: "Dezembro até Abril",
         priceText: "Consulte valores",
-        priceSubtext: "Preço por pessoa"
-      }
+        priceSubtext: "Preço por pessoa",
+      },
     ],
     paymentTerms: [
       "Entrada de 20% via transferência bancária ao confirmar a reserva",
       "80% restante até 30 dias antes da viagem",
-      "Parcelamento disponível em até 10 parcelas sem juros no cartão de crédito"
+      "Parcelamento disponível em até 10 parcelas sem juros no cartão de crédito",
     ],
     cancellationPolicy: "Cancelamento com até 30 dias de antecedência: reembolso de 80% do valor pago.",
-    notes: "Os valores estão sujeitos a alteração sem aviso prévio. Consulte-nos para obter cotações atualizadas e disponibilidade."
+    notes:
+      "Os valores estão sujeitos a alteração sem aviso prévio. Consulte-nos para obter cotações atualizadas e disponibilidade.",
   },
   faqs: [
     {
       question: "Como chegar ao InterContinental Maldives Maamunagau Resort?",
-      answer: "O resort está localizado no Atol de Raa e é acessível através de um voo panorâmico de hidroavião de 35 minutos desde o Aeroporto Internacional de Malé. O transfer de hidroavião está incluído no pacote e oferece vistas espetaculares das ilhas e lagoas das Maldivas."
+      answer:
+        "O resort está localizado no Atol de Raa e é acessível através de um voo panorâmico de hidroavião de 35 minutos desde o Aeroporto Internacional de Malé. O transfer de hidroavião está incluído no pacote e oferece vistas espetaculares das ilhas e lagoas das Maldivas.",
     },
     {
       question: "Qual é a melhor época para visitar as Maldivas?",
-      answer: "As Maldivas podem ser visitadas durante todo o ano. A alta temporada é de dezembro a abril, com clima mais seco e ensolarado. A baixa temporada (maio a novembro) pode ter chuvas ocasionais, mas oferece melhores preços e menos turistas. O resort oferece experiências incríveis em qualquer época do ano."
+      answer:
+        "As Maldivas podem ser visitadas durante todo o ano. A alta temporada é de dezembro a abril, com clima mais seco e ensolarado. A baixa temporada (maio a novembro) pode ter chuvas ocasionais, mas oferece melhores preços e menos turistas. O resort oferece experiências incríveis em qualquer época do ano.",
     },
     {
       question: "O resort é adequado para lua de mel?",
-      answer: "Sim! O InterContinental Maldives é perfeito para lua de mel. Com villas overwater privativas, jantares românticos à beira-mar, spa para casais e pôr do sol espetaculares, o resort oferece o cenário ideal para celebrar momentos especiais. Nossa equipe pode personalizar experiências exclusivas para tornar sua lua de mel inesquecível."
+      answer:
+        "Sim! O InterContinental Maldives é perfeito para lua de mel. Com villas overwater privativas, jantares românticos à beira-mar, spa para casais e pôr do sol espetaculares, o resort oferece o cenário ideal para celebrar momentos especiais. Nossa equipe pode personalizar experiências exclusivas para tornar sua lua de mel inesquecível.",
     },
     {
       question: "Posso fazer mergulho e snorkeling no resort?",
-      answer: "Absolutamente! O resort oferece equipamentos de snorkeling gratuitos e possui uma lagoa privativa com recifes de coral vibrantes. Para mergulho, há um centro de mergulho certificado no local que oferece aulas e passeios guiados para todos os níveis de experiência (custo adicional)."
+      answer:
+        "Absolutamente! O resort oferece equipamentos de snorkeling gratuitos e possui uma lagoa privativa com recifes de coral vibrantes. Para mergulho, há um centro de mergulho certificado no local que oferece aulas e passeios guiados para todos os níveis de experiência (custo adicional).",
     },
     {
       question: "O que está incluído no serviço de mordomo 24 horas?",
-      answer: "O serviço de mordomo oferece assistência personalizada durante toda a sua estadia, incluindo: organização de refeições e reservas em restaurantes, planejamento de atividades, check-in na villa, preparação de banhos aromáticos, serviço de despensa de cortesia e qualquer outra necessidade especial que você possa ter."
+      answer:
+        "O serviço de mordomo oferece assistência personalizada durante toda a sua estadia, incluindo: organização de refeições e reservas em restaurantes, planejamento de atividades, check-in na villa, preparação de banhos aromáticos, serviço de despensa de cortesia e qualquer outra necessidade especial que você possa ter.",
     },
     {
       question: "Há opções vegetarianas e para restrições alimentares?",
-      answer: "Sim, todos os restaurantes do resort podem acomodar diferentes restrições alimentares, incluindo opções vegetarianas, veganas, sem glúten e outras necessidades dietéticas. Informe nossas necessidades alimentares ao fazer a reserva e o chef preparará menus personalizados para você."
+      answer:
+        "Sim, todos os restaurantes do resort podem acomodar diferentes restrições alimentares, incluindo opções vegetarianas, veganas, sem glúten e outras necessidades dietéticas. Informe nossas necessidades alimentares ao fazer a reserva e o chef preparará menus personalizados para você.",
     },
     {
       question: "Preciso de visto para as Maldivas?",
-      answer: "Brasileiros recebem visto de turista gratuito por 30 dias na chegada ao aeroporto de Malé. É necessário apresentar passaporte válido por pelo menos 6 meses, passagem de retorno e comprovante de hospedagem. Recomendamos verificar os requisitos atualizados antes da viagem."
+      answer:
+        "Brasileiros recebem visto de turista gratuito por 30 dias na chegada ao aeroporto de Malé. É necessário apresentar passaporte válido por pelo menos 6 meses, passagem de retorno e comprovante de hospedagem. Recomendamos verificar os requisitos atualizados antes da viagem.",
     },
     {
       question: "Posso estender minha estadia além das 4 noites?",
-      answer: "Sim! Você pode adicionar noites extras ao seu pacote. Entre em contato com nossa equipe para consultar disponibilidade e valores para noites adicionais. Recomendamos reservar com antecedência, especialmente durante a alta temporada."
-    }
+      answer:
+        "Sim! Você pode adicionar noites extras ao seu pacote. Entre em contato com nossa equipe para consultar disponibilidade e valores para noites adicionais. Recomendamos reservar com antecedência, especialmente durante a alta temporada.",
+    },
   ],
   images: [
     {
       src: heroImage,
-      alt: "InterContinental Maldives - Vista aérea do resort"
+      alt: "InterContinental Maldives - Vista aérea do resort",
     },
     {
       src: intercontinentalBathroom,
-      alt: "Overwater Pool Villa - Banheiro luxuoso em planta aberta com banheira de imersão e vista panorâmica do oceano"
+      alt: "Overwater Pool Villa - Banheiro luxuoso em planta aberta com banheira de imersão e vista panorâmica do oceano",
     },
     {
       src: "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?q=80&w=2670",
-      alt: "Villa overwater com piscina infinita privativa"
+      alt: "Villa overwater com piscina infinita privativa",
     },
     {
       src: "https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=2670",
-      alt: "Deck privativo sobre a lagoa"
+      alt: "Deck privativo sobre a lagoa",
     },
     {
       src: "https://images.unsplash.com/photo-1571896349842-33c89424de2d?q=80&w=2680",
-      alt: "AVI Spa overwater - tratamentos exclusivos"
+      alt: "AVI Spa overwater - tratamentos exclusivos",
     },
     {
       src: "https://images.unsplash.com/photo-1540555700478-4be289fbecef?q=80&w=2670",
-      alt: "Café Umi - experiência teppanyaki"
+      alt: "Café Umi - experiência teppanyaki",
     },
     {
       src: "https://images.unsplash.com/photo-1559827260-dc66d52bef19?q=80&w=2670",
-      alt: "Fish Market - frutos do mar frescos"
-    }
-  ]
+      alt: "Fish Market - frutos do mar frescos",
+    },
+  ],
 };
 
 export default intercontinentalMaldives;
