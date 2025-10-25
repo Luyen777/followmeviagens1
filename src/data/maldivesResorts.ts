@@ -24,6 +24,7 @@ import siyamWorld from "./resorts/siyam-world";
 import sonevaJani from "./resorts/soneva-jani";
 import sonevaFushi from "./resorts/soneva-fushi";
 import sonevaSecret from "./resorts/soneva-secret";
+import theNautilus from "./resorts/the-nautilus";
 import adaaranBeachVillasAerial from "@/assets/adaaran-select/beach-villas-aerial.jpg";
 import adaaranBuffetRestaurant from "@/assets/adaaran-select/buffet-restaurant.jpg";
 import adaaranSunsetVillaInterior from "@/assets/adaaran-select/sunset-villa-interior.jpg";
@@ -7577,5 +7578,6 @@ Diferenciais do resort:
   [siyamWorld.slug]: siyamWorld,
   [sonevaJani.slug]: sonevaJani,
   [sonevaFushi.slug]: sonevaFushi,
-  [sonevaSecret.slug]: sonevaSecret
+  [sonevaSecret.slug]: sonevaSecret,
+  [theNautilus.slug]: theNautilus
 };
