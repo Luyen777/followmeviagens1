@@ -18,6 +18,7 @@ import adaaranOverwaterVillasAerial from "@/assets/adaaran-select/overwater-vill
 import oneAndOnlyReethiRah from "./resorts/one-and-only-reethi-rah";
 import patinaMaldives from "./resorts/patina-maldives";
 import radissonBlu from "./resorts/radisson-blu";
+import ritzCarltonMaldives from "./resorts/ritz-carlton-maldives";
 import sixSensesKanuhura from "./resorts/six-senses-kanuhura";
 import sixSensesLaamu from "./resorts/six-senses-laamu";
 import siyamWorld from "./resorts/siyam-world";
@@ -7573,6 +7574,7 @@ Diferenciais do resort:
   [oneAndOnlyReethiRah.slug]: oneAndOnlyReethiRah,
   [patinaMaldives.slug]: patinaMaldives,
   [radissonBlu.slug]: radissonBlu,
+  [ritzCarltonMaldives.slug]: ritzCarltonMaldives,
   [sixSensesKanuhura.slug]: sixSensesKanuhura,
   [sixSensesLaamu.slug]: sixSensesLaamu,
   [siyamWorld.slug]: siyamWorld,
