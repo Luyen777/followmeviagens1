@@ -26,6 +26,7 @@ import sonevaJani from "./resorts/soneva-jani";
 import sonevaFushi from "./resorts/soneva-fushi";
 import sonevaSecret from "./resorts/soneva-secret";
 import theNautilus from "./resorts/the-nautilus";
+import vakkaruMaldives from "./resorts/vakkaru-maldives";
 import adaaranBeachVillasAerial from "@/assets/adaaran-select/beach-villas-aerial.jpg";
 import adaaranBuffetRestaurant from "@/assets/adaaran-select/buffet-restaurant.jpg";
 import adaaranSunsetVillaInterior from "@/assets/adaaran-select/sunset-villa-interior.jpg";
@@ -7581,5 +7582,6 @@ Diferenciais do resort:
   [sonevaJani.slug]: sonevaJani,
   [sonevaFushi.slug]: sonevaFushi,
   [sonevaSecret.slug]: sonevaSecret,
-  [theNautilus.slug]: theNautilus
+  [theNautilus.slug]: theNautilus,
+  [vakkaruMaldives.slug]: vakkaruMaldives
 };
