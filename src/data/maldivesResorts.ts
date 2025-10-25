@@ -15,6 +15,7 @@ import heroImage from "@/assets/maldives-hero-latest.avif";
 import adaaranOverwaterVillasAerial from "@/assets/adaaran-select/overwater-villas-aerial.jpg";
 
 // New modular imports (add new resorts here)
+import intercontinentalMaldives from "./resorts/intercontinental-maldives";
 import oneAndOnlyReethiRah from "./resorts/one-and-only-reethi-rah";
 import patinaMaldives from "./resorts/patina-maldives";
 import radissonBlu from "./resorts/radisson-blu";
@@ -22,6 +23,7 @@ import ritzCarltonMaldives from "./resorts/ritz-carlton-maldives";
 import sixSensesKanuhura from "./resorts/six-senses-kanuhura";
 import sixSensesLaamu from "./resorts/six-senses-laamu";
 import siyamWorld from "./resorts/siyam-world";
+import soMaldives from "./resorts/so-maldives";
 import sonevaJani from "./resorts/soneva-jani";
 import sonevaFushi from "./resorts/soneva-fushi";
 import sonevaSecret from "./resorts/soneva-secret";
@@ -7589,5 +7591,7 @@ Diferenciais do resort:
   [vakkaruMaldives.slug]: vakkaruMaldives,
   [velaaPrivateIsland.slug]: velaaPrivateIsland,
   [waldorfAstoriaMaldives.slug]: waldorfAstoriaMaldives,
-  [youAndMeByCocoon.slug]: youAndMeByCocoon
+  [youAndMeByCocoon.slug]: youAndMeByCocoon,
+  [intercontinentalMaldives.slug]: intercontinentalMaldives,
+  [soMaldives.slug]: soMaldives
 };

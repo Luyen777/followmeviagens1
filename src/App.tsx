@@ -6,8 +6,6 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import ScrollToTop from "./components/ScrollToTop";
 import Index from "./pages/Index";
 import IlhasMaldivas from "./pages/IlhasMaldivas";
-import InterContinentalMaldives from "./pages/InterContinentalMaldives";
-import SOMaldives from "./pages/SOMaldives";
 import MaldivesResortTemplate from "./pages/MaldivesResortTemplate";
 import ResortDetail from "./pages/ResortDetail";
 import Blog from "./pages/Blog";
@@ -45,8 +43,6 @@ const App = () => (
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/ilhas-maldivas" element={<IlhasMaldivas />} />
-          <Route path="/ilhas-maldivas/intercontinental" element={<InterContinentalMaldives />} />
-          <Route path="/ilhas-maldivas/so-maldives" element={<SOMaldives />} />
           <Route path="/ilhas-maldivas/:slug" element={<MaldivesResortTemplate />} />
           
           <Route path="/blog" element={<Blog />} />
