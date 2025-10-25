@@ -54,23 +54,17 @@ Atividades & Facilidades:
 
 Restaurantes:
 
-Café Umi - Restaurante durante todo o dia com influência japonesa e experiência teppanyaki interativa
-
-Fish Market - Conceito "do oceano ao prato" onde você escolhe frutos do mar frescos
-
-The Lighthouse - Especialidades mediterrâneas com vistas panorâmicas
-
-The Collective - Pizzas artesanais
-
-The Retreat - Santuário exclusivo para adultos com vistas da lagoa
+- Café Umi - Restaurante durante todo o dia com influência japonesa e experiência teppanyaki interativa
+- Fish Market - Conceito "do oceano ao prato" onde você escolhe frutos do mar frescos
+- The Lighthouse - Especialidades mediterrâneas com vistas panorâmicas
+- The Collective - Pizzas artesanais
+- The Retreat - Santuário exclusivo para adultos com vistas da lagoa
 
 Bares:
 
-Sunset Bar - Cocktails com vista para o pôr do sol
-
-Pool Bar - Bebidas à beira da piscina
-
-Gelato Bar - Sorvetes artesanais`
+- Sunset Bar - Cocktails com vista para o pôr do sol
+- Pool Bar - Bebidas à beira da piscina
+- Gelato Bar - Sorvetes artesanais`
     },
     {
       id: "activities",
