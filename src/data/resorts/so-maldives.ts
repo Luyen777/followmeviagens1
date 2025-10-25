@@ -17,6 +17,29 @@ const soMaldives: ResortData = {
   about: "O SO/ Maldives é um resort avant-garde de luxo localizado na lagoa privativa de Emboodhoo, no Atol de Kaafu, a apenas 15 minutos de lancha rápida do Aeroporto Internacional de Malé. Este refúgio exclusivo reinventa a experiência de ilha tropical ao combinar design contemporâneo inspirado em moda e arte com 80 vilas personalizadas à beira-mar e sobre as águas cristalinas.\n\nCom uma proposta sofisticada e descontraída, o resort oferece experiências gastronômicas diversificadas em restaurantes como o Hadaba (culinária levantina), The Citronelle Club (sabores pan-asiáticos) e o boêmio Lazuli Beach Club à beira-mar.\n\nO SO/ Maldives também conta com um wellness camp sereno equipado com spa, hammam, academia de última geração e uma vibrante programação de esportes aquáticos na deslumbrante lagoa, criando o cenário perfeito para quem busca relaxamento luxuoso com um toque artístico e contemporâneo.",
   sections: [
     {
+      id: "inclusions",
+      title: "Inclusões do Pacote",
+      subtitle: "Atividades e facilidades gratuitas durante a estadia",
+      type: "list",
+      items: [
+        {
+          items: [
+            "Esportes aquáticos não motorizados: Caiaque, Stand-up paddleboard, Equipamento de windsurf (exceto aulas), Equipamento de snorkeling",
+            "Uso básico de catamarã (apenas para velejadores certificados)",
+            "Aluguel gratuito de bicicletas",
+            "Acesso à academia (24 horas)",
+            "Piscinas (externa e infinita)",
+            "Kids Club 'The Nest' (idades 4-11)",
+            "Teens Club 'The Zone' (idades 12-16)",
+            "Vôlei de praia, bocha, futebol",
+            "Transfer gratuito para CROSSROADS (transfers diários para destino integrado)",
+            "Acesso à sauna e sala de vapor",
+            "Entretenimento noturno (noites de cinema, eventos com DJ, apresentações culturais)"
+          ]
+        }
+      ]
+    },
+    {
       id: "dining",
       title: "Gastronomia",
       subtitle: "Três restaurantes assinatura com proposta gastronômica diversificada",
@@ -24,24 +47,29 @@ const soMaldives: ResortData = {
       items: [
         {
           title: "The Citronelle Club",
-          description: "Fusão Pan-Asiática - Ambiente zen frente à praia com design asiático. Cozinha aberta com woks e pratos como bacalhau enegrecido e costelas de cordeiro agridoce. Extensa oferta de dim sum e pratos leves como spring rolls de rúcula.",
+          description: "Restaurante durante todo o dia com fusão Pan-Asiática. Ambiente zen frente à praia com design asiático. Cozinha aberta com woks e pratos como bacalhau enegrecido e costelas de cordeiro agridoce. Extensa oferta de dim sum e pratos leves como spring rolls de rúcula.",
           icon: "UtensilsCrossed"
         },
         {
           title: "Lazuli Beach Club",
-          description: "Mediterrâneo & Saudável - Ambiente de beach club sofisticado com charme da Côte d'Azur. Pratos como robalo grelhado, molho de pepino e espetadas de vegetais. Churrascos temáticos, pop-ups e festas de paella. Cocktails vibrantes pensados para compartilhar.",
+          description: "Menu mediterrâneo e opções saudáveis. Ambiente de beach club sofisticado com charme da Côte d'Azur. Pratos como robalo grelhado, molho de pepino e espetadas de vegetais. Churrascos temáticos, pop-ups e festas de paella. Cocktails vibrantes pensados para compartilhar.",
           icon: "Wine"
         },
         {
           title: "Hadaba",
-          description: "Culinária Levantina (Assinatura) - Localizado na ponta costeira do resort em dois andares. Especialidades do Golfo da Arábia ao Mediterrâneo. Pão Laffa fresco assado no 'Saj' personalizado. Especiais diários de ceviche e icônico Cordeiro Shawarma de cozimento lento.",
+          description: "Restaurante assinatura com culinária levantina. Localizado na ponta costeira do resort em dois andares. Especialidades do Golfo da Arábia ao Mediterrâneo. Pão Laffa fresco assado no 'Saj' personalizado. Especiais diários de ceviche e icônico Cordeiro Shawarma de cozimento lento.",
+          icon: "Sparkles"
+        },
+        {
+          title: "Experiências Gastronômicas Especiais",
+          description: "Floating Breakfast - Café da manhã flutuante na piscina privada | Private Dining - Jantar privado romântico à luz de velas | In-Room Dining - Serviço de quarto gourmet | Carrinho de cocktails - Preparação de drinks tableside no Hadaba",
           icon: "Sparkles"
         }
       ]
     },
     {
       id: "activities",
-      title: "Atividades",
+      title: "Atividades com Custo Extra",
       subtitle: "Experiências aquáticas e aventuras terrestres em ambiente paradisíaco",
       type: "cards",
       items: [
@@ -49,90 +77,39 @@ const soMaldives: ResortData = {
           title: "Esportes Aquáticos Motorizados",
           icon: "Waves",
           items: [
-            "Jet ski - $150-200 por sessão",
-            "X-Jetblade - Preços premium",
-            "Wakeboard/Wake foil - $125 por 15 minutos",
-            "Aulas de kite surf - $150 por hora",
-            "Wing-surfer - $95 por hora"
+            "Jet ski: $150-200 por sessão",
+            "X-Jetblade: Preços premium",
+            "Wakeboard/Wake foil: $125 por 15 minutos",
+            "Aulas de kite surf: $150 por hora",
+            "Wing-surfer: $95 por hora"
           ]
         },
         {
           title: "Excursões e Passeios",
           icon: "Ship",
           items: [
-            "Tours de snorkeling - $50-600",
-            "Passeio para ver golfinhos - $175",
-            "Passeio do pôr do sol - $175",
-            "Visita a ilhas locais - $150",
-            "Tour pela cidade de Malé - $150"
+            "Tours de snorkeling: $50-600 (dependendo da experiência)",
+            "Passeio para ver golfinhos: $175",
+            "Passeio do pôr do sol: $175",
+            "Visita a ilhas locais: $150",
+            "Tour pela cidade de Malé: $150"
           ]
         },
         {
-          title: "Atividades Gratuitas",
-          icon: "Check",
+          title: "Wellness & Spa",
+          icon: "Sparkles",
           items: [
-            "Caiaque",
-            "Stand-up paddleboard",
-            "Equipamento de windsurf",
-            "Equipamento de snorkeling",
-            "Catamarã (para velejadores certificados)",
-            "Bicicletas",
-            "Academia 24 horas",
-            "Piscinas externa e infinita",
-            "Sauna e sala de vapor",
-            "Vôlei de praia, bocha, futebol",
-            "Kids Club (4-11 anos)",
-            "Teens Club (12-16 anos)"
+            "Moringa Rejuvenate Facial (60min): $220",
+            "Aromatherapy Candle Massage (60/90min): $210/$270",
+            "After Sun Soothing (60min): $175",
+            "Curated Spa Day (180min): $420",
+            "Holistic Treatment (150min): $420",
+            "Glow Session para casal (120min): $650",
+            "Facilities Edition (120min): $50 - Acesso completo às instalações (Steam room, sauna, Vitality Pool)"
           ]
         }
       ]
     },
-    {
-      id: "inclusions",
-      title: "O que está incluído",
-      subtitle: "Pacote completo de comodidades e experiências para sua estadia",
-      type: "cards",
-      items: [
-        {
-          title: "Comodidades na Villa",
-          icon: "Sparkles",
-          items: [
-            "Minibar com bebidas alcoólicas, não-alcoólicas e petiscos (reposição diária)",
-            "Piscina infinita privada com design listrado",
-            "Roupões, chinelos, bolsa de praia",
-            "Produtos de higiene premium",
-            "Wi-Fi em toda a propriedade",
-            "Limpeza diária"
-          ]
-        },
-        {
-          title: "Esportes Aquáticos",
-          icon: "Waves",
-          items: [
-            "Caiaque",
-            "Stand-up paddleboard",
-            "Equipamento de windsurf (exceto aulas)",
-            "Equipamento de snorkeling",
-            "Uso básico de catamarã (apenas para velejadores certificados)",
-            "Aluguel gratuito de bicicletas"
-          ]
-        },
-        {
-          title: "Facilidades & Entretenimento",
-          icon: "Dumbbell",
-          items: [
-            "Acesso à academia (24 horas)",
-            "Piscinas (externa e infinita)",
-            "Kids Club 'The Nest' (idades 4-11)",
-            "Teens Club 'The Zone' (idades 12-16)",
-            "Vôlei de praia, bocha, futebol",
-            "Transfer gratuito para CROSSROADS",
-            "Acesso à sauna e sala de vapor",
-            "Entretenimento noturno (cinema, DJ, apresentações culturais)"
-          ]
-        }
-      ]
-    }
   ],
   accommodations: {
     title: "Acomodação",
@@ -141,14 +118,13 @@ const soMaldives: ResortData = {
       {
         name: "Overwater Pool Villa",
         size: "120 m²",
-        beds: "1 cama king size ou twin beds",
-        maxOccupancy: "3 hóspedes",
+        beds: "Cama king size ou twin beds",
+        maxOccupancy: "Capacidade máxima 3 hóspedes",
         features: [
           "Piscina infinita privada com design listrado característico",
-          "Deck wraparound com vistas oceânicas ininterruptas",
+          "Deck wraparound",
           "Banheira flutuante cocoon com vista para o oceano",
-          "Janelas do chão ao teto com vistas panorâmicas",
-          "Minibar premium com bebidas e petiscos (reposição diária)"
+          "Vistas oceânicas ininterruptas com janelas do chão ao teto"
         ]
       }
     ]

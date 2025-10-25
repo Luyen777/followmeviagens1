@@ -17,6 +17,34 @@ const intercontinentalMaldives: ResortData = {
   about: "O InterContinental Maldives Maamunagau Resort é um paraíso exclusivo localizado no Atol de Raa, acessível por um voo panorâmico de hidroavião de 35 minutos desde Malé. Este resort de luxo oferece uma experiência inesquecível com suas villas overwater e beach villas elegantemente projetadas, cercadas por águas cristalinas e recifes de coral vibrantes.\n\nCom seis restaurantes gourmet, um spa premiado e uma lagoa privativa perfeita para snorkeling e mergulho, o InterContinental combina sofisticação contemporânea com a beleza natural intocada das Maldivas, criando o cenário ideal para lua de mel, celebrações especiais ou simplesmente momentos de puro relaxamento tropical.",
   sections: [
     {
+      id: "inclusions",
+      title: "Inclusões do Pacote",
+      subtitle: "Tudo que você precisa saber sobre as inclusões do pacote",
+      type: "list",
+      items: [
+        {
+          items: [
+            "Café da manhã diário completo das 07:00 às 11:00 no Café Umi",
+            "Chá da tarde diário das 15:00 às 17:00 no The Retreat ou The Collective",
+            "Aperitivo das 17:00 às 19:00 no The Collective & The Retreat ou das 18:30 às 19:00 no Sunset Bar",
+            "Refrescos durante todo o dia no The Retreat e Pool Bar das 11:00 às 18:00",
+            "Transfer privado de e para o terminal de hidroavião",
+            "Check-in na vila",
+            "Serviço de mordomo 24 horas",
+            "Bicicletas disponíveis durante a estadia",
+            "Esportes aquáticos não motorizados (caiaque, prancha de remo e windsurf)",
+            "Equipamentos de snorkeling",
+            "Aulas semanais de yoga, pilates e respiração profunda",
+            "Centro de fitness 24 horas",
+            "Acesso aos clubes infantis indoor e outdoor",
+            "Tênis de mesa",
+            "Sessão de fotos de 30 minutos no resort",
+            "Wi-Fi gratuito nas vilas e áreas públicas"
+          ]
+        }
+      ]
+    },
+    {
       id: "dining",
       title: "Gastronomia de Excelência",
       subtitle: "5 restaurantes gourmet e 3 bares para experiências culinárias memoráveis",
@@ -29,44 +57,44 @@ const intercontinentalMaldives: ResortData = {
         },
         {
           title: "Fish Market",
-          description: "Conceito 'do oceano ao prato' onde você escolhe frutos do mar frescos preparados na hora",
+          description: "Conceito 'do oceano ao prato' onde você escolhe frutos do mar frescos",
           icon: "UtensilsCrossed"
         },
         {
           title: "The Lighthouse",
-          description: "Especialidades mediterrâneas com vistas panorâmicas do oceano",
+          description: "Especialidades mediterrâneas com vistas panorâmicas",
           icon: "UtensilsCrossed"
         },
         {
           title: "The Collective",
-          description: "Pizzas artesanais preparadas em forno à lenha com ingredientes premium",
+          description: "Pizzas artesanais",
           icon: "UtensilsCrossed"
         },
         {
           title: "The Retreat",
-          description: "Santuário exclusivo para adultos com vistas privilegiadas da lagoa",
+          description: "Santuário exclusivo para adultos com vistas da lagoa",
           icon: "UtensilsCrossed"
         },
         {
           title: "Sunset Bar",
-          description: "Cocktails exclusivos com vista para o pôr do sol tropical",
+          description: "Cocktails com vista para o pôr do sol",
           icon: "Wine"
         },
         {
           title: "Pool Bar",
-          description: "Bebidas refrescantes à beira da piscina durante todo o dia",
+          description: "Bebidas à beira da piscina",
           icon: "Wine"
         },
         {
           title: "Gelato Bar",
-          description: "Sorvetes artesanais italianos com sabores tropicais",
+          description: "Sorvetes artesanais",
           icon: "IceCream"
         }
       ]
     },
     {
       id: "activities",
-      title: "Atividades & Experiências",
+      title: "Atividades Disponíveis",
       subtitle: "Aventuras aquáticas, relaxamento e experiências únicas nas Maldivas",
       type: "cards",
       items: [
@@ -74,94 +102,48 @@ const intercontinentalMaldives: ResortData = {
           title: "Esportes Aquáticos",
           icon: "Waves",
           items: [
-            "Snorkeling em recifes de coral vibrantes",
-            "Mergulho com instrutor certificado",
-            "Windsurf e kitesurf",
-            "Caiaque pelo oceano cristalino",
-            "Stand-up paddle na lagoa privativa"
+            "Snorkeling",
+            "Mergulho",
+            "Windsurf",
+            "Caiaque",
+            "Stand-up paddle"
           ]
         },
         {
-          title: "Bem-estar & Relaxamento",
+          title: "Bem-estar",
           icon: "Sparkles",
           items: [
-            "AVI Spa overwater com tratamentos exclusivos",
-            "Massagens terapêuticas e ayurvédicas",
-            "Rituais de beleza e tratamentos faciais",
-            "Aulas de yoga com vista para o mar",
-            "Sessões de pilates e respiração profunda"
+            "AVI Spa overwater com massagens e tratamentos"
           ]
         },
         {
-          title: "Fitness & Recreação",
+          title: "Fitness",
           icon: "Dumbbell",
           items: [
-            "Centro de fitness 24 horas equipado",
-            "Tênis de mesa e jogos recreativos",
-            "Bicicletas disponíveis para explorar o resort",
-            "Parque infantil e sala de jogos",
-            "Aulas de fitness em grupo"
+            "Centro de fitness 24h",
+            "Aulas de yoga e pilates"
+          ]
+        },
+        {
+          title: "Recreação",
+          icon: "Users",
+          items: [
+            "Kids Club",
+            "Parque infantil",
+            "Sala de jogos"
           ]
         },
         {
           title: "Experiências Especiais",
-          icon: "Users",
+          icon: "Sparkles",
           items: [
-            "Cruzeiro ao pôr do sol com observação de golfinhos",
-            "Aula de culinária maldívia com chef local",
-            "Centro de Descoberta Marinha educacional",
-            "Kids Club indoor e outdoor supervisionado",
-            "Sessão de fotos profissional de 30 minutos"
+            "Cruzeiro para observação de golfinhos",
+            "Aula de culinária maldívia",
+            "Centro de Descoberta Marinha: Filmes educacionais e colaboração com a Manta Trust Foundation"
           ]
         }
       ]
     },
-    {
-      id: "inclusions",
-      title: "O que está incluído",
-      subtitle: "Tudo que você precisa saber sobre as inclusões do pacote",
-      type: "two-column",
-      items: [
-        {
-          title: "Incluído no Pacote",
-          icon: "Check",
-          badge: "included",
-          items: [
-            "Café da manhã diário completo das 07:00 às 11:00 no Café Umi",
-            "Chá da tarde diário das 15:00 às 17:00 no The Retreat ou The Collective",
-            "Aperitivo das 17:00 às 19:00 no The Collective & The Retreat",
-            "Refrescos durante todo o dia no The Retreat e Pool Bar (11:00-18:00)",
-            "Transfer privado de e para o terminal de hidroavião",
-            "Check-in personalizado na villa",
-            "Serviço de mordomo 24 horas",
-            "Bicicletas disponíveis durante toda a estadia",
-            "Esportes aquáticos não motorizados (caiaque, SUP, windsurf)",
-            "Equipamentos de snorkeling completos",
-            "Aulas semanais de yoga, pilates e respiração profunda",
-            "Centro de fitness 24 horas totalmente equipado",
-            "Acesso aos clubes infantis indoor e outdoor",
-            "Tênis de mesa e jogos recreativos",
-            "Sessão de fotos de 30 minutos no resort",
-            "Wi-Fi gratuito nas vilas e áreas públicas"
-          ]
-        },
-        {
-          title: "Não Incluído",
-          icon: "X",
-          badge: "excluded",
-          items: [
-            "Passagens aéreas internacionais e domésticas",
-            "Visto de entrada nas Maldivas (se aplicável)",
-            "Seguro viagem (altamente recomendado)",
-            "Refeições e bebidas não especificadas nas inclusões",
-            "Tratamentos de spa e massagens",
-            "Atividades opcionais (mergulho, passeios privativos, etc.)",
-            "Despesas pessoais e gorjetas",
-            "Taxas governamentais e de serviço do resort"
-          ]
-        }
-      ]
-    }
   ],
   accommodations: {
     title: "Acomodação",
@@ -171,12 +153,12 @@ const intercontinentalMaldives: ResortData = {
         name: "Overwater Pool Villa",
         size: "100 m² (1.075 pés quadrados)",
         beds: "1 cama king size",
-        maxOccupancy: "2 adultos",
+        maxOccupancy: "Ocupação máxima 2 adultos",
         features: [
-          "Banheiro em planta aberta com vista panorâmica",
-          "Piscina infinita privativa com acesso direto à lagoa",
-          "Daybed acolchoado para relaxamento",
-          "Área de jantar ao ar livre com vista para o oceano"
+          "Banheiro em planta aberta",
+          "Piscina infinita privada",
+          "Daybed acolchoado",
+          "Área de jantar ao ar livre"
         ]
       }
     ]
