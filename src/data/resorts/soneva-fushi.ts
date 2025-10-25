@@ -1,6 +1,5 @@
 import { ResortData } from '../types';
-
-const heroImage = "https://images.unsplash.com/photo-1573843981267-be1999ff37cd?auto=format&fit=crop&q=80";
+import heroImage from "@/assets/maldives-hero-latest.avif";
 
 export const sonevaFushi: ResortData = {
   slug: "soneva-fushi",
