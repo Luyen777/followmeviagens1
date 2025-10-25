@@ -1,8 +1,9 @@
-import { Helmet } from "react-helmet";
 import { useParams, Navigate } from "react-router-dom";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
+import Breadcrumbs from "@/components/Breadcrumbs";
+import SEOHead from "@/components/SEOHead";
 import Hero from "@/components/resort-template/Hero";
 import AboutSection from "@/components/resort-template/AboutSection";
 import TextSection from "@/components/resort-template/TextSection";
@@ -11,6 +12,7 @@ import FAQSection from "@/components/resort-template/FAQSection";
 import ResortImageCarousel from "@/components/ResortImageCarousel";
 import ContactFormSection from "@/components/adaaran-select/ContactFormSection";
 import { maldivesResorts } from "@/data/maldivesResorts";
+import { createTravelPackageSchema, createFAQSchema } from "@/lib/structuredData";
 
 const MaldivesResortTemplate = () => {
   const { slug } = useParams<{ slug: string }>();
@@ -20,41 +22,42 @@ const MaldivesResortTemplate = () => {
     return <Navigate to="/404" replace />;
   }
 
+  const travelPackageSchema = createTravelPackageSchema({
+    name: resort.name,
+    description: resort.seoDescription,
+    image: resort.heroImage,
+    priceFrom: 0, // Resort files don't have pricing in data structure
+    location: resort.location,
+    url: `https://followmeviagens.com/ilhas-maldivas/${resort.slug}`
+  });
+
+  const faqSchema = resort.faqs.length > 0 ? createFAQSchema(resort.faqs) : null;
+
+  const structuredData = faqSchema 
+    ? [travelPackageSchema, faqSchema] 
+    : travelPackageSchema;
+
   return (
     <>
-      <Helmet>
-        <title>{resort.seoTitle}</title>
-        <meta name="description" content={resort.seoDescription} />
-        <meta property="og:title" content={resort.name} />
-        <meta property="og:description" content={resort.seoDescription} />
-        <meta property="og:type" content="website" />
-        <meta property="og:image" content={resort.heroImage} />
-        <link rel="canonical" href={`https://followmeviagens.com/ilhas-maldivas/${resort.slug}`} />
-        
-        <script type="application/ld+json">
-          {JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "Resort",
-            "name": resort.name,
-            "description": resort.seoDescription,
-            "image": resort.heroImage,
-            "address": {
-              "@type": "PostalAddress",
-              "addressLocality": resort.location,
-              "addressCountry": "MV"
-            },
-            "starRating": {
-              "@type": "Rating",
-              "ratingValue": resort.rating.toString()
-            },
-            "priceRange": "$$"
-          })}
-        </script>
-      </Helmet>
+      <SEOHead
+        title={resort.seoTitle}
+        description={resort.seoDescription}
+        canonicalUrl={`/ilhas-maldivas/${resort.slug}`}
+        ogImage={resort.heroImage}
+        structuredData={structuredData}
+      />
 
       <div className="min-h-screen bg-background">
         <Navigation />
         <WhatsAppButton />
+        
+        <Breadcrumbs 
+          items={[
+            { label: "Início", href: "/" },
+            { label: "Ilhas Maldivas", href: "/ilhas-maldivas" },
+            { label: resort.name, href: `/ilhas-maldivas/${resort.slug}` }
+          ]}
+        />
         
         <main>
           <Hero

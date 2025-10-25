@@ -1,10 +1,12 @@
-import { Helmet } from "react-helmet";
 import { useParams, Link } from "react-router-dom";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import { Calendar, Clock, ArrowLeft, Share2 } from "lucide-react";
+import Breadcrumbs from "@/components/Breadcrumbs";
+import SEOHead from "@/components/SEOHead";
+import { Calendar, Clock, Share2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
+import { createBlogPostingSchema } from "@/lib/structuredData";
 
 // This would come from your CMS/database
 const blogPostData = {
@@ -72,60 +74,41 @@ const BlogPost = () => {
     year: 'numeric'
   });
 
+  const blogPostSchema = createBlogPostingSchema({
+    title: post.title,
+    description: post.excerpt,
+    image: post.image,
+    datePublished: post.date,
+    author: post.author,
+    url: `https://followmeviagens.com/blog/${slug}`
+  });
+
   return (
     <>
-      <Helmet>
-        <title>{post.title} | Follow Me Viagens</title>
-        <meta name="description" content={post.excerpt} />
-        <meta name="keywords" content={post.keywords.join(", ")} />
-        <link rel="canonical" href={`https://followmeviagens.com.br/blog/${slug}`} />
-        
-        {/* Open Graph */}
-        <meta property="og:title" content={post.title} />
-        <meta property="og:description" content={post.excerpt} />
-        <meta property="og:type" content="article" />
-        <meta property="og:url" content={`https://followmeviagens.com.br/blog/${slug}`} />
-        <meta property="og:image" content={post.image} />
-        <meta property="article:published_time" content={post.date} />
-        <meta property="article:author" content={post.author} />
-        
-        {/* Structured Data */}
-        <script type="application/ld+json">
-          {JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "BlogPosting",
-            "headline": post.title,
-            "description": post.excerpt,
-            "image": post.image,
-            "datePublished": post.date,
-            "author": {
-              "@type": "Organization",
-              "name": post.author
-            },
-            "publisher": {
-              "@type": "Organization",
-              "name": "Follow Me Viagens",
-              "logo": {
-                "@type": "ImageObject",
-                "url": "https://followmeviagens.com.br/logo.png"
-              }
-            }
-          })}
-        </script>
-      </Helmet>
+      <SEOHead
+        title={`${post.title} | Follow Me Viagens`}
+        description={post.excerpt}
+        canonicalUrl={`/blog/${slug}`}
+        ogImage={post.image}
+        ogType="article"
+        keywords={post.keywords}
+        structuredData={blogPostSchema}
+        additionalMeta={[
+          { property: "article:published_time", content: post.date },
+          { property: "article:author", content: post.author }
+        ]}
+      />
 
       <div className="min-h-screen">
         <Navigation />
         
-        {/* Back to Blog */}
-        <div className="pt-28 pb-8 border-b">
-          <div className="container mx-auto px-4">
-            <Link to="/blog" className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors">
-              <ArrowLeft className="w-4 h-4" />
-              Voltar ao Blog
-            </Link>
-          </div>
-        </div>
+        <Breadcrumbs 
+          items={[
+            { label: "Início", href: "/" },
+            { label: "Blog", href: "/blog" },
+            { label: post.title, href: `/blog/${slug}` }
+          ]}
+        />
 
         {/* Article Header */}
         <article className="py-12">

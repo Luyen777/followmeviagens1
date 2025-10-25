@@ -4,7 +4,10 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import PackageListItem from "@/components/PackageListItem";
+import Breadcrumbs from "@/components/Breadcrumbs";
+import SEOHead from "@/components/SEOHead";
 import { fetchResortsFromGoogleSheets, type PackageData } from "@/services/googleSheetsService";
+import { createItemListSchema } from "@/lib/structuredData";
 
 
 const IlhasMaldivas = () => {
@@ -28,9 +31,37 @@ const IlhasMaldivas = () => {
     loadResorts();
   }, []);
 
-  return <div className="min-h-screen bg-background">
-      <Navigation />
-      <WhatsAppButton />
+  // Create structured data for resort list
+  const itemListSchema = !loading && !error ? createItemListSchema(
+    resorts.map(resort => ({
+      name: resort.title,
+      description: resort.description,
+      image: resort.image,
+      priceFrom: resort.priceFrom,
+      url: `https://followmeviagens.com/ilhas-maldivas/${resort.slug}`
+    }))
+  ) : null;
+
+  return (
+    <>
+      <SEOHead
+        title="Pacotes para Maldivas 2024 | Resorts de Luxo | Follow Me Viagens"
+        description="Descubra os melhores pacotes para as Ilhas Maldivas. Resorts de luxo com tudo incluído, overwater villas, mergulho e experiências inesquecíveis. Pacotes personalizáveis para lua de mel e férias em família."
+        canonicalUrl="/ilhas-maldivas"
+        keywords={["maldivas", "pacotes maldivas", "resorts maldivas", "viagem maldivas", "lua de mel maldivas", "overwater villas"]}
+        structuredData={itemListSchema || undefined}
+      />
+
+      <div className="min-h-screen bg-background">
+        <Navigation />
+        <WhatsAppButton />
+        
+        <Breadcrumbs 
+          items={[
+            { label: "Início", href: "/" },
+            { label: "Ilhas Maldivas", href: "/ilhas-maldivas" }
+          ]}
+        />
 
       {/* Hero Section */}
       <section className="pt-40 pb-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-background via-background/50 to-background">
@@ -73,8 +104,10 @@ const IlhasMaldivas = () => {
         </div>
       </section>
 
-      <Footer />
-    </div>;
+        <Footer />
+      </div>
+    </>
+  );
 };
 
 export default IlhasMaldivas;

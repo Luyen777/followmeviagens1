@@ -1,15 +1,17 @@
 import { useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
-import { Helmet } from "react-helmet";
 import { fetchResortsFromGoogleSheets, PackageData } from "@/services/googleSheetsService";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
+import Breadcrumbs from "@/components/Breadcrumbs";
+import SEOHead from "@/components/SEOHead";
 import ResortImageCarousel from "@/components/ResortImageCarousel";
 import ContactForm from "@/components/ContactForm";
 import MarkdownContent from "@/components/MarkdownContent";
-import { Star, Clock, Utensils, Plane, Sparkles, ChevronRight, Loader2 } from "lucide-react";
+import { Star, Clock, Utensils, Plane, Sparkles, Loader2 } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
+import { createTravelPackageSchema } from "@/lib/structuredData";
 
 const ResortDetail = () => {
   const { slug } = useParams<{ slug: string }>();
@@ -79,50 +81,40 @@ const ResortDetail = () => {
     );
   }
 
-  const structuredData = {
-    "@context": "https://schema.org",
-    "@type": "TravelAgency",
-    "name": resort.title,
-    "description": resort.description,
-    "image": resort.image,
-    "offers": {
-      "@type": "Offer",
-      "price": resort.priceFrom,
-      "priceCurrency": "USD"
-    }
-  };
+  const structuredData = createTravelPackageSchema({
+    name: resort.title,
+    description: resort.description,
+    image: resort.image,
+    priceFrom: resort.priceFrom,
+    location: resort.classification,
+    url: `https://followmeviagens.com/ilhas-maldivas/${resort.slug}`
+  });
+
+  const metaDescription = resort.aboutPackage 
+    ? resort.aboutPackage.substring(0, 160)
+    : `${resort.description} Classificação ${resort.classification}. Pacotes a partir de USD ${resort.priceFrom}. Reserve sua experiência única nas Maldivas.`;
 
   return (
     <>
-      <Helmet>
-        <title>{resort.title} - Pacotes para Maldivas | Luxo e Conforto</title>
-        <meta name="description" content={resort.aboutPackage ? resort.aboutPackage.substring(0, 160) : `${resort.description} Classificação ${resort.classification}. Pacotes a partir de USD ${resort.priceFrom}. Reserve sua experiência única nas Maldivas.`} />
-        <meta property="og:title" content={`${resort.title} - Pacotes Maldivas`} />
-        <meta property="og:description" content={resort.aboutPackage ? resort.aboutPackage.substring(0, 160) : resort.description} />
-        <meta property="og:image" content={resort.image} />
-        <meta property="og:type" content="website" />
-        <link rel="canonical" href={`https://yourdomain.com/ilhas-maldivas/${resort.slug}`} />
-        <script type="application/ld+json">
-          {JSON.stringify(structuredData)}
-        </script>
-      </Helmet>
+      <SEOHead
+        title={`${resort.title} - Pacotes para Maldivas | Luxo e Conforto`}
+        description={metaDescription}
+        canonicalUrl={`/ilhas-maldivas/${resort.slug}`}
+        ogImage={resort.image}
+        structuredData={structuredData}
+      />
 
       <div className="min-h-screen bg-background">
         <Navigation />
         <WhatsAppButton />
 
-        {/* Breadcrumb */}
-        <div className="bg-muted/30 border-b border-border">
-          <div className="container mx-auto py-4">
-            <nav className="flex items-center gap-2 text-sm text-muted-foreground">
-              <Link to="/" className="hover:text-foreground transition-colors">Início</Link>
-              <ChevronRight className="w-4 h-4" />
-              <Link to="/ilhas-maldivas" className="hover:text-foreground transition-colors">Pacotes Maldivas</Link>
-              <ChevronRight className="w-4 h-4" />
-              <span className="text-foreground font-medium">{resort.title}</span>
-            </nav>
-          </div>
-        </div>
+        <Breadcrumbs 
+          items={[
+            { label: "Início", href: "/" },
+            { label: "Pacotes Maldivas", href: "/ilhas-maldivas" },
+            { label: resort.title, href: `/ilhas-maldivas/${resort.slug}` }
+          ]}
+        />
 
         {/* Hero Section with Title */}
         <section className="bg-card border-b border-border">
