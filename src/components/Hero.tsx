@@ -1,11 +1,71 @@
 import { Search, MessageCircle, Shield, Heart, Users, Award } from "lucide-react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import heroImage from "@/assets/maldives-hero-latest.avif";
+import { useState, useEffect, useRef } from "react";
+import { searchResorts, SearchResult } from "@/services/searchService";
+import { useDebounce } from "@/hooks/useDebounce";
+import SearchResults from "@/components/SearchResults";
 const Hero = () => {
+  const navigate = useNavigate();
+  const [searchTerm, setSearchTerm] = useState("");
+  const [searchResults, setSearchResults] = useState<SearchResult[]>([]);
+  const [showResults, setShowResults] = useState(false);
+  const [isSearching, setIsSearching] = useState(false);
+  const searchRef = useRef<HTMLDivElement>(null);
+  const debouncedSearchTerm = useDebounce(searchTerm, 300);
+
   const handleWhatsAppClick = () => {
     window.open("https://wa.link/followmeviagens", "_blank");
+  };
+
+  // Perform search when debounced term changes
+  useEffect(() => {
+    if (debouncedSearchTerm.trim().length >= 2) {
+      setIsSearching(true);
+      const results = searchResorts(debouncedSearchTerm);
+      setSearchResults(results);
+      setShowResults(true);
+      setIsSearching(false);
+    } else {
+      setSearchResults([]);
+      setShowResults(false);
+    }
+  }, [debouncedSearchTerm]);
+
+  // Close dropdown when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (searchRef.current && !searchRef.current.contains(event.target as Node)) {
+        setShowResults(false);
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, []);
+
+  const handleSearchSubmit = () => {
+    if (searchResults.length > 0) {
+      navigate(searchResults[0].routePath);
+      setShowResults(false);
+      setSearchTerm("");
+    }
+  };
+
+  const handleResultClick = (slug: string) => {
+    navigate(`/ilhas-maldivas/${slug}`);
+    setShowResults(false);
+    setSearchTerm("");
+  };
+
+  const handleKeyDown = (e: React.KeyboardEvent) => {
+    if (e.key === "Enter") {
+      handleSearchSubmit();
+    } else if (e.key === "Escape") {
+      setShowResults(false);
+    }
   };
   
   return <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
@@ -32,14 +92,34 @@ const Hero = () => {
           <p className="text-sm sm:text-base md:text-lg text-foreground/70 mb-8 sm:mb-12 max-w-3xl mx-auto leading-relaxed px-4">Reserve a experiência perfeita com os melhores preços. Pacotes personalizados, suporte 24h e experiência sem estresse — 100% de avaliações positivas!</p>
 
           {/* Search Bar - Desktop Only */}
-          <div className="mb-6 sm:mb-8 max-w-3xl mx-auto px-4 hidden lg:block">
+          <div ref={searchRef} className="mb-6 sm:mb-8 max-w-3xl mx-auto px-4 hidden lg:block relative">
             <div className="flex flex-col sm:flex-row gap-3 bg-white/10 backdrop-blur-md rounded-2xl p-2 border border-white/20 shadow-luxury">
               <div className="flex-1 relative">
                 <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-foreground/60" />
-                <Input type="text" placeholder="Buscar destino, resort ou experiência..." className="h-12 sm:h-14 pl-12 bg-white/50 border-0 text-foreground placeholder:text-foreground/60 focus-visible:ring-2 focus-visible:ring-primary" />
+                <Input 
+                  type="text" 
+                  placeholder="Buscar destino, resort ou experiência..." 
+                  className="h-12 sm:h-14 pl-12 bg-white/50 border-0 text-foreground placeholder:text-foreground/60 focus-visible:ring-2 focus-visible:ring-primary"
+                  value={searchTerm}
+                  onChange={(e) => setSearchTerm(e.target.value)}
+                  onKeyDown={handleKeyDown}
+                />
               </div>
-              <Button size="lg" className="h-12 sm:h-14 px-8 text-white font-semibold shadow-lg text-sm bg-foreground hover:bg-foreground/90">Buscar</Button>
+              <Button 
+                size="lg" 
+                onClick={handleSearchSubmit}
+                className="h-12 sm:h-14 px-8 text-white font-semibold shadow-lg text-sm bg-foreground hover:bg-foreground/90"
+              >
+                Buscar
+              </Button>
             </div>
+            {showResults && (
+              <SearchResults
+                results={searchResults}
+                isSearching={isSearching}
+                onResultClick={handleResultClick}
+              />
+            )}
           </div>
 
           {/* Action Buttons */}
