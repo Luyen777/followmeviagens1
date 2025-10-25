@@ -23,27 +23,22 @@ const intercontinentalMaldives: ResortData = {
       type: "text",
       content: `O pacote InterContinental Maldives inclui:
 
-Gastronomia:
 - Café da manhã diário completo das 07:00 às 11:00 no Café Umi
 - Chá da tarde diário das 15:00 às 17:00 no The Retreat ou The Collective
 - Aperitivo das 17:00 às 19:00 no The Collective & The Retreat ou das 18:30 às 19:00 no Sunset Bar
 - Refrescos durante todo o dia no The Retreat e Pool Bar das 11:00 às 18:00
-
-Transfer & Serviços:
 - Transfer privado de e para o terminal de hidroavião
 - Check-in na vila
 - Serviço de mordomo 24 horas
-- Wi-Fi gratuito nas vilas e áreas públicas
-
-Atividades & Facilidades:
 - Bicicletas disponíveis durante a estadia
 - Esportes aquáticos não motorizados (caiaque, prancha de remo e windsurf)
 - Equipamentos de snorkeling
 - Aulas semanais de yoga, pilates e respiração profunda
 - Centro de fitness 24 horas
-- Tênis de mesa
 - Acesso aos clubes infantis indoor e outdoor
-- Sessão de fotos de 30 minutos no resort`
+- Tênis de mesa
+- Sessão de fotos de 30 minutos no resort
+- Wi-Fi gratuito nas vilas e áreas públicas`
     },
     {
       id: "dining",
