@@ -28,6 +28,7 @@ import sonevaSecret from "./resorts/soneva-secret";
 import theNautilus from "./resorts/the-nautilus";
 import vakkaruMaldives from "./resorts/vakkaru-maldives";
 import velaaPrivateIsland from "./resorts/velaa-private-island";
+import waldorfAstoriaMaldives from "./resorts/waldorf-astoria-maldives";
 import adaaranBeachVillasAerial from "@/assets/adaaran-select/beach-villas-aerial.jpg";
 import adaaranBuffetRestaurant from "@/assets/adaaran-select/buffet-restaurant.jpg";
 import adaaranSunsetVillaInterior from "@/assets/adaaran-select/sunset-villa-interior.jpg";
@@ -7585,5 +7586,6 @@ Diferenciais do resort:
   [sonevaSecret.slug]: sonevaSecret,
   [theNautilus.slug]: theNautilus,
   [vakkaruMaldives.slug]: vakkaruMaldives,
-  [velaaPrivateIsland.slug]: velaaPrivateIsland
+  [velaaPrivateIsland.slug]: velaaPrivateIsland,
+  [waldorfAstoriaMaldives.slug]: waldorfAstoriaMaldives
 };
