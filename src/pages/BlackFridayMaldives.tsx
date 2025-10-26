@@ -365,7 +365,7 @@ const BlackFridayMaldives = () => {
               </div>
 
               {/* Primary CTA */}
-              <Button size="lg" onClick={() => scrollToSection('pricing')} className="bg-amber-500 hover:bg-amber-600 text-black font-bold text-lg px-12 py-6 h-auto rounded-xl shadow-2xl transform hover:scale-105 transition-all duration-300 mb-8">
+              <Button size="lg" onClick={() => scrollToSection('pricing')} className="text-black font-bold text-lg px-12 py-6 h-auto rounded-xl shadow-2xl transform hover:scale-105 transition-all duration-300 mb-8 bg-amber-200 hover:bg-amber-100">
                 VER DATAS DISPONÍVEIS — ÚLTIMAS 12 VAGAS
               </Button>
 
