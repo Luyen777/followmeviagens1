@@ -22,21 +22,40 @@ import snorkeling from "@/assets/maldives-experiences/snorkeling.jpg";
 import beachWedding from "@/assets/maldives-experiences/beach-wedding.jpg";
 import romanticDinner from "@/assets/maldives-experiences/romantic-dinner.jpg";
 import luxuryBath from "@/assets/maldives-experiences/luxury-bath.jpg";
-
-const experiences = [
-  { image: overwaterVillas, alt: "Villas sobre água com design luxuoso" },
-  { image: luxuryBathroom, alt: "Banheiro de luxo com vista para o mar" },
-  { image: chefCooking, alt: "Chef preparando experiências gastronômicas ao vivo" },
-  { image: wineCellar, alt: "Adega de vinhos premium e experiências de degustação" },
-  { image: beachWedding, alt: "Cerimônias românticas na praia paradisíaca" },
-  { image: spaTreatment, alt: "Tratamentos de spa relaxantes e rejuvenescedores" },
-  { image: diningExperience, alt: "Experiências gastronômicas em ambientes únicos" },
-  { image: snorkeling, alt: "Mergulho em águas cristalinas e vida marinha vibrante" },
-  { image: romanticDinner, alt: "Jantares românticos à beira-mar" },
-  { image: luxuryBath, alt: "Banheiras de luxo com vista panorâmica" },
-  { image: villasSunset, alt: "Villas exclusivas ao pôr do sol" },
-];
-
+const experiences = [{
+  image: overwaterVillas,
+  alt: "Villas sobre água com design luxuoso"
+}, {
+  image: luxuryBathroom,
+  alt: "Banheiro de luxo com vista para o mar"
+}, {
+  image: chefCooking,
+  alt: "Chef preparando experiências gastronômicas ao vivo"
+}, {
+  image: wineCellar,
+  alt: "Adega de vinhos premium e experiências de degustação"
+}, {
+  image: beachWedding,
+  alt: "Cerimônias românticas na praia paradisíaca"
+}, {
+  image: spaTreatment,
+  alt: "Tratamentos de spa relaxantes e rejuvenescedores"
+}, {
+  image: diningExperience,
+  alt: "Experiências gastronômicas em ambientes únicos"
+}, {
+  image: snorkeling,
+  alt: "Mergulho em águas cristalinas e vida marinha vibrante"
+}, {
+  image: romanticDinner,
+  alt: "Jantares românticos à beira-mar"
+}, {
+  image: luxuryBath,
+  alt: "Banheiras de luxo com vista panorâmica"
+}, {
+  image: villasSunset,
+  alt: "Villas exclusivas ao pôr do sol"
+}];
 const CarouselSection = () => {
   const [isPaused, setIsPaused] = useState(false);
   const [isDragging, setIsDragging] = useState(false);
@@ -47,41 +66,30 @@ const CarouselSection = () => {
   const animationRef = useRef<number>();
   const baseTimeRef = useRef(0);
   const pausedOffsetRef = useRef(0);
-
   const duplicatedExperiences = [...experiences, ...experiences];
-
   useEffect(() => {
     const track = trackRef.current;
     if (!track) return;
-
     const scrollSpeed = 57.2;
-
     const animate = (timestamp: number) => {
       if (!baseTimeRef.current) baseTimeRef.current = timestamp;
-      
       if (!isPaused && !isDragging) {
         const elapsed = (timestamp - baseTimeRef.current) / 1000;
         const distance = elapsed * scrollSpeed + pausedOffsetRef.current;
-        
         const singleSetWidth = track.scrollWidth / 2;
         const currentScroll = distance % singleSetWidth;
-        
         track.style.transform = `translateX(-${currentScroll}px)`;
         scrollLeftRef.current = currentScroll;
       }
-      
       animationRef.current = requestAnimationFrame(animate);
     };
-
     animationRef.current = requestAnimationFrame(animate);
-
     return () => {
       if (animationRef.current) {
         cancelAnimationFrame(animationRef.current);
       }
     };
   }, [isPaused, isDragging]);
-
   const handleMouseDown = (e: React.MouseEvent) => {
     setIsDragging(true);
     setIsPaused(true);
@@ -98,38 +106,33 @@ const CarouselSection = () => {
       containerRef.current.style.cursor = 'grabbing';
     }
   };
-
   const handleMouseMove = (e: React.MouseEvent) => {
     if (!isDragging) return;
     e.preventDefault();
     const x = e.pageX;
-    const walk = (startXRef.current - x);
+    const walk = startXRef.current - x;
     const track = trackRef.current;
     if (track) {
       const singleSetWidth = track.scrollWidth / 2;
       let newScroll = scrollLeftRef.current + walk;
-      
       if (newScroll >= singleSetWidth) {
         newScroll = newScroll % singleSetWidth;
         scrollLeftRef.current = newScroll;
         startXRef.current = x;
       } else if (newScroll < 0) {
-        newScroll = singleSetWidth + (newScroll % singleSetWidth);
+        newScroll = singleSetWidth + newScroll % singleSetWidth;
         scrollLeftRef.current = newScroll;
         startXRef.current = x;
       }
-      
       track.style.transform = `translateX(-${scrollLeftRef.current + walk}px)`;
     }
   };
-
   const handleMouseUp = () => {
     setIsDragging(false);
     setIsPaused(false);
     if (containerRef.current) {
       containerRef.current.style.cursor = 'grab';
     }
-    
     const track = trackRef.current;
     if (track) {
       const transform = window.getComputedStyle(track).transform;
@@ -141,13 +144,11 @@ const CarouselSection = () => {
       }
     }
   };
-
   const handleMouseLeave = () => {
     if (isDragging) {
       handleMouseUp();
     }
   };
-
   const handleTouchStart = (e: React.TouchEvent) => {
     setIsDragging(true);
     setIsPaused(true);
@@ -161,34 +162,29 @@ const CarouselSection = () => {
       }
     }
   };
-
   const handleTouchMove = (e: React.TouchEvent) => {
     if (!isDragging) return;
     const x = e.touches[0].pageX;
-    const walk = (startXRef.current - x);
+    const walk = startXRef.current - x;
     const track = trackRef.current;
     if (track) {
       const singleSetWidth = track.scrollWidth / 2;
       let newScroll = scrollLeftRef.current + walk;
-      
       if (newScroll >= singleSetWidth) {
         newScroll = newScroll % singleSetWidth;
         scrollLeftRef.current = newScroll;
         startXRef.current = x;
       } else if (newScroll < 0) {
-        newScroll = singleSetWidth + (newScroll % singleSetWidth);
+        newScroll = singleSetWidth + newScroll % singleSetWidth;
         scrollLeftRef.current = newScroll;
         startXRef.current = x;
       }
-      
       track.style.transform = `translateX(-${scrollLeftRef.current + walk}px)`;
     }
   };
-
   const handleTouchEnd = () => {
     setIsDragging(false);
     setIsPaused(false);
-    
     const track = trackRef.current;
     if (track) {
       const transform = window.getComputedStyle(track).transform;
@@ -200,150 +196,115 @@ const CarouselSection = () => {
       }
     }
   };
-
   const togglePause = () => {
     if (!isDragging) {
       setIsPaused(!isPaused);
     }
   };
-
-  return (
-    <div className="mb-12 sm:mb-16 animate-fade-in">
-      <div
-        ref={containerRef}
-        className="relative w-full overflow-hidden cursor-grab select-none"
-        onMouseDown={handleMouseDown}
-        onMouseMove={handleMouseMove}
-        onMouseUp={handleMouseUp}
-        onMouseLeave={handleMouseLeave}
-        onTouchStart={handleTouchStart}
-        onTouchMove={handleTouchMove}
-        onTouchEnd={handleTouchEnd}
-        onClick={togglePause}
-      >
-        <div
-          ref={trackRef}
-          className="flex gap-4 sm:gap-6 will-change-transform"
-          style={{
-            width: 'fit-content',
-          }}
-        >
-          {duplicatedExperiences.map((experience, index) => (
-            <div
-              key={index}
-              className="flex-shrink-0 w-[280px] sm:w-[320px] md:w-[380px]"
-            >
+  return <div className="mb-12 sm:mb-16 animate-fade-in">
+      <div ref={containerRef} className="relative w-full overflow-hidden cursor-grab select-none" onMouseDown={handleMouseDown} onMouseMove={handleMouseMove} onMouseUp={handleMouseUp} onMouseLeave={handleMouseLeave} onTouchStart={handleTouchStart} onTouchMove={handleTouchMove} onTouchEnd={handleTouchEnd} onClick={togglePause}>
+        <div ref={trackRef} className="flex gap-4 sm:gap-6 will-change-transform" style={{
+        width: 'fit-content'
+      }}>
+          {duplicatedExperiences.map((experience, index) => <div key={index} className="flex-shrink-0 w-[280px] sm:w-[320px] md:w-[380px]">
               <div className="relative aspect-[4/5] overflow-hidden rounded-2xl shadow-elegant hover:shadow-glow transition-all duration-500 group">
-                <img 
-                  src={experience.image} 
-                  alt={experience.alt}
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 pointer-events-none"
-                  draggable="false"
-                />
+                <img src={experience.image} alt={experience.alt} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 pointer-events-none" draggable="false" />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
               </div>
-            </div>
-          ))}
+            </div>)}
         </div>
       </div>
-    </div>
-  );
+    </div>;
 };
-
 const BlackFridayMaldives = () => {
-  const [timeLeft, setTimeLeft] = useState({ days: 6, hours: 0, minutes: 0, seconds: 0 });
-
+  const [timeLeft, setTimeLeft] = useState({
+    days: 6,
+    hours: 0,
+    minutes: 0,
+    seconds: 0
+  });
   useEffect(() => {
     // Countdown timer
     const targetDate = new Date();
     targetDate.setDate(targetDate.getDate() + 6);
-
     const timer = setInterval(() => {
       const now = new Date().getTime();
       const distance = targetDate.getTime() - now;
-
       const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-      setTimeLeft({ days, hours, minutes, seconds });
-
+      const hours = Math.floor(distance % (1000 * 60 * 60 * 24) / (1000 * 60 * 60));
+      const minutes = Math.floor(distance % (1000 * 60 * 60) / (1000 * 60));
+      const seconds = Math.floor(distance % (1000 * 60) / 1000);
+      setTimeLeft({
+        days,
+        hours,
+        minutes,
+        seconds
+      });
       if (distance < 0) {
         clearInterval(timer);
       }
     }, 1000);
-
     return () => clearInterval(timer);
   }, []);
-
   const handleWhatsAppClick = () => {
     window.open("https://wa.link/followmeviagens", "_blank");
   };
-
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      element.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+      });
     }
   };
-
-  const breadcrumbItems = [
-    { label: "Início", href: "/" },
-    { label: "Promoções", href: "/#pacotes" },
-    { label: "Black Friday Maldivas", href: "/promocoes/black-friday-maldivas" }
-  ];
-
-  const faqs = [
-    {
-      question: "Posso cancelar minha reserva?",
-      answer: "Sim! Oferecemos cancelamento gratuito até 7 dias antes da data de partida. Para cancelamentos feitos com menos de 7 dias, consulte nossa política de cancelamento."
-    },
-    {
-      question: "O que está incluído no preço do pacote?",
-      answer: "O pacote inclui: 4 noites em bangalô overwater, café da manhã internacional diário, traslados de hidroavião ida e volta, mini bar de cortesia, snorkeling equipment e welcome amenities."
-    },
-    {
-      question: "Como funciona o traslado de hidroavião?",
-      answer: "O hidroavião parte do aeroporto internacional de Malé e leva aproximadamente 20 minutos até o resort. O voo oferece vistas espetaculares das ilhas das Maldivas. O traslado está incluído no pacote."
-    },
-    {
-      question: "Qual a melhor época para visitar as Maldivas?",
-      answer: "As Maldivas podem ser visitadas o ano todo. A estação seca (dezembro a abril) oferece menos chuva, enquanto maio a novembro pode ter chuvas ocasionais, mas com excelentes oportunidades de mergulho."
-    },
-    {
-      question: "Preciso de visto para as Maldivas?",
-      answer: "Brasileiros não precisam de visto para estadias de até 30 dias. É necessário apenas passaporte com validade mínima de 6 meses."
-    }
-  ];
-
-  const pricingOptions = [
-    {
-      period: "25 DE DEZEMBRO A 29 DE DEZEMBRO, 2025",
-      price: "2.890",
-      status: "Últimas 3 vagas",
-      availability: "limited"
-    },
-    {
-      period: "10 DE JANEIRO A 14 DE JANEIRO, 2026",
-      price: "3.050",
-      status: "6 vagas disponíveis",
-      availability: "available"
-    },
-    {
-      period: "15 DE JANEIRO A 19 DE JANEIRO, 2026",
-      price: "3.200",
-      status: "Disponível",
-      availability: "available"
-    },
-    {
-      period: "20 DE JANEIRO A 24 DE JANEIRO, 2026",
-      price: "2.950",
-      status: "2 vagas restantes",
-      availability: "limited"
-    }
-  ];
-
+  const breadcrumbItems = [{
+    label: "Início",
+    href: "/"
+  }, {
+    label: "Promoções",
+    href: "/#pacotes"
+  }, {
+    label: "Black Friday Maldivas",
+    href: "/promocoes/black-friday-maldivas"
+  }];
+  const faqs = [{
+    question: "Posso cancelar minha reserva?",
+    answer: "Sim! Oferecemos cancelamento gratuito até 7 dias antes da data de partida. Para cancelamentos feitos com menos de 7 dias, consulte nossa política de cancelamento."
+  }, {
+    question: "O que está incluído no preço do pacote?",
+    answer: "O pacote inclui: 4 noites em bangalô overwater, café da manhã internacional diário, traslados de hidroavião ida e volta, mini bar de cortesia, snorkeling equipment e welcome amenities."
+  }, {
+    question: "Como funciona o traslado de hidroavião?",
+    answer: "O hidroavião parte do aeroporto internacional de Malé e leva aproximadamente 20 minutos até o resort. O voo oferece vistas espetaculares das ilhas das Maldivas. O traslado está incluído no pacote."
+  }, {
+    question: "Qual a melhor época para visitar as Maldivas?",
+    answer: "As Maldivas podem ser visitadas o ano todo. A estação seca (dezembro a abril) oferece menos chuva, enquanto maio a novembro pode ter chuvas ocasionais, mas com excelentes oportunidades de mergulho."
+  }, {
+    question: "Preciso de visto para as Maldivas?",
+    answer: "Brasileiros não precisam de visto para estadias de até 30 dias. É necessário apenas passaporte com validade mínima de 6 meses."
+  }];
+  const pricingOptions = [{
+    period: "25 DE DEZEMBRO A 29 DE DEZEMBRO, 2025",
+    price: "2.890",
+    status: "Últimas 3 vagas",
+    availability: "limited"
+  }, {
+    period: "10 DE JANEIRO A 14 DE JANEIRO, 2026",
+    price: "3.050",
+    status: "6 vagas disponíveis",
+    availability: "available"
+  }, {
+    period: "15 DE JANEIRO A 19 DE JANEIRO, 2026",
+    price: "3.200",
+    status: "Disponível",
+    availability: "available"
+  }, {
+    period: "20 DE JANEIRO A 24 DE JANEIRO, 2026",
+    price: "2.950",
+    status: "2 vagas restantes",
+    availability: "limited"
+  }];
   const packageSchema = createTravelPackageSchema({
     name: "Lua de Mel nas Maldivas - Black Friday",
     description: "4 noites em bangalô overwater com traslados de hidroavião inclusos",
@@ -352,20 +313,10 @@ const BlackFridayMaldives = () => {
     url: "https://followmeviagens.com/promocoes/black-friday-maldivas",
     location: "Maldivas"
   });
-
   const faqSchema = createFAQSchema(faqs);
   const breadcrumbSchema = createBreadcrumbSchema(breadcrumbItems);
-
-  return (
-    <>
-      <SEOHead
-        title="Lua de Mel Maldivas: 4 Noites Overwater com 25% OFF | Follow Me Viagens"
-        description="Pacote lua de mel Maldivas com 25% desconto Black Friday. 4 noites bangalô overwater, traslados inclusos. A partir U$ 2.890. Reserve agora!"
-        canonicalUrl="/promocoes/black-friday-maldivas"
-        ogImage={heroImage}
-        keywords={["maldivas lua de mel", "black friday maldivas", "bangalô overwater", "pacote maldivas", "viagem maldivas"]}
-        structuredData={[packageSchema, faqSchema, breadcrumbSchema]}
-      />
+  return <>
+      <SEOHead title="Lua de Mel Maldivas: 4 Noites Overwater com 25% OFF | Follow Me Viagens" description="Pacote lua de mel Maldivas com 25% desconto Black Friday. 4 noites bangalô overwater, traslados inclusos. A partir U$ 2.890. Reserve agora!" canonicalUrl="/promocoes/black-friday-maldivas" ogImage={heroImage} keywords={["maldivas lua de mel", "black friday maldivas", "bangalô overwater", "pacote maldivas", "viagem maldivas"]} structuredData={[packageSchema, faqSchema, breadcrumbSchema]} />
 
       <Navigation />
       <WhatsAppButton />
@@ -375,11 +326,7 @@ const BlackFridayMaldives = () => {
         <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
           {/* Background Image */}
           <div className="absolute inset-0 z-0">
-            <img
-              src={heroImage}
-              alt="Vista aérea das Maldivas"
-              className="w-full h-full object-cover"
-            />
+            <img src={heroImage} alt="Vista aérea das Maldivas" className="w-full h-full object-cover" />
             <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/60 to-black/80" />
           </div>
 
@@ -411,26 +358,14 @@ const BlackFridayMaldives = () => {
 
               {/* Benefits List */}
               <div className="grid md:grid-cols-2 gap-4 max-w-3xl mx-auto mb-10 text-left animate-fade-in">
-                {[
-                  "Bangalô Sobre a Água com Vista Incrível do Oceano",
-                  "Nós Pagamos Traslados de Hidroavião (U$ 450 de valor)",
-                  "Café da Manhã Internacional Incluído",
-                  "Cancelamento Flexível até 7 dias antes",
-                  "Garantia de Melhor Preço"
-                ].map((benefit, index) => (
-                  <div key={index} className="flex items-start gap-3 bg-white/10 backdrop-blur-sm p-4 rounded-lg">
+                {["Bangalô Sobre a Água com Vista Incrível do Oceano", "Nós Pagamos Traslados de Hidroavião (U$ 450 de valor)", "Café da Manhã Internacional Incluído", "Cancelamento Flexível até 7 dias antes", "Garantia de Melhor Preço"].map((benefit, index) => <div key={index} className="flex items-start gap-3 bg-white/10 backdrop-blur-sm p-4 rounded-lg">
                     <Check className="w-6 h-6 text-emerald-400 flex-shrink-0 mt-0.5" />
                     <span className="text-white font-medium text-lg">{benefit}</span>
-                  </div>
-                ))}
+                  </div>)}
               </div>
 
               {/* Primary CTA */}
-              <Button
-                size="lg"
-                onClick={() => scrollToSection('pricing')}
-                className="bg-amber-500 hover:bg-amber-600 text-black font-bold text-lg px-12 py-6 h-auto rounded-xl shadow-2xl transform hover:scale-105 transition-all duration-300 mb-8"
-              >
+              <Button size="lg" onClick={() => scrollToSection('pricing')} className="bg-amber-500 hover:bg-amber-600 text-black font-bold text-lg px-12 py-6 h-auto rounded-xl shadow-2xl transform hover:scale-105 transition-all duration-300 mb-8">
                 VER DATAS DISPONÍVEIS — ÚLTIMAS 12 VAGAS
               </Button>
 
@@ -543,9 +478,7 @@ const BlackFridayMaldives = () => {
             <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto mb-12">
               <Card className="p-8">
                 <div className="flex gap-1 mb-4">
-                  {[1, 2, 3, 4, 5].map((star) => (
-                    <Star key={star} className="w-5 h-5 text-amber-400 fill-amber-400" />
-                  ))}
+                  {[1, 2, 3, 4, 5].map(star => <Star key={star} className="w-5 h-5 text-amber-400 fill-amber-400" />)}
                   <span className="ml-2 font-semibold">5/5</span>
                 </div>
                 <p className="text-lg mb-4 italic">
@@ -558,9 +491,7 @@ const BlackFridayMaldives = () => {
 
               <Card className="p-8">
                 <div className="flex gap-1 mb-4">
-                  {[1, 2, 3, 4, 5].map((star) => (
-                    <Star key={star} className="w-5 h-5 text-amber-400 fill-amber-400" />
-                  ))}
+                  {[1, 2, 3, 4, 5].map(star => <Star key={star} className="w-5 h-5 text-amber-400 fill-amber-400" />)}
                   <span className="ml-2 font-semibold">5/5</span>
                 </div>
                 <p className="text-lg mb-4 italic">
@@ -573,11 +504,7 @@ const BlackFridayMaldives = () => {
             </div>
 
             <div className="text-center">
-              <Button
-                size="lg"
-                onClick={() => scrollToSection('pricing')}
-                className="bg-amber-500 hover:bg-amber-600 text-black font-bold text-lg px-10 py-6 h-auto rounded-xl"
-              >
+              <Button size="lg" onClick={() => scrollToSection('pricing')} className="bg-amber-500 hover:bg-amber-600 text-black font-bold text-lg px-10 py-6 h-auto rounded-xl">
                 GARANTIR MINHA VAGA COM 25% OFF
               </Button>
             </div>
@@ -585,25 +512,7 @@ const BlackFridayMaldives = () => {
         </section>
 
         {/* Gastronomy Section */}
-        <section className="py-20 bg-background">
-          <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto">
-              <h2 className="text-3xl md:text-4xl font-display font-bold text-center mb-6">
-                🍽️ Experiências Gastronômicas de Classe Mundial
-              </h2>
-              <div className="relative rounded-2xl overflow-hidden mb-6">
-                <img
-                  src={diningImage}
-                  alt="Experiência gastronômica nas Maldivas"
-                  className="w-full h-[400px] object-cover"
-                />
-              </div>
-              <p className="text-center text-lg text-muted-foreground">
-                Saboreie pratos italianos, asiáticos e locais preparados por chefs premiados em 3 restaurantes diferentes
-              </p>
-            </div>
-          </div>
-        </section>
+        
 
         {/* Package Inclusions Section */}
         <section className="py-20 bg-muted/20">
@@ -613,20 +522,31 @@ const BlackFridayMaldives = () => {
             </h2>
 
             <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
-              {[
-                { icon: "✈️", text: "Nós pagamos transfer de hidroavião (ida e volta)" },
-                { icon: "🍉", text: "Café da manhã internacional todos os dias" },
-                { icon: "✨", text: "4 noites em bangalô overwater privativo" },
-                { icon: "🥂", text: "Mini bar de cortesia (bebidas não-alcoólicas)" },
-                { icon: "🌊", text: "Snorkeling equipment gratuito" },
-                { icon: "❤️", text: "Welcome drink e box de chocolate" },
-                { icon: "💳", text: "Pagamento em até 10x sem juros" }
-              ].map((item, index) => (
-                <div key={index} className="flex items-start gap-4 bg-background p-6 rounded-lg shadow-sm">
+              {[{
+              icon: "✈️",
+              text: "Nós pagamos transfer de hidroavião (ida e volta)"
+            }, {
+              icon: "🍉",
+              text: "Café da manhã internacional todos os dias"
+            }, {
+              icon: "✨",
+              text: "4 noites em bangalô overwater privativo"
+            }, {
+              icon: "🥂",
+              text: "Mini bar de cortesia (bebidas não-alcoólicas)"
+            }, {
+              icon: "🌊",
+              text: "Snorkeling equipment gratuito"
+            }, {
+              icon: "❤️",
+              text: "Welcome drink e box de chocolate"
+            }, {
+              icon: "💳",
+              text: "Pagamento em até 10x sem juros"
+            }].map((item, index) => <div key={index} className="flex items-start gap-4 bg-background p-6 rounded-lg shadow-sm">
                   <span className="text-3xl">{item.icon}</span>
                   <span className="text-lg font-medium">{item.text}</span>
-                </div>
-              ))}
+                </div>)}
             </div>
           </div>
         </section>
@@ -642,8 +562,7 @@ const BlackFridayMaldives = () => {
             </p>
 
             <div className="grid md:grid-cols-2 gap-6 max-w-5xl mx-auto mb-12">
-              {pricingOptions.map((option, index) => (
-                <Card key={index} className="p-8 hover:shadow-xl transition-shadow">
+              {pricingOptions.map((option, index) => <Card key={index} className="p-8 hover:shadow-xl transition-shadow">
                   <div className="mb-4">
                     <div className="text-sm font-semibold text-muted-foreground mb-2">PERÍODO</div>
                     <div className="text-lg font-bold">{option.period}</div>
@@ -660,14 +579,10 @@ const BlackFridayMaldives = () => {
                     {option.status}
                   </div>
 
-                  <Button
-                    onClick={handleWhatsAppClick}
-                    className="w-full bg-amber-500 hover:bg-amber-600 text-black font-bold"
-                  >
+                  <Button onClick={handleWhatsAppClick} className="w-full bg-amber-500 hover:bg-amber-600 text-black font-bold">
                     RESERVAR
                   </Button>
-                </Card>
-              ))}
+                </Card>)}
             </div>
 
             {/* Trust Elements Below Pricing */}
@@ -720,16 +635,14 @@ const BlackFridayMaldives = () => {
 
             <div className="max-w-3xl mx-auto">
               <Accordion type="single" collapsible className="space-y-4">
-                {faqs.map((faq, index) => (
-                  <AccordionItem key={index} value={`item-${index}`} className="bg-background rounded-lg px-6">
+                {faqs.map((faq, index) => <AccordionItem key={index} value={`item-${index}`} className="bg-background rounded-lg px-6">
                     <AccordionTrigger className="text-lg font-semibold hover:no-underline">
                       {faq.question}
                     </AccordionTrigger>
                     <AccordionContent className="text-muted-foreground">
                       {faq.answer}
                     </AccordionContent>
-                  </AccordionItem>
-                ))}
+                  </AccordionItem>)}
               </Accordion>
             </div>
           </div>
@@ -745,11 +658,7 @@ const BlackFridayMaldives = () => {
               22+ pessoas visualizaram esta oferta nas últimas 24h
             </p>
 
-            <Button
-              size="lg"
-              onClick={handleWhatsAppClick}
-              className="bg-amber-500 hover:bg-amber-600 text-black font-bold text-xl px-16 py-8 h-auto rounded-xl shadow-2xl transform hover:scale-105 transition-all duration-300"
-            >
+            <Button size="lg" onClick={handleWhatsAppClick} className="bg-amber-500 hover:bg-amber-600 text-black font-bold text-xl px-16 py-8 h-auto rounded-xl shadow-2xl transform hover:scale-105 transition-all duration-300">
               GARANTIR MINHA VAGA AGORA
             </Button>
 
@@ -773,8 +682,6 @@ const BlackFridayMaldives = () => {
       </main>
 
       <Footer />
-    </>
-  );
+    </>;
 };
-
 export default BlackFridayMaldives;
