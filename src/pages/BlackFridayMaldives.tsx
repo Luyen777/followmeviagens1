@@ -24,6 +24,11 @@ import beachWedding from "@/assets/maldives-experiences/beach-wedding.jpg";
 import romanticDinner from "@/assets/maldives-experiences/romantic-dinner.jpg";
 import luxuryBath from "@/assets/maldives-experiences/luxury-bath.jpg";
 
+// Font stacks that work WITHOUT changing Head/Tailwind (system fonts only)
+const BODY_STACK =
+  'system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif';
+const DISPLAY_STACK = 'Georgia, Cambria, "Times New Roman", Times, serif';
+
 const experiences: { image: string; alt: string }[] = [
   { image: overwaterVillas, alt: "Villas sobre a água com design luxuoso" },
   { image: luxuryBathroom, alt: "Banheiro de luxo com vista para o mar" },
@@ -238,7 +243,7 @@ const BlackFridayMaldives: React.FC = () => {
   });
 
   useEffect(() => {
-    // Countdown timer (kept as-is, with aria-live below)
+    // Countdown timer
     const targetDate = new Date();
     targetDate.setDate(targetDate.getDate() + 6);
     const timer = window.setInterval(() => {
@@ -326,7 +331,6 @@ const BlackFridayMaldives: React.FC = () => {
     image: heroImage,
     url: "https://followmeviagens.com/promocoes/black-friday-maldivas",
     location: "Maldivas",
-    // priceCurrency: "USD", // habilite se o helper aceitar
   });
 
   const faqSchema = createFAQSchema(faqs);
@@ -352,7 +356,7 @@ const BlackFridayMaldives: React.FC = () => {
       <Navigation />
       <WhatsAppButton />
 
-      <main className="min-h-screen bg-background font-sans">
+      <main className="min-h-screen bg-background" style={{ fontFamily: BODY_STACK }}>
         {/* HERO */}
         <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
           {/* Background */}
@@ -363,7 +367,6 @@ const BlackFridayMaldives: React.FC = () => {
 
           {/* Content */}
           <div className="relative z-10 container mx-auto px-4 pt-32 pb-16">
-            {/* Accessible live countdown (screen readers) */}
             <div aria-live="polite" className="sr-only">
               Oferta expira em {timeLeft.days} dias, {timeLeft.hours} horas, {timeLeft.minutes} minutos.
             </div>
@@ -377,7 +380,10 @@ const BlackFridayMaldives: React.FC = () => {
             </div>
 
             <div className="max-w-[65ch] mx-auto text-center">
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-white mb-8 leading-[1.1] tracking-[.02em]">
+              <h1
+                className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-8 leading-[1.1] tracking-[.01em]"
+                style={{ fontFamily: DISPLAY_STACK }}
+              >
                 Lua de mel nas Maldivas: 4 noites em bangalô sobre a água com 25% de desconto
               </h1>
 
@@ -412,7 +418,7 @@ const BlackFridayMaldives: React.FC = () => {
               <Button
                 size="lg"
                 onClick={() => scrollToSection("pricing")}
-                className="bg-amber-400 hover:bg-amber-300 text-black font-semibold text-lg px-12 py-6 h-auto rounded-xl shadow-md transition-all duration-300 mb-8"
+                className="normal-case bg-amber-400 hover:bg-amber-300 text-black font-semibold text-lg px-12 py-6 h-auto rounded-xl shadow-md transition-all duration-300 mb-8"
               >
                 Ver datas disponíveis — últimas 12 vagas
               </Button>
@@ -446,7 +452,7 @@ const BlackFridayMaldives: React.FC = () => {
                 Mais de 500 casais já viveram sua lua de mel conosco
               </p>
 
-              {/* Scroll Indicator (subtle) */}
+              {/* Scroll Indicator */}
               <div className="motion-safe:animate-pulse">
                 <ChevronDown className="w-8 h-8 text-white/70 mx-auto" />
                 <p className="text-white/70 text-sm mt-2">↓ Veja o que está incluído ↓</p>
@@ -466,10 +472,13 @@ const BlackFridayMaldives: React.FC = () => {
 
           <div className="container mx-auto relative z-10 px-4">
             <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-16 animate-fade-in">
-              <h2 className="sm:text-5xl font-display font-medium text-foreground mb-4 sm:mb-6 tracking-tight text-balance leading-tight md:text-5xl text-4xl">
+              <h2
+                className="sm:text-5xl font-medium text-foreground mb-4 sm:mb-6 tracking-tight text-balance leading-tight md:text-5xl text-4xl"
+                style={{ fontFamily: DISPLAY_STACK }}
+              >
                 Momentos inesquecíveis nas Maldivas
               </h2>
-              <p className="text-base sm:text-lg text-foreground/70 leading-relaxed font-light tracking-[.02em] max-w-2xl mx-auto">
+              <p className="text-base sm:text-lg text-foreground/70 leading-relaxed font-light tracking-[.01em] max-w-2xl mx-auto">
                 Das villas exclusivas sobre o mar cristalino aos tratamentos de spa rejuvenescedores, cada momento nas
                 Maldivas é desenhado para criar memórias eternas de luxo e tranquilidade absoluta.
               </p>
@@ -482,7 +491,7 @@ const BlackFridayMaldives: React.FC = () => {
         {/* Benefits Section */}
         <section className="py-20 bg-background">
           <div className="container mx-auto px-4">
-            <h2 className="text-3xl md:text-4xl font-display font-bold text-center mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-center mb-4" style={{ fontFamily: DISPLAY_STACK }}>
               ✨ Por que este é o pacote perfeito para sua lua de mel
             </h2>
             <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
@@ -492,7 +501,9 @@ const BlackFridayMaldives: React.FC = () => {
             <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
               <Card className="p-8 text-center transition-transform duration-300 hover:-translate-y-[2px] hover:shadow-lg">
                 <div className="text-5xl mb-4">🌊</div>
-                <h3 className="text-xl font-bold mb-3">Bangalô overwater privativo</h3>
+                <h3 className="text-xl font-bold mb-3" style={{ fontFamily: DISPLAY_STACK }}>
+                  Bangalô overwater privativo
+                </h3>
                 <p className="text-muted-foreground">
                   Acorde com vista maravilhosa do oceano azul-turquesa direto da sua cama
                 </p>
@@ -500,7 +511,9 @@ const BlackFridayMaldives: React.FC = () => {
 
               <Card className="p-8 text-center transition-transform duration-300 hover:-translate-y-[2px] hover:shadow-lg">
                 <div className="text-5xl mb-4">✈️</div>
-                <h3 className="text-xl font-bold mb-3">Transfer premium incluído</h3>
+                <h3 className="text-xl font-bold mb-3" style={{ fontFamily: DISPLAY_STACK }}>
+                  Transfer premium incluído
+                </h3>
                 <p className="text-muted-foreground">
                   Nós pagamos seu traslado de hidroavião — voe sobre ilhas paradisíacas
                 </p>
@@ -508,7 +521,9 @@ const BlackFridayMaldives: React.FC = () => {
 
               <Card className="p-8 text-center transition-transform duration-300 hover:-translate-y-[2px] hover:shadow-lg">
                 <div className="text-5xl mb-4">🍇</div>
-                <h3 className="text-xl font-bold mb-3">Café da manhã de frente para o mar</h3>
+                <h3 className="text-xl font-bold mb-3" style={{ fontFamily: DISPLAY_STACK }}>
+                  Café da manhã de frente para o mar
+                </h3>
                 <p className="text-muted-foreground">
                   Comece cada dia com café internacional enquanto observa o oceano
                 </p>
@@ -520,7 +535,7 @@ const BlackFridayMaldives: React.FC = () => {
         {/* Social Proof Section */}
         <section className="py-20 bg-muted/20">
           <div className="container mx-auto px-4">
-            <h2 className="text-3xl md:text-4xl font-display font-bold text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-center mb-12" style={{ fontFamily: DISPLAY_STACK }}>
               💬 O que nossos clientes estão dizendo
             </h2>
 
@@ -559,7 +574,7 @@ const BlackFridayMaldives: React.FC = () => {
               <Button
                 size="lg"
                 onClick={() => scrollToSection("pricing")}
-                className="bg-amber-400 hover:bg-amber-300 text-black font-semibold text-lg px-10 py-6 h-auto rounded-xl"
+                className="normal-case bg-amber-400 hover:bg-amber-300 text-black font-semibold text-lg px-10 py-6 h-auto rounded-xl"
               >
                 Garantir minha vaga com 25% OFF
               </Button>
@@ -570,7 +585,7 @@ const BlackFridayMaldives: React.FC = () => {
         {/* Package Inclusions Section */}
         <section className="py-20 bg-muted/20">
           <div className="container mx-auto px-4">
-            <h2 className="text-3xl md:text-4xl font-display font-bold text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-center mb-12" style={{ fontFamily: DISPLAY_STACK }}>
               ✨ O que está incluído no seu pacote
             </h2>
 
@@ -596,7 +611,7 @@ const BlackFridayMaldives: React.FC = () => {
         {/* Pricing Section */}
         <section id="pricing" className="py-20 bg-background scroll-mt-20">
           <div className="container mx-auto px-4">
-            <h2 className="text-3xl md:text-4xl font-display font-bold text-center mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-center mb-4" style={{ fontFamily: DISPLAY_STACK }}>
               📅 Escolha suas datas — últimas vagas
             </h2>
             <p className="text-center text-muted-foreground mb-12">Garanta sua vaga antes que esgote</p>
@@ -631,7 +646,7 @@ const BlackFridayMaldives: React.FC = () => {
                   <Button
                     onClick={handleWhatsAppClick}
                     aria-label="Reservar pelo WhatsApp"
-                    className="w-full bg-amber-400 hover:bg-amber-300 text-black font-semibold rounded-xl"
+                    className="normal-case w-full bg-amber-400 hover:bg-amber-300 text-black font-semibold rounded-xl"
                   >
                     Reservar
                   </Button>
@@ -662,7 +677,9 @@ const BlackFridayMaldives: React.FC = () => {
             {/* Payment Terms */}
             <div className="max-w-3xl mx-auto space-y-6">
               <Card className="p-6">
-                <h3 className="font-bold text-lg mb-4">Formas de pagamento</h3>
+                <h3 className="font-bold text-lg mb-4" style={{ fontFamily: DISPLAY_STACK }}>
+                  Formas de pagamento
+                </h3>
                 <div className="space-y-2 text-muted-foreground">
                   <p>✓ Sinal de 20% — em até 24 horas</p>
                   <p>✓ Saldo de 80% — até 30 dias do embarque</p>
@@ -670,7 +687,9 @@ const BlackFridayMaldives: React.FC = () => {
               </Card>
 
               <Card className="p-6">
-                <h3 className="font-bold text-lg mb-4">Política de cancelamento</h3>
+                <h3 className="font-bold text-lg mb-4" style={{ fontFamily: DISPLAY_STACK }}>
+                  Política de cancelamento
+                </h3>
                 <div className="space-y-2 text-muted-foreground">
                   <p>✓ Até 30 dias antes da data de início — reembolso de 80% do valor total</p>
                   <p>✓ Entre 30 dias e a data de início — reembolso de 0% do valor total</p>
@@ -683,7 +702,7 @@ const BlackFridayMaldives: React.FC = () => {
         {/* FAQ Section */}
         <section className="py-20 bg-muted/20">
           <div className="container mx-auto px-4">
-            <h2 className="text-3xl md:text-4xl font-display font-bold text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-center mb-12" style={{ fontFamily: DISPLAY_STACK }}>
               O que você precisa saber antes de reservar
             </h2>
 
@@ -705,7 +724,7 @@ const BlackFridayMaldives: React.FC = () => {
         {/* Final CTA Section */}
         <section className="py-20 bg-gradient-to-b from-amber-50 to-background dark:from-amber-950/20 dark:to-background">
           <div className="container mx-auto px-4 text-center">
-            <h2 className="text-3xl md:text-4xl font-display font-bold mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4" style={{ fontFamily: DISPLAY_STACK }}>
               Últimas vagas! Garanta sua vaga antes que acabe
             </h2>
             <p className="text-lg text-muted-foreground mb-8">22+ pessoas visualizaram esta oferta nas últimas 24h</p>
@@ -713,7 +732,7 @@ const BlackFridayMaldives: React.FC = () => {
             <Button
               size="lg"
               onClick={handleWhatsAppClick}
-              className="bg-amber-500 hover:bg-amber-600 text-black font-bold text-xl px-16 py-8 h-auto rounded-xl shadow-2xl transition-all duration-300"
+              className="normal-case bg-amber-500 hover:bg-amber-600 text-black font-bold text-xl px-16 py-8 h-auto rounded-xl shadow-2xl transition-all duration-300"
               aria-label="Garantir minha vaga agora pelo WhatsApp"
             >
               Garantir minha vaga agora
