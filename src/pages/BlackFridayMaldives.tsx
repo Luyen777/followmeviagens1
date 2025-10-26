@@ -1,4 +1,5 @@
-import { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect, useRef } from "react";
+import type { CSSProperties, MouseEvent as ReactMouseEvent, TouchEvent as ReactTouchEvent } from "react";
 import { MessageCircle, Check, Star, Shield, CreditCard, Clock, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
@@ -23,7 +24,7 @@ import beachWedding from "@/assets/maldives-experiences/beach-wedding.jpg";
 import romanticDinner from "@/assets/maldives-experiences/romantic-dinner.jpg";
 import luxuryBath from "@/assets/maldives-experiences/luxury-bath.jpg";
 
-const experiences = [
+const experiences: { image: string; alt: string }[] = [
   { image: overwaterVillas, alt: "Villas sobre a água com design luxuoso" },
   { image: luxuryBathroom, alt: "Banheiro de luxo com vista para o mar" },
   { image: chefCooking, alt: "Chef preparando experiências gastronômicas ao vivo" },
@@ -37,16 +38,16 @@ const experiences = [
   { image: villasSunset, alt: "Villas exclusivas ao pôr do sol" },
 ];
 
-const CarouselSection = () => {
-  const [isPaused, setIsPaused] = useState(false);
-  const [isDragging, setIsDragging] = useState(false);
-  const containerRef = useRef(null);
-  const trackRef = useRef(null);
-  const startXRef = useRef(0);
-  const scrollLeftRef = useRef(0);
-  const animationRef = useRef();
-  const baseTimeRef = useRef(0);
-  const pausedOffsetRef = useRef(0);
+const CarouselSection: React.FC = () => {
+  const [isPaused, setIsPaused] = useState<boolean>(false);
+  const [isDragging, setIsDragging] = useState<boolean>(false);
+  const containerRef = useRef<HTMLDivElement | null>(null);
+  const trackRef = useRef<HTMLDivElement | null>(null);
+  const startXRef = useRef<number>(0);
+  const scrollLeftRef = useRef<number>(0);
+  const animationRef = useRef<number | null>(null);
+  const baseTimeRef = useRef<number>(0);
+  const pausedOffsetRef = useRef<number>(0);
   const duplicatedExperiences = [...experiences, ...experiences];
 
   // Respect prefers-reduced-motion
@@ -59,7 +60,7 @@ const CarouselSection = () => {
     const track = trackRef.current;
     if (!track) return;
     const scrollSpeed = 57.2;
-    const animate = (timestamp) => {
+    const animate = (timestamp: number) => {
       if (!baseTimeRef.current) baseTimeRef.current = timestamp;
       if (!isPaused && !isDragging) {
         const elapsed = (timestamp - baseTimeRef.current) / 1000;
@@ -73,11 +74,11 @@ const CarouselSection = () => {
     };
     animationRef.current = requestAnimationFrame(animate);
     return () => {
-      if (animationRef.current) cancelAnimationFrame(animationRef.current);
+      if (animationRef.current !== null) cancelAnimationFrame(animationRef.current);
     };
   }, [isPaused, isDragging]);
 
-  const handleMouseDown = (e) => {
+  const handleMouseDown = (e: ReactMouseEvent<HTMLDivElement>) => {
     setIsDragging(true);
     setIsPaused(true);
     startXRef.current = e.pageX;
@@ -92,7 +93,7 @@ const CarouselSection = () => {
     if (containerRef.current) containerRef.current.style.cursor = "grabbing";
   };
 
-  const handleMouseMove = (e) => {
+  const handleMouseMove = (e: ReactMouseEvent<HTMLDivElement>) => {
     if (!isDragging) return;
     e.preventDefault();
     const x = e.pageX;
@@ -134,7 +135,7 @@ const CarouselSection = () => {
     if (isDragging) handleMouseUp();
   };
 
-  const handleTouchStart = (e) => {
+  const handleTouchStart = (e: ReactTouchEvent<HTMLDivElement>) => {
     setIsDragging(true);
     setIsPaused(true);
     startXRef.current = e.touches[0].pageX;
@@ -148,7 +149,7 @@ const CarouselSection = () => {
     }
   };
 
-  const handleTouchMove = (e) => {
+  const handleTouchMove = (e: ReactTouchEvent<HTMLDivElement>) => {
     if (!isDragging) return;
     const x = e.touches[0].pageX;
     const walk = startXRef.current - x;
@@ -188,6 +189,11 @@ const CarouselSection = () => {
     if (!isDragging) setIsPaused((p) => !p);
   };
 
+  const maskStyles: CSSProperties = {
+    maskImage: "linear-gradient(to right, transparent, black 10%, black 90%, transparent)",
+    WebkitMaskImage: "linear-gradient(to right, transparent, black 10%, black 90%, transparent)",
+  } as CSSProperties;
+
   return (
     <div className="mb-12 sm:mb-16 animate-fade-in">
       <div
@@ -201,10 +207,7 @@ const CarouselSection = () => {
         onTouchMove={handleTouchMove}
         onTouchEnd={handleTouchEnd}
         onClick={togglePause}
-        style={{
-          maskImage: "linear-gradient(to right, transparent, black 10%, black 90%, transparent)",
-          WebkitMaskImage: "linear-gradient(to right, transparent, black 10%, black 90%, transparent)",
-        }}
+        style={maskStyles}
       >
         <div ref={trackRef} className="flex gap-4 sm:gap-6 will-change-transform" style={{ width: "fit-content" }}>
           {duplicatedExperiences.map((experience, index) => (
@@ -214,7 +217,7 @@ const CarouselSection = () => {
                   src={experience.image}
                   alt={experience.alt}
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 pointer-events-none"
-                  draggable="false"
+                  draggable={false}
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
               </div>
@@ -226,14 +229,19 @@ const CarouselSection = () => {
   );
 };
 
-const BlackFridayMaldives = () => {
-  const [timeLeft, setTimeLeft] = useState({ days: 6, hours: 0, minutes: 0, seconds: 0 });
+const BlackFridayMaldives: React.FC = () => {
+  const [timeLeft, setTimeLeft] = useState<{ days: number; hours: number; minutes: number; seconds: number }>({
+    days: 6,
+    hours: 0,
+    minutes: 0,
+    seconds: 0,
+  });
 
   useEffect(() => {
     // Countdown timer (kept as-is, with aria-live below)
     const targetDate = new Date();
     targetDate.setDate(targetDate.getDate() + 6);
-    const timer = setInterval(() => {
+    const timer = window.setInterval(() => {
       const now = new Date().getTime();
       const distance = targetDate.getTime() - now;
       const days = Math.floor(distance / (1000 * 60 * 60 * 24));
@@ -241,16 +249,16 @@ const BlackFridayMaldives = () => {
       const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
       const seconds = Math.floor((distance % (1000 * 60)) / 1000);
       setTimeLeft({ days, hours, minutes, seconds });
-      if (distance < 0) clearInterval(timer);
+      if (distance < 0) window.clearInterval(timer);
     }, 1000);
-    return () => clearInterval(timer);
+    return () => window.clearInterval(timer);
   }, []);
 
   const handleWhatsAppClick = () => {
     window.open("https://wa.link/followmeviagens", "_blank");
   };
 
-  const scrollToSection = (id) => {
+  const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
     if (element) element.scrollIntoView({ behavior: "smooth", block: "start" });
   };
@@ -318,8 +326,7 @@ const BlackFridayMaldives = () => {
     image: heroImage,
     url: "https://followmeviagens.com/promocoes/black-friday-maldivas",
     location: "Maldivas",
-    // Se o helper aceitar:
-    // priceCurrency: "USD",
+    // priceCurrency: "USD", // habilite se o helper aceitar
   });
 
   const faqSchema = createFAQSchema(faqs);
