@@ -504,7 +504,7 @@ const BlackFridayMaldives = () => {
             </div>
 
             <div className="text-center">
-              <Button size="lg" onClick={() => scrollToSection('pricing')} className="bg-amber-500 hover:bg-amber-600 text-black font-bold text-lg px-10 py-6 h-auto rounded-xl">
+              <Button size="lg" onClick={() => scrollToSection('pricing')} className="text-black font-bold text-lg px-10 py-6 h-auto rounded-xl bg-amber-200 hover:bg-amber-100">
                 GARANTIR MINHA VAGA COM 25% OFF
               </Button>
             </div>
