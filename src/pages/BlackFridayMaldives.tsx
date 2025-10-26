@@ -211,20 +211,20 @@ const CarouselSection: React.FC = () => {
         <div ref={trackRef} className="flex gap-8 will-change-transform" style={{ width: "fit-content" }}>
           {duplicatedExperiences.map((experience, index) => (
             <div key={index} className="flex-shrink-0 w-[320px] sm:w-[360px] md:w-[420px]">
-              <div 
+              <div
                 className="relative aspect-[4/5] overflow-hidden group"
                 style={{
-                  borderRadius: '24px',
-                  boxShadow: '0 20px 60px rgba(0, 0, 0, 0.15)',
-                  transition: 'all 0.5s cubic-bezier(0.4, 0, 0.2, 1)'
+                  borderRadius: "24px",
+                  boxShadow: "0 20px 60px rgba(0, 0, 0, 0.15)",
+                  transition: "all 0.5s cubic-bezier(0.4, 0, 0.2, 1)",
                 }}
                 onMouseEnter={(e) => {
-                  e.currentTarget.style.transform = 'translateY(-8px)';
-                  e.currentTarget.style.boxShadow = '0 30px 80px rgba(0, 0, 0, 0.25)';
+                  e.currentTarget.style.transform = "translateY(-8px)";
+                  e.currentTarget.style.boxShadow = "0 30px 80px rgba(0, 0, 0, 0.25)";
                 }}
                 onMouseLeave={(e) => {
-                  e.currentTarget.style.transform = 'translateY(0)';
-                  e.currentTarget.style.boxShadow = '0 20px 60px rgba(0, 0, 0, 0.15)';
+                  e.currentTarget.style.transform = "translateY(0)";
+                  e.currentTarget.style.boxShadow = "0 20px 60px rgba(0, 0, 0, 0.15)";
                 }}
               >
                 <img
@@ -473,7 +473,12 @@ const BlackFridayMaldives: React.FC = () => {
           {/* Background */}
           <div className="absolute inset-0 z-0">
             <img src={heroImage} alt="Vista aérea das Maldivas" className="w-full h-full object-cover" />
-            <div className="absolute inset-0" style={{ background: 'linear-gradient(180deg, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.5) 50%, rgba(0,0,0,0.8) 100%)' }} />
+            <div
+              className="absolute inset-0"
+              style={{
+                background: "linear-gradient(180deg, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.5) 50%, rgba(0,0,0,0.8) 100%)",
+              }}
+            />
           </div>
 
           {/* Content */}
@@ -499,7 +504,10 @@ const BlackFridayMaldives: React.FC = () => {
 
               {/* Pricing */}
               <div className="mb-12 animate-fade-in">
-                <div className="text-amber-400 text-5xl md:text-6xl lg:text-7xl font-bold mb-4" style={{ letterSpacing: '-0.03em' }}>
+                <div
+                  className="text-amber-400 text-5xl md:text-6xl lg:text-7xl font-bold mb-4"
+                  style={{ letterSpacing: "-0.03em" }}
+                >
                   US$ 2.890
                 </div>
                 <div className="text-white/90 text-xl md:text-2xl mb-3">
@@ -554,8 +562,10 @@ const BlackFridayMaldives: React.FC = () => {
 
               {/* Payment Logos */}
               <div className="flex flex-wrap items-center justify-center gap-4 mb-12 text-white/90 text-sm font-bold">
-                {['VISA', 'Mastercard', 'PIX', 'Stripe Secure'].map(method => (
-                  <span key={method} className="trust-badge">{method}</span>
+                {["VISA", "Mastercard", "PIX", "Stripe Secure"].map((method) => (
+                  <span key={method} className="trust-badge">
+                    {method}
+                  </span>
                 ))}
               </div>
 
@@ -573,7 +583,10 @@ const BlackFridayMaldives: React.FC = () => {
         </section>
 
         {/* Breadcrumbs */}
-        <div className="container mx-auto px-4 py-8" style={{ background: 'linear-gradient(to bottom, rgba(0,0,0,0.02), transparent)' }}>
+        <div
+          className="container mx-auto px-4 py-8"
+          style={{ background: "linear-gradient(to bottom, rgba(0,0,0,0.02), transparent)" }}
+        >
           <Breadcrumbs items={breadcrumbItems} />
         </div>
 
@@ -584,7 +597,7 @@ const BlackFridayMaldives: React.FC = () => {
               <h2 className="premium-heading text-5xl md:text-6xl font-semibold text-foreground mb-8">
                 Momentos inesquecíveis nas Maldivas
               </h2>
-              <p className="text-xl text-foreground/60 leading-relaxed max-w-2xl mx-auto" style={{ lineHeight: '1.7' }}>
+              <p className="text-xl text-foreground/60 leading-relaxed max-w-2xl mx-auto" style={{ lineHeight: "1.7" }}>
                 Das villas exclusivas sobre o mar cristalino aos tratamentos de spa rejuvenescedores, cada momento nas
                 Maldivas é desenhado para criar memórias eternas de luxo e tranquilidade absoluta.
               </p>
@@ -601,25 +614,33 @@ const BlackFridayMaldives: React.FC = () => {
               <h2 className="premium-heading text-4xl md:text-5xl font-semibold mb-6">
                 Por que este é o pacote perfeito para sua lua de mel
               </h2>
-              <p className="text-xl text-muted-foreground max-w-2xl mx-auto" style={{ lineHeight: '1.7' }}>
+              <p className="text-xl text-muted-foreground max-w-2xl mx-auto" style={{ lineHeight: "1.7" }}>
                 Experiências inesquecíveis em um dos destinos mais românticos do mundo
               </p>
             </div>
 
             <div className="grid md:grid-cols-3 gap-10 max-w-6xl mx-auto">
               {[
-                { icon: "🌊", title: "Bangalô overwater privativo", desc: "Acorde com vista maravilhosa do oceano azul-turquesa direto da sua cama" },
-                { icon: "✈️", title: "Transfer premium incluído", desc: "Nós pagamos seu traslado de hidroavião — voe sobre ilhas paradisíacas" },
-                { icon: "🍇", title: "Café da manhã de frente para o mar", desc: "Comece cada dia com café internacional enquanto observa o oceano" } da manhã de frente para o mar", desc: "Comece cada dia com café internacional enquanto observa o oceano" },
+                {
+                  icon: "🌊",
+                  title: "Bangalô overwater privativo",
+                  desc: "Acorde com vista maravilhosa do oceano azul-turquesa direto da sua cama",
+                },
+                {
+                  icon: "✈️",
+                  title: "Transfer premium incluído",
+                  desc: "Nós pagamos seu traslado de hidroavião — voe sobre ilhas paradisíacas",
+                },
+                {
+                  icon: "🍇",
+                  title: "Café da manhã de frente para o mar",
+                  desc: "Comece cada dia com café internacional enquanto observa o oceano",
+                },
               ].map((item, index) => (
                 <div key={index} className="premium-card text-center">
                   <div className="text-6xl mb-6">{item.icon}</div>
-                  <h3 className="premium-heading text-2xl font-semibold mb-4">
-                    {item.title}
-                  </h3>
-                  <p className="text-muted-foreground text-lg leading-relaxed">
-                    {item.desc}
-                  </p>
+                  <h3 className="premium-heading text-2xl font-semibold mb-4">{item.title}</h3>
+                  <p className="text-muted-foreground text-lg leading-relaxed">{item.desc}</p>
                 </div>
               ))}
             </div>
@@ -627,7 +648,10 @@ const BlackFridayMaldives: React.FC = () => {
         </section>
 
         {/* Social Proof Section */}
-        <section className="py-32" style={{ background: 'linear-gradient(to bottom, rgba(251, 191, 36, 0.03), transparent)' }}>
+        <section
+          className="py-32"
+          style={{ background: "linear-gradient(to bottom, rgba(251, 191, 36, 0.03), transparent)" }}
+        >
           <div className="container mx-auto px-4">
             <h2 className="premium-heading text-4xl md:text-5xl font-semibold text-center mb-20">
               O que nossos clientes estão dizendo
@@ -638,13 +662,13 @@ const BlackFridayMaldives: React.FC = () => {
                 {
                   text: "A vista do bangalô era exatamente como nas fotos. Acordar sobre a água foi inesquecível!",
                   author: "Marina & Carlos, São Paulo",
-                  occasion: "Lua de mel, março 2024"
+                  occasion: "Lua de mel, março 2024",
                 },
                 {
                   text: "Resort simplesmente incrível. Experiência dos sonhos, vamos guardar pra sempre. Obrigada Follow Me Viagens pela organização impecável ❤️",
                   author: "Juliana & Roberto, Rio de Janeiro",
-                  occasion: "Aniversário, janeiro 2024"
-                }
+                  occasion: "Aniversário, janeiro 2024",
+                },
               ].map((review, index) => (
                 <div key={index} className="premium-card">
                   <div className="flex gap-1 mb-6">
@@ -652,9 +676,7 @@ const BlackFridayMaldives: React.FC = () => {
                       <Star key={star} className="w-6 h-6 text-amber-400 fill-amber-400" />
                     ))}
                   </div>
-                  <p className="text-xl mb-6 leading-relaxed text-foreground/90 italic">
-                    "{review.text}"
-                  </p>
+                  <p className="text-xl mb-6 leading-relaxed text-foreground/90 italic">"{review.text}"</p>
                   <div className="text-sm text-muted-foreground">
                     <p className="font-semibold text-base mb-1">{review.author}</p>
                     <p>{review.occasion}</p>
@@ -691,21 +713,25 @@ const BlackFridayMaldives: React.FC = () => {
                 { icon: "❤️", text: "Welcome drink e caixa de chocolates" },
                 { icon: "💳", text: "Pagamento em até 10x sem juros" },
               ].map((item, index) => (
-                <div key={index} className="flex items-center gap-5 bg-background p-8 rounded-3xl" style={{ 
-                  border: '1px solid #f3f4f6',
-                  transition: 'all 0.3s ease',
-                  boxShadow: '0 2px 10px rgba(0, 0, 0, 0.04)'
-                }}
-                onMouseEnter={(e) => {
-                  e.currentTarget.style.borderColor = '#fbbf24';
-                  e.currentTarget.style.boxShadow = '0 10px 30px rgba(0, 0, 0, 0.08)';
-                  e.currentTarget.style.transform = 'translateY(-2px)';
-                }}
-                onMouseLeave={(e) => {
-                  e.currentTarget.style.borderColor = '#f3f4f6';
-                  e.currentTarget.style.boxShadow = '0 2px 10px rgba(0, 0, 0, 0.04)';
-                  e.currentTarget.style.transform = 'translateY(0)';
-                }}>
+                <div
+                  key={index}
+                  className="flex items-center gap-5 bg-background p-8 rounded-3xl"
+                  style={{
+                    border: "1px solid #f3f4f6",
+                    transition: "all 0.3s ease",
+                    boxShadow: "0 2px 10px rgba(0, 0, 0, 0.04)",
+                  }}
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.borderColor = "#fbbf24";
+                    e.currentTarget.style.boxShadow = "0 10px 30px rgba(0, 0, 0, 0.08)";
+                    e.currentTarget.style.transform = "translateY(-2px)";
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.borderColor = "#f3f4f6";
+                    e.currentTarget.style.boxShadow = "0 2px 10px rgba(0, 0, 0, 0.04)";
+                    e.currentTarget.style.transform = "translateY(0)";
+                  }}
+                >
                   <span className="text-4xl flex-shrink-0">{item.icon}</span>
                   <span className="text-lg font-semibold text-foreground/90 leading-relaxed">{item.text}</span>
                 </div>
@@ -715,7 +741,11 @@ const BlackFridayMaldives: React.FC = () => {
         </section>
 
         {/* Pricing Section */}
-        <section id="pricing" className="py-32 scroll-mt-20" style={{ background: 'linear-gradient(to bottom, rgba(251, 191, 36, 0.03), transparent)' }}>
+        <section
+          id="pricing"
+          className="py-32 scroll-mt-20"
+          style={{ background: "linear-gradient(to bottom, rgba(251, 191, 36, 0.03), transparent)" }}
+        >
           <div className="container mx-auto px-4">
             <h2 className="premium-heading text-4xl md:text-5xl font-semibold text-center mb-6">
               Escolha suas datas — últimas vagas
@@ -731,7 +761,7 @@ const BlackFridayMaldives: React.FC = () => {
                   </div>
 
                   <div className="mb-6">
-                    <div className="text-5xl font-bold mb-2" style={{ color: '#d97706' }}>
+                    <div className="text-5xl font-bold mb-2" style={{ color: "#d97706" }}>
                       US$ {option.price}
                     </div>
                     <span className="text-base text-muted-foreground font-medium">por pessoa</span>
@@ -741,8 +771,8 @@ const BlackFridayMaldives: React.FC = () => {
                     <span
                       className="inline-flex items-center rounded-full px-5 py-2.5 text-sm font-bold"
                       style={{
-                        background: option.availability === "limited" ? '#fef2f2' : '#f0fdf4',
-                        color: option.availability === "limited" ? '#991b1b' : '#166534'
+                        background: option.availability === "limited" ? "#fef2f2" : "#f0fdf4",
+                        color: option.availability === "limited" ? "#991b1b" : "#166534",
                       }}
                     >
                       {option.status}
@@ -754,20 +784,20 @@ const BlackFridayMaldives: React.FC = () => {
                     aria-label="Reservar pelo WhatsApp"
                     className="w-full text-black font-bold text-lg py-5 rounded-full"
                     style={{
-                      background: 'linear-gradient(135deg, #f59e0b 0%, #d97706 100%)',
-                      boxShadow: '0 8px 25px rgba(245, 158, 11, 0.3)',
-                      transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)',
-                      border: 'none'
+                      background: "linear-gradient(135deg, #f59e0b 0%, #d97706 100%)",
+                      boxShadow: "0 8px 25px rgba(245, 158, 11, 0.3)",
+                      transition: "all 0.3s cubic-bezier(0.4, 0, 0.2, 1)",
+                      border: "none",
                     }}
                     onMouseEnter={(e) => {
-                      e.currentTarget.style.background = 'linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%)';
-                      e.currentTarget.style.boxShadow = '0 12px 35px rgba(245, 158, 11, 0.4)';
-                      e.currentTarget.style.transform = 'translateY(-2px)';
+                      e.currentTarget.style.background = "linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%)";
+                      e.currentTarget.style.boxShadow = "0 12px 35px rgba(245, 158, 11, 0.4)";
+                      e.currentTarget.style.transform = "translateY(-2px)";
                     }}
                     onMouseLeave={(e) => {
-                      e.currentTarget.style.background = 'linear-gradient(135deg, #f59e0b 0%, #d97706 100%)';
-                      e.currentTarget.style.boxShadow = '0 8px 25px rgba(245, 158, 11, 0.3)';
-                      e.currentTarget.style.transform = 'translateY(0)';
+                      e.currentTarget.style.background = "linear-gradient(135deg, #f59e0b 0%, #d97706 100%)";
+                      e.currentTarget.style.boxShadow = "0 8px 25px rgba(245, 158, 11, 0.3)";
+                      e.currentTarget.style.transform = "translateY(0)";
                     }}
                   >
                     Reservar agora
@@ -782,12 +812,16 @@ const BlackFridayMaldives: React.FC = () => {
                 { icon: Shield, text: "Reserva segura SSL" },
                 { icon: CreditCard, text: "Parcelamento disponível" },
                 { icon: Check, text: "Cancelamento flexível" },
-                { icon: MessageCircle, text: "Suporte 24/7" }
+                { icon: MessageCircle, text: "Suporte 24/7" },
               ].map((item, index) => (
-                <div key={index} className="flex items-center gap-2 px-6 py-3 rounded-full" style={{
-                  background: 'rgba(0, 0, 0, 0.03)',
-                  border: '1px solid rgba(0, 0, 0, 0.06)'
-                }}>
+                <div
+                  key={index}
+                  className="flex items-center gap-2 px-6 py-3 rounded-full"
+                  style={{
+                    background: "rgba(0, 0, 0, 0.03)",
+                    border: "1px solid rgba(0, 0, 0, 0.06)",
+                  }}
+                >
                   <item.icon className="w-5 h-5" />
                   <span>{item.text}</span>
                 </div>
@@ -797,9 +831,7 @@ const BlackFridayMaldives: React.FC = () => {
             {/* Payment Terms */}
             <div className="max-w-3xl mx-auto space-y-8">
               <div className="premium-card">
-                <h3 className="premium-heading text-2xl font-semibold mb-6">
-                  Formas de pagamento
-                </h3>
+                <h3 className="premium-heading text-2xl font-semibold mb-6">Formas de pagamento</h3>
                 <div className="space-y-4 text-muted-foreground text-lg">
                   <p className="flex items-start gap-3">
                     <Check className="w-6 h-6 text-emerald-600 flex-shrink-0 mt-1" />
@@ -813,9 +845,7 @@ const BlackFridayMaldives: React.FC = () => {
               </div>
 
               <div className="premium-card">
-                <h3 className="premium-heading text-2xl font-semibold mb-6">
-                  Política de cancelamento
-                </h3>
+                <h3 className="premium-heading text-2xl font-semibold mb-6">Política de cancelamento</h3>
                 <div className="space-y-4 text-muted-foreground text-lg">
                   <p className="flex items-start gap-3">
                     <Check className="w-6 h-6 text-emerald-600 flex-shrink-0 mt-1" />
@@ -841,14 +871,14 @@ const BlackFridayMaldives: React.FC = () => {
             <div className="max-w-3xl mx-auto">
               <Accordion type="single" collapsible className="space-y-6">
                 {faqs.map((faq, index) => (
-                  <AccordionItem 
-                    key={index} 
-                    value={`item-${index}`} 
+                  <AccordionItem
+                    key={index}
+                    value={`item-${index}`}
                     className="bg-background rounded-3xl px-8 py-2"
                     style={{
-                      border: '1px solid #f3f4f6',
-                      boxShadow: '0 2px 10px rgba(0, 0, 0, 0.04)',
-                      transition: 'all 0.3s ease'
+                      border: "1px solid #f3f4f6",
+                      boxShadow: "0 2px 10px rgba(0, 0, 0, 0.04)",
+                      transition: "all 0.3s ease",
                     }}
                   >
                     <AccordionTrigger className="premium-heading text-xl font-semibold hover:no-underline text-left py-7">
@@ -865,31 +895,36 @@ const BlackFridayMaldives: React.FC = () => {
         </section>
 
         {/* Final CTA Section */}
-        <section className="py-32" style={{ background: 'linear-gradient(to bottom, rgba(251, 191, 36, 0.08), rgba(251, 191, 36, 0.02))' }}>
+        <section
+          className="py-32"
+          style={{ background: "linear-gradient(to bottom, rgba(251, 191, 36, 0.08), rgba(251, 191, 36, 0.02))" }}
+        >
           <div className="container mx-auto px-4 text-center">
             <h2 className="premium-heading text-4xl md:text-5xl font-semibold mb-6">
               Últimas vagas! Garanta sua vaga antes que acabe
             </h2>
-            <p className="text-xl text-muted-foreground mb-12 font-medium">22+ pessoas visualizaram esta oferta nas últimas 24h</p>
+            <p className="text-xl text-muted-foreground mb-12 font-medium">
+              22+ pessoas visualizaram esta oferta nas últimas 24h
+            </p>
 
             <button
               onClick={handleWhatsAppClick}
               className="text-black font-bold text-2xl px-20 py-7 rounded-full mb-14"
               style={{
-                background: 'linear-gradient(135deg, #f59e0b 0%, #d97706 100%)',
-                boxShadow: '0 15px 50px rgba(245, 158, 11, 0.4)',
-                transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)',
-                border: 'none'
+                background: "linear-gradient(135deg, #f59e0b 0%, #d97706 100%)",
+                boxShadow: "0 15px 50px rgba(245, 158, 11, 0.4)",
+                transition: "all 0.3s cubic-bezier(0.4, 0, 0.2, 1)",
+                border: "none",
               }}
               onMouseEnter={(e) => {
-                e.currentTarget.style.background = 'linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%)';
-                e.currentTarget.style.boxShadow = '0 20px 60px rgba(245, 158, 11, 0.5)';
-                e.currentTarget.style.transform = 'translateY(-3px)';
+                e.currentTarget.style.background = "linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%)";
+                e.currentTarget.style.boxShadow = "0 20px 60px rgba(245, 158, 11, 0.5)";
+                e.currentTarget.style.transform = "translateY(-3px)";
               }}
               onMouseLeave={(e) => {
-                e.currentTarget.style.background = 'linear-gradient(135deg, #f59e0b 0%, #d97706 100%)';
-                e.currentTarget.style.boxShadow = '0 15px 50px rgba(245, 158, 11, 0.4)';
-                e.currentTarget.style.transform = 'translateY(0)';
+                e.currentTarget.style.background = "linear-gradient(135deg, #f59e0b 0%, #d97706 100%)";
+                e.currentTarget.style.boxShadow = "0 15px 50px rgba(245, 158, 11, 0.4)";
+                e.currentTarget.style.transform = "translateY(0)";
               }}
               aria-label="Garantir minha vaga agora pelo WhatsApp"
             >
@@ -901,13 +936,17 @@ const BlackFridayMaldives: React.FC = () => {
               {[
                 { icon: Shield, text: "Pagamento seguro", color: "#059669" },
                 { icon: Star, text: "Avaliação 5 estrelas", color: "#f59e0b" },
-                { icon: Check, text: "Garantia do melhor preço", color: "#059669" }
+                { icon: Check, text: "Garantia do melhor preço", color: "#059669" },
               ].map((item, index) => (
-                <div key={index} className="flex items-center gap-3 px-6 py-4 rounded-full" style={{
-                  background: 'white',
-                  border: '1px solid #f3f4f6',
-                  boxShadow: '0 4px 15px rgba(0, 0, 0, 0.06)'
-                }}>
+                <div
+                  key={index}
+                  className="flex items-center gap-3 px-6 py-4 rounded-full"
+                  style={{
+                    background: "white",
+                    border: "1px solid #f3f4f6",
+                    boxShadow: "0 4px 15px rgba(0, 0, 0, 0.06)",
+                  }}
+                >
                   <item.icon className="w-5 h-5" style={{ color: item.color }} />
                   <span>{item.text}</span>
                 </div>
