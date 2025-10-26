@@ -579,7 +579,7 @@ const BlackFridayMaldives = () => {
                     {option.status}
                   </div>
 
-                  <Button onClick={handleWhatsAppClick} className="w-full bg-amber-500 hover:bg-amber-600 text-black font-bold">
+                  <Button onClick={handleWhatsAppClick} className="w-full text-black font-bold bg-amber-200 hover:bg-amber-100">
                     RESERVAR
                   </Button>
                 </Card>)}
