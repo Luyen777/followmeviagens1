@@ -24,10 +24,6 @@ import beachWedding from "@/assets/maldives-experiences/beach-wedding.jpg";
 import romanticDinner from "@/assets/maldives-experiences/romantic-dinner.jpg";
 import luxuryBath from "@/assets/maldives-experiences/luxury-bath.jpg";
 
-// Premium font stacks
-const BODY_STACK = '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif';
-const DISPLAY_STACK = 'ui-serif, Georgia, Cambria, "Times New Roman", Times, serif';
-
 const experiences: { image: string; alt: string }[] = [
   { image: overwaterVillas, alt: "Villas sobre a água com design luxuoso" },
   { image: luxuryBathroom, alt: "Banheiro de luxo com vista para o mar" },
@@ -198,7 +194,7 @@ const CarouselSection: React.FC = () => {
   } as CSSProperties;
 
   return (
-    <div className="mb-16 sm:mb-20 animate-fade-in">
+    <div className="mb-20 animate-fade-in">
       <div
         ref={containerRef}
         className="relative w-full overflow-hidden cursor-grab select-none"
@@ -212,17 +208,32 @@ const CarouselSection: React.FC = () => {
         onClick={togglePause}
         style={maskStyles}
       >
-        <div ref={trackRef} className="flex gap-6 will-change-transform" style={{ width: "fit-content" }}>
+        <div ref={trackRef} className="flex gap-8 will-change-transform" style={{ width: "fit-content" }}>
           {duplicatedExperiences.map((experience, index) => (
-            <div key={index} className="flex-shrink-0 w-[300px] sm:w-[340px] md:w-[400px]">
-              <div className="relative aspect-[4/5] overflow-hidden rounded-3xl shadow-2xl hover:shadow-3xl transition-all duration-700 group">
+            <div key={index} className="flex-shrink-0 w-[320px] sm:w-[360px] md:w-[420px]">
+              <div 
+                className="relative aspect-[4/5] overflow-hidden group"
+                style={{
+                  borderRadius: '24px',
+                  boxShadow: '0 20px 60px rgba(0, 0, 0, 0.15)',
+                  transition: 'all 0.5s cubic-bezier(0.4, 0, 0.2, 1)'
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.transform = 'translateY(-8px)';
+                  e.currentTarget.style.boxShadow = '0 30px 80px rgba(0, 0, 0, 0.25)';
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.transform = 'translateY(0)';
+                  e.currentTarget.style.boxShadow = '0 20px 60px rgba(0, 0, 0, 0.15)';
+                }}
+              >
                 <img
                   src={experience.image}
                   alt={experience.alt}
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 pointer-events-none"
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 pointer-events-none"
                   draggable={false}
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
               </div>
             </div>
           ))}
@@ -350,20 +361,119 @@ const BlackFridayMaldives: React.FC = () => {
         structuredData={[packageSchema, faqSchema, breadcrumbSchema]}
       />
 
+      <style>{`
+        @import url('https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@400;600;700&family=Inter:wght@400;500;600;700&display=swap');
+        
+        .premium-page {
+          font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+          letter-spacing: -0.011em;
+        }
+        
+        .premium-heading {
+          font-family: 'Crimson Pro', Georgia, serif;
+          letter-spacing: -0.025em;
+          line-height: 1.1;
+        }
+        
+        .premium-button {
+          background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+          border: none;
+          box-shadow: 0 10px 30px rgba(245, 158, 11, 0.3);
+          transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .premium-button:hover {
+          background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
+          box-shadow: 0 15px 40px rgba(245, 158, 11, 0.4);
+          transform: translateY(-2px);
+        }
+        
+        .premium-card {
+          background: white;
+          border: 1px solid #f3f4f6;
+          border-radius: 20px;
+          padding: 48px;
+          transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+          box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+        }
+        
+        .premium-card:hover {
+          border-color: #fbbf24;
+          box-shadow: 0 20px 60px rgba(0, 0, 0, 0.12);
+          transform: translateY(-4px);
+        }
+        
+        .benefit-card {
+          background: rgba(255, 255, 255, 0.03);
+          backdrop-filter: blur(20px);
+          border: 1px solid rgba(255, 255, 255, 0.1);
+          border-radius: 16px;
+          padding: 28px;
+          transition: all 0.3s ease;
+        }
+        
+        .benefit-card:hover {
+          background: rgba(255, 255, 255, 0.08);
+          border-color: rgba(255, 255, 255, 0.2);
+        }
+        
+        .countdown-badge {
+          background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
+          border-radius: 100px;
+          padding: 16px 32px;
+          box-shadow: 0 10px 40px rgba(251, 191, 36, 0.4);
+          animation: pulse-glow 2s ease-in-out infinite;
+        }
+        
+        @keyframes pulse-glow {
+          0%, 100% { box-shadow: 0 10px 40px rgba(251, 191, 36, 0.4); }
+          50% { box-shadow: 0 10px 50px rgba(251, 191, 36, 0.6); }
+        }
+        
+        .trust-badge {
+          background: rgba(255, 255, 255, 0.08);
+          backdrop-filter: blur(10px);
+          border: 1px solid rgba(255, 255, 255, 0.15);
+          border-radius: 100px;
+          padding: 12px 24px;
+        }
+        
+        .pricing-card {
+          background: white;
+          border: 2px solid #f3f4f6;
+          border-radius: 24px;
+          padding: 44px;
+          transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .pricing-card:hover {
+          border-color: #f59e0b;
+          box-shadow: 0 25px 70px rgba(245, 158, 11, 0.15);
+          transform: translateY(-6px);
+        }
+        
+        @media (prefers-color-scheme: dark) {
+          .premium-card, .pricing-card {
+            background: #1f2937;
+            border-color: #374151;
+          }
+          .premium-card:hover, .pricing-card:hover {
+            border-color: #f59e0b;
+            background: #252e3d;
+          }
+        }
+      `}</style>
+
       <Navigation />
       <WhatsAppButton />
 
-      <main className="min-h-screen bg-background" style={{ fontFamily: BODY_STACK }}>
+      <main className="min-h-screen bg-background premium-page">
         {/* HERO */}
         <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
           {/* Background */}
           <div className="absolute inset-0 z-0">
-            <img
-              src={heroImage}
-              alt="Vista aérea das Maldivas"
-              className="w-full h-full object-cover scale-105 animate-[subtle-zoom_20s_ease-in-out_infinite]"
-            />
-            <div className="absolute inset-0 bg-gradient-to-b from-black/75 via-black/60 to-black/85" />
+            <img src={heroImage} alt="Vista aérea das Maldivas" className="w-full h-full object-cover" />
+            <div className="absolute inset-0" style={{ background: 'linear-gradient(180deg, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.5) 50%, rgba(0,0,0,0.8) 100%)' }} />
           </div>
 
           {/* Content */}
@@ -373,36 +483,37 @@ const BlackFridayMaldives: React.FC = () => {
             </div>
 
             {/* Countdown Badge */}
-            <div className="flex justify-center mb-10 animate-fade-in">
-              <div className="bg-gradient-to-r from-amber-400 via-amber-300 to-amber-400 text-black px-8 py-4 rounded-full font-bold text-sm md:text-base flex items-center gap-3 shadow-2xl backdrop-blur-sm border border-amber-200/20">
-                <Clock className="w-5 h-5 animate-pulse" />
-                <span className="tracking-wide">Esquenta Black Friday — 25% OFF · expira em {timeLeft.days} dias</span>
+            <div className="flex justify-center mb-12 animate-fade-in">
+              <div className="countdown-badge flex items-center gap-3">
+                <Clock className="w-5 h-5 text-black" />
+                <span className="text-black font-bold text-base tracking-wide">
+                  Esquenta Black Friday — 25% OFF · expira em {timeLeft.days} dias
+                </span>
               </div>
             </div>
 
             <div className="max-w-5xl mx-auto text-center">
-              <h1
-                className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-10 leading-[1.08] tracking-tight"
-                style={{ fontFamily: DISPLAY_STACK, letterSpacing: "-0.02em" }}
-              >
+              <h1 className="premium-heading text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-12">
                 Lua de mel nas Maldivas: 4 noites em bangalô sobre a água com 25% de desconto
               </h1>
 
               {/* Pricing */}
-              <div className="mb-10 animate-fade-in">
-                <div className="text-amber-300 text-4xl md:text-5xl lg:text-6xl font-bold mb-3 tracking-tight">
-                  A partir de US$ 2.890{" "}
-                  <span className="text-2xl md:text-3xl text-white/90 font-normal">por pessoa</span>
+              <div className="mb-12 animate-fade-in">
+                <div className="text-amber-400 text-5xl md:text-6xl lg:text-7xl font-bold mb-4" style={{ letterSpacing: '-0.03em' }}>
+                  US$ 2.890
                 </div>
-                <div className="text-white/95 text-xl md:text-2xl">
+                <div className="text-white/90 text-xl md:text-2xl mb-3">
+                  <span className="text-white/60">por pessoa</span>
+                </div>
+                <div className="text-white/90 text-lg md:text-xl">
                   <span className="line-through text-white/50">De US$ 3.855</span>
-                  <span className="mx-3 text-white/40">·</span>
-                  <span className="text-emerald-300 font-semibold">ECONOMIZE US$ 965</span>
+                  <span className="mx-4 text-white/30">·</span>
+                  <span className="text-emerald-400 font-semibold">ECONOMIZE US$ 965</span>
                 </div>
               </div>
 
               {/* Benefits */}
-              <div className="grid sm:grid-cols-2 gap-4 max-w-3xl mx-auto mb-12 text-left animate-fade-in">
+              <div className="grid sm:grid-cols-2 gap-5 max-w-4xl mx-auto mb-14 text-left animate-fade-in">
                 {[
                   "Bangalô sobre a água com vista para o oceano",
                   "Traslado de hidroavião incluído (ida e volta)",
@@ -410,83 +521,70 @@ const BlackFridayMaldives: React.FC = () => {
                   "Cancelamento gratuito até 7 dias",
                   "Garantia do melhor preço",
                 ].map((benefit, index) => (
-                  <div
-                    key={index}
-                    className="flex items-start gap-3 bg-white/5 backdrop-blur-md border border-white/10 p-5 rounded-2xl hover:bg-white/10 transition-all duration-300"
-                  >
-                    <Check className="w-6 h-6 text-emerald-300 flex-shrink-0 mt-0.5" />
-                    <span className="text-white/95 font-medium text-base leading-relaxed">{benefit}</span>
+                  <div key={index} className="benefit-card flex items-start gap-4">
+                    <Check className="w-6 h-6 text-emerald-400 flex-shrink-0 mt-0.5" />
+                    <span className="text-white/95 font-medium text-lg leading-relaxed">{benefit}</span>
                   </div>
                 ))}
               </div>
 
               {/* Primary CTA */}
-              <Button
-                size="lg"
+              <button
                 onClick={() => scrollToSection("pricing")}
-                className="bg-gradient-to-r from-amber-400 to-amber-500 hover:from-amber-300 hover:to-amber-400 text-black font-bold text-lg px-14 py-7 h-auto rounded-2xl shadow-2xl transition-all duration-300 hover:scale-105 hover:shadow-amber-500/50 mb-10"
+                className="premium-button text-black font-bold text-xl px-16 py-6 rounded-full mb-12"
               >
                 Ver datas disponíveis — últimas 12 vagas
-              </Button>
+              </button>
 
               {/* Trust Badges Row */}
-              <div className="flex flex-wrap items-center justify-center gap-8 mb-8 text-white/90 text-sm font-medium">
-                <div className="flex items-center gap-2 bg-white/5 px-4 py-2 rounded-full backdrop-blur-sm">
-                  <Shield className="w-5 h-5 text-emerald-300" />
+              <div className="flex flex-wrap items-center justify-center gap-6 mb-10 text-white/90 text-sm font-medium">
+                <div className="trust-badge flex items-center gap-2">
+                  <Shield className="w-5 h-5 text-emerald-400" />
                   <span>Reserva segura SSL</span>
                 </div>
-                <div className="flex items-center gap-2 bg-white/5 px-4 py-2 rounded-full backdrop-blur-sm">
-                  <Star className="w-5 h-5 text-amber-300 fill-amber-300" />
+                <div className="trust-badge flex items-center gap-2">
+                  <Star className="w-5 h-5 text-amber-400 fill-amber-400" />
                   <span>5/5 (127 avaliações)</span>
                 </div>
-                <div className="flex items-center gap-2 bg-white/5 px-4 py-2 rounded-full backdrop-blur-sm">
-                  <Check className="w-5 h-5 text-emerald-300" />
+                <div className="trust-badge flex items-center gap-2">
+                  <Check className="w-5 h-5 text-emerald-400" />
                   <span>Certificado TripAdvisor 2024</span>
                 </div>
               </div>
 
               {/* Payment Logos */}
-              <div className="flex flex-wrap items-center justify-center gap-4 mb-10 text-white/90 text-xs font-bold">
-                <span className="bg-white/10 backdrop-blur-sm px-5 py-2.5 rounded-lg border border-white/10">VISA</span>
-                <span className="bg-white/10 backdrop-blur-sm px-5 py-2.5 rounded-lg border border-white/10">
-                  Mastercard
-                </span>
-                <span className="bg-white/10 backdrop-blur-sm px-5 py-2.5 rounded-lg border border-white/10">PIX</span>
-                <span className="bg-white/10 backdrop-blur-sm px-5 py-2.5 rounded-lg border border-white/10">
-                  Stripe Secure
-                </span>
+              <div className="flex flex-wrap items-center justify-center gap-4 mb-12 text-white/90 text-sm font-bold">
+                {['VISA', 'Mastercard', 'PIX', 'Stripe Secure'].map(method => (
+                  <span key={method} className="trust-badge">{method}</span>
+                ))}
               </div>
 
               {/* Social Proof */}
-              <p className="text-white/95 text-lg font-medium mb-12">
+              <p className="text-white/95 text-xl font-medium mb-16">
                 Mais de 500 casais já viveram sua lua de mel conosco
               </p>
 
               {/* Scroll Indicator */}
               <div className="motion-safe:animate-bounce">
                 <ChevronDown className="w-10 h-10 text-white/60 mx-auto" />
-                <p className="text-white/60 text-sm mt-3 font-medium">Veja o que está incluído</p>
               </div>
             </div>
           </div>
         </section>
 
         {/* Breadcrumbs */}
-        <div className="container mx-auto px-4 py-8">
+        <div className="container mx-auto px-4 py-8" style={{ background: 'linear-gradient(to bottom, rgba(0,0,0,0.02), transparent)' }}>
           <Breadcrumbs items={breadcrumbItems} />
         </div>
 
         {/* Image Carousel Section */}
-        <section className="py-24 sm:py-32 bg-gradient-to-b from-background via-muted/10 to-background relative overflow-hidden">
+        <section className="py-32 bg-background relative overflow-hidden">
           <div className="container mx-auto relative z-10 px-4">
-            <div className="text-center max-w-3xl mx-auto mb-16 animate-fade-in">
-              <h2
-                className="text-4xl sm:text-5xl md:text-6xl font-medium text-foreground mb-6 tracking-tight leading-tight"
-                style={{ fontFamily: DISPLAY_STACK, letterSpacing: "-0.02em" }}
-              >
+            <div className="text-center max-w-3xl mx-auto mb-20 animate-fade-in">
+              <h2 className="premium-heading text-5xl md:text-6xl font-semibold text-foreground mb-8">
                 Momentos inesquecíveis nas Maldivas
               </h2>
-              <p className="text-lg sm:text-xl text-foreground/60 leading-relaxed font-normal max-w-2xl mx-auto">
+              <p className="text-xl text-foreground/60 leading-relaxed max-w-2xl mx-auto" style={{ lineHeight: '1.7' }}>
                 Das villas exclusivas sobre o mar cristalino aos tratamentos de spa rejuvenescedores, cada momento nas
                 Maldivas é desenhado para criar memórias eternas de luxo e tranquilidade absoluta.
               </p>
@@ -497,328 +595,19 @@ const BlackFridayMaldives: React.FC = () => {
         </section>
 
         {/* Benefits Section */}
-        <section className="py-24 bg-background">
+        <section className="py-32 bg-background">
           <div className="container mx-auto px-4">
-            <div className="flex items-center justify-center gap-3 mb-6">
-              <Sparkles className="w-6 h-6 text-amber-500" />
-              <h2
-                className="text-3xl md:text-5xl font-bold text-center"
-                style={{ fontFamily: DISPLAY_STACK, letterSpacing: "-0.02em" }}
-              >
+            <div className="text-center mb-20">
+              <h2 className="premium-heading text-4xl md:text-5xl font-semibold mb-6">
                 Por que este é o pacote perfeito para sua lua de mel
               </h2>
-              <Sparkles className="w-6 h-6 text-amber-500" />
-            </div>
-            <p className="text-center text-muted-foreground text-lg mb-16 max-w-2xl mx-auto">
-              Experiências inesquecíveis em um dos destinos mais românticos do mundo
-            </p>
-
-            <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-              <Card className="p-10 text-center border-2 hover:border-amber-200 transition-all duration-500 hover:shadow-2xl hover:-translate-y-1 bg-gradient-to-b from-background to-muted/20">
-                <div className="text-6xl mb-6">🌊</div>
-                <h3 className="text-2xl font-bold mb-4" style={{ fontFamily: DISPLAY_STACK }}>
-                  Bangalô overwater privativo
-                </h3>
-                <p className="text-muted-foreground text-base leading-relaxed">
-                  Acorde com vista maravilhosa do oceano azul-turquesa direto da sua cama
-                </p>
-              </Card>
-
-              <Card className="p-10 text-center border-2 hover:border-amber-200 transition-all duration-500 hover:shadow-2xl hover:-translate-y-1 bg-gradient-to-b from-background to-muted/20">
-                <div className="text-6xl mb-6">✈️</div>
-                <h3 className="text-2xl font-bold mb-4" style={{ fontFamily: DISPLAY_STACK }}>
-                  Transfer premium incluído
-                </h3>
-                <p className="text-muted-foreground text-base leading-relaxed">
-                  Nós pagamos seu traslado de hidroavião — voe sobre ilhas paradisíacas
-                </p>
-              </Card>
-
-              <Card className="p-10 text-center border-2 hover:border-amber-200 transition-all duration-500 hover:shadow-2xl hover:-translate-y-1 bg-gradient-to-b from-background to-muted/20">
-                <div className="text-6xl mb-6">🍇</div>
-                <h3 className="text-2xl font-bold mb-4" style={{ fontFamily: DISPLAY_STACK }}>
-                  Café da manhã de frente para o mar
-                </h3>
-                <p className="text-muted-foreground text-base leading-relaxed">
-                  Comece cada dia com café internacional enquanto observa o oceano
-                </p>
-              </Card>
-            </div>
-          </div>
-        </section>
-
-        {/* Social Proof Section */}
-        <section className="py-24 bg-gradient-to-b from-background to-muted/30">
-          <div className="container mx-auto px-4">
-            <h2
-              className="text-3xl md:text-5xl font-bold text-center mb-16"
-              style={{ fontFamily: DISPLAY_STACK, letterSpacing: "-0.02em" }}
-            >
-              💬 O que nossos clientes estão dizendo
-            </h2>
-
-            <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto mb-16">
-              <Card className="p-10 border-2 hover:border-amber-200 transition-all duration-300 hover:shadow-xl bg-gradient-to-br from-background to-muted/10">
-                <div className="flex gap-1 mb-5">
-                  {[1, 2, 3, 4, 5].map((star) => (
-                    <Star key={star} className="w-6 h-6 text-amber-400 fill-amber-400" />
-                  ))}
-                  <span className="ml-3 font-bold text-lg">5/5</span>
-                </div>
-                <p className="text-lg mb-5 leading-relaxed text-foreground/90 italic">
-                  "A vista do bangalô era exatamente como nas fotos. Acordar sobre a água foi inesquecível!"
-                </p>
-                <p className="text-sm text-muted-foreground font-medium">
-                  — Marina & Carlos, São Paulo | Lua de mel, março 2024
-                </p>
-              </Card>
-
-              <Card className="p-10 border-2 hover:border-amber-200 transition-all duration-300 hover:shadow-xl bg-gradient-to-br from-background to-muted/10">
-                <div className="flex gap-1 mb-5">
-                  {[1, 2, 3, 4, 5].map((star) => (
-                    <Star key={star} className="w-6 h-6 text-amber-400 fill-amber-400" />
-                  ))}
-                  <span className="ml-3 font-bold text-lg">5/5</span>
-                </div>
-                <p className="text-lg mb-5 leading-relaxed text-foreground/90 italic">
-                  "Resort simplesmente incrível. Experiência dos sonhos, vamos guardar pra sempre. Obrigada Follow Me
-                  Viagens pela organização impecável ❤️"
-                </p>
-                <p className="text-sm text-muted-foreground font-medium">
-                  — Juliana & Roberto, Rio de Janeiro | Aniversário, janeiro 2024
-                </p>
-              </Card>
+              <p className="text-xl text-muted-foreground max-w-2xl mx-auto" style={{ lineHeight: '1.7' }}>
+                Experiências inesquecíveis em um dos destinos mais românticos do mundo
+              </p>
             </div>
 
-            <div className="text-center">
-              <Button
-                size="lg"
-                onClick={() => scrollToSection("pricing")}
-                className="bg-gradient-to-r from-amber-400 to-amber-500 hover:from-amber-300 hover:to-amber-400 text-black font-bold text-lg px-12 py-7 h-auto rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105"
-              >
-                Garantir minha vaga com 25% OFF
-              </Button>
-            </div>
-          </div>
-        </section>
-
-        {/* Package Inclusions Section */}
-        <section className="py-24 bg-gradient-to-b from-muted/30 to-background">
-          <div className="container mx-auto px-4">
-            <h2
-              className="text-3xl md:text-5xl font-bold text-center mb-16"
-              style={{ fontFamily: DISPLAY_STACK, letterSpacing: "-0.02em" }}
-            >
-              ✨ O que está incluído no seu pacote
-            </h2>
-
-            <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+            <div className="grid md:grid-cols-3 gap-10 max-w-6xl mx-auto">
               {[
-                { icon: "✈️", text: "Nós pagamos transfer de hidroavião (ida e volta)" },
-                { icon: "🍉", text: "Café da manhã internacional diário" },
-                { icon: "✨", text: "4 noites em bangalô overwater privativo" },
-                { icon: "🥂", text: "Mini bar de cortesia (bebidas não alcoólicas)" },
-                { icon: "🌊", text: "Equipamento de snorkel gratuito" },
-                { icon: "❤️", text: "Welcome drink e caixa de chocolates" },
-                { icon: "💳", text: "Pagamento em até 10x sem juros" },
-              ].map((item, index) => (
-                <div
-                  key={index}
-                  className="flex items-start gap-5 bg-background p-7 rounded-2xl shadow-md border-2 border-transparent hover:border-amber-200 transition-all duration-300 hover:shadow-xl"
-                >
-                  <span className="text-4xl flex-shrink-0">{item.icon}</span>
-                  <span className="text-lg font-semibold text-foreground/90 leading-relaxed">{item.text}</span>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Pricing Section */}
-        <section id="pricing" className="py-24 bg-background scroll-mt-20">
-          <div className="container mx-auto px-4">
-            <h2
-              className="text-3xl md:text-5xl font-bold text-center mb-4"
-              style={{ fontFamily: DISPLAY_STACK, letterSpacing: "-0.02em" }}
-            >
-              📅 Escolha suas datas — últimas vagas
-            </h2>
-            <p className="text-center text-muted-foreground text-lg mb-16">Garanta sua vaga antes que esgote</p>
-
-            <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto mb-16">
-              {pricingOptions.map((option, index) => (
-                <Card
-                  key={index}
-                  className="p-10 border-2 hover:border-amber-300 transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 bg-gradient-to-br from-background to-muted/20"
-                >
-                  <div className="mb-5">
-                    <div className="text-xs font-bold text-muted-foreground mb-3 tracking-widest">PERÍODO</div>
-                    <div className="text-lg font-bold leading-snug">{option.period}</div>
-                  </div>
-
-                  <div className="mb-5">
-                    <div className="text-4xl font-bold text-amber-600 mb-1">US$ {option.price}</div>
-                    <span className="text-sm text-muted-foreground font-medium">por pessoa</span>
-                  </div>
-
-                  <div className="mb-7">
-                    <span
-                      className={`inline-flex items-center rounded-full px-4 py-2 text-sm font-bold ${
-                        option.availability === "limited"
-                          ? "bg-red-100 text-red-700 dark:bg-red-950 dark:text-red-300"
-                          : "bg-emerald-100 text-emerald-700 dark:bg-emerald-950 dark:text-emerald-300"
-                      }`}
-                    >
-                      {option.status}
-                    </span>
-                  </div>
-
-                  <Button
-                    onClick={handleWhatsAppClick}
-                    aria-label="Reservar pelo WhatsApp"
-                    className="w-full bg-gradient-to-r from-amber-400 to-amber-500 hover:from-amber-300 hover:to-amber-400 text-black font-bold text-lg py-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300"
-                  >
-                    Reservar agora
-                  </Button>
-                </Card>
-              ))}
-            </div>
-
-            {/* Trust Elements Below Pricing */}
-            <div className="flex flex-wrap items-center justify-center gap-8 text-sm font-medium text-muted-foreground mb-12">
-              <div className="flex items-center gap-2 bg-muted/50 px-4 py-3 rounded-full">
-                <Shield className="w-5 h-5" />
-                <span>Reserva segura SSL</span>
-              </div>
-              <div className="flex items-center gap-2 bg-muted/50 px-4 py-3 rounded-full">
-                <CreditCard className="w-5 h-5" />
-                <span>Parcelamento disponível</span>
-              </div>
-              <div className="flex items-center gap-2 bg-muted/50 px-4 py-3 rounded-full">
-                <Check className="w-5 h-5" />
-                <span>Cancelamento flexível</span>
-              </div>
-              <div className="flex items-center gap-2 bg-muted/50 px-4 py-3 rounded-full">
-                <MessageCircle className="w-5 h-5" />
-                <span>Suporte 24/7</span>
-              </div>
-            </div>
-
-            {/* Payment Terms */}
-            <div className="max-w-3xl mx-auto space-y-6">
-              <Card className="p-8 border-2 bg-gradient-to-br from-background to-muted/10">
-                <h3 className="font-bold text-xl mb-5" style={{ fontFamily: DISPLAY_STACK }}>
-                  Formas de pagamento
-                </h3>
-                <div className="space-y-3 text-muted-foreground text-base">
-                  <p className="flex items-start gap-2">
-                    <Check className="w-5 h-5 text-emerald-600 flex-shrink-0 mt-0.5" />
-                    <span>Sinal de 20% — em até 24 horas</span>
-                  </p>
-                  <p className="flex items-start gap-2">
-                    <Check className="w-5 h-5 text-emerald-600 flex-shrink-0 mt-0.5" />
-                    <span>Saldo de 80% — até 30 dias do embarque</span>
-                  </p>
-                </div>
-              </Card>
-
-              <Card className="p-8 border-2 bg-gradient-to-br from-background to-muted/10">
-                <h3 className="font-bold text-xl mb-5" style={{ fontFamily: DISPLAY_STACK }}>
-                  Política de cancelamento
-                </h3>
-                <div className="space-y-3 text-muted-foreground text-base">
-                  <p className="flex items-start gap-2">
-                    <Check className="w-5 h-5 text-emerald-600 flex-shrink-0 mt-0.5" />
-                    <span>Até 30 dias antes da data de início — reembolso de 80% do valor total</span>
-                  </p>
-                  <p className="flex items-start gap-2">
-                    <Check className="w-5 h-5 text-emerald-600 flex-shrink-0 mt-0.5" />
-                    <span>Entre 30 dias e a data de início — reembolso de 0% do valor total</span>
-                  </p>
-                </div>
-              </Card>
-            </div>
-          </div>
-        </section>
-
-        {/* FAQ Section */}
-        <section className="py-24 bg-gradient-to-b from-background to-muted/30">
-          <div className="container mx-auto px-4">
-            <h2
-              className="text-3xl md:text-5xl font-bold text-center mb-16"
-              style={{ fontFamily: DISPLAY_STACK, letterSpacing: "-0.02em" }}
-            >
-              O que você precisa saber antes de reservar
-            </h2>
-
-            <div className="max-w-3xl mx-auto">
-              <Accordion type="single" collapsible className="space-y-4">
-                {faqs.map((faq, index) => (
-                  <AccordionItem
-                    key={index}
-                    value={`item-${index}`}
-                    className="bg-background rounded-2xl px-8 py-2 border-2 hover:border-amber-200 transition-all duration-300 shadow-sm hover:shadow-lg"
-                  >
-                    <AccordionTrigger
-                      className="text-lg font-bold hover:no-underline text-left py-6"
-                      style={{ fontFamily: DISPLAY_STACK }}
-                    >
-                      {faq.question}
-                    </AccordionTrigger>
-                    <AccordionContent className="text-muted-foreground text-base leading-relaxed pb-6">
-                      {faq.answer}
-                    </AccordionContent>
-                  </AccordionItem>
-                ))}
-              </Accordion>
-            </div>
-          </div>
-        </section>
-
-        {/* Final CTA Section */}
-        <section className="py-24 bg-gradient-to-b from-amber-50 via-amber-100/50 to-background dark:from-amber-950/30 dark:via-amber-950/10 dark:to-background">
-          <div className="container mx-auto px-4 text-center">
-            <h2
-              className="text-3xl md:text-5xl font-bold mb-5"
-              style={{ fontFamily: DISPLAY_STACK, letterSpacing: "-0.02em" }}
-            >
-              Últimas vagas! Garanta sua vaga antes que acabe
-            </h2>
-            <p className="text-xl text-muted-foreground mb-10 font-medium">
-              22+ pessoas visualizaram esta oferta nas últimas 24h
-            </p>
-
-            <Button
-              size="lg"
-              onClick={handleWhatsAppClick}
-              className="bg-gradient-to-r from-amber-500 via-amber-400 to-amber-500 hover:from-amber-400 hover:via-amber-300 hover:to-amber-400 text-black font-bold text-xl px-16 py-8 h-auto rounded-2xl shadow-2xl transition-all duration-300 hover:scale-105 hover:shadow-amber-500/50 mb-10"
-              aria-label="Garantir minha vaga agora pelo WhatsApp"
-            >
-              Garantir minha vaga agora
-            </Button>
-
-            {/* Trust Badges */}
-            <div className="flex flex-wrap items-center justify-center gap-8 mt-10 text-sm font-medium text-muted-foreground">
-              <div className="flex items-center gap-2 bg-white/80 dark:bg-background/80 px-5 py-3 rounded-full shadow-md backdrop-blur-sm">
-                <Shield className="w-5 h-5 text-emerald-600" />
-                <span>Pagamento seguro</span>
-              </div>
-              <div className="flex items-center gap-2 bg-white/80 dark:bg-background/80 px-5 py-3 rounded-full shadow-md backdrop-blur-sm">
-                <Star className="w-5 h-5 text-amber-500 fill-amber-500" />
-                <span>Avaliação 5 estrelas</span>
-              </div>
-              <div className="flex items-center gap-2 bg-white/80 dark:bg-background/80 px-5 py-3 rounded-full shadow-md backdrop-blur-sm">
-                <Check className="w-5 h-5 text-emerald-600" />
-                <span>Garantia do melhor preço</span>
-              </div>
-            </div>
-          </div>
-        </section>
-      </main>
-
-      <Footer />
-    </>
-  );
-};
-
-export default BlackFridayMaldives;
+                { icon: "🌊", title: "Bangalô overwater privativo", desc: "Acorde com vista maravilhosa do oceano azul-turquesa direto da sua cama" },
+                { icon: "✈️", title: "Transfer premium incluído", desc: "Nós pagamos seu traslado de hidroavião — voe sobre ilhas paradisíacas" },
+                { icon: "🍇", title: "Café
