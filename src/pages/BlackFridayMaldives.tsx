@@ -342,7 +342,7 @@ const BlackFridayMaldives = () => {
 
             <div className="max-w-5xl mx-auto text-center">
               {/* H1 Headline */}
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-white mb-8 leading-tight animate-fade-in">
+              <h1 className="text-4xl md:text-5xl font-display font-bold text-white mb-8 leading-tight animate-fade-in lg:text-5xl">
                 Lua de Mel nas Maldivas: 4 Noites em Bangalô Overwater com 25% de Desconto
               </h1>
 
