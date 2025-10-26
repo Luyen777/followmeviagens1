@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import type { CSSProperties, MouseEvent as ReactMouseEvent, TouchEvent as ReactTouchEvent } from "react";
-import { MessageCircle, Check, Star, Shield, CreditCard, Clock, ChevronDown, Sparkles } from "lucide-react";
+import { MessageCircle, Check, Star, Shield, CreditCard, Clock, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
@@ -24,9 +24,10 @@ import beachWedding from "@/assets/maldives-experiences/beach-wedding.jpg";
 import romanticDinner from "@/assets/maldives-experiences/romantic-dinner.jpg";
 import luxuryBath from "@/assets/maldives-experiences/luxury-bath.jpg";
 
-// Premium font stacks
-const BODY_STACK = '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif';
-const DISPLAY_STACK = 'ui-serif, Georgia, Cambria, "Times New Roman", Times, serif';
+// Premium look that works from this file alone (Lovable-friendly)
+const BODY_STACK =
+  'system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif';
+const DISPLAY_STACK = 'Georgia, Cambria, "Times New Roman", Times, serif';
 
 const experiences: { image: string; alt: string }[] = [
   { image: overwaterVillas, alt: "Villas sobre a água com design luxuoso" },
@@ -62,7 +63,7 @@ const CarouselSection: React.FC = () => {
   useEffect(() => {
     const track = trackRef.current;
     if (!track) return;
-    const scrollSpeed = 57.2;
+    const scrollSpeed = 50;
     const animate = (timestamp: number) => {
       if (!baseTimeRef.current) baseTimeRef.current = timestamp;
       if (!isPaused && !isDragging) {
@@ -198,7 +199,7 @@ const CarouselSection: React.FC = () => {
   } as CSSProperties;
 
   return (
-    <div className="mb-16 sm:mb-20 animate-fade-in">
+    <div className="mb-12 sm:mb-16 animate-fade-in">
       <div
         ref={containerRef}
         className="relative w-full overflow-hidden cursor-grab select-none"
@@ -212,17 +213,17 @@ const CarouselSection: React.FC = () => {
         onClick={togglePause}
         style={maskStyles}
       >
-        <div ref={trackRef} className="flex gap-6 will-change-transform" style={{ width: "fit-content" }}>
+        <div ref={trackRef} className="flex gap-4 sm:gap-6 will-change-transform" style={{ width: "fit-content" }}>
           {duplicatedExperiences.map((experience, index) => (
-            <div key={index} className="flex-shrink-0 w-[300px] sm:w-[340px] md:w-[400px]">
-              <div className="relative aspect-[4/5] overflow-hidden rounded-3xl shadow-2xl hover:shadow-3xl transition-all duration-700 group">
+            <div key={index} className="flex-shrink-0 w-[280px] sm:w-[320px] md:w-[380px]">
+              <div className="relative aspect-[4/5] overflow-hidden rounded-2xl bg-white shadow-sm hover:shadow-lg border border-slate-200 transition-all duration-500 group">
                 <img
                   src={experience.image}
                   alt={experience.alt}
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 pointer-events-none"
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 pointer-events-none"
                   draggable={false}
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
+                <div className="absolute inset-0 bg-gradient-to-t from-white via-transparent to-transparent opacity-60 group-hover:opacity-50 transition-opacity duration-500" />
               </div>
             </div>
           ))}
@@ -261,8 +262,8 @@ const BlackFridayMaldives: React.FC = () => {
   };
 
   const scrollToSection = (id: string) => {
-    const element = document.getElementById(id);
-    if (element) element.scrollIntoView({ behavior: "smooth", block: "start" });
+    const el = document.getElementById(id);
+    if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
   };
 
   const breadcrumbItems = [
@@ -333,6 +334,12 @@ const BlackFridayMaldives: React.FC = () => {
   const faqSchema = createFAQSchema(faqs);
   const breadcrumbSchema = createBreadcrumbSchema(breadcrumbItems);
 
+  // Light pattern for depth
+  const patternLight: CSSProperties = {
+    backgroundImage: "radial-gradient(circle at 1px 1px, rgba(2,6,23,0.06) 1px, rgba(255,255,255,0) 0)",
+    backgroundSize: "24px 24px",
+  };
+
   return (
     <>
       <SEOHead
@@ -353,321 +360,218 @@ const BlackFridayMaldives: React.FC = () => {
       <Navigation />
       <WhatsAppButton />
 
-      <main className="min-h-screen bg-background" style={{ fontFamily: BODY_STACK }}>
-        {/* HERO */}
-        <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-          {/* Background */}
-          <div className="absolute inset-0 z-0">
-            <img
-              src={heroImage}
-              alt="Vista aérea das Maldivas"
-              className="w-full h-full object-cover scale-105 animate-[subtle-zoom_20s_ease-in-out_infinite]"
-            />
-            <div className="absolute inset-0 bg-gradient-to-b from-black/75 via-black/60 to-black/85" />
+      <main className="min-h-screen bg-white text-slate-800" style={{ fontFamily: BODY_STACK }}>
+        {/* HERO — reverted to dark overlay style */}
+        <section className="relative min-h-[88vh] flex items-center justify-center overflow-hidden">
+          <div className="absolute inset-0 -z-10">
+            <img src={heroImage} alt="Vista aérea das Maldivas" className="w-full h-full object-cover" />
+            <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/70 to-black/80" />
           </div>
 
-          {/* Content */}
-          <div className="relative z-10 container mx-auto px-4 pt-32 pb-20">
-            <div aria-live="polite" className="sr-only">
-              Oferta expira em {timeLeft.days} dias, {timeLeft.hours} horas, {timeLeft.minutes} minutos.
+          <div className="relative z-10 container mx-auto px-4 pt-28 pb-16 text-center max-w-[80ch]">
+            <div className="inline-flex items-center gap-2 rounded-full border border-cyan-300/30 bg-white/10 backdrop-blur-sm px-4 py-1.5 text-cyan-100 text-xs tracking-widest uppercase">
+              <Clock className="w-4 h-4" /> 25% OFF · expira em {timeLeft.days} dias
             </div>
 
-            {/* Countdown Badge */}
-            <div className="flex justify-center mb-10 animate-fade-in">
-              <div className="bg-gradient-to-r from-amber-400 via-amber-300 to-amber-400 text-black px-8 py-4 rounded-full font-bold text-sm md:text-base flex items-center gap-3 shadow-2xl backdrop-blur-sm border border-amber-200/20">
-                <Clock className="w-5 h-5 animate-pulse" />
-                <span className="tracking-wide">Esquenta Black Friday — 25% OFF · expira em {timeLeft.days} dias</span>
+            <h1
+              className="mt-6 text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-[1.08]"
+              style={{ fontFamily: DISPLAY_STACK }}
+            >
+              Lua de mel nas Maldivas: 4 noites em bangalô sobre a água
+            </h1>
+
+            <div className="mt-6">
+              <div className="text-cyan-200 text-3xl md:text-4xl font-bold">A partir de US$ 2.890 por pessoa</div>
+              <div className="text-white/90 text-lg md:text-xl mt-1">
+                <span className="line-through text-white/60">De US$ 3.855</span>
+                <span className="mx-2">•</span>
+                <span className="text-emerald-300 font-semibold">Economize US$ 965 por pessoa</span>
               </div>
             </div>
 
-            <div className="max-w-5xl mx-auto text-center">
-              <h1
-                className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-10 leading-[1.08] tracking-tight"
-                style={{ fontFamily: DISPLAY_STACK, letterSpacing: "-0.02em" }}
-              >
-                Lua de mel nas Maldivas: 4 noites em bangalô sobre a água com 25% de desconto
-              </h1>
-
-              {/* Pricing */}
-              <div className="mb-10 animate-fade-in">
-                <div className="text-amber-300 text-4xl md:text-5xl lg:text-6xl font-bold mb-3 tracking-tight">
-                  A partir de US$ 2.890{" "}
-                  <span className="text-2xl md:text-3xl text-white/90 font-normal">por pessoa</span>
+            <div className="mt-7 grid sm:grid-cols-2 gap-3 max-w-3xl mx-auto text-left">
+              {[
+                "Bangalô sobre a água com vista para o oceano",
+                "Traslado de hidroavião incluído (ida e volta)",
+                "Café da manhã internacional diário",
+                "Cancelamento gratuito até 7 dias",
+                "Garantia do melhor preço",
+              ].map((b, i) => (
+                <div key={i} className="flex items-start gap-3 rounded-lg bg-white/10 backdrop-blur-sm p-3">
+                  <Check className="w-5 h-5 text-emerald-300 mt-0.5" />
+                  <span className="text-white">{b}</span>
                 </div>
-                <div className="text-white/95 text-xl md:text-2xl">
-                  <span className="line-through text-white/50">De US$ 3.855</span>
-                  <span className="mx-3 text-white/40">·</span>
-                  <span className="text-emerald-300 font-semibold">ECONOMIZE US$ 965</span>
-                </div>
-              </div>
+              ))}
+            </div>
 
-              {/* Benefits */}
-              <div className="grid sm:grid-cols-2 gap-4 max-w-3xl mx-auto mb-12 text-left animate-fade-in">
-                {[
-                  "Bangalô sobre a água com vista para o oceano",
-                  "Traslado de hidroavião incluído (ida e volta)",
-                  "Café da manhã internacional diário",
-                  "Cancelamento gratuito até 7 dias",
-                  "Garantia do melhor preço",
-                ].map((benefit, index) => (
-                  <div
-                    key={index}
-                    className="flex items-start gap-3 bg-white/5 backdrop-blur-md border border-white/10 p-5 rounded-2xl hover:bg-white/10 transition-all duration-300"
-                  >
-                    <Check className="w-6 h-6 text-emerald-300 flex-shrink-0 mt-0.5" />
-                    <span className="text-white/95 font-medium text-base leading-relaxed">{benefit}</span>
-                  </div>
-                ))}
-              </div>
-
-              {/* Primary CTA */}
+            <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
               <Button
-                size="lg"
                 onClick={() => scrollToSection("pricing")}
-                className="bg-gradient-to-r from-amber-400 to-amber-500 hover:from-amber-300 hover:to-amber-400 text-black font-bold text-lg px-14 py-7 h-auto rounded-2xl shadow-2xl transition-all duration-300 hover:scale-105 hover:shadow-amber-500/50 mb-10"
+                className="normal-case bg-gradient-to-r from-cyan-400 to-teal-400 hover:from-cyan-300 hover:to-teal-300 text-slate-900 font-semibold text-lg px-8 py-6 h-auto rounded-xl shadow-lg"
               >
-                Ver datas disponíveis — últimas 12 vagas
+                Ver datas disponíveis
               </Button>
+              <Button
+                variant="outline"
+                onClick={handleWhatsAppClick}
+                className="normal-case border-cyan-200/60 text-cyan-100 hover:text-white hover:bg-white/10 px-8 py-6 h-auto rounded-xl"
+              >
+                Falar com especialista
+              </Button>
+            </div>
 
-              {/* Trust Badges Row */}
-              <div className="flex flex-wrap items-center justify-center gap-8 mb-8 text-white/90 text-sm font-medium">
-                <div className="flex items-center gap-2 bg-white/5 px-4 py-2 rounded-full backdrop-blur-sm">
-                  <Shield className="w-5 h-5 text-emerald-300" />
-                  <span>Reserva segura SSL</span>
-                </div>
-                <div className="flex items-center gap-2 bg-white/5 px-4 py-2 rounded-full backdrop-blur-sm">
-                  <Star className="w-5 h-5 text-amber-300 fill-amber-300" />
-                  <span>5/5 (127 avaliações)</span>
-                </div>
-                <div className="flex items-center gap-2 bg-white/5 px-4 py-2 rounded-full backdrop-blur-sm">
-                  <Check className="w-5 h-5 text-emerald-300" />
-                  <span>Certificado TripAdvisor 2024</span>
-                </div>
+            <div className="mt-6 flex flex-wrap items-center justify-center gap-6 text-sm text-white/80">
+              <div className="flex items-center gap-2">
+                <Shield className="w-4 h-4 text-emerald-300" /> Reserva segura SSL
               </div>
-
-              {/* Payment Logos */}
-              <div className="flex flex-wrap items-center justify-center gap-4 mb-10 text-white/90 text-xs font-bold">
-                <span className="bg-white/10 backdrop-blur-sm px-5 py-2.5 rounded-lg border border-white/10">VISA</span>
-                <span className="bg-white/10 backdrop-blur-sm px-5 py-2.5 rounded-lg border border-white/10">
-                  Mastercard
-                </span>
-                <span className="bg-white/10 backdrop-blur-sm px-5 py-2.5 rounded-lg border border-white/10">PIX</span>
-                <span className="bg-white/10 backdrop-blur-sm px-5 py-2.5 rounded-lg border border-white/10">
-                  Stripe Secure
-                </span>
+              <div className="hidden sm:block">•</div>
+              <div className="flex items-center gap-2">
+                <Star className="w-4 h-4 text-cyan-200 fill-cyan-200" /> 5/5 (127 avaliações)
               </div>
-
-              {/* Social Proof */}
-              <p className="text-white/95 text-lg font-medium mb-12">
-                Mais de 500 casais já viveram sua lua de mel conosco
-              </p>
-
-              {/* Scroll Indicator */}
-              <div className="motion-safe:animate-bounce">
-                <ChevronDown className="w-10 h-10 text-white/60 mx-auto" />
-                <p className="text-white/60 text-sm mt-3 font-medium">Veja o que está incluído</p>
+              <div className="hidden sm:block">•</div>
+              <div className="flex items-center gap-2">
+                <Check className="w-4 h-4 text-emerald-300" /> Certificado TripAdvisor 2024
               </div>
+            </div>
+
+            <div className="mt-10 motion-safe:animate-pulse text-white/70">
+              <ChevronDown className="w-7 h-7 mx-auto" />
+              <p className="text-xs mt-2">Role para ver mais</p>
             </div>
           </div>
         </section>
 
         {/* Breadcrumbs */}
-        <div className="container mx-auto px-4 py-8">
+        <div className="container mx-auto px-4 py-6">
           <Breadcrumbs items={breadcrumbItems} />
         </div>
 
-        {/* Image Carousel Section */}
-        <section className="py-24 sm:py-32 bg-gradient-to-b from-background via-muted/10 to-background relative overflow-hidden">
-          <div className="container mx-auto relative z-10 px-4">
-            <div className="text-center max-w-3xl mx-auto mb-16 animate-fade-in">
-              <h2
-                className="text-4xl sm:text-5xl md:text-6xl font-medium text-foreground mb-6 tracking-tight leading-tight"
-                style={{ fontFamily: DISPLAY_STACK, letterSpacing: "-0.02em" }}
-              >
-                Momentos inesquecíveis nas Maldivas
+        {/* Signature Mosaic Gallery */}
+        <section className="py-20" style={patternLight}>
+          <div className="container mx-auto px-4">
+            <div className="text-center max-w-3xl mx-auto mb-10">
+              <h2 className="text-3xl md:text-4xl font-bold text-slate-900" style={{ fontFamily: DISPLAY_STACK }}>
+                Momentos inesquecíveis
               </h2>
-              <p className="text-lg sm:text-xl text-foreground/60 leading-relaxed font-normal max-w-2xl mx-auto">
-                Das villas exclusivas sobre o mar cristalino aos tratamentos de spa rejuvenescedores, cada momento nas
-                Maldivas é desenhado para criar memórias eternas de luxo e tranquilidade absoluta.
+              <p className="text-slate-600 mt-2">
+                Uma curadoria visual: villas sobre o mar, gastronomia autoral, spas serenos e pores do sol dourados.
               </p>
             </div>
 
+            <div className="grid grid-cols-2 md:grid-cols-6 gap-3">
+              <div className="md:col-span-2 row-span-2 aspect-[4/5] overflow-hidden rounded-xl">
+                <img src={overwaterVillas} alt="Overwater" className="w-full h-full object-cover" />
+              </div>
+              <div className="md:col-span-2 aspect-[16/10] overflow-hidden rounded-xl">
+                <img src={diningExperience} alt="Gastronomia" className="w-full h-full object-cover" />
+              </div>
+              <div className="aspect-square overflow-hidden rounded-xl">
+                <img src={snorkeling} alt="Snorkel" className="w-full h-full object-cover" />
+              </div>
+              <div className="aspect-square overflow-hidden rounded-xl">
+                <img src={spaTreatment} alt="Spa" className="w-full h-full object-cover" />
+              </div>
+              <div className="md:col-span-2 aspect-[16/10] overflow-hidden rounded-xl">
+                <img src={villasSunset} alt="Pôr do sol" className="w-full h-full object-cover" />
+              </div>
+              <div className="aspect-square overflow-hidden rounded-xl">
+                <img src={wineCellar} alt="Adega" className="w-full h-full object-cover" />
+              </div>
+              <div className="aspect-square overflow-hidden rounded-xl">
+                <img src={luxuryBathroom} alt="Banheiro luxo" className="w-full h-full object-cover" />
+              </div>
+              <div className="md:col-span-2 aspect-[16/10] overflow-hidden rounded-xl">
+                <img src={beachWedding} alt="Casamento praia" className="w-full h-full object-cover" />
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Why this package */}
+        <section className="py-16">
+          <div className="container mx-auto px-4">
+            <div className="grid lg:grid-cols-2 gap-10 items-center max-w-6xl mx-auto">
+              <div>
+                <h2 className="text-3xl md:text-4xl font-bold text-slate-900" style={{ fontFamily: DISPLAY_STACK }}>
+                  Por que este pacote?
+                </h2>
+                <p className="mt-2 text-slate-600">
+                  Luxo descomplicado: tudo que importa está incluso, com curadoria para casais que buscam privacidade,
+                  conforto e serviço impecável.
+                </p>
+                <ul className="mt-6 space-y-3">
+                  {[
+                    "Bangalô overwater privativo com vista infinita",
+                    "Traslado de hidroavião incluído, ida e volta",
+                    "Café da manhã internacional diário",
+                    "Cancelamento gratuito até 7 dias",
+                    "Garantia do melhor preço",
+                  ].map((t, i) => (
+                    <li key={i} className="flex items-start gap-3">
+                      <span className="inline-flex items-center justify-center w-6 h-6 rounded-full bg-cyan-50 border border-cyan-200">
+                        <Check className="w-4 h-4 text-cyan-700" />
+                      </span>
+                      <span className="text-slate-800">{t}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              <div className="grid grid-cols-2 gap-3">
+                <div className="aspect-[4/5] overflow-hidden rounded-xl">
+                  <img src={romanticDinner} alt="Jantar" className="w-full h-full object-cover" />
+                </div>
+                <div className="aspect-[4/5] overflow-hidden rounded-xl">
+                  <img src={luxuryBath} alt="Banheira" className="w-full h-full object-cover" />
+                </div>
+                <div className="col-span-2 aspect-[16/10] overflow-hidden rounded-xl">
+                  <img src={chefCooking} alt="Chef" className="w-full h-full object-cover" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Carousel strip */}
+        <section className="py-16" style={patternLight}>
+          <div className="container mx-auto px-4">
             <CarouselSection />
           </div>
         </section>
 
-        {/* Benefits Section */}
-        <section className="py-24 bg-background">
+        {/* Pricing */}
+        <section id="pricing" className="py-20">
           <div className="container mx-auto px-4">
-            <div className="flex items-center justify-center gap-3 mb-6">
-              <Sparkles className="w-6 h-6 text-amber-500" />
-              <h2
-                className="text-3xl md:text-5xl font-bold text-center"
-                style={{ fontFamily: DISPLAY_STACK, letterSpacing: "-0.02em" }}
-              >
-                Por que este é o pacote perfeito para sua lua de mel
+            <div className="text-center max-w-3xl mx-auto mb-10">
+              <h2 className="text-3xl md:text-4xl font-bold text-slate-900" style={{ fontFamily: DISPLAY_STACK }}>
+                Escolha suas datas
               </h2>
-              <Sparkles className="w-6 h-6 text-amber-500" />
-            </div>
-            <p className="text-center text-muted-foreground text-lg mb-16 max-w-2xl mx-auto">
-              Experiências inesquecíveis em um dos destinos mais românticos do mundo
-            </p>
-
-            <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-              <Card className="p-10 text-center border-2 hover:border-amber-200 transition-all duration-500 hover:shadow-2xl hover:-translate-y-1 bg-gradient-to-b from-background to-muted/20">
-                <div className="text-6xl mb-6">🌊</div>
-                <h3 className="text-2xl font-bold mb-4" style={{ fontFamily: DISPLAY_STACK }}>
-                  Bangalô overwater privativo
-                </h3>
-                <p className="text-muted-foreground text-base leading-relaxed">
-                  Acorde com vista maravilhosa do oceano azul-turquesa direto da sua cama
-                </p>
-              </Card>
-
-              <Card className="p-10 text-center border-2 hover:border-amber-200 transition-all duration-500 hover:shadow-2xl hover:-translate-y-1 bg-gradient-to-b from-background to-muted/20">
-                <div className="text-6xl mb-6">✈️</div>
-                <h3 className="text-2xl font-bold mb-4" style={{ fontFamily: DISPLAY_STACK }}>
-                  Transfer premium incluído
-                </h3>
-                <p className="text-muted-foreground text-base leading-relaxed">
-                  Nós pagamos seu traslado de hidroavião — voe sobre ilhas paradisíacas
-                </p>
-              </Card>
-
-              <Card className="p-10 text-center border-2 hover:border-amber-200 transition-all duration-500 hover:shadow-2xl hover:-translate-y-1 bg-gradient-to-b from-background to-muted/20">
-                <div className="text-6xl mb-6">🍇</div>
-                <h3 className="text-2xl font-bold mb-4" style={{ fontFamily: DISPLAY_STACK }}>
-                  Café da manhã de frente para o mar
-                </h3>
-                <p className="text-muted-foreground text-base leading-relaxed">
-                  Comece cada dia com café internacional enquanto observa o oceano
-                </p>
-              </Card>
-            </div>
-          </div>
-        </section>
-
-        {/* Social Proof Section */}
-        <section className="py-24 bg-gradient-to-b from-background to-muted/30">
-          <div className="container mx-auto px-4">
-            <h2
-              className="text-3xl md:text-5xl font-bold text-center mb-16"
-              style={{ fontFamily: DISPLAY_STACK, letterSpacing: "-0.02em" }}
-            >
-              💬 O que nossos clientes estão dizendo
-            </h2>
-
-            <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto mb-16">
-              <Card className="p-10 border-2 hover:border-amber-200 transition-all duration-300 hover:shadow-xl bg-gradient-to-br from-background to-muted/10">
-                <div className="flex gap-1 mb-5">
-                  {[1, 2, 3, 4, 5].map((star) => (
-                    <Star key={star} className="w-6 h-6 text-amber-400 fill-amber-400" />
-                  ))}
-                  <span className="ml-3 font-bold text-lg">5/5</span>
-                </div>
-                <p className="text-lg mb-5 leading-relaxed text-foreground/90 italic">
-                  "A vista do bangalô era exatamente como nas fotos. Acordar sobre a água foi inesquecível!"
-                </p>
-                <p className="text-sm text-muted-foreground font-medium">
-                  — Marina & Carlos, São Paulo | Lua de mel, março 2024
-                </p>
-              </Card>
-
-              <Card className="p-10 border-2 hover:border-amber-200 transition-all duration-300 hover:shadow-xl bg-gradient-to-br from-background to-muted/10">
-                <div className="flex gap-1 mb-5">
-                  {[1, 2, 3, 4, 5].map((star) => (
-                    <Star key={star} className="w-6 h-6 text-amber-400 fill-amber-400" />
-                  ))}
-                  <span className="ml-3 font-bold text-lg">5/5</span>
-                </div>
-                <p className="text-lg mb-5 leading-relaxed text-foreground/90 italic">
-                  "Resort simplesmente incrível. Experiência dos sonhos, vamos guardar pra sempre. Obrigada Follow Me
-                  Viagens pela organização impecável ❤️"
-                </p>
-                <p className="text-sm text-muted-foreground font-medium">
-                  — Juliana & Roberto, Rio de Janeiro | Aniversário, janeiro 2024
-                </p>
-              </Card>
+              <p className="text-slate-600">Garanta sua vaga antes que esgote</p>
             </div>
 
-            <div className="text-center">
-              <Button
-                size="lg"
-                onClick={() => scrollToSection("pricing")}
-                className="bg-gradient-to-r from-amber-400 to-amber-500 hover:from-amber-300 hover:to-amber-400 text-black font-bold text-lg px-12 py-7 h-auto rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105"
-              >
-                Garantir minha vaga com 25% OFF
-              </Button>
-            </div>
-          </div>
-        </section>
-
-        {/* Package Inclusions Section */}
-        <section className="py-24 bg-gradient-to-b from-muted/30 to-background">
-          <div className="container mx-auto px-4">
-            <h2
-              className="text-3xl md:text-5xl font-bold text-center mb-16"
-              style={{ fontFamily: DISPLAY_STACK, letterSpacing: "-0.02em" }}
-            >
-              ✨ O que está incluído no seu pacote
-            </h2>
-
-            <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
-              {[
-                { icon: "✈️", text: "Nós pagamos transfer de hidroavião (ida e volta)" },
-                { icon: "🍉", text: "Café da manhã internacional diário" },
-                { icon: "✨", text: "4 noites em bangalô overwater privativo" },
-                { icon: "🥂", text: "Mini bar de cortesia (bebidas não alcoólicas)" },
-                { icon: "🌊", text: "Equipamento de snorkel gratuito" },
-                { icon: "❤️", text: "Welcome drink e caixa de chocolates" },
-                { icon: "💳", text: "Pagamento em até 10x sem juros" },
-              ].map((item, index) => (
-                <div
-                  key={index}
-                  className="flex items-start gap-5 bg-background p-7 rounded-2xl shadow-md border-2 border-transparent hover:border-amber-200 transition-all duration-300 hover:shadow-xl"
-                >
-                  <span className="text-4xl flex-shrink-0">{item.icon}</span>
-                  <span className="text-lg font-semibold text-foreground/90 leading-relaxed">{item.text}</span>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Pricing Section */}
-        <section id="pricing" className="py-24 bg-background scroll-mt-20">
-          <div className="container mx-auto px-4">
-            <h2
-              className="text-3xl md:text-5xl font-bold text-center mb-4"
-              style={{ fontFamily: DISPLAY_STACK, letterSpacing: "-0.02em" }}
-            >
-              📅 Escolha suas datas — últimas vagas
-            </h2>
-            <p className="text-center text-muted-foreground text-lg mb-16">Garanta sua vaga antes que esgote</p>
-
-            <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto mb-16">
-              {pricingOptions.map((option, index) => (
+            <div className="grid md:grid-cols-2 gap-6 max-w-5xl mx-auto mb-10">
+              {pricingOptions.map((option, idx) => (
                 <Card
-                  key={index}
-                  className="p-10 border-2 hover:border-amber-300 transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 bg-gradient-to-br from-background to-muted/20"
+                  key={idx}
+                  className="relative p-8 bg-white border border-slate-200 shadow-sm hover:shadow-xl transition-shadow"
                 >
-                  <div className="mb-5">
-                    <div className="text-xs font-bold text-muted-foreground mb-3 tracking-widest">PERÍODO</div>
-                    <div className="text-lg font-bold leading-snug">{option.period}</div>
+                  <div className="absolute inset-x-0 top-0 h-[3px] bg-gradient-to-r from-cyan-400 via-teal-400 to-emerald-400 rounded-t-xl" />
+
+                  <div className="mt-2 mb-4">
+                    <div className="text-xs tracking-widest text-slate-500 mb-2 uppercase">Período</div>
+                    <div className="text-lg font-semibold text-slate-900" style={{ fontFamily: DISPLAY_STACK }}>
+                      {option.period}
+                    </div>
                   </div>
 
-                  <div className="mb-5">
-                    <div className="text-4xl font-bold text-amber-600 mb-1">US$ {option.price}</div>
-                    <span className="text-sm text-muted-foreground font-medium">por pessoa</span>
+                  <div className="mb-4">
+                    <div className="text-3xl font-bold text-slate-900">
+                      US$ {option.price} <span className="text-sm text-slate-500 font-medium">por pessoa</span>
+                    </div>
                   </div>
 
-                  <div className="mb-7">
+                  <div className="mb-6">
                     <span
-                      className={`inline-flex items-center rounded-full px-4 py-2 text-sm font-bold ${
-                        option.availability === "limited"
-                          ? "bg-red-100 text-red-700 dark:bg-red-950 dark:text-red-300"
-                          : "bg-emerald-100 text-emerald-700 dark:bg-emerald-950 dark:text-emerald-300"
-                      }`}
+                      className={`inline-flex items-center rounded-full px-3 py-1 text-sm font-medium border ${option.availability === "limited" ? "bg-rose-50 text-rose-700 border-rose-200" : "bg-emerald-50 text-emerald-700 border-emerald-200"}`}
                     >
                       {option.status}
                     </span>
@@ -676,98 +580,75 @@ const BlackFridayMaldives: React.FC = () => {
                   <Button
                     onClick={handleWhatsAppClick}
                     aria-label="Reservar pelo WhatsApp"
-                    className="w-full bg-gradient-to-r from-amber-400 to-amber-500 hover:from-amber-300 hover:to-amber-400 text-black font-bold text-lg py-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300"
+                    className="normal-case w-full bg-gradient-to-r from-cyan-500 to-teal-500 hover:from-cyan-400 hover:to-teal-400 text-white font-semibold rounded-xl"
                   >
-                    Reservar agora
+                    Reservar
                   </Button>
                 </Card>
               ))}
             </div>
 
-            {/* Trust Elements Below Pricing */}
-            <div className="flex flex-wrap items-center justify-center gap-8 text-sm font-medium text-muted-foreground mb-12">
-              <div className="flex items-center gap-2 bg-muted/50 px-4 py-3 rounded-full">
-                <Shield className="w-5 h-5" />
-                <span>Reserva segura SSL</span>
+            {/* Trust strip */}
+            <div className="flex flex-wrap items-center justify-center gap-6 text-sm text-slate-600 mb-8">
+              <div className="flex items-center gap-2">
+                <Shield className="w-4 h-4" /> Reserva segura SSL
               </div>
-              <div className="flex items-center gap-2 bg-muted/50 px-4 py-3 rounded-full">
-                <CreditCard className="w-5 h-5" />
-                <span>Parcelamento disponível</span>
+              <div className="flex items-center gap-2">
+                <CreditCard className="w-4 h-4" /> Parcelamento disponível
               </div>
-              <div className="flex items-center gap-2 bg-muted/50 px-4 py-3 rounded-full">
-                <Check className="w-5 h-5" />
-                <span>Cancelamento flexível</span>
+              <div className="flex items-center gap-2">
+                <Check className="w-4 h-4" /> Cancelamento flexível
               </div>
-              <div className="flex items-center gap-2 bg-muted/50 px-4 py-3 rounded-full">
-                <MessageCircle className="w-5 h-5" />
-                <span>Suporte 24/7</span>
+              <div className="flex items-center gap-2">
+                <MessageCircle className="w-4 h-4" /> Suporte 24/7
               </div>
             </div>
 
-            {/* Payment Terms */}
-            <div className="max-w-3xl mx-auto space-y-6">
-              <Card className="p-8 border-2 bg-gradient-to-br from-background to-muted/10">
-                <h3 className="font-bold text-xl mb-5" style={{ fontFamily: DISPLAY_STACK }}>
+            {/* Terms */}
+            <div className="max-w-3xl mx-auto grid md:grid-cols-2 gap-6">
+              <Card className="p-6 bg-white border border-slate-200">
+                <h3 className="font-semibold mb-2 text-slate-900" style={{ fontFamily: DISPLAY_STACK }}>
                   Formas de pagamento
                 </h3>
-                <div className="space-y-3 text-muted-foreground text-base">
-                  <p className="flex items-start gap-2">
-                    <Check className="w-5 h-5 text-emerald-600 flex-shrink-0 mt-0.5" />
-                    <span>Sinal de 20% — em até 24 horas</span>
-                  </p>
-                  <p className="flex items-start gap-2">
-                    <Check className="w-5 h-5 text-emerald-600 flex-shrink-0 mt-0.5" />
-                    <span>Saldo de 80% — até 30 dias do embarque</span>
-                  </p>
+                <div className="space-y-1 text-slate-600">
+                  <p>✓ Sinal de 20% — em até 24 horas</p>
+                  <p>✓ Saldo de 80% — até 30 dias do embarque</p>
                 </div>
               </Card>
-
-              <Card className="p-8 border-2 bg-gradient-to-br from-background to-muted/10">
-                <h3 className="font-bold text-xl mb-5" style={{ fontFamily: DISPLAY_STACK }}>
+              <Card className="p-6 bg-white border border-slate-200">
+                <h3 className="font-semibold mb-2 text-slate-900" style={{ fontFamily: DISPLAY_STACK }}>
                   Política de cancelamento
                 </h3>
-                <div className="space-y-3 text-muted-foreground text-base">
-                  <p className="flex items-start gap-2">
-                    <Check className="w-5 h-5 text-emerald-600 flex-shrink-0 mt-0.5" />
-                    <span>Até 30 dias antes da data de início — reembolso de 80% do valor total</span>
-                  </p>
-                  <p className="flex items-start gap-2">
-                    <Check className="w-5 h-5 text-emerald-600 flex-shrink-0 mt-0.5" />
-                    <span>Entre 30 dias e a data de início — reembolso de 0% do valor total</span>
-                  </p>
+                <div className="space-y-1 text-slate-600">
+                  <p>✓ Até 30 dias antes da data de início — reembolso de 80% do valor total</p>
+                  <p>✓ Entre 30 dias e a data de início — reembolso de 0% do valor total</p>
                 </div>
               </Card>
             </div>
           </div>
         </section>
 
-        {/* FAQ Section */}
-        <section className="py-24 bg-gradient-to-b from-background to-muted/30">
+        {/* FAQ */}
+        <section className="py-16" style={patternLight}>
           <div className="container mx-auto px-4">
             <h2
-              className="text-3xl md:text-5xl font-bold text-center mb-16"
-              style={{ fontFamily: DISPLAY_STACK, letterSpacing: "-0.02em" }}
+              className="text-3xl md:text-4xl font-bold text-center mb-10 text-slate-900"
+              style={{ fontFamily: DISPLAY_STACK }}
             >
-              O que você precisa saber antes de reservar
+              Antes de reservar
             </h2>
-
             <div className="max-w-3xl mx-auto">
               <Accordion type="single" collapsible className="space-y-4">
                 {faqs.map((faq, index) => (
                   <AccordionItem
                     key={index}
                     value={`item-${index}`}
-                    className="bg-background rounded-2xl px-8 py-2 border-2 hover:border-amber-200 transition-all duration-300 shadow-sm hover:shadow-lg"
+                    className="bg-white border border-slate-200 rounded-lg px-6 py-2"
                   >
-                    <AccordionTrigger
-                      className="text-lg font-bold hover:no-underline text-left py-6"
-                      style={{ fontFamily: DISPLAY_STACK }}
-                    >
+                    <AccordionTrigger className="text-lg font-medium hover:no-underline">
                       {faq.question}
                     </AccordionTrigger>
-                    <AccordionContent className="text-muted-foreground text-base leading-relaxed pb-6">
-                      {faq.answer}
-                    </AccordionContent>
+                    <AccordionContent className="text-slate-700">{faq.answer}</AccordionContent>
                   </AccordionItem>
                 ))}
               </Accordion>
@@ -775,42 +656,36 @@ const BlackFridayMaldives: React.FC = () => {
           </div>
         </section>
 
-        {/* Final CTA Section */}
-        <section className="py-24 bg-gradient-to-b from-amber-50 via-amber-100/50 to-background dark:from-amber-950/30 dark:via-amber-950/10 dark:to-background">
+        {/* Final CTA (ocean tint over image) */}
+        <section className="relative overflow-hidden py-24">
+          <div className="absolute inset-0 -z-10">
+            <img src={villasSunset} alt="Pôr do sol nas Maldivas" className="w-full h-full object-cover" />
+            <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/50 to-black/70" />
+            <div
+              className="absolute inset-0"
+              style={{ background: "radial-gradient(1000px 400px at 50% 0, rgba(34,211,238,0.18), transparent 60%)" }}
+            />
+          </div>
           <div className="container mx-auto px-4 text-center">
-            <h2
-              className="text-3xl md:text-5xl font-bold mb-5"
-              style={{ fontFamily: DISPLAY_STACK, letterSpacing: "-0.02em" }}
-            >
-              Últimas vagas! Garanta sua vaga antes que acabe
+            <h2 className="text-3xl md:text-4xl font-bold text-white" style={{ fontFamily: DISPLAY_STACK }}>
+              Pronto para a viagem dos sonhos?
             </h2>
-            <p className="text-xl text-muted-foreground mb-10 font-medium">
-              22+ pessoas visualizaram esta oferta nas últimas 24h
-            </p>
-
-            <Button
-              size="lg"
-              onClick={handleWhatsAppClick}
-              className="bg-gradient-to-r from-amber-500 via-amber-400 to-amber-500 hover:from-amber-400 hover:via-amber-300 hover:to-amber-400 text-black font-bold text-xl px-16 py-8 h-auto rounded-2xl shadow-2xl transition-all duration-300 hover:scale-105 hover:shadow-amber-500/50 mb-10"
-              aria-label="Garantir minha vaga agora pelo WhatsApp"
-            >
-              Garantir minha vaga agora
-            </Button>
-
-            {/* Trust Badges */}
-            <div className="flex flex-wrap items-center justify-center gap-8 mt-10 text-sm font-medium text-muted-foreground">
-              <div className="flex items-center gap-2 bg-white/80 dark:bg-background/80 px-5 py-3 rounded-full shadow-md backdrop-blur-sm">
-                <Shield className="w-5 h-5 text-emerald-600" />
-                <span>Pagamento seguro</span>
-              </div>
-              <div className="flex items-center gap-2 bg-white/80 dark:bg-background/80 px-5 py-3 rounded-full shadow-md backdrop-blur-sm">
-                <Star className="w-5 h-5 text-amber-500 fill-amber-500" />
-                <span>Avaliação 5 estrelas</span>
-              </div>
-              <div className="flex items-center gap-2 bg-white/80 dark:bg-background/80 px-5 py-3 rounded-full shadow-md backdrop-blur-sm">
-                <Check className="w-5 h-5 text-emerald-600" />
-                <span>Garantia do melhor preço</span>
-              </div>
+            <p className="text-white/80 mt-2 mb-8">22+ pessoas visualizaram esta oferta nas últimas 24h</p>
+            <div className="flex flex-wrap items-center justify-center gap-4">
+              <Button
+                onClick={handleWhatsAppClick}
+                className="normal-case bg-gradient-to-r from-cyan-400 to-teal-400 hover:from-cyan-300 hover:to-teal-300 text-slate-900 font-semibold text-lg px-10 py-7 h-auto rounded-xl shadow-xl"
+                aria-label="Garantir minha vaga agora pelo WhatsApp"
+              >
+                Garantir minha vaga agora
+              </Button>
+              <Button
+                variant="outline"
+                onClick={() => scrollToSection("pricing")}
+                className="normal-case border-white/60 text-white hover:bg-white/10 px-8 py-7 h-auto rounded-xl"
+              >
+                Ver preços e datas
+              </Button>
             </div>
           </div>
         </section>
