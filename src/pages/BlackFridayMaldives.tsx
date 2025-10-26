@@ -378,7 +378,7 @@ const BlackFridayMaldives: React.FC = () => {
 
             <div className="max-w-[65ch] mx-auto text-center">
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-white mb-8 leading-[1.1] tracking-[.02em]">
-                Lua de mel nas Maldivas: 4 noites em bangalô sobre a água com 25% de desconto
+                TESTE Lua de mel nas Maldivas: 4 noites em bangalô sobre a água com 25% de desconto
               </h1>
 
               {/* Pricing */}
