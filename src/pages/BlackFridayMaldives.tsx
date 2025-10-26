@@ -334,7 +334,7 @@ const BlackFridayMaldives = () => {
           <div className="relative z-10 container mx-auto px-4 pt-32 pb-16">
             {/* Countdown Badge */}
             <div className="flex justify-center mb-8 animate-fade-in">
-              <div className="bg-amber-500 text-black px-6 py-3 rounded-full font-bold text-sm md:text-base flex items-center gap-2 shadow-2xl">
+              <div className="text-black px-6 py-3 rounded-full font-bold text-sm md:text-base flex items-center gap-2 shadow-2xl bg-amber-200">
                 <Clock className="w-5 h-5" />
                 <span>ESQUENTA BLACK FRIDAY 25% OFF - Expira em {timeLeft.days} dias</span>
               </div>
