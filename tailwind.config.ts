@@ -98,12 +98,17 @@ export default {
           "0%": { transform: "scale(0.98)", opacity: "0" },
           "100%": { transform: "scale(1)", opacity: "1" }
         },
+        "scroll-slow": {
+          "0%": { transform: "translateX(0)" },
+          "100%": { transform: "translateX(-50%)" }
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.3s ease-out",
         "accordion-up": "accordion-up 0.3s ease-out",
         "fade-in": "fade-in 0.6s ease-out",
         "scale-in": "scale-in 0.4s ease-out",
+        "scroll-slow": "scroll-slow 30s linear infinite",
       },
     },
   },

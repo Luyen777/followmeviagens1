@@ -117,7 +117,7 @@ const Navigation = () => {
     href: "#destinos"
   }, {
     label: "Promoções",
-    href: "#pacotes"
+    href: "/promocoes/black-friday-maldivas"
   }, {
     label: "Blog",
     href: "/blog"
