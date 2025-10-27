@@ -218,7 +218,7 @@ const CarouselSection = () => {
 };
 const BlackFridayMaldives = () => {
   const [timeLeft, setTimeLeft] = useState({
-    days: 9,
+    days: 10,
     hours: 0,
     minutes: 0,
     seconds: 0
