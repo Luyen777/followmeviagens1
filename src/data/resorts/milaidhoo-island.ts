@@ -151,13 +151,13 @@ Diferenciais do Resort:
           name: "Baixa Temporada",
           period: "Maio a Outubro",
           priceText: "Sob consulta",
-          priceSubtext: "por pessoa, por noite, all inclusive"
+          priceSubtext: "por pessoa, por noite"
         },
         {
           name: "Alta Temporada",
           period: "Novembro a Abril",
           priceText: "Sob consulta",
-          priceSubtext: "por pessoa, por noite, all inclusive"
+          priceSubtext: "por pessoa, por noite"
         }
       ],
       paymentTerms: [
