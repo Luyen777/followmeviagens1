@@ -352,7 +352,7 @@ const BlackFridayMaldives = () => {
                   A partir de U$ 2.890 por pessoa
                 </div>
                 <div className="text-white/90 text-lg md:text-xl">
-                  <span className="line-through text-white/60">Economia de U$ 965</span> <span className="text-white/40 mx-2">•</span> <span className="text-emerald-400 font-medium">Economize U$ 965</span>
+                  <span className="line-through text-white/60">De U$ 3.855</span> <span className="text-white/40 mx-2">•</span> <span className="text-emerald-400 font-medium">Economize U$ 965</span>
                 </div>
               </div>
 
