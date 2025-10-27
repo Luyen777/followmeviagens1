@@ -31,6 +31,7 @@ import IlhasMauricio from "./pages/IlhasMauricio";
 import Fiji from "./pages/Fiji";
 import Camboja from "./pages/Camboja";
 import BlackFridayMaldives from "./pages/BlackFridayMaldives";
+import TestPage from "./pages/TestPage";
 
 const queryClient = new QueryClient();
 
@@ -68,6 +69,7 @@ const App = () => (
           <Route path="/fiji" element={<Fiji />} />
           <Route path="/camboja" element={<Camboja />} />
           <Route path="/promocoes/black-friday-maldivas" element={<BlackFridayMaldives />} />
+          <Route path="/test" element={<TestPage />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
