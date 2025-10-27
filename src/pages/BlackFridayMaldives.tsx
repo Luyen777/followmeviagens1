@@ -358,7 +358,7 @@ const BlackFridayMaldives = () => {
 
               {/* Benefits List */}
               <div className="grid md:grid-cols-2 gap-4 max-w-3xl mx-auto mb-10 text-left animate-fade-in">
-                {["Bangalô Sobre a Água com Vista Incrível do Oceano", "Nós Pagamos Traslados de Hidroavião (U$ 450 de valor)", "Café da Manhã Internacional Incluído", "Cancelamento Flexível até 7 dias antes", "Garantia de Melhor Preço"].map((benefit, index) => <div key={index} className="flex items-start gap-3 bg-white/10 backdrop-blur-sm p-4 rounded-lg">
+                {["Bangalô Sobre a Água com Vista Incrível", "Nós Pagamos os Traslados de Hidroavião (U$ 450 de valor)", "Sistems All Inclusive (todas as refeições)", "Cancelamento Flexível até 30 dias antes", "Garantia de Melhor Preço"].map((benefit, index) => <div key={index} className="flex items-start gap-3 bg-white/10 backdrop-blur-sm p-4 rounded-lg">
                     <Check className="w-6 h-6 text-emerald-400 flex-shrink-0 mt-0.5" />
                     <span className="text-white font-medium text-lg">{benefit}</span>
                   </div>)}
@@ -449,9 +449,9 @@ const BlackFridayMaldives = () => {
                 <div className="inline-flex items-center justify-center w-14 h-14 rounded-full bg-amber-50 mb-5">
                   <Coffee className="w-7 h-7 text-amber-600" />
                 </div>
-                <h3 className="text-lg font-semibold mb-3">Café da Manhã Internacional</h3>
+                <h3 className="text-lg font-semibold mb-3">All Inclusive (Refeições)</h3>
                 <p className="text-muted-foreground text-sm leading-relaxed">
-                  Comece cada dia com café gourmet de frente para o mar
+                  Gastronomia de nível mundial
                 </p>
               </Card>
             </div>
