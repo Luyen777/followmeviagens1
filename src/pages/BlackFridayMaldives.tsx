@@ -273,7 +273,7 @@ const BlackFridayMaldives = () => {
     answer: "Até 30 dias antes da viagem, o reembolso é de 80% do valor. A partir de 30 dias antes da viagem, já não é possível cancelamento com reembolso."
   }, {
     question: "O que está incluído no preço do pacote?",
-    answer: "O pacote inclui: 4 noites em bangalô overwater, café da manhã internacional diário, traslados de hidroavião ida e volta, mini bar de cortesia, snorkeling equipment e welcome amenities."
+    answer: "O pacote inclui: 4 noites em bangalô overwater, refeições diárias em restaurantes incríveis, traslados de hidroavião ida e volta, mini bar de cortesia, snorkeling equipment e welcome amenities."
   }, {
     question: "Como funciona o traslado de hidroavião?",
     answer: "O hidroavião parte do aeroporto internacional de Malé e leva aproximadamente 20 minutos até o resort. O voo oferece vistas espetaculares das ilhas das Maldivas. O traslado está incluído no pacote."
