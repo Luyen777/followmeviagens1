@@ -9,7 +9,7 @@ import WhatsAppButton from "@/components/WhatsAppButton";
 import SEOHead from "@/components/SEOHead";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import { createFAQSchema, createTravelPackageSchema, createBreadcrumbSchema } from "@/lib/structuredData";
-import heroImage from "@/assets/maldives-hero2.jpg";
+import heroImage from "@/assets/maldives-hero-latest.avif";
 import diningImage from "@/assets/maldives-experiences/gourmet-cuisine.jpg";
 import villasSunset from "@/assets/maldives-experiences/villa-sunset.jpg";
 import overwaterVillas from "@/assets/maldives-experiences/overwater-villas.jpg";
@@ -218,7 +218,7 @@ const CarouselSection = () => {
 };
 const BlackFridayMaldives = () => {
   const [timeLeft, setTimeLeft] = useState({
-    days: 10,
+    days: 9,
     hours: 0,
     minutes: 0,
     seconds: 0
@@ -348,7 +348,7 @@ const BlackFridayMaldives = () => {
 
               {/* Pricing */}
               <div className="mb-8 animate-fade-in">
-                <div className="text-rose-400 text-3xl md:text-4xl font-bold mb-2">
+                <div className="text-purple-700 text-3xl md:text-4xl font-bold mb-2">
                   A partir de U$ 2.890 por pessoa
                 </div>
                 <div className="text-white/90 text-lg md:text-xl">
