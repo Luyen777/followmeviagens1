@@ -3243,7 +3243,7 @@ Esportes Aquáticos Motorizados (valores sob consulta local):
 Excursões e Passeios:
 
 - Cruzeiro sunset, observação de golfinhos
-- Passeios para a capital e ilhas locais
+- Passeios para a capital e as ilhas locais
 - Experiências no sandbank, piquenique privativo
 - Visitas ao Marine Discovery Center do CROSSROADS
 - Tours culturais e wellness
@@ -3302,7 +3302,7 @@ Comodidades nas Villas/Suítes:
 - Minibar (restocked diário no AI)
 - Ar-condicionado, ventilador, TV smart, som, Wi-Fi
 - Bicicletas, máquina de café/chá
-- Deck aberto (sobre água ou praia), lounge nets (nas overwater)
+- Deck aberto (sobre água ou na praia), lounge nets (nas overwater)
 - Serviço de quarto e limpeza diária
 - Cofre eletrônico, amenities kids sob requisição
 - Decoração moderna com toques "hard rock" e memorabilia exclusiva
