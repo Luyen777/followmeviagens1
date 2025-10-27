@@ -348,7 +348,7 @@ const BlackFridayMaldives = () => {
 
               {/* Pricing */}
               <div className="mb-8 animate-fade-in">
-                <div className="text-purple-700 text-3xl md:text-4xl font-bold mb-2">
+                <div className="text-yellow-500 text-3xl md:text-4xl font-bold mb-2">
                   A partir de U$ 2.890 por pessoa
                 </div>
                 <div className="text-white/90 text-lg md:text-xl">
