@@ -218,7 +218,7 @@ const CarouselSection = () => {
 };
 const BlackFridayMaldives = () => {
   const [timeLeft, setTimeLeft] = useState({
-    days: 6,
+    days: 9,
     hours: 0,
     minutes: 0,
     seconds: 0
@@ -270,7 +270,7 @@ const BlackFridayMaldives = () => {
   }];
   const faqs = [{
     question: "Posso cancelar minha reserva?",
-    answer: "Sim! Oferecemos cancelamento gratuito até 7 dias antes da data de partida. Para cancelamentos feitos com menos de 7 dias, consulte nossa política de cancelamento."
+    answer: "Até 30 dias antes da viagem, o reembolso é de 80% do valor. A partir de 30 dias antes da viagem, já não é possível cancelamento com reembolso."
   }, {
     question: "O que está incluído no preço do pacote?",
     answer: "O pacote inclui: 4 noites em bangalô overwater, café da manhã internacional diário, traslados de hidroavião ida e volta, mini bar de cortesia, snorkeling equipment e welcome amenities."
