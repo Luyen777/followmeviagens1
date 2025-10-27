@@ -1,5 +1,15 @@
 import { ResortData } from '../types';
 import heroImage from "@/assets/maldives-hero-latest.avif";
+import adaaranOverwaterVillasAerial from "@/assets/adaaran-select/overwater-villas-aerial.jpg";
+import adaaranBeachVillasAerial from "@/assets/adaaran-select/beach-villas-aerial.jpg";
+import adaaranBuffetRestaurant from "@/assets/adaaran-select/buffet-restaurant.jpg";
+import adaaranSunsetVillaInterior from "@/assets/adaaran-select/sunset-villa-interior.jpg";
+import adaaranDivingCoralReef from "@/assets/adaaran-select/diving-coral-reef.jpg";
+import adaaranVillaBathroomOceanView from "@/assets/adaaran-select/villa-bathroom-ocean-view.jpg";
+import adaaranMainRestaurantInterior from "@/assets/adaaran-select/main-restaurant-interior.jpg";
+import adaaranSunsetWaterVillaRoom from "@/assets/adaaran-select/sunset-water-villa-room.jpg";
+import adaaranResortAerialPool from "@/assets/adaaran-select/resort-aerial-pool.jpg";
+import adaaranIslandAerialView from "@/assets/adaaran-select/island-aerial-view.jpg";
 
 export const adaaranSelect: ResortData = {
     slug: "adaaran-select",
