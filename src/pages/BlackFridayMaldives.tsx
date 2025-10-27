@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from "react";
-import { MessageCircle, Check, Star, Shield, CreditCard, Clock, ChevronDown, Waves, Plane, Coffee, Wine, Heart, Sparkles, Calendar, Users } from "lucide-react";
+import { MessageCircle, Check, Star, Shield, CreditCard, Clock, ChevronDown, Waves, Plane, Coffee, Wine, Heart, Sparkles, Calendar, Users, Gift, Activity, Utensils, Package } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
@@ -358,7 +358,7 @@ const BlackFridayMaldives = () => {
 
               {/* Benefits List */}
               <div className="grid md:grid-cols-2 gap-4 max-w-3xl mx-auto mb-10 text-left animate-fade-in">
-                {["Bangalô Sobre a Água com Vista Incrível do Oceano", "Nós Pagamos Traslados de Hidroavião (U$ 450 de valor)", "Café da Manhã Internacional Incluído", "Cancelamento Flexível até 7 dias antes", "Garantia de Melhor Preço"].map((benefit, index) => <div key={index} className="flex items-start gap-3 bg-white/10 backdrop-blur-sm p-4 rounded-lg">
+                {["Bangalô Sobre a Água com Vista Incrível do Oceano", "Traslados de Hidroavião Inclusos (U$ 450 de valor)", "Café da Manhã Flutuante na Piscina do Quarto", "Massagem para o Casal + Open Bar de Chocolates", "Assistência 24h WhatsApp + Cancelamento Flexível"].map((benefit, index) => <div key={index} className="flex items-start gap-3 bg-white/10 backdrop-blur-sm p-4 rounded-lg">
                     <Check className="w-6 h-6 text-emerald-400 flex-shrink-0 mt-0.5" />
                     <span className="text-white font-medium text-lg">{benefit}</span>
                   </div>)}
@@ -517,31 +517,46 @@ const BlackFridayMaldives = () => {
               Tudo pensado para sua experiência ser perfeita
             </p>
 
-            <div className="grid md:grid-cols-2 gap-4 max-w-4xl mx-auto">
+            <div className="grid md:grid-cols-2 gap-4 max-w-5xl mx-auto">
               {[{
+              icon: Waves,
+              text: "4 noites em bangalô overwater privativo"
+            }, {
               icon: Plane,
               text: "Transfer de hidroavião ida e volta"
             }, {
               icon: Coffee,
               text: "Café da manhã internacional diário"
             }, {
-              icon: Waves,
-              text: "4 noites em bangalô overwater privativo"
+              icon: Utensils,
+              text: "Um café da manhã flutuante na piscina do quarto"
             }, {
               icon: Wine,
-              text: "Mini bar de cortesia"
+              text: "Mini bar no quarto com bebidas alcoólicas"
+            }, {
+              icon: Gift,
+              text: "Open Bar de chocolates todos os dias"
+            }, {
+              icon: Heart,
+              text: "Uma massagem para o casal"
+            }, {
+              icon: Activity,
+              text: "Aula de yoga 2x por dia"
             }, {
               icon: Sparkles,
               text: "Snorkeling equipment gratuito"
             }, {
-              icon: Heart,
-              text: "Welcome drink e amenities"
+              icon: Package,
+              text: "Kit viagem Follow Me Gold com brindes"
+            }, {
+              icon: MessageCircle,
+              text: "Assistência 24 horas pelo WhatsApp"
             }, {
               icon: CreditCard,
               text: "Pagamento em até 10x sem juros"
             }].map((item, index) => {
                 const Icon = item.icon;
-                return <div key={index} className="flex items-start gap-4 bg-white dark:bg-slate-900 p-5 rounded-lg border border-slate-200/60 dark:border-slate-800">
+                return <div key={index} className="flex items-start gap-4 bg-white dark:bg-slate-900 p-5 rounded-lg border border-slate-200/60 dark:border-slate-800 hover:border-slate-300 dark:hover:border-slate-700 transition-colors">
                   <Icon className="w-5 h-5 text-slate-600 dark:text-slate-400 flex-shrink-0 mt-0.5" />
                   <span className="text-sm font-medium text-foreground/90">{item.text}</span>
                 </div>
