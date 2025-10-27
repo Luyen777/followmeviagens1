@@ -218,7 +218,7 @@ const CarouselSection = () => {
 };
 const BlackFridayMaldives = () => {
   const [timeLeft, setTimeLeft] = useState({
-    days: 6,
+    days: 9,
     hours: 0,
     minutes: 0,
     seconds: 0
@@ -270,10 +270,10 @@ const BlackFridayMaldives = () => {
   }];
   const faqs = [{
     question: "Posso cancelar minha reserva?",
-    answer: "Sim! Oferecemos cancelamento gratuito até 7 dias antes da data de partida. Para cancelamentos feitos com menos de 7 dias, consulte nossa política de cancelamento."
+    answer: "Até 30 dias antes da viagem, o reembolso é de 80% do valor. A partir de 30 dias antes da viagem, já não é possível cancelamento com reembolso."
   }, {
     question: "O que está incluído no preço do pacote?",
-    answer: "O pacote inclui: 4 noites em bangalô overwater, café da manhã internacional diário, traslados de hidroavião ida e volta, mini bar de cortesia, snorkeling equipment e welcome amenities."
+    answer: "O pacote inclui: 4 noites em bangalô overwater, refeições diárias em restaurantes incríveis, traslados de hidroavião ida e volta, mini bar de cortesia, snorkeling equipment e welcome amenities."
   }, {
     question: "Como funciona o traslado de hidroavião?",
     answer: "O hidroavião parte do aeroporto internacional de Malé e leva aproximadamente 20 minutos até o resort. O voo oferece vistas espetaculares das ilhas das Maldivas. O traslado está incluído no pacote."
@@ -348,7 +348,7 @@ const BlackFridayMaldives = () => {
 
               {/* Pricing */}
               <div className="mb-8 animate-fade-in">
-                <div className="text-rose-400 text-3xl md:text-4xl font-bold mb-2">
+                <div className="text-yellow-500 text-3xl md:text-4xl font-bold mb-2">
                   A partir de U$ 2.890 por pessoa
                 </div>
                 <div className="text-white/90 text-lg md:text-xl">
@@ -358,16 +358,14 @@ const BlackFridayMaldives = () => {
 
               {/* Benefits List */}
               <div className="grid md:grid-cols-2 gap-4 max-w-3xl mx-auto mb-10 text-left animate-fade-in">
-                {["Bangalô Sobre a Água com Vista Incrível do Oceano", "Traslados de Hidroavião Inclusos (U$ 450 de valor)", "Café da Manhã Flutuante na Piscina do Quarto", "Massagem para o Casal + Open Bar de Chocolates", "Assistência 24h WhatsApp + Cancelamento Flexível"].map((benefit, index) => <div key={index} className="flex items-start gap-3 bg-white/10 backdrop-blur-sm p-4 rounded-lg">
+                {["Bangalô Sobre a Água com Vista Incrível", "Nós Pagamos os Traslados de Hidroavião (U$ 450 de valor)", "Sistems All Inclusive (todas as refeições)", "Cancelamento Flexível até 30 dias antes", "Garantia de Melhor Preço"].map((benefit, index) => <div key={index} className="flex items-start gap-3 bg-white/10 backdrop-blur-sm p-4 rounded-lg">
                     <Check className="w-6 h-6 text-emerald-400 flex-shrink-0 mt-0.5" />
                     <span className="text-white font-medium text-lg">{benefit}</span>
                   </div>)}
               </div>
 
               {/* Primary CTA */}
-              <Button size="lg" onClick={() => scrollToSection('pricing')} className="text-white font-semibold text-base px-10 py-6 h-auto rounded-lg shadow-xl hover:shadow-2xl transform hover:scale-[1.02] transition-all duration-300 mb-8 bg-slate-800 hover:bg-slate-900 border border-slate-700">
-                Ver Datas Disponíveis
-              </Button>
+              <Button size="lg" onClick={() => scrollToSection('pricing')} className="text-white font-semibold text-base px-10 py-6 h-auto rounded-lg shadow-xl hover:shadow-2xl transform hover:scale-[1.02] transition-all duration-300 mb-8 border border-slate-700 bg-green-800 hover:bg-green-700">Garantir minha vaga</Button>
 
               {/* Trust Badges Row */}
               <div className="flex flex-wrap items-center justify-center gap-6 mb-8 text-white/80 text-sm">
@@ -451,9 +449,9 @@ const BlackFridayMaldives = () => {
                 <div className="inline-flex items-center justify-center w-14 h-14 rounded-full bg-amber-50 mb-5">
                   <Coffee className="w-7 h-7 text-amber-600" />
                 </div>
-                <h3 className="text-lg font-semibold mb-3">Café da Manhã Internacional</h3>
+                <h3 className="text-lg font-semibold mb-3">All Inclusive (Refeições)</h3>
                 <p className="text-muted-foreground text-sm leading-relaxed">
-                  Comece cada dia com café gourmet de frente para o mar
+                  Culinária variada e gastronomia de nível mundial, tudo incluído
                 </p>
               </Card>
             </div>
@@ -526,7 +524,7 @@ const BlackFridayMaldives = () => {
               text: "Transfer de hidroavião ida e volta"
             }, {
               icon: Coffee,
-              text: "Café da manhã internacional diário"
+              text: "Sistema all inclusive (3 refeições por dia)"
             }, {
               icon: Utensils,
               text: "Um café da manhã flutuante na piscina do quarto"
@@ -544,23 +542,20 @@ const BlackFridayMaldives = () => {
               text: "Aula de yoga 2x por dia"
             }, {
               icon: Sparkles,
-              text: "Snorkeling equipment gratuito"
+              text: "Snorkeling equipmento gratuito"
             }, {
-              icon: Package,
-              text: "Kit viagem Follow Me Gold com brindes"
-            }, {
-              icon: MessageCircle,
-              text: "Assistência 24 horas pelo WhatsApp"
+              icon: Heart,
+              text: "Welcome drink e amenidades"
             }, {
               icon: CreditCard,
               text: "Pagamento em até 10x sem juros"
             }].map((item, index) => {
-                const Icon = item.icon;
-                return <div key={index} className="flex items-start gap-4 bg-white dark:bg-slate-900 p-5 rounded-lg border border-slate-200/60 dark:border-slate-800 hover:border-slate-300 dark:hover:border-slate-700 transition-colors">
+              const Icon = item.icon;
+              return <div key={index} className="flex items-start gap-4 bg-white dark:bg-slate-900 p-5 rounded-lg border border-slate-200/60 dark:border-slate-800">
                   <Icon className="w-5 h-5 text-slate-600 dark:text-slate-400 flex-shrink-0 mt-0.5" />
                   <span className="text-sm font-medium text-foreground/90">{item.text}</span>
-                </div>
-              })}
+                </div>;
+            })}
             </div>
           </div>
         </section>
