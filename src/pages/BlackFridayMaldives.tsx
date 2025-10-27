@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from "react";
-import { MessageCircle, Check, Star, Shield, CreditCard, Clock, ChevronDown, Waves, Plane, Coffee, Wine, Heart, Sparkles, Calendar, Users } from "lucide-react";
+import { MessageCircle, Check, Star, Shield, CreditCard, Clock, ChevronDown, Waves, Plane, Coffee, Wine, Heart, Sparkles, Calendar, Users, Gift, Activity, Utensils, Package } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
@@ -515,19 +515,31 @@ const BlackFridayMaldives = () => {
               Tudo pensado para sua experiência ser perfeita
             </p>
 
-            <div className="grid md:grid-cols-2 gap-4 max-w-4xl mx-auto">
+            <div className="grid md:grid-cols-2 gap-4 max-w-5xl mx-auto">
               {[{
+              icon: Waves,
+              text: "4 noites em bangalô overwater privativo"
+            }, {
               icon: Plane,
               text: "Transfer de hidroavião ida e volta"
             }, {
               icon: Coffee,
               text: "Sistema all inclusive (3 refeições por dia)"
             }, {
-              icon: Waves,
-              text: "4 noites em bangalô overwater privativo"
+              icon: Utensils,
+              text: "Um café da manhã flutuante na piscina do quarto"
             }, {
               icon: Wine,
-              text: "Mini bar de cortesia"
+              text: "Mini bar no quarto com bebidas alcoólicas"
+            }, {
+              icon: Gift,
+              text: "Open Bar de chocolates todos os dias"
+            }, {
+              icon: Heart,
+              text: "Uma massagem para o casal"
+            }, {
+              icon: Activity,
+              text: "Aula de yoga 2x por dia"
             }, {
               icon: Sparkles,
               text: "Snorkeling equipmento gratuito"
