@@ -365,9 +365,7 @@ const BlackFridayMaldives = () => {
               </div>
 
               {/* Primary CTA */}
-              <Button size="lg" onClick={() => scrollToSection('pricing')} className="text-white font-semibold text-base px-10 py-6 h-auto rounded-lg shadow-xl hover:shadow-2xl transform hover:scale-[1.02] transition-all duration-300 mb-8 border border-slate-700 bg-green-800 hover:bg-green-700">
-                Ver Datas Disponíveis
-              </Button>
+              <Button size="lg" onClick={() => scrollToSection('pricing')} className="text-white font-semibold text-base px-10 py-6 h-auto rounded-lg shadow-xl hover:shadow-2xl transform hover:scale-[1.02] transition-all duration-300 mb-8 border border-slate-700 bg-green-800 hover:bg-green-700">Garantir minha vaga</Button>
 
               {/* Trust Badges Row */}
               <div className="flex flex-wrap items-center justify-center gap-6 mb-8 text-white/80 text-sm">
