@@ -9,7 +9,7 @@ import WhatsAppButton from "@/components/WhatsAppButton";
 import SEOHead from "@/components/SEOHead";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import { createFAQSchema, createTravelPackageSchema, createBreadcrumbSchema } from "@/lib/structuredData";
-import heroImage from "@/assets/maldives-hero-latest.avif";
+import heroImage from "@/assets/maldives-hero2.jpg";
 import diningImage from "@/assets/maldives-experiences/gourmet-cuisine.jpg";
 import villasSunset from "@/assets/maldives-experiences/villa-sunset.jpg";
 import overwaterVillas from "@/assets/maldives-experiences/overwater-villas.jpg";
