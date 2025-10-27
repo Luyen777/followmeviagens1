@@ -365,7 +365,7 @@ const BlackFridayMaldives = () => {
               </div>
 
               {/* Primary CTA */}
-              <Button size="lg" onClick={() => scrollToSection('pricing')} className="text-white font-semibold text-base px-10 py-6 h-auto rounded-lg shadow-xl hover:shadow-2xl transform hover:scale-[1.02] transition-all duration-300 mb-8 bg-slate-800 hover:bg-slate-900 border border-slate-700">
+              <Button size="lg" onClick={() => scrollToSection('pricing')} className="text-white font-semibold text-base px-10 py-6 h-auto rounded-lg shadow-xl hover:shadow-2xl transform hover:scale-[1.02] transition-all duration-300 mb-8 border border-slate-700 bg-green-800 hover:bg-green-700">
                 Ver Datas Disponíveis
               </Button>
 
@@ -540,12 +540,12 @@ const BlackFridayMaldives = () => {
               icon: CreditCard,
               text: "Pagamento em até 10x sem juros"
             }].map((item, index) => {
-                const Icon = item.icon;
-                return <div key={index} className="flex items-start gap-4 bg-white dark:bg-slate-900 p-5 rounded-lg border border-slate-200/60 dark:border-slate-800">
+              const Icon = item.icon;
+              return <div key={index} className="flex items-start gap-4 bg-white dark:bg-slate-900 p-5 rounded-lg border border-slate-200/60 dark:border-slate-800">
                   <Icon className="w-5 h-5 text-slate-600 dark:text-slate-400 flex-shrink-0 mt-0.5" />
                   <span className="text-sm font-medium text-foreground/90">{item.text}</span>
-                </div>
-              })}
+                </div>;
+            })}
             </div>
           </div>
         </section>
