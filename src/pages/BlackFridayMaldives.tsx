@@ -451,7 +451,7 @@ const BlackFridayMaldives = () => {
                 </div>
                 <h3 className="text-lg font-semibold mb-3">All Inclusive (Refeições)</h3>
                 <p className="text-muted-foreground text-sm leading-relaxed">
-                  Gastronomia de nível mundial
+                  Culinária variada e gastronomia de nível mundial, tudo incluído
                 </p>
               </Card>
             </div>
@@ -521,7 +521,7 @@ const BlackFridayMaldives = () => {
               text: "Transfer de hidroavião ida e volta"
             }, {
               icon: Coffee,
-              text: "Café da manhã internacional diário"
+              text: "Sistema all inclusive (3 refeições por dia)"
             }, {
               icon: Waves,
               text: "4 noites em bangalô overwater privativo"
@@ -530,10 +530,10 @@ const BlackFridayMaldives = () => {
               text: "Mini bar de cortesia"
             }, {
               icon: Sparkles,
-              text: "Snorkeling equipment gratuito"
+              text: "Snorkeling equipmento gratuito"
             }, {
               icon: Heart,
-              text: "Welcome drink e amenities"
+              text: "Welcome drink e amenidades"
             }, {
               icon: CreditCard,
               text: "Pagamento em até 10x sem juros"
