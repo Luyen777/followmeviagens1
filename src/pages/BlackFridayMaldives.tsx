@@ -332,7 +332,7 @@ const BlackFridayMaldives = () => {
           <div className="relative z-10 container mx-auto px-4 pt-32 pb-20">
             <div className="max-w-5xl mx-auto">
               {/* Offer badge */}
-              <div className="flex justify-center mb-8">
+              <div className="flex justify-center mb-6">
                 <div className="inline-flex items-center gap-2 px-4 py-2 bg-slate-900 dark:bg-slate-800 text-white rounded-full text-sm font-medium">
                   <Sparkles className="w-4 h-4" />
                   <span>BLACK FRIDAY</span>
@@ -341,30 +341,30 @@ const BlackFridayMaldives = () => {
               </div>
 
               {/* Main headline */}
-              <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-slate-900 dark:text-white text-center leading-tight mb-4">
+              <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-slate-900 dark:text-white text-center leading-tight mb-3">
                 Maldivas All-Inclusive
-                <span className="block text-2xl md:text-3xl lg:text-4xl text-slate-600 dark:text-slate-400 font-normal mt-4 mb-2">
+                <span className="block text-2xl md:text-3xl lg:text-4xl text-slate-600 dark:text-slate-400 font-normal mt-3">
                   Romance nas Maldivas: 4 Noites em Bangalô Sobre Águas Cristalinas com 25% de Desconto
                 </span>
               </h1>
 
               {/* Price highlight box */}
-              <div className="flex flex-col sm:flex-row items-center justify-center gap-6 mb-10">
-                <div className="bg-slate-100 border border-slate-200 rounded-lg px-6 py-2 w-56 text-center shadow-sm flex flex-col justify-center items-center">
-                  <div className="text-xs text-slate-500 mb-1">A partir de</div>
-                  <div className="text-2xl font-bold text-slate-900">U$ 2.890</div>
-                  <div className="text-xs text-slate-500 mt-1">por pessoa</div>
+              <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12 mt-8">
+                <div className="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-lg px-8 py-4 w-60 text-center shadow-sm hover:shadow-md transition-shadow">
+                  <div className="text-xs font-medium text-slate-500 dark:text-slate-400 uppercase tracking-wider mb-2">A partir de</div>
+                  <div className="text-3xl font-bold text-slate-900 dark:text-white">U$ 2.890</div>
+                  <div className="text-xs text-slate-500 dark:text-slate-400 mt-2">por pessoa</div>
                 </div>
-                <div className="bg-emerald-100 border border-emerald-200 rounded-lg px-6 py-2 w-56 text-center shadow-sm flex flex-col justify-center items-center">
-                  <div className="text-xs text-emerald-700 mb-1">Economize</div>
-                  <div className="text-2xl font-bold text-emerald-900">U$ 965</div>
-                  <div className="text-xs text-emerald-700 mt-1">Desconto especial</div>
+                <div className="bg-slate-900 dark:bg-slate-800 border border-slate-800 dark:border-slate-700 rounded-lg px-8 py-4 w-60 text-center shadow-sm hover:shadow-md transition-shadow">
+                  <div className="text-xs font-medium text-slate-400 uppercase tracking-wider mb-2">Economize</div>
+                  <div className="text-3xl font-bold text-white">U$ 965</div>
+                  <div className="text-xs text-slate-400 mt-2">Desconto especial</div>
                 </div>
               </div>
 
 
               {/* Features grid - clean layout */}
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12 max-w-3xl mx-auto">
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10 max-w-3xl mx-auto">
                 <div className="flex items-center gap-3 justify-center md:justify-start">
                   <div className="w-10 h-10 rounded-full bg-slate-100 dark:bg-slate-800 flex items-center justify-center flex-shrink-0">
                     <Waves className="w-5 h-5 text-slate-700 dark:text-slate-300" />
@@ -409,7 +409,7 @@ const BlackFridayMaldives = () => {
               </div>
 
               {/* CTA Button - More premium design */}
-              <div className="flex flex-col items-center gap-6 mb-16">
+              <div className="flex flex-col items-center gap-5 mb-12">
                 <Button 
                   size="lg" 
                   onClick={handleWhatsAppClick} 
@@ -447,118 +447,6 @@ const BlackFridayMaldives = () => {
         {/* Carousel Section */}
         <CarouselSection />
 
-        {/* Pricing Cards Section - Hero */}
-        <section className="py-24 bg-gradient-to-b from-white to-slate-50 dark:from-slate-950 dark:to-slate-900">
-          <div className="container mx-auto px-4">
-            <div className="flex items-center justify-center gap-2 mb-4">
-              <Sparkles className="w-5 h-5 text-emerald-600" />
-              <h2 className="text-2xl md:text-3xl font-display font-semibold text-center">
-                Preços Especiais Black Friday
-              </h2>
-            </div>
-            <p className="text-center text-muted-foreground mb-12 text-sm">
-              25% de desconto em todas as datas - Oferta limitada!
-            </p>
-
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
-              {pricingOptionsHeroSection.map((option, index) => (
-                <Card key={index} className="relative overflow-hidden hover:shadow-xl transition-all duration-300 border-slate-200/60">
-                  {/* Discount badge */}
-                  <div className="absolute top-4 right-4 bg-rose-500 text-white text-xs font-bold px-2 py-1 rounded-full">
-                    -25%
-                  </div>
-                  
-                  <div className="p-6">
-                    <div className="mb-4">
-                      <div className="text-xs font-medium text-muted-foreground mb-2 uppercase tracking-wide">
-                        Período
-                      </div>
-                      <div className="text-sm font-semibold text-slate-900 dark:text-slate-100">
-                        {option.period}
-                      </div>
-                    </div>
-
-                    <div className="mb-4">
-                      <div className="flex items-baseline gap-2">
-                        <div className="text-2xl font-bold text-slate-900 dark:text-slate-100">
-                          U$ {option.discountedPrice}
-                        </div>
-                        <div className="text-base text-muted-foreground line-through">
-                          U$ {option.originalPrice}
-                        </div>
-                      </div>
-                      <div className="text-sm text-muted-foreground">por pessoa</div>
-                    </div>
-
-                    <div className={`mb-4 text-sm font-medium ${
-                      option.availability === 'limited' ? 'text-rose-600' : 'text-emerald-600'
-                    }`}>
-                      {option.status}
-                    </div>
-
-                    <Button 
-                      onClick={handleWhatsAppClick} 
-                      className="w-full bg-gradient-to-r from-slate-800 to-slate-900 hover:from-slate-900 hover:to-black text-white font-medium h-10"
-                    >
-                      <MessageCircle className="w-3.5 h-3.5 mr-1.5" />
-                      Reservar
-                    </Button>
-                  </div>
-                </Card>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Customer Reviews Section */}
-        <section className="py-24 bg-white dark:bg-slate-950">
-          <div className="container mx-auto px-4">
-            <div className="flex items-center justify-center gap-2 mb-4">
-              <Star className="w-5 h-5 text-yellow-500 fill-yellow-500" />
-              <h2 className="text-2xl md:text-3xl font-display font-semibold text-center">
-                Avaliações dos Clientes
-              </h2>
-            </div>
-            <p className="text-center text-muted-foreground mb-12 text-sm">
-              Veja o que nossos clientes dizem sobre a experiência
-            </p>
-
-            <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
-              {testimonials.map((testimonial, index) => (
-                <Card key={index} className="p-6 hover:shadow-lg transition-all duration-300 border-slate-200/60">
-                  <div className="flex items-center gap-1 mb-3">
-                    {[...Array(testimonial.rating)].map((_, i) => (
-                      <Star key={i} className="w-4 h-4 text-yellow-500 fill-yellow-500" />
-                    ))}
-                  </div>
-                  
-                  <p className="text-sm text-muted-foreground mb-4 leading-relaxed">
-                    "{testimonial.text}"
-                  </p>
-                  
-                  <div className="pt-4 border-t border-slate-100 dark:border-slate-800">
-                    <div className="font-semibold text-sm">{testimonial.name}</div>
-                    <div className="text-xs text-muted-foreground">{testimonial.date}</div>
-                  </div>
-                </Card>
-              ))}
-            </div>
-
-            {/* Average rating */}
-            <div className="mt-12 text-center">
-              <div className="inline-flex items-center gap-2 px-6 py-3 bg-slate-50 dark:bg-slate-900 rounded-full">
-                <div className="flex items-center gap-1">
-                  {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="w-5 h-5 text-yellow-500 fill-yellow-500" />
-                  ))}
-                </div>
-                <span className="font-semibold text-slate-900 dark:text-white">5.0</span>
-                <span className="text-muted-foreground">de 5.0 • 127 avaliações</span>
-              </div>
-            </div>
-          </div>
-        </section>
-
         {/* Package Details Section */}
         <section className="py-24 bg-slate-50/50 dark:bg-slate-900/20 scroll-mt-20">
           <div className="container mx-auto px-4">
@@ -572,7 +460,7 @@ const BlackFridayMaldives = () => {
               Pacote completo com tudo que você precisa para uma experiência inesquecível
             </p>
 
-            <div className="grid md:grid-cols-2 gap-4 max-w-5xl mx-auto">
+            <div className="grid md:grid-cols-2 gap-4 max-w-4xl mx-auto md:place-items-center">
               {[{
               icon: Waves,
               text: "4 noites em bangalô overwater privativo"
@@ -608,54 +496,78 @@ const BlackFridayMaldives = () => {
               text: "Pagamento em até 10x sem juros"
             }].map((item, index) => {
               const Icon = item.icon;
-              return <div key={index} className="flex items-start gap-4 bg-white dark:bg-slate-900 p-5 rounded-lg border border-slate-200/60 dark:border-slate-800">
+              return <div key={index} className="flex items-start gap-4 bg-white dark:bg-slate-900 p-5 rounded-lg border border-slate-200/60 dark:border-slate-800 w-full md:max-w-md">
                   <Icon className="w-5 h-5 text-slate-600 dark:text-slate-400 flex-shrink-0 mt-0.5" />
-                  <span className="text-sm font-medium text-foreground/90">{item.text}</span>
+                  <span className="text-sm font-medium text-foreground/90 text-left">{item.text}</span>
                 </div>;
             })}
             </div>
           </div>
         </section>
 
-        {/* Pricing Section */}
-        <section id="pricing" className="py-24 bg-white dark:bg-slate-950 scroll-mt-20">
+        {/* Pricing Cards Section - Hero */}
+        <section className="py-24 bg-gradient-to-b from-white to-slate-50 dark:from-slate-950 dark:to-slate-900">
           <div className="container mx-auto px-4">
-            <div className="flex items-center justify-center gap-2 mb-3">
-              <Calendar className="w-5 h-5 text-slate-600" />
+            <div className="flex items-center justify-center gap-2 mb-4">
+              <Sparkles className="w-5 h-5 text-emerald-600" />
               <h2 className="text-2xl md:text-3xl font-display font-semibold text-center">
-                Escolha suas datas
+                Preços Especiais Black Friday
               </h2>
             </div>
             <p className="text-center text-muted-foreground mb-12 text-sm">
-              Disponibilidade limitada para os próximos meses
+              25% de desconto em todas as datas - Oferta limitada!
             </p>
 
-            <div className="grid md:grid-cols-2 gap-6 max-w-5xl mx-auto mb-12">
-              {pricingOptions.map((option, index) => <Card key={index} className="p-8 hover:shadow-lg transition-all duration-300 border-slate-200/60">
-                  <div className="mb-5">
-                    <div className="text-xs font-medium text-muted-foreground mb-2 uppercase tracking-wide">Período</div>
-                    <div className="text-base font-semibold">{option.period}</div>
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto mb-12">
+              {pricingOptionsHeroSection.map((option, index) => (
+                <Card key={index} className="relative overflow-hidden hover:shadow-xl transition-all duration-300 border-slate-200/60">
+                  {/* Discount badge */}
+                  <div className="absolute top-4 right-4 bg-rose-500 text-white text-xs font-bold px-2 py-1 rounded-full">
+                    -25%
                   </div>
 
-                  <div className="mb-5">
-                    <div className="text-3xl font-bold text-slate-900 dark:text-slate-100">
-                      U$ {option.price}
+                  <div className="p-6">
+                    <div className="mb-4">
+                      <div className="text-xs font-medium text-muted-foreground mb-2 uppercase tracking-wide">
+                        Período
+                      </div>
+                      <div className="text-sm font-semibold text-slate-900 dark:text-slate-100">
+                        {option.period}
+                      </div>
                     </div>
-                    <div className="text-sm text-muted-foreground">por pessoa</div>
-                  </div>
 
-                  <div className={`mb-6 text-sm font-medium ${option.availability === 'limited' ? 'text-rose-600' : 'text-emerald-600'}`}>
-                    {option.status}
-                  </div>
+                    <div className="mb-4">
+                      <div className="flex items-baseline gap-2">
+                        <div className="text-2xl font-bold text-slate-900 dark:text-slate-100">
+                          U$ {option.discountedPrice}
+                        </div>
+                        <div className="text-base text-muted-foreground line-through">
+                          U$ {option.originalPrice}
+                        </div>
+                      </div>
+                      <div className="text-sm text-muted-foreground">por pessoa</div>
+                    </div>
 
-                  <Button onClick={handleWhatsAppClick} className="w-full text-white font-semibold bg-slate-800 hover:bg-slate-900 border border-slate-700">
-                    Reservar
-                  </Button>
-                </Card>)}
+                    <div className={`mb-4 text-sm font-medium ${
+                      option.availability === 'limited' ? 'text-rose-600' : 'text-emerald-600'
+                    }`}>
+                      {option.status}
+                    </div>
+
+                    <Button
+                      onClick={handleWhatsAppClick}
+                      className="w-full bg-gradient-to-r from-slate-800 to-slate-900 hover:from-slate-900 hover:to-black text-white font-medium h-10"
+                    >
+                      <MessageCircle className="w-3.5 h-3.5 mr-1.5" />
+                      Reservar
+                    </Button>
+                  </div>
+                </Card>
+              ))}
             </div>
 
-            {/* Payment Terms */}
-            <div className="max-w-3xl mx-auto space-y-4">
+            {/* Payment Terms and Cancellation Policy */}
+            <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-6">
               <Card className="p-6 border-slate-200/60">
                 <h3 className="font-semibold text-base mb-4 flex items-center gap-2">
                   <CreditCard className="w-4 h-4 text-slate-600" />
@@ -689,6 +601,55 @@ const BlackFridayMaldives = () => {
                   </div>
                 </div>
               </Card>
+            </div>
+          </div>
+        </section>
+
+        {/* Customer Reviews Section */}
+        <section className="py-24 bg-white dark:bg-slate-950">
+          <div className="container mx-auto px-4">
+            <div className="flex items-center justify-center gap-2 mb-4">
+              <Star className="w-5 h-5 text-yellow-500 fill-yellow-500" />
+              <h2 className="text-2xl md:text-3xl font-display font-semibold text-center">
+                Avaliações dos Clientes
+              </h2>
+            </div>
+            <p className="text-center text-muted-foreground mb-12 text-sm">
+              Veja o que nossos clientes dizem sobre a experiência
+            </p>
+
+            <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+              {testimonials.map((testimonial, index) => (
+                <Card key={index} className="p-6 hover:shadow-lg transition-all duration-300 border-slate-200/60">
+                  <div className="flex items-center gap-1 mb-3">
+                    {[...Array(testimonial.rating)].map((_, i) => (
+                      <Star key={i} className="w-4 h-4 text-yellow-500 fill-yellow-500" />
+                    ))}
+                  </div>
+
+                  <p className="text-sm text-muted-foreground mb-4 leading-relaxed">
+                    "{testimonial.text}"
+                  </p>
+
+                  <div className="pt-4 border-t border-slate-100 dark:border-slate-800">
+                    <div className="font-semibold text-sm">{testimonial.name}</div>
+                    <div className="text-xs text-muted-foreground">{testimonial.date}</div>
+                  </div>
+                </Card>
+              ))}
+            </div>
+
+            {/* Average rating */}
+            <div className="mt-12 text-center">
+              <div className="inline-flex items-center gap-2 px-6 py-3 bg-slate-50 dark:bg-slate-900 rounded-full">
+                <div className="flex items-center gap-1">
+                  {[...Array(5)].map((_, i) => (
+                    <Star key={i} className="w-5 h-5 text-yellow-500 fill-yellow-500" />
+                  ))}
+                </div>
+                <span className="font-semibold text-slate-900 dark:text-white">5.0</span>
+                <span className="text-muted-foreground">de 5.0 • 127 avaliações</span>
+              </div>
             </div>
           </div>
         </section>
