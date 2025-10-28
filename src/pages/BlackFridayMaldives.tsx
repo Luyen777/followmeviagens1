@@ -196,323 +196,224 @@ const CarouselSection = () => {
       }
     }
   };
-  const togglePause = () => {
-    if (!isDragging) {
-      setIsPaused(!isPaused);
-    }
-  };
-  return <div className="mb-12 sm:mb-16 animate-fade-in">
-      <div ref={containerRef} className="relative w-full overflow-hidden cursor-grab select-none" onMouseDown={handleMouseDown} onMouseMove={handleMouseMove} onMouseUp={handleMouseUp} onMouseLeave={handleMouseLeave} onTouchStart={handleTouchStart} onTouchMove={handleTouchMove} onTouchEnd={handleTouchEnd} onClick={togglePause}>
-        <div ref={trackRef} className="flex gap-4 sm:gap-6 will-change-transform" style={{
-        width: 'fit-content'
-      }}>
-          {duplicatedExperiences.map((experience, index) => <div key={index} className="flex-shrink-0 w-[280px] sm:w-[320px] md:w-[380px]">
-              <div className="relative aspect-[4/5] overflow-hidden rounded-2xl shadow-elegant hover:shadow-glow transition-all duration-500 group">
-                <img src={experience.image} alt={experience.alt} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 pointer-events-none" draggable="false" />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+  return <section className="relative w-full overflow-hidden">
+      <div ref={containerRef} className="relative w-full h-[240px] md:h-[280px] lg:h-[300px] cursor-grab select-none" onMouseDown={handleMouseDown} onMouseMove={handleMouseMove} onMouseUp={handleMouseUp} onMouseLeave={handleMouseLeave} onTouchStart={handleTouchStart} onTouchMove={handleTouchMove} onTouchEnd={handleTouchEnd}>
+        <div className="absolute inset-0 bg-gradient-to-r from-white/30 via-transparent to-white/30 pointer-events-none z-10" />
+        <div ref={trackRef} className="flex will-change-transform">
+          {duplicatedExperiences.map((exp, index) => <div key={index} className="relative w-[440px] h-[240px] md:h-[280px] lg:h-[300px] flex-shrink-0 mx-2">
+              <div className="relative h-full rounded-xl overflow-hidden shadow-lg">
+                <img src={exp.image} alt={exp.alt} loading="eager" className="w-full h-full object-cover" />
+                <div className="absolute inset-0 bg-gradient-to-t from-slate-900/40 via-transparent to-transparent" />
               </div>
             </div>)}
         </div>
       </div>
-    </div>;
+    </section>;
 };
 const BlackFridayMaldives = () => {
-  const [timeLeft, setTimeLeft] = useState({
-    days: 9,
-    hours: 0,
-    minutes: 0,
-    seconds: 0
-  });
-  useEffect(() => {
-    // Countdown timer
-    const targetDate = new Date();
-    targetDate.setDate(targetDate.getDate() + 6);
-    const timer = setInterval(() => {
-      const now = new Date().getTime();
-      const distance = targetDate.getTime() - now;
-      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-      const hours = Math.floor(distance % (1000 * 60 * 60 * 24) / (1000 * 60 * 60));
-      const minutes = Math.floor(distance % (1000 * 60 * 60) / (1000 * 60));
-      const seconds = Math.floor(distance % (1000 * 60) / 1000);
-      setTimeLeft({
-        days,
-        hours,
-        minutes,
-        seconds
-      });
-      if (distance < 0) {
-        clearInterval(timer);
-      }
-    }, 1000);
-    return () => clearInterval(timer);
-  }, []);
-  const handleWhatsAppClick = () => {
-    window.open("https://wa.link/followmeviagens", "_blank");
-  };
-  const scrollToSection = (id: string) => {
-    const element = document.getElementById(id);
-    if (element) {
-      element.scrollIntoView({
-        behavior: 'smooth',
-        block: 'start'
-      });
-    }
-  };
-  const breadcrumbItems = [{
-    label: "Início",
-    href: "/"
-  }, {
-    label: "Promoções",
-    href: "/#pacotes"
-  }, {
-    label: "Black Friday Maldivas",
-    href: "/promocoes/black-friday-maldivas"
-  }];
   const faqs = [{
-    question: "Posso cancelar minha reserva?",
-    answer: "Até 30 dias antes da viagem, o reembolso é de 80% do valor. A partir de 30 dias antes da viagem, já não é possível cancelamento com reembolso."
+    question: "O que está incluído no pacote?",
+    answer: "O pacote inclui: 4 noites em bangalô overwater privativo, transfer de hidroavião ida e volta, sistema all inclusive com 3 refeições por dia, café da manhã flutuante, mini bar com bebidas alcoólicas, open bar de chocolates diário, uma massagem para o casal, aulas de yoga 2x ao dia, equipamento de snorkel gratuito e welcome drink."
   }, {
-    question: "O que está incluído no preço do pacote?",
-    answer: "O pacote inclui: 4 noites em bangalô overwater, refeições diárias em restaurantes incríveis, traslados de hidroavião ida e volta, mini bar de cortesia, snorkeling equipment e welcome amenities."
+    question: "Qual é o melhor período para viajar?",
+    answer: "As Maldivas têm clima tropical o ano todo. A estação seca (novembro a abril) oferece dias ensolarados e mar calmo, ideal para atividades aquáticas. A estação úmida (maio a outubro) pode ter chuvas ocasionais, mas ainda assim oferece temperaturas agradáveis e menos turistas."
   }, {
-    question: "Como funciona o traslado de hidroavião?",
-    answer: "O hidroavião parte do aeroporto internacional de Malé e leva aproximadamente 20 minutos até o resort. O voo oferece vistas espetaculares das ilhas das Maldivas. O traslado está incluído no pacote."
+    question: "Como funciona o sistema all inclusive?",
+    answer: "Nosso all inclusive premium inclui todas as refeições (café da manhã, almoço e jantar) em qualquer um dos restaurantes do resort, bebidas alcoólicas e não alcoólicas ilimitadas, minibar do quarto reabastecido diariamente e lanches ao longo do dia."
   }, {
-    question: "Qual a melhor época para visitar as Maldivas?",
-    answer: "As Maldivas podem ser visitadas o ano todo. A estação seca (dezembro a abril) oferece menos chuva, enquanto maio a novembro pode ter chuvas ocasionais, mas com excelentes oportunidades de mergulho."
+    question: "É necessário visto para brasileiros?",
+    answer: "Brasileiros recebem visto gratuito na chegada às Maldivas, válido por 30 dias. É necessário apenas passaporte com validade mínima de 6 meses, comprovante de reserva do hotel e passagem de retorno."
   }, {
-    question: "Preciso de visto para as Maldivas?",
-    answer: "Brasileiros não precisam de visto para estadias de até 30 dias. É necessário apenas passaporte com validade mínima de 6 meses."
+    question: "Quais atividades estão disponíveis?",
+    answer: "Além das inclusas no pacote, o resort oferece: mergulho com cilindro, pesca esportiva, passeios de barco ao pôr do sol, esportes aquáticos motorizados, experiências gastronômicas especiais e tratamentos no spa (com custo adicional)."
+  }, {
+    question: "Como funciona o transfer?",
+    answer: "O transfer de hidroavião está incluído no pacote. A viagem dura aproximadamente 40 minutos com vistas espetaculares. Nossos parceiros aguardam vocês no aeroporto e cuidam de toda a logística."
   }];
   const pricingOptions = [{
-    period: "25 DE DEZEMBRO A 29 DE DEZEMBRO, 2025",
+    period: "Datas até 31/01/2025",
     price: "2.890",
-    status: "Últimas 3 vagas",
+    status: "Últimas 4 vagas",
     availability: "limited"
   }, {
-    period: "10 DE JANEIRO A 14 DE JANEIRO, 2026",
-    price: "3.050",
-    status: "6 vagas disponíveis",
+    period: "Datas até 31/03/2025",
+    price: "3.290",
+    status: "Ainda há disponibilidade",
     availability: "available"
-  }, {
-    period: "15 DE JANEIRO A 19 DE JANEIRO, 2026",
-    price: "3.200",
-    status: "Disponível",
-    availability: "available"
-  }, {
-    period: "20 DE JANEIRO A 24 DE JANEIRO, 2026",
-    price: "2.950",
-    status: "2 vagas restantes",
-    availability: "limited"
   }];
-  const packageSchema = createTravelPackageSchema({
-    name: "Lua de Mel nas Maldivas - Black Friday",
-    description: "4 noites em bangalô overwater com traslados de hidroavião inclusos",
-    priceFrom: 2890,
-    image: heroImage,
-    url: "https://followmeviagens.com/promocoes/black-friday-maldivas",
-    location: "Maldivas"
+  const packageStructuredData = createTravelPackageSchema({
+    name: "Pacote Maldivas All-Inclusive - Bangalô sobre água privativo",
+    description: "Experiência completa nas Maldivas com 4 noites em bangalô overwater, transfer de hidroavião e sistema all inclusive premium",
+    price: "2890",
+    priceRange: "U$ 2.890 - U$ 3.290",
+    startDate: "2025-01-01",
+    endDate: "2025-03-31",
+    duration: "P4D",
+    location: "Maldivas",
+    includesFood: true,
+    includesAccommodation: true,
+    includesTransport: true
   });
-  const faqSchema = createFAQSchema(faqs);
-  const breadcrumbSchema = createBreadcrumbSchema(breadcrumbItems);
+  const faqStructuredData = createFAQSchema(faqs.map(faq => ({
+    question: faq.question,
+    answer: faq.answer
+  })));
+  const breadcrumbStructuredData = createBreadcrumbSchema([{
+    name: "Home",
+    url: "https://eliteluxtravel.com.br"
+  }, {
+    name: "Pacotes",
+    url: "https://eliteluxtravel.com.br/pacotes"
+  }, {
+    name: "Maldivas Black Friday",
+    url: "https://eliteluxtravel.com.br/maldivas-black-friday"
+  }]);
+  const handleWhatsAppClick = () => {
+    const message = encodeURIComponent("Olá! Vi a oferta de Black Friday para as Maldivas e gostaria de mais informações sobre o pacote.");
+    window.open(`https://wa.me/5511944495505?text=${message}`, "_blank");
+  };
   return <>
-      <SEOHead title="Lua de Mel Maldivas: 4 Noites Overwater com 25% OFF | Follow Me Viagens" description="Pacote lua de mel Maldivas com 25% desconto Black Friday. 4 noites bangalô overwater, traslados inclusos. A partir U$ 2.890. Reserve agora!" canonicalUrl="/promocoes/black-friday-maldivas" ogImage={heroImage} keywords={["maldivas lua de mel", "black friday maldivas", "bangalô overwater", "pacote maldivas", "viagem maldivas"]} structuredData={[packageSchema, faqSchema, breadcrumbSchema]} />
+      <SEOHead title="Pacote Maldivas All-Inclusive - Black Friday | Elite Lux Travel" description="Aproveite nossa oferta especial: 4 noites em bangalô overwater nas Maldivas com all-inclusive. Economize U$ 965 e parcele em até 10x sem juros." keywords="pacote maldivas, black friday maldivas, viagem maldivas all inclusive, bangalô overwater, lua de mel maldivas" ogImage={heroImage} structuredData={[packageStructuredData, faqStructuredData, breadcrumbStructuredData]} />
 
-      <Navigation />
       <WhatsAppButton />
+      <Navigation />
 
-      <main className="min-h-screen bg-background">
-        {/* Hero Section - Above the Fold */}
-        <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-          {/* Background Image */}
-          <div className="absolute inset-0 z-0">
-            <img src={heroImage} alt="Vista aérea das Maldivas" className="w-full h-full object-cover" />
-            <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/60 to-black/80" />
-          </div>
-
-          {/* Content */}
-          <div className="relative z-10 container mx-auto px-4 pt-32 pb-16">
-            {/* Countdown Badge */}
-            <div className="flex justify-center mb-8 animate-fade-in">
-              <div className="text-slate-700 px-5 py-2.5 rounded-full font-medium text-xs md:text-sm flex items-center gap-2 shadow-lg bg-white/95 backdrop-blur-sm border border-slate-200">
-                <Clock className="w-4 h-4" />
-                <span>Oferta Especial • Válida por {timeLeft.days} dias</span>
+      <main className="overflow-x-hidden">
+        {/* REDESIGNED HERO SECTION */}
+        <section className="relative min-h-screen bg-white dark:bg-slate-950">
+          {/* Clean gradient background */}
+          <div className="absolute inset-0 bg-gradient-to-br from-slate-50 to-white dark:from-slate-950 dark:to-slate-900" />
+          
+          {/* Main content container */}
+          <div className="relative z-10 container mx-auto px-4 pt-32 pb-20">
+            <div className="max-w-5xl mx-auto">
+              {/* Offer badge */}
+              <div className="flex justify-center mb-8">
+                <div className="inline-flex items-center gap-2 px-4 py-2 bg-slate-900 dark:bg-slate-800 text-white rounded-full text-sm font-medium">
+                  <Sparkles className="w-4 h-4" />
+                  <span>BLACK FRIDAY</span>
+                  <span className="text-yellow-400">Oferta Limitada</span>
+                </div>
               </div>
-            </div>
 
-            <div className="max-w-5xl mx-auto text-center">
-              {/* H1 Headline */}
-              <h1 className="text-4xl md:text-5xl font-display font-bold text-white mb-8 leading-tight animate-fade-in lg:text-5xl">
-                Lua de Mel nas Maldivas: 4 Noites em Bangalô Overwater com 25% de Desconto
+              {/* Main headline */}
+              <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-slate-900 dark:text-white text-center leading-tight mb-6">
+                Maldivas All-Inclusive
+                <span className="block text-3xl md:text-5xl lg:text-6xl text-slate-700 dark:text-slate-300 font-normal mt-2">
+                  Bangalô sobre água privativo
+                </span>
               </h1>
 
-              {/* Pricing */}
-              <div className="mb-8 animate-fade-in">
-                <div className="text-yellow-500 text-3xl md:text-4xl font-bold mb-2">
-                  A partir de U$ 2.890 por pessoa
+              {/* Price highlight box */}
+              <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12">
+                <div className="bg-slate-900 dark:bg-slate-800 text-white px-8 py-4 rounded-2xl shadow-xl">
+                  <div className="text-sm font-medium mb-1 opacity-90">A partir de</div>
+                  <div className="text-3xl md:text-4xl font-bold">U$ 2.890</div>
+                  <div className="text-sm mt-1 opacity-90">por pessoa</div>
                 </div>
-                <div className="text-white/90 text-lg md:text-xl">
-                  <span className="line-through text-white/60">De U$ 3.855</span> <span className="text-white/40 mx-2">•</span> <span className="text-emerald-400 font-medium">Economize U$ 965</span>
-                </div>
-              </div>
-
-              {/* Benefits List */}
-              <div className="grid md:grid-cols-2 gap-4 max-w-3xl mx-auto mb-10 text-left animate-fade-in">
-                {["Bangalô Sobre a Água com Vista Incrível", "Nós Pagamos os Traslados de Hidroavião (U$ 450 de valor)", "Sistems All Inclusive (todas as refeições)", "Cancelamento Flexível até 30 dias antes", "Garantia de Melhor Preço"].map((benefit, index) => <div key={index} className="flex items-start gap-3 bg-white/10 backdrop-blur-sm p-4 rounded-lg">
-                    <Check className="w-6 h-6 text-emerald-400 flex-shrink-0 mt-0.5" />
-                    <span className="text-white font-medium text-lg">{benefit}</span>
-                  </div>)}
-              </div>
-
-              {/* Primary CTA */}
-              <Button size="lg" onClick={() => scrollToSection('pricing')} className="text-white font-semibold text-base px-10 py-6 h-auto rounded-lg shadow-xl hover:shadow-2xl transform hover:scale-[1.02] transition-all duration-300 mb-8 border border-slate-700 bg-green-800 hover:bg-green-700">Garantir minha vaga</Button>
-
-              {/* Trust Badges Row */}
-              <div className="flex flex-wrap items-center justify-center gap-6 mb-8 text-white/80 text-sm">
-                <div className="flex items-center gap-2">
-                  <Shield className="w-4 h-4 text-emerald-400" />
-                  <span>Pagamento Seguro</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <Star className="w-4 h-4 text-rose-400 fill-rose-400" />
-                  <span>Avaliação 5.0</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <Check className="w-4 h-4 text-emerald-400" />
-                  <span>Cancelamento Flexível</span>
+                
+                <div className="bg-emerald-600 text-white px-6 py-4 rounded-2xl shadow-xl animate-pulse">
+                  <div className="text-sm font-medium mb-1">Economize</div>
+                  <div className="text-2xl md:text-3xl font-bold">U$ 965</div>
+                  <div className="text-sm mt-1">Desconto especial</div>
                 </div>
               </div>
 
-              {/* Scroll Indicator */}
-              <div className="animate-bounce mt-8">
-                <ChevronDown className="w-6 h-6 text-white/50 mx-auto" />
+              {/* Features grid - clean layout */}
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12 max-w-3xl mx-auto">
+                <div className="flex items-center gap-3 justify-center md:justify-start">
+                  <div className="w-10 h-10 rounded-full bg-slate-100 dark:bg-slate-800 flex items-center justify-center flex-shrink-0">
+                    <Waves className="w-5 h-5 text-slate-700 dark:text-slate-300" />
+                  </div>
+                  <span className="text-base font-medium text-slate-700 dark:text-slate-300">4 noites overwater</span>
+                </div>
+
+                <div className="flex items-center gap-3 justify-center md:justify-start">
+                  <div className="w-10 h-10 rounded-full bg-slate-100 dark:bg-slate-800 flex items-center justify-center flex-shrink-0">
+                    <Plane className="w-5 h-5 text-slate-700 dark:text-slate-300" />
+                  </div>
+                  <span className="text-base font-medium text-slate-700 dark:text-slate-300">Transfer hidroavião</span>
+                </div>
+
+                <div className="flex items-center gap-3 justify-center md:justify-start">
+                  <div className="w-10 h-10 rounded-full bg-slate-100 dark:bg-slate-800 flex items-center justify-center flex-shrink-0">
+                    <Utensils className="w-5 h-5 text-slate-700 dark:text-slate-300" />
+                  </div>
+                  <span className="text-base font-medium text-slate-700 dark:text-slate-300">All inclusive premium</span>
+                </div>
+
+                <div className="flex items-center gap-3 justify-center md:justify-start">
+                  <div className="w-10 h-10 rounded-full bg-slate-100 dark:bg-slate-800 flex items-center justify-center flex-shrink-0">
+                    <Wine className="w-5 h-5 text-slate-700 dark:text-slate-300" />
+                  </div>
+                  <span className="text-base font-medium text-slate-700 dark:text-slate-300">Mini bar incluso</span>
+                </div>
+
+                <div className="flex items-center gap-3 justify-center md:justify-start">
+                  <div className="w-10 h-10 rounded-full bg-slate-100 dark:bg-slate-800 flex items-center justify-center flex-shrink-0">
+                    <Heart className="w-5 h-5 text-slate-700 dark:text-slate-300" />
+                  </div>
+                  <span className="text-base font-medium text-slate-700 dark:text-slate-300">Massagem casal</span>
+                </div>
+
+                <div className="flex items-center gap-3 justify-center md:justify-start">
+                  <div className="w-10 h-10 rounded-full bg-slate-100 dark:bg-slate-800 flex items-center justify-center flex-shrink-0">
+                    <CreditCard className="w-5 h-5 text-slate-700 dark:text-slate-300" />
+                  </div>
+                  <span className="text-base font-medium text-slate-700 dark:text-slate-300">10x sem juros</span>
+                </div>
+              </div>
+
+              {/* CTA Button */}
+              <div className="flex flex-col items-center gap-6 mb-16">
+                <Button 
+                  size="lg" 
+                  onClick={handleWhatsAppClick} 
+                  className="bg-emerald-600 hover:bg-emerald-700 text-white font-semibold text-lg px-12 py-7 h-auto rounded-2xl shadow-xl hover:shadow-2xl transform hover:scale-[1.02] transition-all duration-300 flex items-center gap-3"
+                >
+                  <MessageCircle className="w-5 h-5" />
+                  Reservar Agora
+                </Button>
+
+                {/* Trust badges */}
+                <div className="flex flex-wrap items-center justify-center gap-6 text-sm text-slate-600 dark:text-slate-400">
+                  <div className="flex items-center gap-2">
+                    <Shield className="w-4 h-4 text-slate-400" />
+                    <span>Pagamento Seguro</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <Star className="w-4 h-4 text-yellow-500 fill-yellow-500" />
+                    <span>Avaliação 5.0</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <Clock className="w-4 h-4 text-slate-400" />
+                    <span>Cancelamento Flexível</span>
+                  </div>
+                </div>
+              </div>
+
+              {/* Scroll indicator */}
+              <div className="flex justify-center animate-bounce">
+                <ChevronDown className="w-6 h-6 text-slate-400" />
               </div>
             </div>
           </div>
         </section>
 
-        {/* Breadcrumbs */}
-        <div className="container mx-auto px-4 py-6">
-          <Breadcrumbs items={breadcrumbItems} />
-        </div>
+        {/* Carousel Section */}
+        <CarouselSection />
 
-        {/* Image Carousel Section */}
-        <section className="py-20 sm:py-32 bg-background relative overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-b from-transparent via-muted/20 to-transparent pointer-events-none"></div>
-          
-          <div className="container mx-auto relative z-10 px-4">
-            <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-16 animate-fade-in">
-              <h2 className="sm:text-5xl font-display font-medium text-foreground mb-4 sm:mb-6 tracking-tight text-balance leading-tight md:text-5xl text-4xl">
-                Momentos Inesquecíveis nas Maldivas
+        {/* Package Details Section */}
+        <section className="py-24 bg-slate-50/50 dark:bg-slate-900/20 scroll-mt-20">
+          <div className="container mx-auto px-4">
+            <div className="flex items-center justify-center gap-2 mb-3">
+              <Package className="w-5 h-5 text-slate-600" />
+              <h2 className="text-2xl md:text-3xl font-display font-semibold text-center">
+                O que está incluído
               </h2>
-              <p className="text-base sm:text-lg text-foreground/70 leading-relaxed font-light tracking-luxury max-w-2xl mx-auto">
-                Das villas exclusivas sobre o mar cristalino aos tratamentos de spa rejuvenescedores, cada momento nas Maldivas é desenhado para criar memórias eternas de luxo e tranquilidade absoluta.
-              </p>
             </div>
-
-            <CarouselSection />
-          </div>
-        </section>
-
-        {/* Benefits Section */}
-        <section className="py-24 bg-gradient-to-b from-background to-slate-50/50 dark:to-slate-900/20">
-          <div className="container mx-auto px-4">
-            <h2 className="text-2xl md:text-3xl font-display font-semibold text-center mb-3">
-              Por que escolher este pacote
-            </h2>
-            <p className="text-center text-muted-foreground mb-16 max-w-2xl mx-auto text-sm md:text-base">
-              Experiências cuidadosamente selecionadas para sua lua de mel perfeita
-            </p>
-
-            <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-              <Card className="p-8 text-center hover:shadow-lg transition-all duration-300 border-slate-200/60 bg-white/80 backdrop-blur-sm">
-                <div className="inline-flex items-center justify-center w-14 h-14 rounded-full bg-blue-50 mb-5">
-                  <Waves className="w-7 h-7 text-blue-600" />
-                </div>
-                <h3 className="text-lg font-semibold mb-3">Bangalô Overwater Privativo</h3>
-                <p className="text-muted-foreground text-sm leading-relaxed">
-                  Acorde com vista do oceano azul-turquesa direto da sua cama
-                </p>
-              </Card>
-
-              <Card className="p-8 text-center hover:shadow-lg transition-all duration-300 border-slate-200/60 bg-white/80 backdrop-blur-sm">
-                <div className="inline-flex items-center justify-center w-14 h-14 rounded-full bg-sky-50 mb-5">
-                  <Plane className="w-7 h-7 text-sky-600" />
-                </div>
-                <h3 className="text-lg font-semibold mb-3">Transfer Premium Incluído</h3>
-                <p className="text-muted-foreground text-sm leading-relaxed">
-                  Traslado de hidroavião com vistas espetaculares das ilhas
-                </p>
-              </Card>
-
-              <Card className="p-8 text-center hover:shadow-lg transition-all duration-300 border-slate-200/60 bg-white/80 backdrop-blur-sm">
-                <div className="inline-flex items-center justify-center w-14 h-14 rounded-full bg-amber-50 mb-5">
-                  <Coffee className="w-7 h-7 text-amber-600" />
-                </div>
-                <h3 className="text-lg font-semibold mb-3">All Inclusive (Refeições)</h3>
-                <p className="text-muted-foreground text-sm leading-relaxed">
-                  Culinária variada e gastronomia de nível mundial, tudo incluído
-                </p>
-              </Card>
-            </div>
-          </div>
-        </section>
-
-        {/* Social Proof Section */}
-        <section className="py-24 bg-white dark:bg-slate-950">
-          <div className="container mx-auto px-4">
-            <h2 className="text-2xl md:text-3xl font-display font-semibold text-center mb-3">
-              Avaliações de clientes
-            </h2>
-            <p className="text-center text-muted-foreground mb-12 text-sm">
-              Experiências reais de casais que viajaram conosco
-            </p>
-
-            <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto mb-12">
-              <Card className="p-8 border-slate-200/60 shadow-sm hover:shadow-md transition-shadow">
-                <div className="flex gap-0.5 mb-4">
-                  {[1, 2, 3, 4, 5].map(star => <Star key={star} className="w-4 h-4 text-rose-500 fill-rose-500" />)}
-                </div>
-                <p className="text-base mb-6 leading-relaxed text-foreground/90">
-                  "A vista do bangalô era exatamente como nas fotos. Acordar sobre a água foi inesquecível!"
-                </p>
-                <p className="text-xs text-muted-foreground font-medium">
-                  Marina & Carlos • São Paulo
-                </p>
-              </Card>
-
-              <Card className="p-8 border-slate-200/60 shadow-sm hover:shadow-md transition-shadow">
-                <div className="flex gap-0.5 mb-4">
-                  {[1, 2, 3, 4, 5].map(star => <Star key={star} className="w-4 h-4 text-rose-500 fill-rose-500" />)}
-                </div>
-                <p className="text-base mb-6 leading-relaxed text-foreground/90">
-                  "Resort simplesmente incrível. Experiência dos sonhos, vamos guardar pra sempre. Obrigada Follow Me Viagens pela organização impecável."
-                </p>
-                <p className="text-xs text-muted-foreground font-medium">
-                  Juliana & Roberto • Rio de Janeiro
-                </p>
-              </Card>
-            </div>
-
-            <div className="text-center">
-              <Button size="lg" onClick={() => scrollToSection('pricing')} className="text-white font-semibold text-base px-10 py-6 h-auto rounded-lg bg-slate-800 hover:bg-slate-900 border border-slate-700">
-                Ver Preços e Datas
-              </Button>
-            </div>
-          </div>
-        </section>
-
-        {/* Gastronomy Section */}
-        
-
-        {/* Package Inclusions Section */}
-        <section className="py-24 bg-slate-50/50 dark:bg-slate-900/20">
-          <div className="container mx-auto px-4">
-            <h2 className="text-2xl md:text-3xl font-display font-semibold text-center mb-3">
-              O que está incluído
-            </h2>
-            <p className="text-center text-muted-foreground mb-12 text-sm">
-              Tudo pensado para sua experiência ser perfeita
+            <p className="text-center text-muted-foreground mb-12 text-sm max-w-2xl mx-auto">
+              Pacote completo com tudo que você precisa para uma experiência inesquecível
             </p>
 
             <div className="grid md:grid-cols-2 gap-4 max-w-5xl mx-auto">
