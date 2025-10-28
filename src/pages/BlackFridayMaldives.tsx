@@ -196,14 +196,18 @@ const CarouselSection = () => {
       }
     }
   };
-  return <section className="relative w-full overflow-hidden">
-      <div ref={containerRef} className="relative w-full h-[240px] md:h-[280px] lg:h-[300px] cursor-grab select-none" onMouseDown={handleMouseDown} onMouseMove={handleMouseMove} onMouseUp={handleMouseUp} onMouseLeave={handleMouseLeave} onTouchStart={handleTouchStart} onTouchMove={handleTouchMove} onTouchEnd={handleTouchEnd}>
-        <div className="absolute inset-0 bg-gradient-to-r from-white/30 via-transparent to-white/30 pointer-events-none z-10" />
-        <div ref={trackRef} className="flex will-change-transform">
-          {duplicatedExperiences.map((exp, index) => <div key={index} className="relative w-[440px] h-[240px] md:h-[280px] lg:h-[300px] flex-shrink-0 mx-2">
-              <div className="relative h-full rounded-xl overflow-hidden shadow-lg">
-                <img src={exp.image} alt={exp.alt} loading="eager" className="w-full h-full object-cover" />
-                <div className="absolute inset-0 bg-gradient-to-t from-slate-900/40 via-transparent to-transparent" />
+  const togglePause = () => {
+    if (!isDragging) {
+      setIsPaused(!isPaused);
+    }
+  };
+  return <section className="py-16 bg-white dark:bg-slate-950">
+      <div ref={containerRef} className="relative w-full overflow-hidden cursor-grab select-none" onMouseDown={handleMouseDown} onMouseMove={handleMouseMove} onMouseUp={handleMouseUp} onMouseLeave={handleMouseLeave} onTouchStart={handleTouchStart} onTouchMove={handleTouchMove} onTouchEnd={handleTouchEnd} onClick={togglePause}>
+        <div ref={trackRef} className="flex gap-4 sm:gap-6 will-change-transform" style={{ width: 'fit-content' }}>
+          {duplicatedExperiences.map((exp, index) => <div key={index} className="flex-shrink-0 w-[280px] sm:w-[320px] md:w-[380px]">
+              <div className="relative aspect-[4/5] overflow-hidden rounded-2xl shadow-lg hover:shadow-xl transition-all duration-500 group">
+                <img src={exp.image} alt={exp.alt} loading="eager" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 pointer-events-none" draggable="false" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
               </div>
             </div>)}
         </div>
@@ -355,10 +359,13 @@ const BlackFridayMaldives = () => {
                   <div className="text-3xl font-bold text-slate-900 dark:text-white">U$ 2.890</div>
                   <div className="text-xs text-slate-500 dark:text-slate-400 mt-2">por pessoa</div>
                 </div>
-                <div className="bg-slate-900 dark:bg-slate-800 border border-slate-800 dark:border-slate-700 rounded-lg px-8 py-4 w-60 text-center shadow-sm hover:shadow-md transition-shadow">
-                  <div className="text-xs font-medium text-slate-400 uppercase tracking-wider mb-2">Economize</div>
-                  <div className="text-3xl font-bold text-white">U$ 965</div>
-                  <div className="text-xs text-slate-400 mt-2">Desconto especial</div>
+                <div className="relative bg-gradient-to-br from-emerald-500 to-emerald-600 border border-emerald-400/30 rounded-lg px-8 py-4 w-60 text-center shadow-lg hover:shadow-xl transition-all overflow-hidden group">
+                  <div className="absolute inset-0 bg-white/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                  <div className="relative z-10">
+                    <div className="text-xs font-medium text-emerald-50 uppercase tracking-wider mb-2">Economize</div>
+                    <div className="text-3xl font-bold text-white">U$ 965</div>
+                    <div className="text-xs text-emerald-50 mt-2">Desconto especial</div>
+                  </div>
                 </div>
               </div>
 
@@ -460,7 +467,7 @@ const BlackFridayMaldives = () => {
               Pacote completo com tudo que você precisa para uma experiência inesquecível
             </p>
 
-            <div className="grid md:grid-cols-2 gap-4 max-w-4xl mx-auto md:place-items-center">
+            <div className="grid md:grid-cols-2 gap-4 max-w-4xl mx-auto place-items-start md:place-items-center">
               {[{
               icon: Waves,
               text: "4 noites em bangalô overwater privativo"
@@ -496,7 +503,7 @@ const BlackFridayMaldives = () => {
               text: "Pagamento em até 10x sem juros"
             }].map((item, index) => {
               const Icon = item.icon;
-              return <div key={index} className="flex items-start gap-4 bg-white dark:bg-slate-900 p-5 rounded-lg border border-slate-200/60 dark:border-slate-800 w-full md:max-w-md">
+              return <div key={index} className="flex items-start gap-4 bg-white dark:bg-slate-900 p-5 rounded-lg border border-slate-200/60 dark:border-slate-800 w-full md:max-w-md justify-self-start md:justify-self-center">
                   <Icon className="w-5 h-5 text-slate-600 dark:text-slate-400 flex-shrink-0 mt-0.5" />
                   <span className="text-sm font-medium text-foreground/90 text-left">{item.text}</span>
                 </div>;
@@ -680,11 +687,8 @@ const BlackFridayMaldives = () => {
         </section>
 
         {/* Final CTA Section */}
-        <section className="py-24 bg-gradient-to-b from-slate-50 to-white dark:from-slate-900/20 dark:to-slate-950">
+        <section className="py-16 bg-gradient-to-b from-slate-50 to-white dark:from-slate-900/20 dark:to-slate-950">
           <div className="container mx-auto px-4 text-center">
-            <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-slate-100 dark:bg-slate-800 mb-6">
-              <Users className="w-6 h-6 text-slate-600 dark:text-slate-400" />
-            </div>
             <h2 className="text-2xl md:text-3xl font-display font-semibold mb-3 max-w-2xl mx-auto">
               Pronto para sua lua de mel dos sonhos?
             </h2>
