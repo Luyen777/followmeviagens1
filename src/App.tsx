@@ -19,7 +19,7 @@ import AfricaDoSulLanding from "./pages/AfricaDoSulLanding";
 import AfricaDoSulSafariCapeTown from "./pages/AfricaDoSulSafariCapeTown";
 import AfricaDoSulGardenRoute from "./pages/AfricaDoSulGardenRoute";
 import Seychelles from "./pages/Seychelles";
-import Egito from "./pages/Egito";
+import EgitoLanding from "./pages/EgitoLanding";
 import Vietna from "./pages/Vietna";
 import Turquia from "./pages/Turquia";
 import Grecia from "./pages/Grecia";
@@ -31,6 +31,8 @@ import IlhasMauricio from "./pages/IlhasMauricio";
 import Fiji from "./pages/Fiji";
 import Camboja from "./pages/Camboja";
 import BlackFridayMaldives from "./pages/BlackFridayMaldives";
+import TestPage from "./pages/TestPage";
+import SobreNos from "./pages/SobreNos";
 
 const queryClient = new QueryClient();
 
@@ -56,7 +58,7 @@ const App = () => (
           <Route path="/africa-do-sul/safari-cape-town-7-noites" element={<AfricaDoSulSafariCapeTown />} />
           <Route path="/africa-do-sul/garden-route-explorer" element={<AfricaDoSulGardenRoute />} />
           <Route path="/seychelles" element={<Seychelles />} />
-          <Route path="/egito" element={<Egito />} />
+          <Route path="/egito" element={<EgitoLanding />} />
           <Route path="/vietna" element={<Vietna />} />
           <Route path="/turquia" element={<Turquia />} />
           <Route path="/grecia" element={<Grecia />} />
@@ -68,6 +70,8 @@ const App = () => (
           <Route path="/fiji" element={<Fiji />} />
           <Route path="/camboja" element={<Camboja />} />
           <Route path="/promocoes/black-friday-maldivas" element={<BlackFridayMaldives />} />
+          <Route path="/sobre-nos" element={<SobreNos />} />
+          <Route path="/test" element={<TestPage />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
