@@ -30,6 +30,11 @@ import NovaZelandia from "./pages/NovaZelandia";
 import IlhasMauricio from "./pages/IlhasMauricio";
 import Fiji from "./pages/Fiji";
 import Camboja from "./pages/Camboja";
+import Laos from "./pages/Laos";
+import Tanzania from "./pages/Tanzania";
+import Japao from "./pages/Japao";
+import Filipinas from "./pages/Filipinas";
+import CoreiaDoSul from "./pages/CoreiaDoSul";
 import BlackFridayMaldives from "./pages/BlackFridayMaldives";
 import TestPage from "./pages/TestPage";
 import SobreNos from "./pages/SobreNos";
@@ -69,6 +74,11 @@ const App = () => (
           <Route path="/ilhas-mauricio" element={<IlhasMauricio />} />
           <Route path="/fiji" element={<Fiji />} />
           <Route path="/camboja" element={<Camboja />} />
+          <Route path="/laos" element={<Laos />} />
+          <Route path="/tanzania" element={<Tanzania />} />
+          <Route path="/japao" element={<Japao />} />
+          <Route path="/filipinas" element={<Filipinas />} />
+          <Route path="/coreia-do-sul" element={<CoreiaDoSul />} />
           <Route path="/promocoes/black-friday-maldivas" element={<BlackFridayMaldives />} />
           <Route path="/sobre-nos" element={<SobreNos />} />
           <Route path="/test" element={<TestPage />} />

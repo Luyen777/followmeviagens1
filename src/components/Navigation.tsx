@@ -51,6 +51,21 @@ const destinations = [{
 }, {
   label: "Camboja",
   href: "/camboja"
+}, {
+  label: "Laos",
+  href: "/laos"
+}, {
+  label: "Tanzânia",
+  href: "/tanzania"
+}, {
+  label: "Japão",
+  href: "/japao"
+}, {
+  label: "Filipinas",
+  href: "/filipinas"
+}, {
+  label: "Coreia do Sul",
+  href: "/coreia-do-sul"
 }];
 const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -163,7 +178,7 @@ const Navigation = () => {
                         <ChevronDown className="w-3 h-3" />
                       </button>
                       {isDestinationsOpen && <div className="absolute top-full left-0 pt-1 z-50">
-                          <div className="bg-background border border-border rounded-lg shadow-lg py-2 min-w-[200px] animate-fade-in">
+                          <div className="bg-background border border-border rounded-lg shadow-lg py-2 min-w-[200px] max-h-[70vh] overflow-y-auto animate-fade-in">
                             {destinations.map(dest => <Link key={dest.href} to={dest.href} className="block px-4 py-2 text-sm text-foreground/80 hover:text-foreground hover:bg-foreground/5 transition-colors">
                                 {dest.label}
                               </Link>)}
@@ -218,7 +233,7 @@ const Navigation = () => {
                         {item.label}
                         <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${isMobileDestinationsOpen ? 'rotate-180' : ''}`} />
                       </button>
-                      {isMobileDestinationsOpen && <div className="pl-4 mt-1 space-y-1 animate-fade-in">
+                      {isMobileDestinationsOpen && <div className="pl-4 mt-1 space-y-1 max-h-[50vh] overflow-y-auto animate-fade-in">
                           {destinations.map(dest => <Link key={dest.href} to={dest.href} onClick={() => {
                     setIsMenuOpen(false);
                     setIsMobileDestinationsOpen(false);
