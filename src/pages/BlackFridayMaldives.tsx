@@ -217,13 +217,13 @@ const CarouselSection = () => {
 const BlackFridayMaldives = () => {
   const faqs = [{
     question: "O que está incluído no pacote?",
-    answer: "O pacote inclui: 4 noites em bangalô overwater privativo, transfer de hidroavião ida e volta, sistema all inclusive com 3 refeições por dia, café da manhã flutuante, mini bar com bebidas alcoólicas, open bar de chocolates diário, uma massagem para o casal, aulas de yoga 2x ao dia, equipamento de snorkel gratuito e welcome drink."
+    answer: "O pacote inclui: 4 noites em bangalô overwater privativo, transfer de hidroavião ida e volta, sistema all inclusive com 3 refeições por dia, 1 café da manhã flutuante, open bar de chocolates diário, uma massagem para o casal, aulas de yoga 2x ao dia, equipamento de snorkel gratuito e welcome drinks."
   }, {
     question: "Qual é o melhor período para viajar?",
     answer: "As Maldivas têm clima tropical o ano todo. A estação seca (novembro a abril) oferece dias ensolarados e mar calmo, ideal para atividades aquáticas. A estação úmida (maio a outubro) pode ter chuvas ocasionais, mas ainda assim oferece temperaturas agradáveis e menos turistas."
   }, {
     question: "Como funciona o sistema all inclusive?",
-    answer: "Nosso all inclusive premium inclui todas as refeições (café da manhã, almoço e jantar) em qualquer um dos restaurantes do resort, bebidas alcoólicas e não alcoólicas ilimitadas, minibar do quarto reabastecido diariamente e lanches ao longo do dia."
+    answer: "Este all inclusive premium inclui todas as refeições (café da manhã, almoço e jantar) nos restaurantes do resort, e bebidas não alcoólicas durante as refeições."
   }, {
     question: "É necessário visto para brasileiros?",
     answer: "Brasileiros recebem visto gratuito na chegada às Maldivas, válido por 30 dias. É necessário apenas passaporte com validade mínima de 6 meses, comprovante de reserva do hotel e passagem de retorno."
@@ -389,7 +389,7 @@ const BlackFridayMaldives = () => {
      <div className="w-10 h-10 rounded-full bg-slate-100 dark:bg-slate-800 flex items-center justify-center flex-shrink-0">
        <Waves className="w-5 h-5 text-slate-700 dark:text-slate-300" />
      </div>
-     <span className="text-base font-medium text-slate-700 dark:text-slate-300">5 dias bangalô sobre as águas</span>
+     <span className="text-base font-medium text-slate-700 dark:text-slate-300">4 noites bangalô sobre as águas</span>
    </div>
  
    <div className="flex items-center gap-3 justify-start">
@@ -495,9 +495,6 @@ const BlackFridayMaldives = () => {
               icon: Utensils,
               text: "Um café da manhã flutuante na piscina do quarto"
             }, {
-              icon: Wine,
-              text: "Mini bar no quarto com bebidas alcoólicas"
-            }, {
               icon: Gift,
               text: "Open Bar de chocolates todos os dias"
             }, {
@@ -508,13 +505,13 @@ const BlackFridayMaldives = () => {
               text: "Aula de yoga 2x por dia"
             }, {
               icon: Sparkles,
-              text: "Snorkeling equipmento gratuito"
+              text: "Snorkeling - equipmento gratuito"
             }, {
               icon: Heart,
               text: "Welcome drink e amenidades"
             }, {
               icon: CreditCard,
-              text: "Pagamento em até 10x sem juros"
+              text: "Pagamento em até 10x sem juros!"
             }].map((item, index) => {
               const Icon = item.icon;
               return <div key={index} className="flex items-start gap-4 bg-white dark:bg-slate-900 p-5 rounded-lg border border-slate-200/60 dark:border-slate-800 w-full md:max-w-md justify-self-start md:justify-self-center">
@@ -726,7 +723,7 @@ const BlackFridayMaldives = () => {
                 <span>Pagamento Seguro</span>
               </div>
               <div className="flex items-center gap-2">
-                <Star className="w-4 h-4 text-rose-500 fill-rose-500" />
+                <Star className="w-4 h-4 text-yellow-500 fill-yellow-500" />
                 <span>Avaliação 5.0</span>
               </div>
               <div className="flex items-center gap-2">
