@@ -3,7 +3,7 @@ import { Helmet } from "react-helmet";
 interface SEOHeadProps {
   title: string;
   description: string;
-  canonicalUrl: string;
+  canonicalUrl?: string;
   ogImage?: string;
   ogType?: "website" | "article";
   keywords?: string[];
@@ -26,9 +26,15 @@ const SEOHead = ({
   additionalMeta = []
 }: SEOHeadProps) => {
   // Ensure URLs are absolute
-  const fullCanonicalUrl = canonicalUrl.startsWith("http") 
-    ? canonicalUrl 
-    : `https://followmeviagens.com${canonicalUrl}`;
+  const defaultCanonicalUrl = typeof window !== 'undefined' 
+    ? window.location.href 
+    : 'https://followmeviagens.com';
+  
+  const fullCanonicalUrl = canonicalUrl 
+    ? (canonicalUrl.startsWith("http") 
+        ? canonicalUrl 
+        : `https://followmeviagens.com${canonicalUrl}`)
+    : defaultCanonicalUrl;
   
   const fullOgImage = ogImage?.startsWith("http")
     ? ogImage
