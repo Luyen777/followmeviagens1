@@ -293,36 +293,31 @@ const BlackFridayMaldives = () => {
   const packageStructuredData = createTravelPackageSchema({
     name: "Pacote Maldivas All-Inclusive - Bangalô sobre água privativo",
     description: "Experiência completa nas Maldivas com 4 noites em bangalô overwater, transfer de hidroavião e sistema all inclusive premium",
-    price: "2890",
-    priceRange: "U$ 2.890 - U$ 3.290",
-    startDate: "2025-01-01",
-    endDate: "2025-03-31",
-    duration: "P4D",
+    image: heroImage,
+    priceFrom: 2890,
     location: "Maldivas",
-    includesFood: true,
-    includesAccommodation: true,
-    includesTransport: true
+    url: "https://eliteluxtravel.com.br/promocoes/black-friday-maldivas"
   });
   const faqStructuredData = createFAQSchema(faqs.map(faq => ({
     question: faq.question,
     answer: faq.answer
   })));
   const breadcrumbStructuredData = createBreadcrumbSchema([{
-    name: "Home",
-    url: "https://eliteluxtravel.com.br"
+    label: "Home",
+    href: "https://eliteluxtravel.com.br"
   }, {
-    name: "Pacotes",
-    url: "https://eliteluxtravel.com.br/pacotes"
+    label: "Pacotes",
+    href: "https://eliteluxtravel.com.br/pacotes"
   }, {
-    name: "Maldivas Black Friday",
-    url: "https://eliteluxtravel.com.br/maldivas-black-friday"
+    label: "Maldivas Black Friday",
+    href: "https://eliteluxtravel.com.br/promocoes/black-friday-maldivas"
   }]);
   const handleWhatsAppClick = () => {
     const message = encodeURIComponent("Olá! Vi a oferta de Black Friday para as Maldivas e gostaria de mais informações sobre o pacote.");
     window.open(`https://wa.me/5511944495505?text=${message}`, "_blank");
   };
   return <>
-      <SEOHead title="Pacote Maldivas All-Inclusive - Black Friday | Elite Lux Travel" description="Aproveite nossa oferta especial: 4 noites em bangalô overwater nas Maldivas com all-inclusive. Economize U$ 965 e parcele em até 10x sem juros." keywords="pacote maldivas, black friday maldivas, viagem maldivas all inclusive, bangalô overwater, lua de mel maldivas" ogImage={heroImage} structuredData={[packageStructuredData, faqStructuredData, breadcrumbStructuredData]} />
+      <SEOHead title="Pacote Maldivas All-Inclusive - Black Friday | Elite Lux Travel" description="Aproveite nossa oferta especial: 4 noites em bangalô overwater nas Maldivas com all-inclusive. Economize U$ 965 e parcele em até 10x sem juros." keywords={["pacote maldivas", "black friday maldivas", "viagem maldivas all inclusive", "bangalô overwater", "lua de mel maldivas"]} ogImage={heroImage} canonicalUrl="/promocoes/black-friday-maldivas" structuredData={[packageStructuredData, faqStructuredData, breadcrumbStructuredData]} />
 
       <WhatsAppButton />
       <Navigation />
