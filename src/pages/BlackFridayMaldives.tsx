@@ -352,34 +352,34 @@ const BlackFridayMaldives = () => {
                 </span>
               </h1>
 
-            {/* Price highlight box */}
-            <div className="flex flex-row items-center justify-center gap-6 mb-12 mt-8">
-              {/* Original price box */}
-              <div className="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-xl px-10 py-3 w-80 text-center shadow-sm flex flex-col justify-center" style={{ minHeight: '76px' }}>
-                <div className="text-xs font-medium text-slate-500 dark:text-slate-400 uppercase tracking-wider mb-1">
-                  A partir de
-                </div>
-                <div className="text-4xl font-bold text-slate-900 dark:text-white">
-                  U$ 2.890
-                </div>
-                <div className="text-xs text-slate-500 dark:text-slate-400 mt-1">
-                  por pessoa
-                </div>
-              </div>
-            
-              {/* Discount box */}
-              <div className="bg-emerald-50 border border-emerald-200 rounded-xl px-10 py-3 w-80 text-center shadow shadow-md flex flex-col justify-center" style={{ minHeight: '76px' }}>
-                <div className="text-xs font-medium text-black uppercase tracking-wider mb-1">
-                  Economize
-                </div>
-                <div className="text-4xl font-bold" style={{ color: '#04804A' }}>
-                  U$ 965
-                </div>
-                <div className="text-xs text-black mt-1">
-                  Desconto especial
-                </div>
-              </div>
-            </div>
+           {/* Price highlight box - Responsive & smaller */}
+           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8 mt-8">
+             {/* Original price box */}
+             <div className="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-lg px-6 py-2 w-64 text-center shadow-sm flex flex-col justify-center" style={{ minHeight: '54px' }}>
+               <div className="text-xs font-medium text-slate-500 dark:text-slate-400 uppercase tracking-wider mb-1">
+                 A partir de
+               </div>
+               <div className="text-3xl font-bold text-slate-900 dark:text-white">
+                 U$ 2.890
+               </div>
+               <div className="text-xs text-slate-500 dark:text-slate-400 mt-1">
+                 por pessoa
+               </div>
+             </div>
+           
+             {/* Discount box */}
+             <div className="bg-emerald-50 border border-emerald-200 rounded-lg px-6 py-2 w-64 text-center shadow shadow-md flex flex-col justify-center" style={{ minHeight: '54px' }}>
+               <div className="text-xs font-medium text-black uppercase tracking-wider mb-1">
+                 Economize
+               </div>
+               <div className="text-3xl font-bold" style={{ color: '#04804A' }}>
+                 U$ 965
+               </div>
+               <div className="text-xs text-black mt-1">
+                 Desconto especial
+               </div>
+             </div>
+           </div>
 
 
 
