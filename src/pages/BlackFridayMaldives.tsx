@@ -349,19 +349,19 @@ const BlackFridayMaldives = () => {
               </h1>
 
               {/* Price highlight box */}
-              <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12">
-                <div className="bg-slate-900 dark:bg-slate-800 text-white px-8 py-3 rounded-2xl shadow-xl w-64 text-center">
-                  <div className="text-sm font-medium mb-1 opacity-90">A partir de</div>
-                  <div className="text-3xl md:text-4xl font-bold">U$ 2.890</div>
-                  <div className="text-sm mt-1 opacity-90">por pessoa</div>
+              <div className="flex flex-col sm:flex-row items-center justify-center gap-6 mb-10">
+                <div className="bg-slate-100 border border-slate-200 rounded-lg px-6 py-2 w-56 text-center shadow-sm flex flex-col justify-center items-center">
+                  <div className="text-xs text-slate-500 mb-1">A partir de</div>
+                  <div className="text-2xl font-bold text-slate-900">U$ 2.890</div>
+                  <div className="text-xs text-slate-500 mt-1">por pessoa</div>
                 </div>
-                
-                <div className="bg-emerald-600 text-white px-6 py-3 rounded-2xl shadow-xl animate-pulse w-64 text-center">
-                  <div className="text-sm font-medium mb-1">Economize</div>
-                  <div className="text-2xl md:text-3xl font-bold">U$ 965</div>
-                  <div className="text-sm mt-1">Desconto especial</div>
+                <div className="bg-emerald-100 border border-emerald-200 rounded-lg px-6 py-2 w-56 text-center shadow-sm flex flex-col justify-center items-center">
+                  <div className="text-xs text-emerald-700 mb-1">Economize</div>
+                  <div className="text-2xl font-bold text-emerald-900">U$ 965</div>
+                  <div className="text-xs text-emerald-700 mt-1">Desconto especial</div>
                 </div>
               </div>
+
 
               {/* Features grid - clean layout */}
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12 max-w-3xl mx-auto">
