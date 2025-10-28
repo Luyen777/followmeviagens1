@@ -80,15 +80,15 @@ const SobreNos = () => {
 
             <div className="max-w-4xl mx-auto space-y-6 text-lg leading-relaxed text-foreground/80">
               <p ref={(el) => (heroParagraphsRef.current[0] = el)} className="scroll-reveal scroll-reveal-fade">
-                Com duas décadas de experiência no mercado de turismo de luxo, a Follow Me Viagens se consolidou como referência absoluta em destinos exóticos, com especialização incomparável nas Maldivas e Sudeste Asiático. Nossa missão vai além de vender pacotes: criamos jornadas personalizadas que transformam suas expectativas mais altas em realidade.
+                Com duas décadas de experiência no mercado de turismo de luxo, a Follow Me Viagens se consolidou como referência absoluta em destinos exóticos, com especialização nas Maldivas, Ásia e outros destinos de luxo. Nossa missão vai além de vender pacotes: criamos jornadas personalizadas que transformam suas expectativas mais altas em realidade.
               </p>
               
               <p ref={(el) => (heroParagraphsRef.current[1] = el)} className="scroll-reveal scroll-reveal-fade">
-                Nosso conhecimento profundo dos resorts mais exclusivos das Maldivas, combinado com parcerias estratégicas em toda a Ásia, nos permite oferecer não apenas viagens, mas experiências autênticas e memoráveis. Cada detalhe é meticulosamente planejado por nossa equipe de especialistas, garantindo que sua lua-de-mel, aniversário ou férias dos sonhos superem qualquer expectativa.
+                Nosso conhecimento profundo dos resorts mais exclusivos das Maldivas, combinado com parcerias estratégicas, nos permite oferecer não apenas viagens, mas experiências autênticas e memoráveis. Cada detalhe é planejado por nossa equipe de especialistas, garantindo que sua viagem supere qualquer expectativa.
               </p>
               
               <p ref={(el) => (heroParagraphsRef.current[2] = el)} className="scroll-reveal scroll-reveal-fade">
-                Com sede em São Paulo e uma comunidade de mais de 200 mil viajantes apaixonados, construímos relacionamentos baseados em confiança, expertise e resultados excepcionais.
+                Com sede em São Paulo e uma comunidade de mais de 200 mil viajantes, construímos relacionamentos baseados em confiança, expertise e resultados.
               </p>
             </div>
           </div>
@@ -115,11 +115,10 @@ const SobreNos = () => {
 
                 <div className="space-y-4 text-foreground/80 leading-relaxed">
                   <p>
-                    Nossa presença no Instagram reflete anos de experiência compartilhada, inspiração diária e conexão autêntica com viajantes que buscam o extraordinário. Com mais de 200.000 seguidores engajados, criamos uma comunidade vibrante onde compartilhamos destinos paradisíacos, dicas exclusivas e bastidores das Maldivas e Ásia.
+                    Nossa presença no Instagram reflete anos de experiência compartilhada, inspiração diária e conexão autêntica com viajantes que buscam o extraordinário. Com mais de 200.000 seguidores engajados, criamos uma comunidade vibrante onde compartilhamos destinos paradisíacos, dicas e bastidores das Maldivas e Ásia.
                   </p>
                   
                   <p>
-                    Cada post, cada história, cada depoimento representa nossa dedicação em transformar sonhos em realidade. Junte-se à nossa comunidade e inspire-se para sua próxima aventura.
                   </p>
                 </div>
 
@@ -191,7 +190,7 @@ const SobreNos = () => {
 
             <div ref={clienteleContentRef} className="max-w-4xl mx-auto space-y-6 text-lg leading-relaxed text-foreground/80 mb-16 scroll-reveal scroll-reveal-fade">
               <p>
-                Ao longo de duas décadas, tivemos a honra de atender empresários, celebridades, executivos e famílias que buscam o melhor em experiências de viagem. Nossa reputação foi construída através de serviço impecável, atenção aos detalhes e resultados que consistentemente excedem expectativas.
+                Ao longo de duas décadas, tivemos a honra de atender celebridades e viajantes que buscam o melhor em experiências de alto padrão. Nossa reputação foi construída através de serviço impecável, atenção aos detalhes e resultados que excedem expectativas.
               </p>
               
               <p>
@@ -205,13 +204,13 @@ const SobreNos = () => {
                 <div className="absolute -top-6 left-1/2 -translate-x-1/2 text-6xl text-gold opacity-40 font-display">"</div>
                 
                 <blockquote className="text-xl sm:text-2xl font-light text-foreground/90 leading-relaxed mb-6 italic">
-                  A atenção aos detalhes e o conhecimento profundo dos destinos fizeram toda a diferença. Nossa lua-de-mel nas Maldivas superou todas as expectativas.
+                  A atenção aos detalhes e o conhecimento profundo dos destinos e do hotel fizeram toda a diferença. Nossa lua-de-mel nas Maldivas superou todas as expectativas!
                 </blockquote>
                 
                 <div className="h-[1px] w-16 mx-auto bg-gold/40 mb-4"></div>
                 
                 <cite className="text-sm text-muted-foreground uppercase tracking-wider not-italic">
-                  Cliente Premium — São Paulo
+                  Amanda S. — São Paulo
                 </cite>
               </div>
             </div>
@@ -228,12 +227,12 @@ const SobreNos = () => {
               </div>
 
               <h2 className="text-3xl sm:text-4xl lg:text-5xl font-display font-semibold text-foreground mb-6 tracking-tight">
-                Expertise Baseada em São Paulo,
+                Agência com Base em São Paulo,
                 <span className="block mt-2">Alcance Global</span>
               </h2>
 
               <p className="text-xl text-gold font-light mb-8">
-                Seu Time Dedicado de Especialistas em Destinos Exóticos
+                Seu Time Dedicado de Especialistas
               </p>
 
               <div className="h-[2px] w-24 mx-auto bg-gradient-to-r from-transparent via-gold to-transparent"></div>
@@ -241,11 +240,11 @@ const SobreNos = () => {
 
             <div ref={teamContentRef} className="max-w-4xl mx-auto space-y-6 text-lg leading-relaxed text-foreground/80 mb-16 text-center scroll-reveal scroll-reveal-fade">
               <p>
-                Nossa sede em São Paulo abriga uma equipe completa de consultores de viagem altamente especializados, cada um com profundo conhecimento em destinos específicos. Não somos apenas agentes de viagem—somos curadores de experiências que viveram, exploraram e compreendem intimamente cada resort, cada ilha, cada detalhe que torna as Maldivas e a Ásia destinos únicos.
+                Nossa agêmcia abriga uma equipe completa e altamente especializados, com profundo conhecimento em destinos específicos. Não somos apenas agentes de viagem, somos especialistas que visitaram, exploraram e compreendem intimamente cada resort, cada ilha, cada detalhe que tornam os destinos únicos.
               </p>
               
               <p>
-                Com atendimento personalizado e consultoria especializada, nossa equipe dedica-se a compreender suas preferências, estilo de viagem e expectativas para criar itinerários verdadeiramente sob medida. Do primeiro contato até seu retorno, você terá o suporte de profissionais comprometidos com a excelência em cada etapa da sua jornada.
+                Com atendimento personalizado, nossa equipe se dedica a compreender as suas preferências, estilo e expectativas para criar itinerários verdadeiramente inesquecíveis. Do primeiro contato até seu retorno, você terá o suporte de profissionais comprometidos com a excelência em cada etapa da sua jornada.
               </p>
             </div>
 
@@ -301,7 +300,7 @@ const SobreNos = () => {
             </h2>
 
             <p className="text-xl text-foreground/70 leading-relaxed mb-12 max-w-3xl mx-auto">
-              Deixe nossa expertise de 20 anos guiar você para o destino dos seus sonhos. Entre em contato hoje e descubra como podemos transformar sua viagem em uma experiência extraordinária.
+              Deixe nossa expertise de 20 anos te guiar para o destino dos seus sonhos. Entre em contato hoje e descubra como podemos transformar sua viagem em uma experiência memorável.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
