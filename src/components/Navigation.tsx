@@ -4,68 +4,68 @@ import { Link, useNavigate, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import logo from "@/assets/logo-new.png";
 const destinations = [{
-  label: "Dubai",
-  href: "/dubai"
-}, {
-  label: "Tailândia",
-  href: "/tailandia"
-}, {
-  label: "Índia",
-  href: "/india"
-}, {
   label: "África do Sul",
   href: "/africa-do-sul"
-}, {
-  label: "Seychelles",
-  href: "/seychelles"
-}, {
-  label: "Egito",
-  href: "/egito"
-}, {
-  label: "Vietnã",
-  href: "/vietna"
-}, {
-  label: "Turquia",
-  href: "/turquia"
-}, {
-  label: "Grécia",
-  href: "/grecia"
-}, {
-  label: "Bali",
-  href: "/bali"
-}, {
-  label: "Taiti",
-  href: "/taiti"
 }, {
   label: "Austrália",
   href: "/australia"
 }, {
-  label: "Nova Zelândia",
-  href: "/nova-zelandia"
-}, {
-  label: "Ilhas Maurício",
-  href: "/ilhas-mauricio"
-}, {
-  label: "Fiji",
-  href: "/fiji"
+  label: "Bali",
+  href: "/bali"
 }, {
   label: "Camboja",
   href: "/camboja"
 }, {
-  label: "Laos",
-  href: "/laos"
+  label: "Coreia do Sul",
+  href: "/coreia-do-sul"
 }, {
-  label: "Tanzânia",
-  href: "/tanzania"
+  label: "Dubai",
+  href: "/dubai"
 }, {
-  label: "Japão",
-  href: "/japao"
+  label: "Egito",
+  href: "/egito"
+}, {
+  label: "Fiji",
+  href: "/fiji"
 }, {
   label: "Filipinas",
   href: "/filipinas"
 }, {
-  label: "Coreia do Sul",
-  href: "/coreia-do-sul"
+  label: "Grécia",
+  href: "/grecia"
+}, {
+  label: "Ilhas Maurício",
+  href: "/ilhas-mauricio"
+}, {
+  label: "Índia",
+  href: "/india"
+}, {
+  label: "Japão",
+  href: "/japao"
+}, {
+  label: "Laos",
+  href: "/laos"
+}, {
+  label: "Nova Zelândia",
+  href: "/nova-zelandia"
+}, {
+  label: "Seychelles",
+  href: "/seychelles"
+}, {
+  label: "Tailândia",
+  href: "/tailandia"
+}, {
+  label: "Taiti",
+  href: "/taiti"
+}, {
+  label: "Tanzânia",
+  href: "/tanzania"
+}, {
+  label: "Turquia",
+  href: "/turquia"
+}, {
+  label: "Vietnã",
+  href: "/vietna"
 }];
 const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
