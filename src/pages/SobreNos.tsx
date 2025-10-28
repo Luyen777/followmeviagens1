@@ -240,7 +240,7 @@ const SobreNos = () => {
     <>
       <SEOHead
         title="Sobre Nós - Follow Me Viagens | 20 Anos de Expertise em Destinos Exóticos"
-        description="Conheça a Follow Me Viagens: 20 anos de experiência em turismo de luxo, especialistas em Maldivas e Ásia. Mais de 200 mil viajantes confiam em nossa expertise."
+        description="Conheça a Follow Me Viagens: 20 anos de experiência em turismo de luxo, especialistas em Maldivas e Ásia. Mais de 200 mil seguidores."
         canonicalUrl="/sobre-nos"
         keywords={["sobre follow me viagens", "agência de viagens maldivas", "especialistas maldivas são paulo", "turismo de luxo brasil", "agência viagens exóticas"]}
       />
@@ -306,7 +306,7 @@ const SobreNos = () => {
 
                 <div className="space-y-4 text-foreground/80 leading-relaxed">
                   <p>
-                    Nossa presença no Instagram reflete anos de experiência compartilhada, inspiração diária e conexão autêntica com viajantes que buscam o extraordinário. Com mais de 200.000 seguidores engajados, criamos uma comunidade vibrante onde compartilhamos destinos paradisíacos, dicas e bastidores das Maldivas e Ásia.
+                    Nossa presença nas redes sociais reflete anos de experiência compartilhada, inspiração diária e conexão autêntica com viajantes que buscam o extraordinário. Com mais de 200.000 seguidores engajados, criamos uma comunidade vibrante onde compartilhamos destinos paradisíacos, dicas e bastidores das Maldivas e Ásia
                   </p>
                   
                   <p>
@@ -347,7 +347,7 @@ const SobreNos = () => {
 
                   <div className="text-center">
                     <div className="text-4xl sm:text-5xl font-display font-bold text-foreground mb-2">
-                      42+
+                      50+
                     </div>
                     <p className="text-sm text-muted-foreground uppercase tracking-wider">
                       Resorts Parceiros
@@ -463,7 +463,7 @@ const SobreNos = () => {
 
             <div ref={teamContentRef} className="max-w-4xl mx-auto space-y-6 text-lg leading-relaxed text-foreground/80 mb-16 text-center scroll-reveal scroll-reveal-fade">
               <p>
-                Nossa agêmcia abriga uma equipe completa e altamente especializados, com profundo conhecimento em destinos específicos. Não somos apenas agentes de viagem, somos especialistas que visitaram, exploraram e compreendem intimamente cada resort, cada ilha, cada detalhe que tornam os destinos únicos.
+                Nossa agência abriga uma equipe completa e altamente especializados, com profundo conhecimento em destinos específicos. Não somos apenas agentes de viagem, somos especialistas que visitaram, exploraram e compreendem intimamente cada resort, cada ilha, cada detalhe que tornam os destinos únicos.
               </p>
               
               <p>
@@ -523,7 +523,7 @@ const SobreNos = () => {
             </h2>
 
             <p className="text-xl text-foreground/70 leading-relaxed mb-12 max-w-3xl mx-auto">
-              Deixe nossa expertise de 20 anos te guiar para o destino dos seus sonhos. Entre em contato hoje e descubra como podemos transformar sua viagem em uma experiência memorável.
+              Realize a sua viagem dos sonhos com a Follow Me Viagens.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
