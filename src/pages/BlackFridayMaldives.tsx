@@ -352,22 +352,35 @@ const BlackFridayMaldives = () => {
                 </span>
               </h1>
 
-              {/* Price highlight box */}
-              <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12 mt-8">
-                <div className="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-lg px-8 py-4 w-60 text-center shadow-sm hover:shadow-md transition-shadow">
-                  <div className="text-xs font-medium text-slate-500 dark:text-slate-400 uppercase tracking-wider mb-2">A partir de</div>
-                  <div className="text-3xl font-bold text-slate-900 dark:text-white">U$ 2.890</div>
-                  <div className="text-xs text-slate-500 dark:text-slate-400 mt-2">por pessoa</div>
+            {/* Price highlight box */}
+            <div className="flex flex-row items-center justify-center gap-6 mb-12 mt-8">
+              {/* Original price box */}
+              <div className="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-xl px-10 py-3 w-80 text-center shadow-sm flex flex-col justify-center" style={{ minHeight: '76px' }}>
+                <div className="text-xs font-medium text-slate-500 dark:text-slate-400 uppercase tracking-wider mb-1">
+                  A partir de
                 </div>
-                <div className="relative bg-gradient-to-br from-emerald-500 to-emerald-600 border border-emerald-400/30 rounded-lg px-8 py-4 w-60 text-center shadow-lg hover:shadow-xl transition-all overflow-hidden group">
-                  <div className="absolute inset-0 bg-white/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                  <div className="relative z-10">
-                    <div className="text-xs font-medium text-emerald-50 uppercase tracking-wider mb-2">Economize</div>
-                    <div className="text-3xl font-bold text-white">U$ 965</div>
-                    <div className="text-xs text-emerald-50 mt-2">Desconto especial</div>
-                  </div>
+                <div className="text-4xl font-bold text-slate-900 dark:text-white">
+                  U$ 2.890
+                </div>
+                <div className="text-xs text-slate-500 dark:text-slate-400 mt-1">
+                  por pessoa
                 </div>
               </div>
+            
+              {/* Discount box */}
+              <div className="bg-emerald-50 border border-emerald-200 rounded-xl px-10 py-3 w-80 text-center shadow shadow-md flex flex-col justify-center" style={{ minHeight: '76px' }}>
+                <div className="text-xs font-medium text-black uppercase tracking-wider mb-1">
+                  Economize
+                </div>
+                <div className="text-4xl font-bold" style={{ color: '#04804A' }}>
+                  U$ 965
+                </div>
+                <div className="text-xs text-black mt-1">
+                  Desconto especial
+                </div>
+              </div>
+            </div>
+
 
 
               {/* Features grid - clean layout */}
