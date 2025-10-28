@@ -36,6 +36,10 @@ All colors MUST be HSL.
     --accent: 38 35% 65%;
     --accent-foreground: 0 0% 10%;
 
+    /* Premium gold accent */
+    --gold: 43 69% 52%;
+    --gold-foreground: 0 0% 10%;
+
     --destructive: 0 70% 50%;
     --destructive-foreground: 0 0% 100%;
 
@@ -83,6 +87,9 @@ All colors MUST be HSL.
 
     --accent: 38 40% 70%;
     --accent-foreground: 0 0% 10%;
+
+    --gold: 43 69% 52%;
+    --gold-foreground: 0 0% 10%;
 
     --destructive: 0 62.8% 50%;
     --destructive-foreground: 36 17% 98%;

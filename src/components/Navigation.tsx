@@ -123,7 +123,7 @@ const Navigation = () => {
     href: "/blog"
   }, {
     label: "Sobre Nós",
-    href: "#sobre"
+    href: "/sobre-nos"
   }, {
     label: "Contato",
     href: "/#contato"
