@@ -5,11 +5,30 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import SEOHead from "@/components/SEOHead";
+import { useScrollReveal, useScrollRevealGroup } from "@/hooks/useScrollReveal";
 
 const SobreNos = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+
+  // Scroll reveal refs
+  const heroTitleRef = useScrollReveal({ delay: 0, once: true });
+  const heroSubtitleRef = useScrollReveal({ delay: 200, once: true });
+  const heroParagraphsRef = useScrollRevealGroup(3, { staggerDelay: 150, once: true });
+  
+  const instagramContentRef = useScrollReveal({ delay: 0, once: true });
+  const instagramStatsRef = useScrollReveal({ delay: 200, once: true });
+  
+  const clienteleHeaderRef = useScrollReveal({ delay: 0, once: true });
+  const clienteleContentRef = useScrollReveal({ delay: 200, once: true });
+  const testimonialRef = useScrollReveal({ delay: 300, once: true });
+  
+  const teamHeaderRef = useScrollReveal({ delay: 0, once: true });
+  const teamContentRef = useScrollReveal({ delay: 200, once: true });
+  const teamFeaturesRef = useScrollRevealGroup(3, { staggerDelay: 150, once: true });
+  
+  const ctaRef = useScrollReveal({ delay: 0, once: true });
 
   const handleWhatsAppClick = () => {
     window.open("https://wa.link/followmeviagens", "_blank");
@@ -43,28 +62,32 @@ const SobreNos = () => {
         <section className="relative pt-32 pb-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
           <div className="absolute top-0 left-1/2 -translate-x-1/2 w-32 h-[2px] bg-gradient-to-r from-transparent via-gold to-transparent"></div>
           
-          <div className="max-w-5xl mx-auto text-center animate-fade-in">
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-display font-bold text-foreground mb-6 tracking-tight">
-              Transformando Sonhos em
-              <span className="block mt-2 text-gold">Experiências Inesquecíveis</span>
-            </h1>
+          <div className="max-w-5xl mx-auto text-center">
+            <div ref={heroTitleRef} className="scroll-reveal scroll-reveal-up">
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-display font-bold text-foreground mb-6 tracking-tight">
+                Transformando Sonhos em
+                <span className="block mt-2 text-gold">Experiências Inesquecíveis</span>
+              </h1>
+            </div>
             
-            <p className="text-xl sm:text-2xl text-muted-foreground font-light tracking-wide mb-12">
-              20 Anos de Expertise em Destinos Exóticos
-            </p>
+            <div ref={heroSubtitleRef} className="scroll-reveal scroll-reveal-fade">
+              <p className="text-xl sm:text-2xl text-muted-foreground font-light tracking-wide mb-12">
+                20 Anos de Expertise em Destinos Exóticos
+              </p>
+            </div>
 
             <div className="h-[2px] w-24 mx-auto bg-gradient-to-r from-transparent via-gold to-transparent mb-12"></div>
 
             <div className="max-w-4xl mx-auto space-y-6 text-lg leading-relaxed text-foreground/80">
-              <p>
+              <p ref={(el) => (heroParagraphsRef.current[0] = el)} className="scroll-reveal scroll-reveal-fade">
                 Com duas décadas de experiência no mercado de turismo de luxo, a Follow Me Viagens se consolidou como referência absoluta em destinos exóticos, com especialização incomparável nas Maldivas e Sudeste Asiático. Nossa missão vai além de vender pacotes: criamos jornadas personalizadas que transformam suas expectativas mais altas em realidade.
               </p>
               
-              <p>
+              <p ref={(el) => (heroParagraphsRef.current[1] = el)} className="scroll-reveal scroll-reveal-fade">
                 Nosso conhecimento profundo dos resorts mais exclusivos das Maldivas, combinado com parcerias estratégicas em toda a Ásia, nos permite oferecer não apenas viagens, mas experiências autênticas e memoráveis. Cada detalhe é meticulosamente planejado por nossa equipe de especialistas, garantindo que sua lua-de-mel, aniversário ou férias dos sonhos superem qualquer expectativa.
               </p>
               
-              <p>
+              <p ref={(el) => (heroParagraphsRef.current[2] = el)} className="scroll-reveal scroll-reveal-fade">
                 Com sede em São Paulo e uma comunidade de mais de 200 mil viajantes apaixonados, construímos relacionamentos baseados em confiança, expertise e resultados excepcionais.
               </p>
             </div>
@@ -148,23 +171,25 @@ const SobreNos = () => {
 
         {/* Prestigious Clientele Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 relative">
-          <div className="max-w-5xl mx-auto text-center animate-fade-in">
-            <div className="inline-flex items-center gap-2 text-gold text-sm font-medium tracking-wider uppercase mb-6">
-              <Award className="w-5 h-5" />
-              <span>Excelência Reconhecida</span>
+          <div className="max-w-5xl mx-auto text-center">
+            <div ref={clienteleHeaderRef} className="scroll-reveal scroll-reveal-up">
+              <div className="inline-flex items-center gap-2 text-gold text-sm font-medium tracking-wider uppercase mb-6">
+                <Award className="w-5 h-5" />
+                <span>Excelência Reconhecida</span>
+              </div>
+
+              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-display font-semibold text-foreground mb-6 tracking-tight">
+                A Escolha de Clientes Exigentes
+              </h2>
+
+              <p className="text-xl text-gold font-light mb-12">
+                Confiança Conquistada através de Excelência
+              </p>
+
+              <div className="h-[2px] w-24 mx-auto bg-gradient-to-r from-transparent via-gold to-transparent mb-12"></div>
             </div>
 
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-display font-semibold text-foreground mb-6 tracking-tight">
-              A Escolha de Clientes Exigentes
-            </h2>
-
-            <p className="text-xl text-gold font-light mb-12">
-              Confiança Conquistada através de Excelência
-            </p>
-
-            <div className="h-[2px] w-24 mx-auto bg-gradient-to-r from-transparent via-gold to-transparent mb-12"></div>
-
-            <div className="max-w-4xl mx-auto space-y-6 text-lg leading-relaxed text-foreground/80 mb-16">
+            <div ref={clienteleContentRef} className="max-w-4xl mx-auto space-y-6 text-lg leading-relaxed text-foreground/80 mb-16 scroll-reveal scroll-reveal-fade">
               <p>
                 Ao longo de duas décadas, tivemos a honra de atender empresários, celebridades, executivos e famílias que buscam o melhor em experiências de viagem. Nossa reputação foi construída através de serviço impecável, atenção aos detalhes e resultados que consistentemente excedem expectativas.
               </p>
@@ -175,7 +200,7 @@ const SobreNos = () => {
             </div>
 
             {/* Testimonial Highlight */}
-            <div className="max-w-3xl mx-auto">
+            <div ref={testimonialRef} className="max-w-3xl mx-auto scroll-reveal scroll-reveal-scale">
               <div className="relative bg-card border-2 border-gold/20 rounded-2xl p-8 sm:p-12 shadow-luxury">
                 <div className="absolute -top-6 left-1/2 -translate-x-1/2 text-6xl text-gold opacity-40 font-display">"</div>
                 
@@ -195,8 +220,8 @@ const SobreNos = () => {
 
         {/* Our Team & Office Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-card relative">
-          <div className="max-w-6xl mx-auto animate-fade-in">
-            <div className="text-center mb-16">
+          <div className="max-w-6xl mx-auto">
+            <div ref={teamHeaderRef} className="text-center mb-16 scroll-reveal scroll-reveal-up">
               <div className="inline-flex items-center gap-2 text-gold text-sm font-medium tracking-wider uppercase mb-6">
                 <MapPin className="w-5 h-5" />
                 <span>São Paulo, Brasil</span>
@@ -214,7 +239,7 @@ const SobreNos = () => {
               <div className="h-[2px] w-24 mx-auto bg-gradient-to-r from-transparent via-gold to-transparent"></div>
             </div>
 
-            <div className="max-w-4xl mx-auto space-y-6 text-lg leading-relaxed text-foreground/80 mb-16 text-center">
+            <div ref={teamContentRef} className="max-w-4xl mx-auto space-y-6 text-lg leading-relaxed text-foreground/80 mb-16 text-center scroll-reveal scroll-reveal-fade">
               <p>
                 Nossa sede em São Paulo abriga uma equipe completa de consultores de viagem altamente especializados, cada um com profundo conhecimento em destinos específicos. Não somos apenas agentes de viagem—somos curadores de experiências que viveram, exploraram e compreendem intimamente cada resort, cada ilha, cada detalhe que torna as Maldivas e a Ásia destinos únicos.
               </p>
@@ -226,7 +251,7 @@ const SobreNos = () => {
 
             {/* Features Grid */}
             <div className="grid sm:grid-cols-3 gap-8 max-w-4xl mx-auto">
-              <div className="text-center space-y-4 p-6 rounded-2xl border border-gold/10 hover:border-gold/30 transition-colors duration-500">
+              <div ref={(el) => (teamFeaturesRef.current[0] = el)} className="text-center space-y-4 p-6 rounded-2xl border border-gold/10 hover:border-gold/30 transition-colors duration-500 scroll-reveal scroll-reveal-scale">
                 <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gold/10 text-gold mx-auto">
                   <Users className="w-8 h-8" />
                 </div>
@@ -238,7 +263,7 @@ const SobreNos = () => {
                 </p>
               </div>
 
-              <div className="text-center space-y-4 p-6 rounded-2xl border border-gold/10 hover:border-gold/30 transition-colors duration-500">
+              <div ref={(el) => (teamFeaturesRef.current[1] = el)} className="text-center space-y-4 p-6 rounded-2xl border border-gold/10 hover:border-gold/30 transition-colors duration-500 scroll-reveal scroll-reveal-scale">
                 <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gold/10 text-gold mx-auto">
                   <Award className="w-8 h-8" />
                 </div>
@@ -250,7 +275,7 @@ const SobreNos = () => {
                 </p>
               </div>
 
-              <div className="text-center space-y-4 p-6 rounded-2xl border border-gold/10 hover:border-gold/30 transition-colors duration-500">
+              <div ref={(el) => (teamFeaturesRef.current[2] = el)} className="text-center space-y-4 p-6 rounded-2xl border border-gold/10 hover:border-gold/30 transition-colors duration-500 scroll-reveal scroll-reveal-scale">
                 <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gold/10 text-gold mx-auto">
                   <Headphones className="w-8 h-8" />
                 </div>
@@ -269,7 +294,7 @@ const SobreNos = () => {
         <section className="py-20 px-4 sm:px-6 lg:px-8 relative">
           <div className="absolute top-0 left-1/2 -translate-x-1/2 w-32 h-[2px] bg-gradient-to-r from-transparent via-gold to-transparent"></div>
           
-          <div className="max-w-4xl mx-auto text-center animate-fade-in">
+          <div ref={ctaRef} className="max-w-4xl mx-auto text-center scroll-reveal scroll-reveal-up">
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-display font-semibold text-foreground mb-8 tracking-tight">
               Pronto para Planejar
               <span className="block mt-2 text-gold">Sua Próxima Aventura?</span>
