@@ -350,13 +350,13 @@ const BlackFridayMaldives = () => {
 
               {/* Price highlight box */}
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12">
-                <div className="bg-slate-900 dark:bg-slate-800 text-white px-8 py-4 rounded-2xl shadow-xl">
+                <div className="bg-slate-900 dark:bg-slate-800 text-white px-8 py-3 rounded-2xl shadow-xl w-64 text-center">
                   <div className="text-sm font-medium mb-1 opacity-90">A partir de</div>
                   <div className="text-3xl md:text-4xl font-bold">U$ 2.890</div>
                   <div className="text-sm mt-1 opacity-90">por pessoa</div>
                 </div>
                 
-                <div className="bg-emerald-600 text-white px-6 py-4 rounded-2xl shadow-xl animate-pulse">
+                <div className="bg-emerald-600 text-white px-6 py-3 rounded-2xl shadow-xl animate-pulse w-64 text-center">
                   <div className="text-sm font-medium mb-1">Economize</div>
                   <div className="text-2xl md:text-3xl font-bold">U$ 965</div>
                   <div className="text-sm mt-1">Desconto especial</div>
