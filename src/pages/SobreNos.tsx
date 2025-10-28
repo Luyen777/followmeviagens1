@@ -279,7 +279,7 @@ const SobreNos = () => {
               </p>
               
               <p ref={(el) => (heroParagraphsRef.current[2] = el)} className="scroll-reveal scroll-reveal-fade">
-                Com sede em São Paulo e uma comunidade de mais de 200 mil viajantes, construímos relacionamentos baseados em confiança, expertise e resultados.
+                Nosso diretor, Rafael Wiedman, é formado em Turismo pela Universidade de São Paulo (USP) e construiu sua carreira com forte foco em destinos de luxo como as Maldivas. Todo ano, Rafael e membros da equipe Follow Me visitam as Ilhas Malvivas, realizando visitas técnicas e firmando parcerias para garantir as melhores condições aos nossos clientes.
               </p>
             </div>
           </div>
@@ -381,11 +381,14 @@ const SobreNos = () => {
 
             <div ref={clienteleContentRef} className="max-w-4xl mx-auto space-y-6 text-lg leading-relaxed text-foreground/80 mb-16 scroll-reveal scroll-reveal-fade">
               <p>
-                Ao longo de duas décadas, tivemos a honra de atender celebridades e viajantes que buscam o melhor em experiências de alto padrão. Nossa reputação foi construída através de serviço impecável, atenção aos detalhes e resultados que excedem expectativas.
+                Ao longo de duas décadas, tivemos a honra de atender diversas celebridades e viajantes que buscam o melhor em experiências de alto padrão. Nossa reputação foi construída através de serviço impecável, atenção aos detalhes e resultados que excedem expectativas.
               </p>
               
               <p>
                 Da seleção criteriosa de resorts exclusivos à coordenação logística perfeita, cada aspecto do seu itinerário recebe nossa atenção personalizada. Nossos clientes retornam não apenas pelas Maldivas deslumbrantes, mas pelo nível de expertise e cuidado que demonstramos em cada interação.
+              </p>
+              <p>
+               Nos orgulhamos de ter 100% de availações positivas no Google e demais canais, e nosso comprometimento é com a satisfação absoluta dos viajantes que decidem confiar na nossa agência.
               </p>
             </div>
 
@@ -450,8 +453,8 @@ const SobreNos = () => {
               </div>
 
               <h2 className="text-3xl sm:text-4xl lg:text-5xl font-display font-semibold text-foreground mb-6 tracking-tight">
-                Agência com Base em São Paulo,
-                <span className="block mt-2">Alcance Global</span>
+                Agência com 20 Anos de Expertise,
+                <span className="block mt-2">& Alcance Global</span>
               </h2>
 
               <p className="text-xl text-gold font-light mb-8">
