@@ -475,7 +475,7 @@ const BlackFridayMaldives = () => {
           </div>
         </section>
 
-        {/* Pricing Cards Section - Hero */}
+{/* Pricing Cards Section - Hero */}
         <section className="py-24 bg-gradient-to-b from-white to-slate-50 dark:from-slate-950 dark:to-slate-900">
           <div className="container mx-auto px-4">
             <div className="flex items-center justify-center gap-2 mb-4">
@@ -487,51 +487,35 @@ const BlackFridayMaldives = () => {
             <p className="text-center text-muted-foreground mb-12 text-sm">
               25% de desconto em todas as datas - Oferta limitada!
             </p>
-
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto mb-12">
+        
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto mb-12">
               {pricingOptionsHeroSection.map((option, index) => (
-                <Card key={index} className="relative overflow-hidden hover:shadow-xl transition-all duration-300 border-slate-200/60">
-                  {/* Discount badge */}
-                  <div className="absolute top-4 right-4 bg-rose-500 text-white text-xs font-bold px-2 py-1 rounded-full">
+                <Card key={index} className="relative border border-slate-100 shadow-md px-6 py-8 rounded-2xl bg-white transition-shadow duration-300 hover:shadow-lg">
+                  {/* Discount badge simpler and lighter */}
+                  <div className="absolute top-4 right-4 text-xs font-bold px-3 py-1 rounded-full bg-rose-100 text-rose-500">
                     -25%
                   </div>
-
-                  <div className="p-6">
-                    <div className="mb-4">
-                      <div className="text-xs font-medium text-muted-foreground mb-2 uppercase tracking-wide">
-                        Período
-                      </div>
-                      <div className="text-sm font-semibold text-slate-900 dark:text-slate-100">
-                        {option.period}
-                      </div>
-                    </div>
-
-                    <div className="mb-4">
-                      <div className="flex items-baseline gap-2">
-                        <div className="text-2xl font-bold text-slate-900 dark:text-slate-100">
-                          U$ {option.discountedPrice}
-                        </div>
-                        <div className="text-base text-muted-foreground line-through">
-                          U$ {option.originalPrice}
-                        </div>
-                      </div>
-                      <div className="text-sm text-muted-foreground">por pessoa</div>
-                    </div>
-
-                    <div className={`mb-4 text-sm font-medium ${
-                      option.availability === 'limited' ? 'text-rose-600' : 'text-emerald-600'
-                    }`}>
-                      {option.status}
-                    </div>
-
-                    <Button
-                      onClick={handleWhatsAppClick}
-                      className="w-full bg-gradient-to-r from-slate-800 to-slate-900 hover:from-slate-900 hover:to-black text-white font-medium h-10"
-                    >
-                      <MessageCircle className="w-3.5 h-3.5 mr-1.5" />
-                      Reservar
-                    </Button>
+        
+                  <div className="mb-2 text-xs tracking-wider text-slate-400 uppercase">
+                    {option.period}
                   </div>
+                  <div className="mb-3 text-[1.8rem] font-extrabold text-slate-900">
+                    U$ {option.discountedPrice}
+                    <span className="text-base font-normal text-muted-foreground line-through ml-2">
+                      U$ {option.originalPrice}
+                    </span>
+                  </div>
+                  <div className="mb-1 text-xs text-slate-400">por pessoa</div>
+                  <div className={`mb-4 text-sm ${option.availability === 'limited' ? 'text-rose-500' : 'text-emerald-600'}`}>
+                    {option.status}
+                  </div>
+                  <Button
+                    onClick={handleWhatsAppClick}
+                    className="w-full bg-gradient-to-r from-slate-900 to-slate-700 hover:from-slate-800 hover:to-slate-900 text-white font-medium h-10 rounded-full text-sm shadow-none"
+                  >
+                    <MessageCircle className="w-4 h-4 mr-1" />
+                    Reservar
+                  </Button>
                 </Card>
               ))}
             </div>
