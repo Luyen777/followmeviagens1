@@ -440,6 +440,7 @@ const BlackFridayMaldives = () => {
                   Reservar Agora
                 </Button>
 
+
                 {/* Trust badges */}
                 <div className="flex flex-wrap items-center justify-center gap-6 text-sm text-slate-600 dark:text-slate-400">
                   <div className="flex items-center gap-2">
