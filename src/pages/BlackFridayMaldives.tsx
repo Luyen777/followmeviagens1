@@ -201,7 +201,7 @@ const CarouselSection = () => {
       setIsPaused(!isPaused);
     }
   };
-  return <section className="py-16 bg-white dark:bg-slate-950">
+  return <section className="py-8 bg-white dark:bg-slate-950">
       <div ref={containerRef} className="relative w-full overflow-hidden cursor-grab select-none" onMouseDown={handleMouseDown} onMouseMove={handleMouseMove} onMouseUp={handleMouseUp} onMouseLeave={handleMouseLeave} onTouchStart={handleTouchStart} onTouchMove={handleTouchMove} onTouchEnd={handleTouchEnd} onClick={togglePause}>
         <div ref={trackRef} className="flex gap-4 sm:gap-6 will-change-transform" style={{ width: 'fit-content' }}>
           {duplicatedExperiences.map((exp, index) => <div key={index} className="flex-shrink-0 w-[280px] sm:w-[320px] md:w-[380px]">
@@ -540,37 +540,37 @@ const BlackFridayMaldives = () => {
             </div>
 
             {/* Payment Terms and Cancellation Policy */}
-            <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-6">
-              <Card className="p-6 border-slate-200/60">
-                <h3 className="font-semibold text-base mb-4 flex items-center gap-2">
-                  <CreditCard className="w-4 h-4 text-slate-600" />
+            <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-6 place-items-center md:place-items-start">
+              <Card className="p-6 border-slate-200/60 w-full">
+                <h3 className="font-semibold text-[1.2rem] mb-4 flex items-center justify-center md:justify-start gap-2">
+                  <CreditCard className="w-5 h-5 text-slate-600" />
                   Formas de pagamento
                 </h3>
                 <div className="space-y-2 text-sm text-muted-foreground">
-                  <div className="flex items-start gap-2">
+                  <div className="flex items-start justify-center md:justify-start gap-2">
                     <Check className="w-4 h-4 text-emerald-600 flex-shrink-0 mt-0.5" />
-                    <span>Sinal de 20% em até 24 horas</span>
+                    <span className="text-center md:text-left">Sinal de 20% em até 24 horas</span>
                   </div>
-                  <div className="flex items-start gap-2">
+                  <div className="flex items-start justify-center md:justify-start gap-2">
                     <Check className="w-4 h-4 text-emerald-600 flex-shrink-0 mt-0.5" />
-                    <span>Saldo de 80% até 30 dias do embarque</span>
+                    <span className="text-center md:text-left">Saldo de 80% até 30 dias do embarque</span>
                   </div>
                 </div>
               </Card>
 
-              <Card className="p-6 border-slate-200/60">
-                <h3 className="font-semibold text-base mb-4 flex items-center gap-2">
-                  <Shield className="w-4 h-4 text-slate-600" />
+              <Card className="p-6 border-slate-200/60 w-full">
+                <h3 className="font-semibold text-[1.2rem] mb-4 flex items-center justify-center md:justify-start gap-2">
+                  <Shield className="w-5 h-5 text-slate-600" />
                   Política de cancelamento
                 </h3>
                 <div className="space-y-2 text-sm text-muted-foreground">
-                  <div className="flex items-start gap-2">
+                  <div className="flex items-start justify-center md:justify-start gap-2">
                     <Check className="w-4 h-4 text-emerald-600 flex-shrink-0 mt-0.5" />
-                    <span>Até 30 dias antes: Reembolso de 80%</span>
+                    <span className="text-center md:text-left">Até 30 dias antes: Reembolso de 80%</span>
                   </div>
-                  <div className="flex items-start gap-2">
+                  <div className="flex items-start justify-center md:justify-start gap-2">
                     <Check className="w-4 h-4 text-amber-600 flex-shrink-0 mt-0.5" />
-                    <span>Menos de 30 dias: Sem reembolso</span>
+                    <span className="text-center md:text-left">Menos de 30 dias: Sem reembolso</span>
                   </div>
                 </div>
               </Card>
