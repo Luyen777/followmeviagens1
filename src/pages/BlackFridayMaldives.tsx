@@ -201,7 +201,7 @@ const CarouselSection = () => {
       setIsPaused(!isPaused);
     }
   };
-  return <section className="py-8 bg-white dark:bg-slate-950">
+  return <section className="py-0">
       <div ref={containerRef} className="relative w-full overflow-hidden cursor-grab select-none" onMouseDown={handleMouseDown} onMouseMove={handleMouseMove} onMouseUp={handleMouseUp} onMouseLeave={handleMouseLeave} onTouchStart={handleTouchStart} onTouchMove={handleTouchMove} onTouchEnd={handleTouchEnd} onClick={togglePause}>
         <div ref={trackRef} className="flex gap-4 sm:gap-6 will-change-transform" style={{ width: 'fit-content' }}>
           {duplicatedExperiences.map((exp, index) => <div key={index} className="flex-shrink-0 w-[280px] sm:w-[320px] md:w-[380px]">
@@ -400,9 +400,9 @@ const BlackFridayMaldives = () => {
                 </div>
               
                 {/* CTA Button – now centered below badges */}
-                <Button 
-                  size="lg" 
-                  onClick={handleWhatsAppClick} 
+                <Button
+                  size="lg"
+                  onClick={handleWhatsAppClick}
                   className="bg-gradient-to-r from-[#FFD700] to-[#FFC300] hover:from-[#FFC300] hover:to-[#FFA500] text-black font-medium text-base px-8 py-4 h-auto rounded-xl shadow-lg hover:shadow-xl transform hover:scale-[1.02] transition-all duration-300 flex items-center gap-2.5 group"
                 >
                   <MessageCircle className="w-4 h-4 group-hover:scale-110 transition-transform" />
@@ -410,15 +410,15 @@ const BlackFridayMaldives = () => {
                 </Button>
               </div>
 
-
+              {/* Carousel Section - Integrated into Hero */}
+              <div className="mt-12 -mx-4">
+                <CarouselSection />
+              </div>
 
 
             </div>
           </div>
         </section>
-
-        {/* Carousel Section */}
-        <CarouselSection />
 
         {/* Package Details Section */}
         <section className="py-24 bg-slate-50/50 dark:bg-slate-900/20 scroll-mt-20">
