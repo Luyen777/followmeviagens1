@@ -352,33 +352,33 @@ const BlackFridayMaldives = () => {
                 </span>
               </h1>
 
-
-{/* Luxury Price Highlight – Unified Card, Modern and Premium */}
+{/* Luxury Price Highlight – Unified Card, Mobile Responsive */}
               <div className="flex flex-col items-center justify-center my-8">
-                <div className="bg-white/95 border border-slate-200 shadow-lg rounded-xl px-10 py-6 w-full max-w-md text-center">
+                <div className="bg-white/95 border border-slate-200 shadow-lg rounded-xl px-4 py-4 sm:px-8 sm:py-6 w-full max-w-xs sm:max-w-md text-center">
                   <div className="flex flex-col gap-1 items-center justify-center">
-                    <div className="flex items-center gap-2 mb-1">
-                      <span className="bg-yellow-100 text-yellow-800 rounded px-3 py-1 text-xs font-semibold uppercase tracking-wider">
+                    <div className="flex items-center gap-2 mb-1 flex-wrap justify-center">
+                      <span className="bg-yellow-100 text-yellow-800 rounded px-2 py-0.5 text-[10px] sm:text-xs font-semibold uppercase tracking-wider">
                         Black Friday Exclusivo
                       </span>
-                      <span className="bg-emerald-100 text-emerald-700 rounded px-3 py-1 text-xs font-semibold uppercase tracking-wider">
+                      <span className="bg-emerald-100 text-emerald-700 rounded px-2 py-0.5 text-[10px] sm:text-xs font-semibold uppercase tracking-wider">
                         25% OFF
                       </span>
                     </div>
-                    <div className="text-4xl font-extrabold text-slate-900 my-1">
-                      U$ 2.890 <span className="text-lg font-normal text-slate-400">/ pessoa</span>
+                    <div className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-slate-900 my-1">
+                      U$ 2.890 <span className="text-[12px] sm:text-lg font-normal text-slate-400">/ pessoa</span>
                     </div>
-                    <div className="flex items-center gap-2 mt-1">
-                      <span className="text-base text-emerald-600 font-semibold">
+                    <div className="flex items-center gap-2 mt-1 flex-wrap justify-center">
+                      <span className="text-[13px] sm:text-base text-emerald-600 font-semibold">
                         Você economiza <span className="font-bold">U$ 965</span>
                       </span>
-                      <span className="bg-emerald-50 text-emerald-700 rounded px-2 py-1 text-xs font-bold uppercase">
+                      <span className="bg-emerald-50 text-emerald-700 rounded px-2 py-0.5 text-[10px] sm:text-xs font-bold uppercase">
                         Oferta Especial
                       </span>
                     </div>
                   </div>
                 </div>
               </div>
+
 
 
 {/* CTA & Trust section – Trust badges first, then the button below */}
