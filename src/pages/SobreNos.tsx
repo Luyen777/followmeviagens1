@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Instagram, MapPin, Users, Headphones, Award } from "lucide-react";
 import Navigation from "@/components/Navigation";
@@ -7,16 +7,9 @@ import WhatsAppButton from "@/components/WhatsAppButton";
 import SEOHead from "@/components/SEOHead";
 import { useScrollReveal, useScrollRevealGroup } from "@/hooks/useScrollReveal";
 
-// Celebrity images
-import viihTube from "@/assets/famosos/Viih-Tube-maldivas.jpg";
-import clara from "@/assets/famosos/clara-maldivas.jpg";
-import cleoPires from "@/assets/famosos/cleo-pires-maldivas.jpg";
-import lucianaGimenez from "@/assets/famosos/luciana-gimenez.webp";
-import maldivasCasal from "@/assets/famosos/maldivas-casal.jpg";
-import pamela from "@/assets/famosos/pamela-maldivas.jpeg";
-import pamelaCasamento from "@/assets/famosos/pamelacasamento-maldivas-11.avif";
-import translado from "@/assets/famosos/translado-maldivas.png";
+// Images
 import equipeFollowMe from "@/assets/equipe-follow-me.jpg";
+import famososCollage from "@/assets/famosos-collage.jpg";
 
 const SobreNos = () => {
   useEffect(() => {
@@ -39,188 +32,7 @@ const SobreNos = () => {
   const teamFeaturesRef = useScrollRevealGroup(3, { staggerDelay: 150, once: true });
 
   const ctaRef = useScrollReveal({ delay: 0, once: true });
-
-  // Celebrity carousel setup
-  const celebrities = [
-    { image: viihTube, alt: "Viih Tube nas Maldivas" },
-    { image: clara, alt: "Clara nas Maldivas" },
-    { image: cleoPires, alt: "Cleo Pires nas Maldivas" },
-    { image: lucianaGimenez, alt: "Luciana Gimenez nas Maldivas" },
-    { image: maldivasCasal, alt: "Casal famoso nas Maldivas" },
-    { image: pamela, alt: "Pâmela nas Maldivas" },
-    { image: pamelaCasamento, alt: "Casamento de Pâmela nas Maldivas" },
-    { image: translado, alt: "Translado de luxo nas Maldivas" },
-  ];
-
-  const [isPaused, setIsPaused] = useState(false);
-  const [isDragging, setIsDragging] = useState(false);
-  const containerRef = useRef<HTMLDivElement>(null);
-  const trackRef = useRef<HTMLDivElement>(null);
-  const startXRef = useRef(0);
-  const scrollLeftRef = useRef(0);
-  const animationRef = useRef<number>();
-  const baseTimeRef = useRef(0);
-  const pausedOffsetRef = useRef(0);
-
-  // Duplicate celebrities for seamless infinite loop
-  const duplicatedCelebrities = [...celebrities, ...celebrities];
-
-  useEffect(() => {
-    const track = trackRef.current;
-    if (!track) return;
-
-    const scrollSpeed = 57.2; // pixels per second
-
-    const animate = (timestamp: number) => {
-      if (!baseTimeRef.current) baseTimeRef.current = timestamp;
-
-      if (!isPaused && !isDragging) {
-        const elapsed = (timestamp - baseTimeRef.current) / 1000;
-        const distance = elapsed * scrollSpeed + pausedOffsetRef.current;
-
-        const singleSetWidth = track.scrollWidth / 2;
-        const currentScroll = distance % singleSetWidth;
-
-        track.style.transform = `translateX(-${currentScroll}px)`;
-        scrollLeftRef.current = currentScroll;
-      }
-
-      animationRef.current = requestAnimationFrame(animate);
-    };
-
-    animationRef.current = requestAnimationFrame(animate);
-
-    return () => {
-      if (animationRef.current) {
-        cancelAnimationFrame(animationRef.current);
-      }
-    };
-  }, [isPaused, isDragging]);
-
-  const handleMouseDown = (e: React.MouseEvent) => {
-    setIsDragging(true);
-    setIsPaused(true);
-    startXRef.current = e.pageX;
-    const track = trackRef.current;
-    if (track) {
-      const transform = window.getComputedStyle(track).transform;
-      if (transform !== 'none') {
-        const matrix = new DOMMatrix(transform);
-        scrollLeftRef.current = -matrix.m41;
-      }
-    }
-    if (containerRef.current) {
-      containerRef.current.style.cursor = 'grabbing';
-    }
-  };
-
-  const handleMouseMove = (e: React.MouseEvent) => {
-    if (!isDragging) return;
-    e.preventDefault();
-    const x = e.pageX;
-    const walk = (startXRef.current - x);
-    const track = trackRef.current;
-    if (track) {
-      const singleSetWidth = track.scrollWidth / 2;
-      let newScroll = scrollLeftRef.current + walk;
-
-      if (newScroll >= singleSetWidth) {
-        newScroll = newScroll % singleSetWidth;
-        scrollLeftRef.current = newScroll;
-        startXRef.current = x;
-      } else if (newScroll < 0) {
-        newScroll = singleSetWidth + (newScroll % singleSetWidth);
-        scrollLeftRef.current = newScroll;
-        startXRef.current = x;
-      }
-
-      track.style.transform = `translateX(-${scrollLeftRef.current + walk}px)`;
-    }
-  };
-
-  const handleMouseUp = () => {
-    setIsDragging(false);
-    setIsPaused(false);
-    if (containerRef.current) {
-      containerRef.current.style.cursor = 'grab';
-    }
-
-    const track = trackRef.current;
-    if (track) {
-      const transform = window.getComputedStyle(track).transform;
-      if (transform !== 'none') {
-        const matrix = new DOMMatrix(transform);
-        const currentPosition = -matrix.m41;
-        pausedOffsetRef.current = currentPosition;
-        baseTimeRef.current = 0;
-      }
-    }
-  };
-
-  const handleMouseLeave = () => {
-    if (isDragging) {
-      handleMouseUp();
-    }
-  };
-
-  const handleTouchStart = (e: React.TouchEvent) => {
-    setIsDragging(true);
-    setIsPaused(true);
-    startXRef.current = e.touches[0].pageX;
-    const track = trackRef.current;
-    if (track) {
-      const transform = window.getComputedStyle(track).transform;
-      if (transform !== 'none') {
-        const matrix = new DOMMatrix(transform);
-        scrollLeftRef.current = -matrix.m41;
-      }
-    }
-  };
-
-  const handleTouchMove = (e: React.TouchEvent) => {
-    if (!isDragging) return;
-    const x = e.touches[0].pageX;
-    const walk = (startXRef.current - x);
-    const track = trackRef.current;
-    if (track) {
-      const singleSetWidth = track.scrollWidth / 2;
-      let newScroll = scrollLeftRef.current + walk;
-
-      if (newScroll >= singleSetWidth) {
-        newScroll = newScroll % singleSetWidth;
-        scrollLeftRef.current = newScroll;
-        startXRef.current = x;
-      } else if (newScroll < 0) {
-        newScroll = singleSetWidth + (newScroll % singleSetWidth);
-        scrollLeftRef.current = newScroll;
-        startXRef.current = x;
-      }
-
-      track.style.transform = `translateX(-${scrollLeftRef.current + walk}px)`;
-    }
-  };
-
-  const handleTouchEnd = () => {
-    setIsDragging(false);
-    setIsPaused(false);
-
-    const track = trackRef.current;
-    if (track) {
-      const transform = window.getComputedStyle(track).transform;
-      if (transform !== 'none') {
-        const matrix = new DOMMatrix(transform);
-        const currentPosition = -matrix.m41;
-        pausedOffsetRef.current = currentPosition;
-        baseTimeRef.current = 0;
-      }
-    }
-  };
-
-  const togglePause = () => {
-    if (!isDragging) {
-      setIsPaused(!isPaused);
-    }
-  };
+  const famososImageRef = useScrollReveal({ delay: 200, once: true });
 
   const handleWhatsAppClick = () => {
     window.open("https://wa.link/followmeviagens", "_blank");
@@ -403,7 +215,7 @@ const SobreNos = () => {
               </p>
             </div>
 
-            {/* Celebrity Carousel Title */}
+            {/* Celebrity Showcase Title */}
             <div className="text-center mb-8">
               <h3 className="text-2xl sm:text-3xl font-display font-semibold text-foreground mb-4">
                 Clientes famosos que viajaram com a Follow Me este ano
@@ -411,45 +223,14 @@ const SobreNos = () => {
               <div className="h-[2px] w-24 mx-auto bg-gradient-to-r from-transparent via-gold to-transparent"></div>
             </div>
 
-            {/* Celebrity Carousel */}
-            <div className="mb-12 sm:mb-16 animate-fade-in">
-              <div
-                ref={containerRef}
-                className="relative w-full overflow-hidden cursor-grab select-none"
-                onMouseDown={handleMouseDown}
-                onMouseMove={handleMouseMove}
-                onMouseUp={handleMouseUp}
-                onMouseLeave={handleMouseLeave}
-                onTouchStart={handleTouchStart}
-                onTouchMove={handleTouchMove}
-                onTouchEnd={handleTouchEnd}
-                onClick={togglePause}
-              >
-                <div
-                  ref={trackRef}
-                  className="flex gap-4 sm:gap-6 will-change-transform"
-                  style={{
-                    width: 'fit-content',
-                  }}
-                >
-                  {duplicatedCelebrities.map((celebrity, index) => (
-                    <div
-                      key={index}
-                      className="flex-shrink-0 w-[280px] sm:w-[320px] md:w-[380px]"
-                    >
-                      <div className="relative aspect-[4/5] overflow-hidden rounded-2xl shadow-elegant hover:shadow-glow transition-all duration-500 group">
-                        <img
-                          src={celebrity.image}
-                          alt={celebrity.alt}
-                          className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 pointer-events-none"
-                          draggable="false"
-                        />
-                        <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </div>
+            {/* Celebrity Showcase Image */}
+            <div ref={famososImageRef} className="mb-12 sm:mb-16 scroll-reveal scroll-reveal-fade">
+              <img 
+                src={famososCollage} 
+                alt="Clientes famosos que viajaram com a Follow Me para as Maldivas" 
+                className="w-full max-w-5xl mx-auto rounded-2xl shadow-elegant object-cover"
+                loading="lazy"
+              />
             </div>
           </div>
         </section>
