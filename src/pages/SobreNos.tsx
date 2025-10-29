@@ -16,6 +16,7 @@ import maldivasCasal from "@/assets/famosos/maldivas-casal.jpg";
 import pamela from "@/assets/famosos/pamela-maldivas.jpeg";
 import pamelaCasamento from "@/assets/famosos/pamelacasamento-maldivas-11.avif";
 import translado from "@/assets/famosos/translado-maldivas.png";
+import equipeFollowMe from "@/assets/equipe-follow-me.jpg";
 
 const SobreNos = () => {
   useEffect(() => {
@@ -281,6 +282,15 @@ const SobreNos = () => {
               <p ref={(el) => (heroParagraphsRef.current[2] = el)} className="scroll-reveal scroll-reveal-fade">
                 Nosso diretor, Rafael Wiedman, é formado em Turismo pela Universidade de São Paulo (USP) e construiu sua carreira com forte foco em destinos de luxo como as Maldivas. Todo ano, Rafael e membros da equipe Follow Me visitam as Ilhas Malvivas, realizando visitas técnicas e firmando parcerias para garantir as melhores condições aos nossos clientes.
               </p>
+
+              {/* Team Image */}
+              <div className="mt-12 scroll-reveal scroll-reveal-fade">
+                <img 
+                  src={equipeFollowMe} 
+                  alt="Equipe Follow Me Viagens" 
+                  className="w-full max-w-3xl mx-auto rounded-lg shadow-lg"
+                />
+              </div>
             </div>
           </div>
         </section>
