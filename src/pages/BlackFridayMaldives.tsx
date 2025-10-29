@@ -499,9 +499,9 @@ const BlackFridayMaldives = () => {
                   <div className="absolute top-4 right-4 bg-rose-500 text-white text-xs font-bold px-2 py-1 rounded-full">
                     -25%
                   </div>
-                  <div className="p-6 flex flex-col h-full">
+                  <div className="p-6 flex flex-col">
                     {/* Fixed height for period section to ensure alignment */}
-                    <div className="mb-6 min-h-[80px] flex flex-col justify-start">
+                    <div className="mb-4 min-h-[68px] flex flex-col justify-start">
                       <div className="text-xs font-medium text-muted-foreground mb-2 uppercase tracking-wide text-center">
                         Período
                       </div>
@@ -510,7 +510,7 @@ const BlackFridayMaldives = () => {
                       </div>
                     </div>
                     {/* Price section with consistent spacing */}
-                    <div className="mb-6">
+                    <div className="mb-4">
                       <div className="flex items-baseline gap-2 justify-center">
                         <div className="text-2xl font-bold text-slate-900 dark:text-slate-100">
                           U$ {option.discountedPrice}
@@ -521,8 +521,8 @@ const BlackFridayMaldives = () => {
                       </div>
                       <div className="text-sm text-muted-foreground text-center mt-1">por pessoa</div>
                     </div>
-                    {/* Status pushed to bottom */}
-                    <div className={`mt-auto text-sm font-medium text-center ${
+                    {/* Status at bottom */}
+                    <div className={`text-sm font-medium text-center ${
                       option.availability === 'limited' ? 'text-rose-600' : 'text-emerald-600'
                     }`}>
                       {option.status}
