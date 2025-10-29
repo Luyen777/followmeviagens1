@@ -228,7 +228,7 @@ const SobreNos = () => {
               <img 
                 src={famososCollage} 
                 alt="Clientes famosos que viajaram com a Follow Me para as Maldivas" 
-                className="w-full max-w-5xl mx-auto rounded-2xl shadow-elegant object-cover"
+                className="w-full max-w-xl mx-auto rounded-2xl shadow-elegant object-cover"
                 loading="lazy"
               />
             </div>
