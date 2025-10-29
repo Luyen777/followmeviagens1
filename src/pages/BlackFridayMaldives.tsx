@@ -430,30 +430,24 @@ const BlackFridayMaldives = () => {
 
 
 {/* CTA Button */}
- <Button 
-   size="lg" 
-   onClick={handleWhatsAppClick} 
-   className="bg-gradient-to-r from-[#FFD700] to-[#FFC300] hover:from-[#FFC300] hover:to-[#FFA500] text-black font-medium text-base px-8 py-4 h-auto rounded-xl shadow-lg hover:shadow-xl transform hover:scale-[1.02] transition-all duration-300 flex items-center gap-2.5 group"
- >
-   <MessageCircle className="w-4 h-4 group-hover:scale-110 transition-transform" />
-   Reservar Agora
- </Button>
- 
- {/* Trust badges – add margin top */}
- <div className="flex flex-wrap items-center justify-center gap-6 text-sm text-slate-600 dark:text-slate-400 mt-8">
-   <div className="flex items-center gap-2">
-     <Shield className="w-4 h-4 text-slate-400" />
-     <span>Pagamento Seguro</span>
-   </div>
-   <div className="flex items-center gap-2">
-     <Star className="w-4 h-4 text-yellow-500 fill-yellow-500" />
-     <span>Avaliação 5.0</span>
-   </div>
-   <div className="flex items-center gap-2">
-     <Clock className="w-4 h-4 text-slate-400" />
-     <span>Cancelamento Flexível</span>
-   </div>
- </div>
+<div className="flex flex-col items-center gap-5 mb-12">
+  {/* CTA Button */}
+  <Button 
+    size="lg" 
+    onClick={handleWhatsAppClick} 
+    className="bg-gradient-to-r from-[#FFD700] to-[#FFC300] hover:from-[#FFC300] hover:to-[#FFA500] text-black font-medium text-base px-8 py-4 h-auto rounded-xl shadow-lg hover:shadow-xl transform hover:scale-[1.02] transition-all duration-300 flex items-center gap-2.5 group"
+  >
+    <MessageCircle className="w-4 h-4 group-hover:scale-110 transition-transform" />
+    Reservar Agora
+  </Button>
+
+  {/* Trust badges (use mt-8 for spacing, but omit if using gap in parent container) */}
+  <div className="flex flex-wrap items-center justify-center gap-6 text-sm text-slate-600 dark:text-slate-400 mt-8">
+    <div className="flex items-center gap-2"><Shield className="w-4 h-4 text-slate-400" /><span>Pagamento Seguro</span></div>
+    <div className="flex items-center gap-2"><Star className="w-4 h-4 text-yellow-500 fill-yellow-500" /><span>Avaliação 5.0</span></div>
+    <div className="flex items-center gap-2"><Clock className="w-4 h-4 text-slate-400" /><span>Cancelamento Flexível</span></div>
+  </div>
+</div>
 
 
               {/* Scroll indicator */}
