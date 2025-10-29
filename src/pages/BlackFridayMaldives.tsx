@@ -381,54 +381,6 @@ const BlackFridayMaldives = () => {
               </div>
 
 
-
-
- {/* Features grid - clean, aligned and responsive */}
- <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-x-10 gap-y-6 mb-10 max-w-3xl mx-auto">
-   <div className="flex items-center gap-3 justify-start">
-     <div className="w-10 h-10 rounded-full bg-slate-100 dark:bg-slate-800 flex items-center justify-center flex-shrink-0">
-       <Waves className="w-5 h-5 text-slate-700 dark:text-slate-300" />
-     </div>
-     <span className="text-base font-medium text-slate-700 dark:text-slate-300">4 noites bangalô sobre as águas</span>
-   </div>
- 
-   <div className="flex items-center gap-3 justify-start">
-     <div className="w-10 h-10 rounded-full bg-slate-100 dark:bg-slate-800 flex items-center justify-center flex-shrink-0">
-       <Plane className="w-5 h-5 text-slate-700 dark:text-slate-300" />
-     </div>
-     <span className="text-base font-medium text-slate-700 dark:text-slate-300">Transfer hidroavião</span>
-   </div>
- 
-   <div className="flex items-center gap-3 justify-start">
-     <div className="w-10 h-10 rounded-full bg-slate-100 dark:bg-slate-800 flex items-center justify-center flex-shrink-0">
-       <Utensils className="w-5 h-5 text-slate-700 dark:text-slate-300" />
-     </div>
-     <span className="text-base font-medium text-slate-700 dark:text-slate-300">All inclusive premium</span>
-   </div>
- 
-   <div className="flex items-center gap-3 justify-start">
-     <div className="w-10 h-10 rounded-full bg-slate-100 dark:bg-slate-800 flex items-center justify-center flex-shrink-0">
-       <Activity className="w-5 h-5 text-slate-700 dark:text-slate-300" />
-     </div>
-     <span className="text-base font-medium text-slate-700 dark:text-slate-300">Yoga todos os dias</span>
-   </div>
- 
-   <div className="flex items-center gap-3 justify-start">
-     <div className="w-10 h-10 rounded-full bg-slate-100 dark:bg-slate-800 flex items-center justify-center flex-shrink-0">
-       <Heart className="w-5 h-5 text-slate-700 dark:text-slate-300" />
-     </div>
-     <span className="text-base font-medium text-slate-700 dark:text-slate-300">Massagem casal</span>
-   </div>
- 
-   <div className="flex items-center gap-3 justify-start">
-     <div className="w-10 h-10 rounded-full bg-slate-100 dark:bg-slate-800 flex items-center justify-center flex-shrink-0">
-       <CreditCard className="w-5 h-5 text-slate-700 dark:text-slate-300" />
-     </div>
-     <span className="text-base font-medium text-slate-700 dark:text-slate-300">10x sem juros</span>
-   </div>
- </div>
-
-
 {/* CTA Button */}
 <div className="flex flex-col items-center gap-5 mb-12">
   {/* CTA Button */}
