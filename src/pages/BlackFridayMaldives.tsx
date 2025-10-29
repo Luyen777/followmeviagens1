@@ -240,21 +240,25 @@ const BlackFridayMaldives = () => {
   const pricingOptionsHeroSection = [{
     period: "Outubro até 25 de Dezembro 2025",
     price: "2.890",
+    originalPrice: "3.853",
     status: "Disponível",
     availability: "available"
   }, {
     period: "25 de Dezembro até 11 de Janeiro",
     price: "4.990",
+    originalPrice: "6.653",
     status: "Poucas vagas",
     availability: "limited"
   }, {
     period: "11 de Janeiro a 10 de Abril 2026",
     price: "3.050",
+    originalPrice: "4.067",
     status: "Disponível",
     availability: "available"
   }, {
     period: "10 de Abril a 21 de Dezembro 2026",
     price: "2.950",
+    originalPrice: "3.933",
     status: "Disponível",
     availability: "available"
   }];
@@ -482,59 +486,75 @@ const BlackFridayMaldives = () => {
               Selecione o período desejado - Oferta limitada!
             </p>
 
-            {/* Tabs Navigation */}
-            <div className="max-w-5xl mx-auto mb-8">
-              <div className="flex flex-wrap justify-center gap-3 md:gap-4">
-                {pricingOptionsHeroSection.map((option, index) => (
-                  <button
-                    key={index}
-                    onClick={() => setActiveTab(index)}
-                    className={`px-4 py-3 rounded-lg text-sm font-medium transition-all duration-300 ${
-                      activeTab === index
-                        ? 'bg-gradient-to-r from-slate-800 to-slate-900 text-white shadow-lg scale-105'
-                        : 'bg-white dark:bg-slate-900 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-800 hover:border-slate-300 dark:hover:border-slate-700 hover:shadow-md'
-                    }`}
-                  >
-                    <div className="text-xs md:text-sm whitespace-nowrap">
+            {/* Navigation-Style Tabs */}
+            <div className="max-w-5xl mx-auto mb-10">
+              <div className="relative border-b border-slate-200 dark:border-slate-800">
+                <div className="flex overflow-x-auto scrollbar-hide -mb-px">
+                  {pricingOptionsHeroSection.map((option, index) => (
+                    <button
+                      key={index}
+                      onClick={() => setActiveTab(index)}
+                      className={`relative flex-shrink-0 px-6 py-4 text-sm font-medium transition-all duration-200 whitespace-nowrap ${
+                        activeTab === index
+                          ? 'text-slate-900 dark:text-white'
+                          : 'text-slate-500 dark:text-slate-400 hover:text-slate-700 dark:hover:text-slate-300'
+                      }`}
+                    >
                       {option.period}
-                    </div>
-                  </button>
-                ))}
+                      {activeTab === index && (
+                        <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-slate-900 dark:bg-white" />
+                      )}
+                    </button>
+                  ))}
+                </div>
               </div>
             </div>
 
-            {/* Active Card Display */}
-            <div className="max-w-md mx-auto mb-12">
-              <Card className="relative overflow-hidden shadow-2xl transition-all duration-500 border-slate-200/60 animate-in fade-in-50 slide-in-from-bottom-4">
-                <div className="p-8">
-                  <div className="mb-6 text-center">
-                    <div className="text-xs font-medium text-muted-foreground mb-2 uppercase tracking-wide">
-                      Período Selecionado
+            {/* Premium Pricing Card */}
+            <div className="max-w-xl mx-auto mb-12">
+              <Card className="relative overflow-hidden shadow-xl border-slate-200 dark:border-slate-800 transition-all duration-300">
+                {/* Discount Badge */}
+                <div className="absolute top-6 right-6 z-10">
+                  <div className="bg-gradient-to-r from-rose-500 to-red-600 text-white text-xs font-bold px-3 py-1.5 rounded-full shadow-lg">
+                    -25% OFF
+                  </div>
+                </div>
+
+                <div className="p-10">
+                  {/* Period Headline */}
+                  <h3 className="text-2xl font-bold text-slate-900 dark:text-white mb-8 pr-20">
+                    {pricingOptionsHeroSection[activeTab].period}
+                  </h3>
+
+                  {/* Price Section */}
+                  <div className="mb-6">
+                    <div className="flex items-baseline gap-3 mb-2">
+                      <div className="text-5xl font-extrabold text-slate-900 dark:text-white">
+                        U$ {pricingOptionsHeroSection[activeTab].price}
+                      </div>
+                      <div className="text-xl text-slate-400 dark:text-slate-500 line-through font-medium">
+                        U$ {pricingOptionsHeroSection[activeTab].originalPrice}
+                      </div>
                     </div>
-                    <div className="text-lg font-semibold text-slate-900 dark:text-slate-100">
-                      {pricingOptionsHeroSection[activeTab].period}
-                    </div>
+                    <p className="text-sm text-slate-500 dark:text-slate-400">por pessoa</p>
                   </div>
 
-                  <div className="mb-6 text-center">
-                    <div className="text-4xl font-bold text-slate-900 dark:text-slate-100 mb-1">
-                      U$ {pricingOptionsHeroSection[activeTab].price}
-                    </div>
-                    <div className="text-sm text-muted-foreground">por pessoa</div>
-                  </div>
-
-                  <div className={`mb-6 text-center text-base font-medium ${
-                    pricingOptionsHeroSection[activeTab].availability === 'limited' ? 'text-rose-600' : 'text-emerald-600'
+                  {/* Status */}
+                  <div className={`mb-8 text-sm font-semibold ${
+                    pricingOptionsHeroSection[activeTab].availability === 'limited'
+                      ? 'text-rose-600 dark:text-rose-500'
+                      : 'text-emerald-600 dark:text-emerald-500'
                   }`}>
                     {pricingOptionsHeroSection[activeTab].status}
                   </div>
 
+                  {/* CTA Button */}
                   <Button
                     onClick={handleWhatsAppClick}
-                    className="w-full bg-gradient-to-r from-slate-800 to-slate-900 hover:from-slate-900 hover:to-black text-white font-medium h-12 text-base"
+                    className="w-full bg-gradient-to-r from-[#FFD700] to-[#FFC300] hover:from-[#FFC300] hover:to-[#FFB000] text-slate-900 font-bold text-base px-8 py-6 h-auto rounded-xl shadow-lg hover:shadow-xl transform hover:scale-[1.02] transition-all duration-300"
                   >
-                    <MessageCircle className="w-4 h-4 mr-2" />
-                    Reservar Este Período
+                    <MessageCircle className="w-5 h-5 mr-2" />
+                    Reservar agora com desconto
                   </Button>
                 </div>
               </Card>
