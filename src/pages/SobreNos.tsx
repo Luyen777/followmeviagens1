@@ -39,7 +39,7 @@ const SobreNos = () => {
   };
 
   const handleInstagramClick = () => {
-    window.open("https://instagram.com/followmemaldives", "_blank");
+    window.open("https://instagram.com/followmeviagens", "_blank");
   };
 
   const handleContactClick = () => {
@@ -245,7 +245,7 @@ const SobreNos = () => {
                 className="group border-gold text-foreground hover:bg-gold hover:text-gold-foreground transition-all duration-500"
               >
                 <Instagram className="w-5 h-5 mr-2 group-hover:scale-110 transition-transform" />
-                Seguir @followmemaldives
+                @followmeviagens
               </Button>
             </div>
           </div>
