@@ -224,13 +224,29 @@ const SobreNos = () => {
             </div>
 
             {/* Celebrity Showcase Image */}
-            <div ref={famososImageRef} className="mb-12 sm:mb-16 scroll-reveal scroll-reveal-fade">
+            <div ref={famososImageRef} className="mb-8 scroll-reveal scroll-reveal-fade">
               <img 
                 src={famososCollage} 
                 alt="Clientes famosos que viajaram com a Follow Me para as Maldivas" 
                 className="w-full max-w-xl mx-auto rounded-2xl shadow-elegant object-cover"
                 loading="lazy"
               />
+            </div>
+
+            {/* Instagram Callout */}
+            <div className="flex flex-col items-center gap-4 max-w-2xl mx-auto">
+              <p className="text-center text-foreground/70 text-lg">
+                Confira viagens de clientes, visitas aos resorts e muito mais no nosso Instagram
+              </p>
+              <Button
+                onClick={handleInstagramClick}
+                variant="outline"
+                size="lg"
+                className="group border-gold text-foreground hover:bg-gold hover:text-gold-foreground transition-all duration-500"
+              >
+                <Instagram className="w-5 h-5 mr-2 group-hover:scale-110 transition-transform" />
+                Seguir @followmemaldives
+              </Button>
             </div>
           </div>
         </section>
