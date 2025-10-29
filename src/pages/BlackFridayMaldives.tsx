@@ -201,7 +201,7 @@ const CarouselSection = () => {
       setIsPaused(!isPaused);
     }
   };
-  return <section className="py-8 bg-white dark:bg-slate-950">
+  return <section className="py-2 bg-white dark:bg-slate-950">
       <div ref={containerRef} className="relative w-full overflow-hidden cursor-grab select-none" onMouseDown={handleMouseDown} onMouseMove={handleMouseMove} onMouseUp={handleMouseUp} onMouseLeave={handleMouseLeave} onTouchStart={handleTouchStart} onTouchMove={handleTouchMove} onTouchEnd={handleTouchEnd} onClick={togglePause}>
         <div ref={trackRef} className="flex gap-4 sm:gap-6 will-change-transform" style={{ width: 'fit-content' }}>
           {duplicatedExperiences.map((exp, index) => <div key={index} className="flex-shrink-0 w-[280px] sm:w-[320px] md:w-[380px]">
@@ -333,7 +333,7 @@ const BlackFridayMaldives = () => {
           <div className="absolute inset-0 bg-gradient-to-br from-slate-50 to-white dark:from-slate-950 dark:to-slate-900" />
           
           {/* Main content container */}
-          <div className="relative z-10 container mx-auto px-4 pt-32 pb-20">
+          <div className="relative z-10 container mx-auto px-4 pt-32 pb-6">
             <div className="max-w-5xl mx-auto">
               {/* Offer badge */}
               <div className="flex justify-center mb-6">
@@ -382,7 +382,7 @@ const BlackFridayMaldives = () => {
 
 
 {/* CTA & Trust section – Trust badges first, then the button below */}
-              <div className="flex flex-col items-center gap-8 mb-12">
+              <div className="flex flex-col items-center gap-8 mb-4">
                 {/* Trust badges */}
                 <div className="flex flex-wrap items-center justify-center gap-6 text-sm text-slate-600 dark:text-slate-400">
                   <div className="flex items-center gap-2">
@@ -412,13 +412,6 @@ const BlackFridayMaldives = () => {
 
 
 
-              {/* Scroll indicator */}
-              <div className="flex justify-center animate-bounce">
-                <ChevronDown className="w-6 h-6 text-slate-400" />
-              </div>
-            </div>
-          </div>
-        </section>
 
         {/* Carousel Section */}
         <CarouselSection />
