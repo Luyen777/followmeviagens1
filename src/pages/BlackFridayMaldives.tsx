@@ -236,28 +236,28 @@ const BlackFridayMaldives = () => {
   }];
   
   const pricingOptionsHeroSection = [{
-    period: "Outubro até 25 de Dezembro 2025",
+    period: "Outubro a 25 de Dezembro 2025",
     price: "3.700",
     discountedPrice: "2.890",
     originalPrice: "3.700",
     status: "4 vagas restantes",
     availability: "limited"
   }, {
-    period: "25 de Dezembro até 11 de Janeiro 2025",
+    period: "25 de Dezembro a 11 de Janeiro 2025",
     price: "6.240",
     discountedPrice: "4.990",
     originalPrice: "6.240",
     status: "Poucas vagas",
     availability: "limited"
   }, {
-    period: "11 de Janeiro até 10 de Abril 2026",
+    period: "11 de Janeiro a 10 de Abril 2026",
     price: "3.850",
     discountedPrice: "3.050",
     originalPrice: "3.850",
     status: "Disponível",
     availability: "available"
   }, {
-    period: "10 de Abril até 21 de Dezembro 2026",
+    period: "10 de Abril a 21 de Dezembro 2026",
     price: "3.800",
     discountedPrice: "2.950",
     originalPrice: "3.800",
@@ -487,8 +487,11 @@ const BlackFridayMaldives = () => {
             <p className="text-center text-muted-foreground mb-12 text-sm">
               25% de desconto em todas as datas - Oferta limitada!
             </p>
-        
+         
+        <p className="text-lg font-semibold text-slate-900 mb-4">Períodos:</p>
+
             {/* Pricing Cards without button in each */}
+            
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto mb-12">
               {pricingOptionsHeroSection.map((option, index) => (
                 <Card key={index} className="relative overflow-hidden hover:shadow-xl transition-all duration-300 border-slate-200/60">
