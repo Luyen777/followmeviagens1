@@ -466,7 +466,7 @@ const BlackFridayMaldives = () => {
               text: "Pagamento em até 10x sem juros!"
             }].map((item, index) => {
               const Icon = item.icon;
-              return <div key={index} className="flex items-start gap-4 bg-gradient-to-br from-yellow-300 via-yellow-100 to-white dark:from-yellow-900/10 dark:via-slate-900 dark:to-slate-900 p-5 rounded-lg border border-yellow-200/40 dark:border-yellow-800/20 shadow-sm hover:shadow-md transition-all duration-300 w-full md:max-w-md justify-self-start md:justify-self-center">
+              return <div key={index} className="flex items-start gap-4 bg-gradient-to-br from-yellow-300 via-white to-white dark:from-yellow-900/10 dark:via-slate-900 dark:to-slate-900 p-5 rounded-lg border border-yellow-200/40 dark:border-yellow-800/20 shadow-sm hover:shadow-md transition-all duration-300 w-full md:max-w-md justify-self-start md:justify-self-center">
                   <Icon className="w-5 h-5 text-slate-700 dark:text-slate-300 flex-shrink-0 mt-0.5" />
                   <span className="text-sm font-medium text-slate-900 dark:text-slate-100 text-left">{item.text}</span>
                 </div>;
