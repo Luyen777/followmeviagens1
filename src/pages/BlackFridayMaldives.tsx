@@ -333,7 +333,7 @@ const BlackFridayMaldives = () => {
           <div className="absolute inset-0 bg-gradient-to-br from-slate-50 to-white dark:from-slate-950 dark:to-slate-900" />
           
           {/* Main content container */}
-          <div className="relative z-10 container mx-auto px-4 pt-32 pb-20">
+          <div className="relative z-10 container mx-auto px-4 pt-32 pb-6">
             <div className="max-w-5xl mx-auto">
               {/* Offer badge */}
               <div className="flex justify-center mb-6">
@@ -382,7 +382,7 @@ const BlackFridayMaldives = () => {
 
 
 {/* CTA & Trust section – Trust badges first, then the button below */}
-              <div className="flex flex-col items-center gap-8 mb-12">
+              <div className="flex flex-col items-center gap-8 mb-4">
                 {/* Trust badges */}
                 <div className="flex flex-wrap items-center justify-center gap-6 text-sm text-slate-600 dark:text-slate-400">
                   <div className="flex items-center gap-2">
@@ -415,10 +415,7 @@ const BlackFridayMaldives = () => {
                 <CarouselSection />
               </div>
 
-              {/* Scroll indicator */}
-              <div className="flex justify-center animate-bounce mt-8">
-                <ChevronDown className="w-6 h-6 text-slate-400" />
-              </div>
+
             </div>
           </div>
         </section>
