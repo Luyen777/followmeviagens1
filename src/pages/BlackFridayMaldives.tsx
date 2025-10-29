@@ -494,22 +494,22 @@ const BlackFridayMaldives = () => {
             
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto mb-12">
               {pricingOptionsHeroSection.map((option, index) => (
-                <Card key={index} className="relative overflow-hidden hover:shadow-xl transition-all duration-300 border-slate-200/60">
+                <Card key={index} className="relative overflow-hidden hover:shadow-xl transition-all duration-300 border-slate-200/60 flex flex-col">
                   {/* Discount badge */}
                   <div className="absolute top-4 right-4 bg-rose-500 text-white text-xs font-bold px-2 py-1 rounded-full">
                     -25%
                   </div>
-                  <div className="p-6">
-                    <div className="mb-4">
-                      <div className="text-xs font-medium text-muted-foreground mb-2 uppercase tracking-wide">
+                  <div className="p-6 flex flex-col h-full">
+                    <div className="mb-6">
+                      <div className="text-xs font-medium text-muted-foreground mb-2 uppercase tracking-wide text-center">
                         Período
                       </div>
-                      <div className="text-sm font-semibold text-slate-900 dark:text-slate-100">
+                      <div className="text-sm font-semibold text-slate-900 dark:text-slate-100 text-center">
                         {option.period}
                       </div>
                     </div>
-                    <div className="mb-4">
-                      <div className="flex items-baseline gap-2">
+                    <div className="mb-8 mt-4">
+                      <div className="flex items-baseline gap-2 justify-center">
                         <div className="text-2xl font-bold text-slate-900 dark:text-slate-100">
                           U$ {option.discountedPrice}
                         </div>
@@ -517,9 +517,9 @@ const BlackFridayMaldives = () => {
                           U$ {option.originalPrice}
                         </div>
                       </div>
-                      <div className="text-sm text-muted-foreground">por pessoa</div>
+                      <div className="text-sm text-muted-foreground text-center">por pessoa</div>
                     </div>
-                    <div className={`mb-4 text-sm font-medium ${
+                    <div className={`mt-auto pt-4 text-sm font-medium text-center ${
                       option.availability === 'limited' ? 'text-rose-600' : 'text-emerald-600'
                     }`}>
                       {option.status}
