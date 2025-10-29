@@ -411,7 +411,7 @@ const BlackFridayMaldives = () => {
               </div>
 
               {/* Carousel Section - Integrated into Hero */}
-              <div className="mt-20">
+              <div className="mt-22">
                 <CarouselSection />
               </div>
 
