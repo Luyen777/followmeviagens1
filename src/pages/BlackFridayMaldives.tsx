@@ -497,7 +497,7 @@ const BlackFridayMaldives = () => {
               {pricingOptionsHeroSection.map((option, index) => (
                 <Card key={index} className="relative overflow-hidden hover:shadow-xl transition-all duration-300 border-slate-200/60">
                   {/* Discount badge */}
-                  <div className="absolute top-4 right-4 bg-emerald-100 text-emerald-700 rounded px-2 py-0.5 text-[10px] sm:text-xs font-semibold uppercase tracking-wider"">
+                  <div className="absolute top-4 right-4 bg-emerald-100 text-emerald-700 rounded px-2 py-0.5 text-[10px] sm:text-xs font-semibold uppercase tracking-wider>
                     -25%
                   </div>
                   <div className="p-6">
