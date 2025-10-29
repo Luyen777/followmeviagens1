@@ -348,7 +348,7 @@ const BlackFridayMaldives = () => {
               <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-slate-900 dark:text-white text-center leading-tight mb-3">
                 Ilhas Maldivas
                 <span className="block text-2xl md:text-3xl lg:text-4xl text-slate-600 dark:text-slate-400 font-normal mt-3">
-                  Black Friday・Maldivas All Inclusive・Bangalô Luxuoso Sobre Águas Cristalinas・25% de Desconto
+                  Black Friday・All Inclusive Premium・Bangalô Luxuoso Sobre Águas Cristalinas・25% de Desconto!
                 </span>
               </h1>
 
