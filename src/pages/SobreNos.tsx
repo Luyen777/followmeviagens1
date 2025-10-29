@@ -284,11 +284,12 @@ const SobreNos = () => {
               </p>
 
               {/* Team Image */}
-              <div className="mt-12 scroll-reveal scroll-reveal-fade">
+              <div ref={(el) => (heroParagraphsRef.current[3] = el)} className="mt-12 scroll-reveal scroll-reveal-fade">
                 <img 
                   src={equipeFollowMe} 
                   alt="Equipe Follow Me Viagens" 
-                  className="w-full max-w-3xl mx-auto rounded-lg shadow-lg"
+                  className="w-full max-w-3xl mx-auto rounded-lg shadow-lg object-cover"
+                  loading="lazy"
                 />
               </div>
             </div>
