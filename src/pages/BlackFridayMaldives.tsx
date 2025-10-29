@@ -236,31 +236,31 @@ const BlackFridayMaldives = () => {
   }];
   
   const pricingOptionsHeroSection = [{
-    period: "Dezembro 2025 e Janeiro 2026",
-    price: "3.855",
+    period: "Outubro até 25 de Dezembro 2025",
+    price: "3.700",
     discountedPrice: "2.890",
-    originalPrice: "3.855",
+    originalPrice: "3.700",
     status: "4 vagas restantes",
     availability: "limited"
   }, {
-    period: "Fevereiro 2026",
-    price: "3.655",
-    discountedPrice: "2.741",
-    originalPrice: "3.655",
+    period: "25 de Dezembro até 11 de Janeiro 2025",
+    price: "6.240",
+    discountedPrice: "4.990",
+    originalPrice: "6.240",
     status: "Poucas vagas",
     availability: "limited"
   }, {
-    period: "Março 2026",
-    price: "3.455",
-    discountedPrice: "2.591",
-    originalPrice: "3.455",
+    period: "11 de Janeiro até 10 de Abril 2026",
+    price: "3.850",
+    discountedPrice: "3.050",
+    originalPrice: "3.850",
     status: "Disponível",
     availability: "available"
   }, {
-    period: "Abril 2026",
-    price: "3.355",
-    discountedPrice: "2.516",
-    originalPrice: "3.355",
+    period: "10 de Abril até 21 de Dezembro 2026",
+    price: "3.800",
+    discountedPrice: "2.950",
+    originalPrice: "3.800",
     status: "Disponível",
     availability: "available"
   }];
@@ -533,7 +533,7 @@ const BlackFridayMaldives = () => {
                 className="bg-gradient-to-r from-yellow-400 to-yellow-300 hover:from-yellow-300 hover:to-yellow-400 text-slate-900 font-semibold h-12 text-lg px-8 rounded-xl shadow-none min-w-[240px]"
               >
                 <MessageCircle className="w-5 h-5 mr-2" />
-                Reservar Agora com Desconto
+                RESERVAR
               </Button>
             </div>
         
