@@ -346,40 +346,39 @@ const BlackFridayMaldives = () => {
 
               {/* Main headline */}
               <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-slate-900 dark:text-white text-center leading-tight mb-3">
-                Ilhas Maldivas
+                Experiência de Luxo nas Ilhas Maldivas
                 <span className="block text-2xl md:text-3xl lg:text-4xl text-slate-600 dark:text-slate-400 font-normal mt-3">
-                  Black Friday・All Inclusive Premium・Bangalô Luxuoso Sobre Águas Cristalinas・25% de Desconto!
+                  BANGALÔ SOBRE ÁGUAS CRISTALINAS・ALL INCLUSIVE PREMIUM
                 </span>
               </h1>
 
-           {/* Price highlight box - Responsive & smaller */}
-           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8 mt-8">
-             {/* Original price box */}
-             <div className="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-lg px-6 py-2 w-64 text-center shadow-sm flex flex-col justify-center" style={{ minHeight: '54px' }}>
-               <div className="text-xs font-medium text-slate-500 dark:text-slate-400 uppercase tracking-wider mb-1">
-                 A partir de
-               </div>
-               <div className="text-3xl font-bold text-slate-900 dark:text-white">
-                 U$ 2.890
-               </div>
-               <div className="text-xs text-slate-500 dark:text-slate-400 mt-1">
-                 por pessoa
-               </div>
-             </div>
-           
-             {/* Discount box */}
-             <div className="bg-emerald-50 border border-emerald-200 rounded-lg px-6 py-2 w-64 text-center shadow shadow-md flex flex-col justify-center" style={{ minHeight: '54px' }}>
-               <div className="text-xs font-medium text-black uppercase tracking-wider mb-1">
-                 Economize
-               </div>
-               <div className="text-3xl font-bold" style={{ color: '#04804A' }}>
-                 U$ 965
-               </div>
-               <div className="text-xs text-black mt-1">
-                 Desconto especial
-               </div>
-             </div>
-           </div>
+{/* Luxury Price Highlight – Unified Card, Modern and Premium */}
+              <div className="flex flex-col items-center justify-center my-8">
+                <div className="bg-white/95 border border-slate-200 shadow-lg rounded-xl px-10 py-6 w-full max-w-md text-center">
+                  <div className="flex flex-col gap-1 items-center justify-center">
+                    <div className="flex items-center gap-2 mb-1">
+                      <span className="bg-yellow-100 text-yellow-800 rounded px-3 py-1 text-xs font-semibold uppercase tracking-wider">
+                        Black Friday Exclusivo
+                      </span>
+                      <span className="bg-emerald-100 text-emerald-700 rounded px-3 py-1 text-xs font-semibold uppercase tracking-wider">
+                        25% OFF
+                      </span>
+                    </div>
+                    <div className="text-4xl font-extrabold text-slate-900 my-1">
+                      U$ 2.890 <span className="text-lg font-normal text-slate-400">/ pessoa</span>
+                    </div>
+                    <div className="flex items-center gap-2 mt-1">
+                      <span className="text-base text-emerald-600 font-semibold">
+                        Você economiza <span className="font-bold">U$ 965</span>
+                      </span>
+                      <span className="bg-emerald-50 text-emerald-700 rounded px-2 py-1 text-xs font-bold uppercase">
+                        Oferta Especial
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
 
 
 
