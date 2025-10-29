@@ -318,7 +318,7 @@ const BlackFridayMaldives = () => {
   }]);
   const handleWhatsAppClick = () => {
     const message = encodeURIComponent("Olá! Vi a oferta de Black Friday para as Maldivas e gostaria de mais informações sobre o pacote.");
-    window.open(`https://wa.link/followmeviagens?text=${message}`, "_blank");
+    window.open(`https://wa.me/5511988347426?text=${message}`, "_blank");
   };
   return <>
       <SEOHead title="Pacote Maldivas All-Inclusive - Black Friday | Elite Lux Travel" description="Aproveite nossa oferta especial: 4 noites em bangalô overwater nas Maldivas com all-inclusive. Economize U$ 965 e parcele em até 10x sem juros." keywords={["pacote maldivas", "black friday maldivas", "viagem maldivas all inclusive", "bangalô overwater", "lua de mel maldivas"]} ogImage={heroImage} canonicalUrl="/promocoes/black-friday-maldivas" structuredData={[packageStructuredData, faqStructuredData, breadcrumbStructuredData]} />
