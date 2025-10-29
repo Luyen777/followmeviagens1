@@ -204,7 +204,7 @@ const SobreNos = () => {
 
             <div ref={clienteleContentRef} className="max-w-4xl mx-auto space-y-6 text-lg leading-relaxed text-foreground/80 mb-16 scroll-reveal scroll-reveal-fade">
               <p>
-                Ao longo de duas décadas, tivemos a honra de atender diversas celebridades e viajantes que buscam o melhor em experiências de alto padrão. Nossa reputação foi construída através de serviço impecável, atenção aos detalhes e resultados que excedem expectativas.
+                Ao longo de duas décadas, tivemos a honra de atender pessoas de destaque na sociedade brasileira e viajantes que buscam o melhor em experiências de alto padrão. Nossa reputação foi construída através de serviço impecável, atenção aos detalhes e resultados que excedem expectativas.
               </p>
               
               <p>
@@ -218,7 +218,7 @@ const SobreNos = () => {
             {/* Celebrity Showcase Title */}
             <div className="text-center mb-8">
               <h3 className="text-2xl sm:text-3xl font-display font-semibold text-foreground mb-4">
-                Clientes famosos que viajaram com a Follow Me este ano
+                Alguns clientes de destaque que viajaram conosco recentemente
               </h3>
               <div className="h-[2px] w-24 mx-auto bg-gradient-to-r from-transparent via-gold to-transparent"></div>
             </div>
