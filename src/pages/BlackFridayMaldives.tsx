@@ -344,13 +344,14 @@ const BlackFridayMaldives = () => {
                 </div>
               </div>
 
-              {/* Main headline */}
-              <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-slate-900 dark:text-white text-center leading-tight mb-3">
-                Experiência de Luxo nas Ilhas Maldivas
-                <span className="block text-2xl md:text-3xl lg:text-4xl text-slate-600 dark:text-slate-400 font-normal mt-3">
-                  BANGALÔ SOBRE ÁGUAS CRISTALINAS・ALL INCLUSIVE PREMIUM
+{/* Main headline – Premium, Modern, Aspirational */}
+              <h1 className="font-serif font-extrabold text-slate-900 dark:text-white text-center tracking-wide text-5xl md:text-6xl lg:text-7xl leading-tight mb-4">
+                Ilhas Maldivas: Sua Experiência de Luxo
+                <span className="block font-sans font-medium uppercase text-slate-600 dark:text-slate-400 tracking-wider text-xl md:text-2xl lg:text-3xl mt-2">
+                  Bangalô Sobre Águas Cristalinas • All Inclusive Premium
                 </span>
               </h1>
+
 
 {/* Luxury Price Highlight – Unified Card, Modern and Premium */}
               <div className="flex flex-col items-center justify-center my-8">
