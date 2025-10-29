@@ -500,7 +500,8 @@ const BlackFridayMaldives = () => {
                     -25%
                   </div>
                   <div className="p-6 flex flex-col h-full">
-                    <div className="mb-6">
+                    {/* Fixed height for period section to ensure alignment */}
+                    <div className="mb-6 min-h-[80px] flex flex-col justify-start">
                       <div className="text-xs font-medium text-muted-foreground mb-2 uppercase tracking-wide text-center">
                         Período
                       </div>
@@ -508,7 +509,8 @@ const BlackFridayMaldives = () => {
                         {option.period}
                       </div>
                     </div>
-                    <div className="mb-8 mt-4">
+                    {/* Price section with consistent spacing */}
+                    <div className="mb-6">
                       <div className="flex items-baseline gap-2 justify-center">
                         <div className="text-2xl font-bold text-slate-900 dark:text-slate-100">
                           U$ {option.discountedPrice}
@@ -517,9 +519,10 @@ const BlackFridayMaldives = () => {
                           U$ {option.originalPrice}
                         </div>
                       </div>
-                      <div className="text-sm text-muted-foreground text-center">por pessoa</div>
+                      <div className="text-sm text-muted-foreground text-center mt-1">por pessoa</div>
                     </div>
-                    <div className={`mt-auto pt-4 text-sm font-medium text-center ${
+                    {/* Status pushed to bottom */}
+                    <div className={`mt-auto text-sm font-medium text-center ${
                       option.availability === 'limited' ? 'text-rose-600' : 'text-emerald-600'
                     }`}>
                       {option.status}
