@@ -475,7 +475,7 @@ const BlackFridayMaldives = () => {
           </div>
         </section>
 
-        {/* Pricing Cards Section - Hero */}
+{/* Pricing Cards Section - Hero */}
         <section className="py-24 bg-gradient-to-b from-white to-slate-50 dark:from-slate-950 dark:to-slate-900">
           <div className="container mx-auto px-4">
             <div className="flex items-center justify-center gap-2 mb-4">
@@ -487,7 +487,8 @@ const BlackFridayMaldives = () => {
             <p className="text-center text-muted-foreground mb-12 text-sm">
               25% de desconto em todas as datas - Oferta limitada!
             </p>
-
+        
+            {/* Pricing Cards without button in each */}
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto mb-12">
               {pricingOptionsHeroSection.map((option, index) => (
                 <Card key={index} className="relative overflow-hidden hover:shadow-xl transition-all duration-300 border-slate-200/60">
@@ -495,7 +496,6 @@ const BlackFridayMaldives = () => {
                   <div className="absolute top-4 right-4 bg-rose-500 text-white text-xs font-bold px-2 py-1 rounded-full">
                     -25%
                   </div>
-
                   <div className="p-6">
                     <div className="mb-4">
                       <div className="text-xs font-medium text-muted-foreground mb-2 uppercase tracking-wide">
@@ -505,7 +505,6 @@ const BlackFridayMaldives = () => {
                         {option.period}
                       </div>
                     </div>
-
                     <div className="mb-4">
                       <div className="flex items-baseline gap-2">
                         <div className="text-2xl font-bold text-slate-900 dark:text-slate-100">
@@ -517,25 +516,27 @@ const BlackFridayMaldives = () => {
                       </div>
                       <div className="text-sm text-muted-foreground">por pessoa</div>
                     </div>
-
                     <div className={`mb-4 text-sm font-medium ${
                       option.availability === 'limited' ? 'text-rose-600' : 'text-emerald-600'
                     }`}>
                       {option.status}
                     </div>
-
-                    <Button
-                      onClick={handleWhatsAppClick}
-                      className="w-full bg-gradient-to-r from-slate-800 to-slate-900 hover:from-slate-900 hover:to-black text-white font-medium h-10"
-                    >
-                      <MessageCircle className="w-3.5 h-3.5 mr-1.5" />
-                      Reservar
-                    </Button>
                   </div>
                 </Card>
               ))}
             </div>
-
+        
+            {/* Single Reservar Button */}
+            <div className="flex justify-center mb-12">
+              <Button
+                onClick={handleWhatsAppClick}
+                className="bg-gradient-to-r from-yellow-400 to-yellow-300 hover:from-yellow-300 hover:to-yellow-400 text-slate-900 font-semibold h-12 text-lg px-8 rounded-xl shadow-none min-w-[240px]"
+              >
+                <MessageCircle className="w-5 h-5 mr-2" />
+                Reservar Agora com Desconto
+              </Button>
+            </div>
+        
             {/* Payment Terms and Cancellation Policy */}
             <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-6 place-items-center md:place-items-start">
               <Card className="p-6 border-slate-200/60 w-full">
@@ -554,7 +555,7 @@ const BlackFridayMaldives = () => {
                   </div>
                 </div>
               </Card>
-
+        
               <Card className="p-6 border-slate-200/60 w-full">
                 <h3 className="font-semibold text-[1.2rem] mb-4 flex items-center justify-center md:justify-start gap-2">
                   <Shield className="w-5 h-5 text-slate-600" />
