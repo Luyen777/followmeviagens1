@@ -288,7 +288,7 @@ const SobreNos = () => {
                 <img 
                   src={equipeFollowMe} 
                   alt="Equipe Follow Me Viagens" 
-                  className="w-full max-w-3xl mx-auto rounded-lg shadow-lg object-cover"
+                  className="w-full max-w-2xl mx-auto rounded-lg shadow-lg object-cover"
                   loading="lazy"
                 />
               </div>
