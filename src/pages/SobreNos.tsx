@@ -84,15 +84,15 @@ const SobreNos = () => {
 
             <div className="max-w-4xl mx-auto space-y-6 text-lg leading-relaxed text-foreground/80">
               <p ref={(el) => (heroParagraphsRef.current[0] = el)} className="scroll-reveal scroll-reveal-fade">
-                Com duas décadas de experiência no mercado de turismo de luxo, a Follow Me Viagens se consolidou como referência absoluta em destinos exóticos, com especialização nas Maldivas, Ásia e outros destinos de luxo. Nossa missão vai além de vender pacotes: criamos jornadas personalizadas que transformam suas expectativas mais altas em realidade.
+                Com duas décadas de experiência no mercado de turismo de luxo, a Follow Me Viagens se consolidou como referência absoluta em destinos exóticos, com especialização nas Maldivas, Ásia e outros destinos de luxo.
               </p>
               
               <p ref={(el) => (heroParagraphsRef.current[1] = el)} className="scroll-reveal scroll-reveal-fade">
-                Nosso conhecimento profundo dos resorts mais exclusivos das Maldivas, combinado com parcerias estratégicas, nos permite oferecer não apenas viagens, mas experiências autênticas e memoráveis. Cada detalhe é planejado por nossa equipe de especialistas, garantindo que sua viagem supere qualquer expectativa.
+                Nossa missão vai além de vender pacotes: criamos jornadas personalizadas que transformam suas expectativas mais altas em realidade. Nosso conhecimento profundo dos resorts mais exclusivos, combinado com parcerias estratégicas, nos permite oferecer não apenas viagens, mas experiências autênticas e memoráveis.
               </p>
               
               <p ref={(el) => (heroParagraphsRef.current[2] = el)} className="scroll-reveal scroll-reveal-fade">
-                Nosso diretor, Rafael Wiedman, é formado em Turismo pela Universidade de São Paulo (USP) e construiu sua carreira com forte foco em destinos de luxo como as Maldivas. Todo ano, Rafael e membros da equipe Follow Me visitam as Ilhas Malvivas, realizando visitas técnicas e firmando parcerias para garantir as melhores condições aos nossos clientes.
+                Nossa equipe, liderada pelo diretor Rafael Wiedman, visita anualmente as Maldivas para realizar visitas técnicas e firmar parcerias que garantem as melhores condições aos nossos clientes. Cada detalhe é planejado com dedicação, assegurando que sua viagem supere qualquer expectativa.
               </p>
 
               {/* Team Image */}
@@ -208,10 +208,10 @@ const SobreNos = () => {
               </p>
               
               <p>
-                Da seleção criteriosa de resorts exclusivos à coordenação logística perfeita, cada aspecto do seu itinerário recebe nossa atenção personalizada. Nossos clientes retornam não apenas pelas Maldivas deslumbrantes, mas pelo nível de expertise e cuidado que demonstramos em cada interação.
+                Da seleção criteriosa de resorts exclusivos à coordenação logística perfeita, cada aspecto do seu itinerário recebe nossa atenção personalizada.
               </p>
               <p>
-               Nos orgulhamos de ter 100% de availações positivas no Google e demais canais, e nosso comprometimento é com a satisfação absoluta dos viajantes que decidem confiar na nossa agência.
+               Nos orgulhamos de ter 100% de avaliações positivas no Google e demais canais. Nossos clientes retornam não apenas pelas Maldivas deslumbrantes, mas pelo nível de expertise e cuidado que demonstramos em cada interação, refletindo nosso comprometimento com a satisfação absoluta de quem confia na Follow Me Viagens.
               </p>
             </div>
 
@@ -274,11 +274,11 @@ const SobreNos = () => {
 
             <div ref={teamContentRef} className="max-w-4xl mx-auto space-y-6 text-lg leading-relaxed text-foreground/80 mb-16 text-center scroll-reveal scroll-reveal-fade">
               <p>
-                Nossa agência abriga uma equipe completa e altamente especializados, com profundo conhecimento em destinos específicos. Não somos apenas agentes de viagem, somos especialistas que visitaram, exploraram e compreendem intimamente cada resort, cada ilha, cada detalhe que tornam os destinos únicos.
+                Nossa equipe é altamente especializada, com profundo conhecimento em destinos específicos. Não somos apenas agentes de viagem, somos especialistas que visitaram, exploraram e compreendem intimamente cada resort, cada ilha, cada detalhe que torna os destinos únicos.
               </p>
               
               <p>
-                Com atendimento personalizado, nossa equipe se dedica a compreender as suas preferências, estilo e expectativas para criar itinerários verdadeiramente inesquecíveis. Do primeiro contato até seu retorno, você terá o suporte de profissionais comprometidos com a excelência em cada etapa da sua jornada.
+                Com atendimento personalizado, nos dedicamos a compreender suas preferências, estilo e expectativas para criar itinerários verdadeiramente inesquecíveis. Do primeiro contato até seu retorno, você terá o suporte de profissionais comprometidos com a excelência em cada etapa da sua jornada.
               </p>
             </div>
 
