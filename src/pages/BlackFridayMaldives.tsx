@@ -434,7 +434,7 @@ const BlackFridayMaldives = () => {
                 <Button 
                   size="lg" 
                   onClick={handleWhatsAppClick} 
-                  className="bg-gradient-to-r from-emerald-600 to-emerald-700 hover:from-emerald-700 hover:to-emerald-800 text-white font-medium text-base px-8 py-4 h-auto rounded-xl shadow-lg hover:shadow-xl transform hover:scale-[1.02] transition-all duration-300 flex items-center gap-2.5 group"
+                  className="bg-gradient-to-r from-gold-600 to-gold-700 hover:from-gold-700 hover:to-gold-800 text-black font-medium text-base px-8 py-4 h-auto rounded-xl shadow-lg hover:shadow-xl transform hover:scale-[1.02] transition-all duration-300 flex items-center gap-2.5 group"
                 >
                   <MessageCircle className="w-4 h-4 group-hover:scale-110 transition-transform" />
                   Reservar Agora
