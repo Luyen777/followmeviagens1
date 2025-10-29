@@ -488,7 +488,8 @@ const BlackFridayMaldives = () => {
               25% de desconto em todas as datas - Oferta limitada!
             </p>
          
-        <p className="text-lg font-semibold text-slate-900 mb-4">Períodos:</p>
+<p className="text-lg font-semibold text-slate-900 mb-4 text-center">Períodos:</p>
+
 
             {/* Pricing Cards without button in each */}
             
@@ -496,7 +497,7 @@ const BlackFridayMaldives = () => {
               {pricingOptionsHeroSection.map((option, index) => (
                 <Card key={index} className="relative overflow-hidden hover:shadow-xl transition-all duration-300 border-slate-200/60">
                   {/* Discount badge */}
-                  <div className="absolute top-4 right-4 bg-rose-500 text-white text-xs font-bold px-2 py-1 rounded-full">
+                  <div className="absolute top-4 right-4 bg-emerald-100 text-emerald-700 rounded px-2 py-0.5 text-[10px] sm:text-xs font-semibold uppercase tracking-wider"">
                     -25%
                   </div>
                   <div className="p-6">
