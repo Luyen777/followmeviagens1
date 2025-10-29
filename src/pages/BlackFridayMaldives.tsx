@@ -551,13 +551,13 @@ const BlackFridayMaldives = () => {
                   Formas de pagamento
                 </h3>
                 <div className="space-y-2 text-sm text-muted-foreground">
-                  <div className="flex items-start justify-center md:justify-start gap-2">
+                  <div className="flex items-start gap-2">
                     <Check className="w-4 h-4 text-emerald-600 flex-shrink-0 mt-0.5" />
-                    <span className="text-center md:text-left">Sinal de 20% em até 24 horas</span>
+                    <span>Sinal de 20% em até 24 horas</span>
                   </div>
-                  <div className="flex items-start justify-center md:justify-start gap-2">
+                  <div className="flex items-start gap-2">
                     <Check className="w-4 h-4 text-emerald-600 flex-shrink-0 mt-0.5" />
-                    <span className="text-center md:text-left">Saldo de 80% até 30 dias do embarque</span>
+                    <span>Saldo de 80% até 30 dias do embarque</span>
                   </div>
                 </div>
               </Card>
@@ -568,13 +568,13 @@ const BlackFridayMaldives = () => {
                   Política de cancelamento
                 </h3>
                 <div className="space-y-2 text-sm text-muted-foreground">
-                  <div className="flex items-start justify-center md:justify-start gap-2">
+                  <div className="flex items-start gap-2">
                     <Check className="w-4 h-4 text-emerald-600 flex-shrink-0 mt-0.5" />
-                    <span className="text-center md:text-left">Até 30 dias antes: Reembolso de 80%</span>
+                    <span>Até 30 dias antes: Reembolso de 80%</span>
                   </div>
-                  <div className="flex items-start justify-center md:justify-start gap-2">
+                  <div className="flex items-start gap-2">
                     <Check className="w-4 h-4 text-amber-600 flex-shrink-0 mt-0.5" />
-                    <span className="text-center md:text-left">Menos de 30 dias: Sem reembolso</span>
+                    <span>Menos de 30 dias: Sem reembolso</span>
                   </div>
                 </div>
               </Card>
