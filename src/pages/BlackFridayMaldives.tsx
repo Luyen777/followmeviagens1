@@ -488,7 +488,7 @@ const BlackFridayMaldives = () => {
               25% de desconto em todas as datas - Oferta limitada!
             </p>
          
-        <p className="text-lg font-semibold text-slate-900 mb-4">Períodos:</p>
+        <p className="text-lg font-semibold text-slate-900 mb-4 text-center">Períodos:</p>
 
             {/* Pricing Cards without button in each */}
             
