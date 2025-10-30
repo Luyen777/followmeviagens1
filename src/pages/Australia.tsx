@@ -271,7 +271,7 @@ const Australia = () => {
                 <Star className="w-5 h-5 text-amber-600 mt-0.5 flex-shrink-0" />
                 <div>
                   <p className="text-sm text-amber-900 dark:text-amber-200">
-                    <strong>Dicas de Ouro:</strong> Use filtro solar regularmente, fique atento a avisos em praias e parques sobre
+                    <strong>Dicas de Ouro:</strong> Tenha cuidado com o sol forte, fique atento a avisos em praias e parques sobre
                     animais (medusas, crocodilos), e compre passes de atrações para economizar.
                   </p>
                 </div>
