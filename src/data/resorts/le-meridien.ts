@@ -185,10 +185,6 @@ Comodidades nas Villas:
         question: "Crianças pagam?",
         answer: "Kids até 11 anos podem ficar gratuitamente com os pais em alguns planos. Consulte-nos para verificar as promoções vigentes e disponibilidade."
       },
-      {
-        question: "O resort aceita animais de estimação?",
-        answer: "Sim, o resort é pet friendly em algumas tarifas. Consulte-nos para verificar as condições e disponibilidade."
-      }
     ],
     images: [
       {
