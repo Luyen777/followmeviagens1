@@ -102,7 +102,6 @@ Comodidades nas Villas:
 - Clube Kids com atividades criativas, esportivas e educativas
 - Villas familiar/Thilamaafushi Villa com 2 ou 3 quartos, privacidade total
 - Menu kids e amenities baby
-- Resort pet friendly em algumas tarifas (sob consulta)
 - Bicicletas disponíveis
 - Atividades culturais e trilhas ecológicas
 - Sustentabilidade: adoção de práticas eco-friendly, redução de plásticos e restauração de recifes`
