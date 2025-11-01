@@ -958,9 +958,9 @@ const IlhasMaldivasStatic = () => {
                   <div className="absolute inset-2 bg-background rounded-full"></div>
                   <Heart className="w-10 h-10 text-teal absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 group-hover:text-gold transition-colors duration-500" strokeWidth={1.5} />
                 </div>
-                <h3 className="text-xl md:text-2xl font-display font-semibold mb-4 text-foreground tracking-tight">Destino para Lua de Mel</h3>
+                <h3 className="text-xl md:text-2xl font-display font-semibold mb-4 text-foreground tracking-tight">Destino feito para o Romance</h3>
                 <p className="text-muted-foreground leading-relaxed font-light">
-                  O lugar mais romântico do mundo com experiências exclusivas para casais e jantares privativos
+                  O lugar mais romântico do mundo com experiências exclusivas para casais. Perfeito para Lua de Mel e celebração do amor
                 </p>
               </div>
 
@@ -1020,7 +1020,7 @@ const IlhasMaldivasStatic = () => {
               <div className="w-20 h-[1px] bg-gradient-to-r from-transparent via-gold to-transparent mx-auto mb-8"></div>
 
               <p className="text-xl sm:text-2xl text-slate-300/80 leading-relaxed font-extralight">
-                Experiência exclusiva com tarifas especiais e curadoria especializada
+                Experiência exclusiva com tarifas especiais e curadoria especializada. Somos a maior agência especializada em Maldivas do Brasil. Todo ano, visitamos as Ilhas Maldivas para negociar valores exclusivos diretamente com os resorts. Visite nosso Instagram para conferir as visitas.
               </p>
             </div>
 
@@ -1060,10 +1060,10 @@ const IlhasMaldivasStatic = () => {
           <div className="container mx-auto px-4">
             <div className="text-center mb-12">
               <h2 className="text-3xl md:text-4xl font-display font-bold mb-4">
-                Explore Nossos Resorts
+                Explore Nossos Pacotes
               </h2>
               <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-                49 resorts cuidadosamente selecionados - do luxo acessível ao ultra-exclusivo. Encontre o paraíso perfeito para você.
+                A Follow Me Viagens visitou e selecionou cada um dos resorts aqui listados. Do luxo acessível ao ultra-exclusivo, encontre o resort perfeito para a sua viagem.
               </p>
             </div>
 
@@ -1167,7 +1167,7 @@ const IlhasMaldivasStatic = () => {
                     Qual a melhor época para visitar?
                   </AccordionTrigger>
                   <AccordionContent className="text-muted-foreground leading-relaxed pb-5">
-                    Novembro a abril é a estação seca com clima perfeito: sol garantido, mar calmo e céu azul. Maio a outubro é a estação chuvosa, mas oferece preços até 40% menores e é a melhor época para avistar tubarões-baleia e arraias-manta. Muitos resorts têm excelente clima mesmo na baixa temporada.
+                    Novembro a abril é a estação seca com clima perfeito: sol garantido, mar calmo e céu azul. Maio a outubro é a estação que apresenta mais chuva, mas oferece preços até 40% menores e é a melhor época para avistar tubarões-baleia e arraias-manta. Muitos resorts têm excelente clima mesmo na baixa temporada. 
                   </AccordionContent>
                 </AccordionItem>
 
