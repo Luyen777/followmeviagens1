@@ -52,7 +52,12 @@ export default {
         },
         gold: {
           DEFAULT: "hsl(var(--gold))",
+          light: "hsl(var(--gold-light))",
           foreground: "hsl(var(--gold-foreground))",
+        },
+        teal: {
+          DEFAULT: "hsl(var(--teal))",
+          light: "hsl(var(--teal-light))",
         },
         popover: {
           DEFAULT: "hsl(var(--popover))",

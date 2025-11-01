@@ -906,80 +906,99 @@ const IlhasMaldivasStatic = () => {
         </section>
 
         {/* Why Choose Maldives Section */}
-        <section className="py-16 md:py-24 bg-gradient-to-b from-[#F5E6D3]/10 to-background">
+        <section className="py-24 md:py-32 bg-background relative overflow-hidden">
+          {/* Subtle decorative element */}
+          <div className="absolute top-0 left-1/2 -translate-x-1/2 w-32 h-[1px] bg-gradient-to-r from-transparent via-gold to-transparent"></div>
+          
           <div className="container mx-auto px-4">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-display font-bold mb-4">
+            <div className="text-center mb-20 max-w-4xl mx-auto">
+              <p className="text-sm tracking-[0.3em] uppercase text-gold mb-6 font-light">
+                O Paraíso na Terra
+              </p>
+              <h2 className="text-4xl md:text-5xl lg:text-6xl font-display font-light tracking-tight mb-6 text-foreground">
                 Por Que Escolher as Ilhas Maldivas
               </h2>
-              <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+              <div className="w-16 h-[2px] bg-gold mx-auto mb-8"></div>
+              <p className="text-lg md:text-xl text-muted-foreground font-light leading-relaxed">
                 Um destino único que combina luxo incomparável, privacidade absoluta e natureza pristine
               </p>
             </div>
 
-            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-x-12 gap-y-16 max-w-6xl mx-auto">
               {/* Benefit 1 */}
-              <div className="group bg-card border border-border rounded-2xl p-8 hover:shadow-xl hover:border-[#00BCD4]/50 transition-all duration-300 hover:-translate-y-1">
-                <div className="w-16 h-16 mx-auto mb-6 rounded-full bg-gradient-to-br from-[#00BCD4]/20 to-[#4DD0E1]/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                  <Crown className="w-8 h-8 text-[#00BCD4]" />
+              <div className="group text-center">
+                <div className="w-20 h-20 mx-auto mb-8 relative">
+                  <div className="absolute inset-0 bg-gradient-to-br from-teal/10 to-gold/10 rounded-full group-hover:scale-110 transition-transform duration-500"></div>
+                  <div className="absolute inset-2 bg-background rounded-full"></div>
+                  <Crown className="w-10 h-10 text-teal absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 group-hover:text-gold transition-colors duration-500" strokeWidth={1.5} />
                 </div>
-                <h3 className="text-xl font-semibold mb-3 text-center">Luxo e Exclusividade Incomparáveis</h3>
-                <p className="text-muted-foreground text-center">
+                <h3 className="text-xl md:text-2xl font-display font-semibold mb-4 text-foreground tracking-tight">Luxo e Exclusividade</h3>
+                <p className="text-muted-foreground leading-relaxed font-light">
                   Conceito único de 'uma ilha, um resort' garante privacidade absoluta e experiência premium sem igual
                 </p>
               </div>
 
               {/* Benefit 2 */}
-              <div className="group bg-card border border-border rounded-2xl p-8 hover:shadow-xl hover:border-[#00BCD4]/50 transition-all duration-300 hover:-translate-y-1">
-                <div className="w-16 h-16 mx-auto mb-6 rounded-full bg-gradient-to-br from-[#00BCD4]/20 to-[#4DD0E1]/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                  <Home className="w-8 h-8 text-[#00BCD4]" />
+              <div className="group text-center">
+                <div className="w-20 h-20 mx-auto mb-8 relative">
+                  <div className="absolute inset-0 bg-gradient-to-br from-teal/10 to-gold/10 rounded-full group-hover:scale-110 transition-transform duration-500"></div>
+                  <div className="absolute inset-2 bg-background rounded-full"></div>
+                  <Home className="w-10 h-10 text-teal absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 group-hover:text-gold transition-colors duration-500" strokeWidth={1.5} />
                 </div>
-                <h3 className="text-xl font-semibold mb-3 text-center">Villas Sobre a Água</h3>
-                <p className="text-muted-foreground text-center">
+                <h3 className="text-xl md:text-2xl font-display font-semibold mb-4 text-foreground tracking-tight">Villas Sobre a Água</h3>
+                <p className="text-muted-foreground leading-relaxed font-light">
                   Icônicas overwater villas com pisos de vidro, acesso direto ao oceano e vistas deslumbrantes 360°
                 </p>
               </div>
 
               {/* Benefit 3 */}
-              <div className="group bg-card border border-border rounded-2xl p-8 hover:shadow-xl hover:border-[#00BCD4]/50 transition-all duration-300 hover:-translate-y-1">
-                <div className="w-16 h-16 mx-auto mb-6 rounded-full bg-gradient-to-br from-[#00BCD4]/20 to-[#4DD0E1]/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                  <Fish className="w-8 h-8 text-[#00BCD4]" />
+              <div className="group text-center">
+                <div className="w-20 h-20 mx-auto mb-8 relative">
+                  <div className="absolute inset-0 bg-gradient-to-br from-teal/10 to-gold/10 rounded-full group-hover:scale-110 transition-transform duration-500"></div>
+                  <div className="absolute inset-2 bg-background rounded-full"></div>
+                  <Fish className="w-10 h-10 text-teal absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 group-hover:text-gold transition-colors duration-500" strokeWidth={1.5} />
                 </div>
-                <h3 className="text-xl font-semibold mb-3 text-center">Vida Marinha Excepcional</h3>
-                <p className="text-muted-foreground text-center">
+                <h3 className="text-xl md:text-2xl font-display font-semibold mb-4 text-foreground tracking-tight">Vida Marinha Excepcional</h3>
+                <p className="text-muted-foreground leading-relaxed font-light">
                   Mais de 2.000 espécies marinhas, tubarões-baleia, arraias-manta e recifes de coral vibrantes
                 </p>
               </div>
 
               {/* Benefit 4 */}
-              <div className="group bg-card border border-border rounded-2xl p-8 hover:shadow-xl hover:border-[#00BCD4]/50 transition-all duration-300 hover:-translate-y-1">
-                <div className="w-16 h-16 mx-auto mb-6 rounded-full bg-gradient-to-br from-[#00BCD4]/20 to-[#4DD0E1]/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                  <Heart className="w-8 h-8 text-[#00BCD4]" />
+              <div className="group text-center">
+                <div className="w-20 h-20 mx-auto mb-8 relative">
+                  <div className="absolute inset-0 bg-gradient-to-br from-teal/10 to-gold/10 rounded-full group-hover:scale-110 transition-transform duration-500"></div>
+                  <div className="absolute inset-2 bg-background rounded-full"></div>
+                  <Heart className="w-10 h-10 text-teal absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 group-hover:text-gold transition-colors duration-500" strokeWidth={1.5} />
                 </div>
-                <h3 className="text-xl font-semibold mb-3 text-center">Destino para Lua de Mel</h3>
-                <p className="text-muted-foreground text-center">
+                <h3 className="text-xl md:text-2xl font-display font-semibold mb-4 text-foreground tracking-tight">Destino para Lua de Mel</h3>
+                <p className="text-muted-foreground leading-relaxed font-light">
                   O lugar mais romântico do mundo com experiências exclusivas para casais e jantares privativos
                 </p>
               </div>
 
               {/* Benefit 5 */}
-              <div className="group bg-card border border-border rounded-2xl p-8 hover:shadow-xl hover:border-[#00BCD4]/50 transition-all duration-300 hover:-translate-y-1">
-                <div className="w-16 h-16 mx-auto mb-6 rounded-full bg-gradient-to-br from-[#00BCD4]/20 to-[#4DD0E1]/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                  <Utensils className="w-8 h-8 text-[#00BCD4]" />
+              <div className="group text-center">
+                <div className="w-20 h-20 mx-auto mb-8 relative">
+                  <div className="absolute inset-0 bg-gradient-to-br from-teal/10 to-gold/10 rounded-full group-hover:scale-110 transition-transform duration-500"></div>
+                  <div className="absolute inset-2 bg-background rounded-full"></div>
+                  <Utensils className="w-10 h-10 text-teal absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 group-hover:text-gold transition-colors duration-500" strokeWidth={1.5} />
                 </div>
-                <h3 className="text-xl font-semibold mb-3 text-center">Gastronomia de Classe Mundial</h3>
-                <p className="text-muted-foreground text-center">
+                <h3 className="text-xl md:text-2xl font-display font-semibold mb-4 text-foreground tracking-tight">Gastronomia de Classe Mundial</h3>
+                <p className="text-muted-foreground leading-relaxed font-light">
                   Restaurantes subaquáticos, jantares privativos na praia e culinária internacional de alto nível
                 </p>
               </div>
 
               {/* Benefit 6 */}
-              <div className="group bg-card border border-border rounded-2xl p-8 hover:shadow-xl hover:border-[#00BCD4]/50 transition-all duration-300 hover:-translate-y-1">
-                <div className="w-16 h-16 mx-auto mb-6 rounded-full bg-gradient-to-br from-[#00BCD4]/20 to-[#4DD0E1]/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                  <Leaf className="w-8 h-8 text-[#00BCD4]" />
+              <div className="group text-center">
+                <div className="w-20 h-20 mx-auto mb-8 relative">
+                  <div className="absolute inset-0 bg-gradient-to-br from-teal/10 to-gold/10 rounded-full group-hover:scale-110 transition-transform duration-500"></div>
+                  <div className="absolute inset-2 bg-background rounded-full"></div>
+                  <Leaf className="w-10 h-10 text-teal absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 group-hover:text-gold transition-colors duration-500" strokeWidth={1.5} />
                 </div>
-                <h3 className="text-xl font-semibold mb-3 text-center">Sustentabilidade</h3>
-                <p className="text-muted-foreground text-center">
+                <h3 className="text-xl md:text-2xl font-display font-semibold mb-4 text-foreground tracking-tight">Sustentabilidade</h3>
+                <p className="text-muted-foreground leading-relaxed font-light">
                   Resorts eco-friendly com energia solar, restauração de corais e práticas sustentáveis pioneiras
                 </p>
               </div>
@@ -988,54 +1007,62 @@ const IlhasMaldivasStatic = () => {
         </section>
 
         {/* Practical Information Section */}
-        <section className="py-16 md:py-24 bg-background">
+        <section className="py-24 md:py-32 bg-gradient-to-b from-muted/20 via-background to-background relative">
+          {/* Top divider */}
+          <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-[1px] bg-gradient-to-r from-transparent via-border to-transparent"></div>
+          
           <div className="container mx-auto px-4">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-display font-bold mb-4">
+            <div className="text-center mb-20">
+              <p className="text-sm tracking-[0.3em] uppercase text-gold mb-6 font-light">
+                Essencial para sua Viagem
+              </p>
+              <h2 className="text-4xl md:text-5xl font-display font-light tracking-tight mb-6 text-foreground">
                 Informações Práticas
               </h2>
-              <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-                Tudo que você precisa saber para planejar sua viagem
-              </p>
+              <div className="w-16 h-[2px] bg-gold mx-auto"></div>
             </div>
 
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
-              <div className="bg-card p-6 rounded-xl border border-border hover:border-[#00BCD4]/50 transition-colors">
-                <div className="w-14 h-14 mx-auto mb-4 rounded-full bg-[#00BCD4]/10 flex items-center justify-center">
-                  <FileText className="w-7 h-7 text-[#00BCD4]" />
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-12 max-w-7xl mx-auto">
+              <div className="group text-center px-4">
+                <div className="mb-6">
+                  <FileText className="w-12 h-12 text-teal mx-auto group-hover:text-gold transition-colors duration-500" strokeWidth={1.5} />
                 </div>
-                <h3 className="font-semibold text-center mb-2 text-lg">Visto na Chegada</h3>
-                <p className="text-sm text-muted-foreground text-center leading-relaxed">
+                <h3 className="text-lg font-display font-semibold mb-4 text-foreground tracking-tight">Visto na Chegada</h3>
+                <div className="w-8 h-[1px] bg-gold/30 mx-auto mb-4"></div>
+                <p className="text-sm text-muted-foreground leading-relaxed font-light">
                   Visto gratuito de 30 dias para brasileiros. Necessário passaporte válido por 6 meses e certificado de vacina contra febre amarela
                 </p>
               </div>
 
-              <div className="bg-card p-6 rounded-xl border border-border hover:border-[#00BCD4]/50 transition-colors">
-                <div className="w-14 h-14 mx-auto mb-4 rounded-full bg-[#00BCD4]/10 flex items-center justify-center">
-                  <DollarSign className="w-7 h-7 text-[#00BCD4]" />
+              <div className="group text-center px-4">
+                <div className="mb-6">
+                  <DollarSign className="w-12 h-12 text-teal mx-auto group-hover:text-gold transition-colors duration-500" strokeWidth={1.5} />
                 </div>
-                <h3 className="font-semibold text-center mb-2 text-lg">Dólar Americano</h3>
-                <p className="text-sm text-muted-foreground text-center leading-relaxed">
+                <h3 className="text-lg font-display font-semibold mb-4 text-foreground tracking-tight">Dólar Americano</h3>
+                <div className="w-8 h-[1px] bg-gold/30 mx-auto mb-4"></div>
+                <p className="text-sm text-muted-foreground leading-relaxed font-light">
                   USD amplamente aceito. Troque pequena quantia para MVR (Rupia Maldívia) para gorjetas e compras locais
                 </p>
               </div>
 
-              <div className="bg-card p-6 rounded-xl border border-border hover:border-[#00BCD4]/50 transition-colors">
-                <div className="w-14 h-14 mx-auto mb-4 rounded-full bg-[#00BCD4]/10 flex items-center justify-center">
-                  <Sun className="w-7 h-7 text-[#00BCD4]" />
+              <div className="group text-center px-4">
+                <div className="mb-6">
+                  <Sun className="w-12 h-12 text-teal mx-auto group-hover:text-gold transition-colors duration-500" strokeWidth={1.5} />
                 </div>
-                <h3 className="font-semibold text-center mb-2 text-lg">Melhor Época</h3>
-                <p className="text-sm text-muted-foreground text-center leading-relaxed">
+                <h3 className="text-lg font-display font-semibold mb-4 text-foreground tracking-tight">Melhor Época</h3>
+                <div className="w-8 h-[1px] bg-gold/30 mx-auto mb-4"></div>
+                <p className="text-sm text-muted-foreground leading-relaxed font-light">
                   Novembro a abril (estação seca) para clima ideal. Maio a outubro para preços menores e avistar tubarões-baleia
                 </p>
               </div>
 
-              <div className="bg-card p-6 rounded-xl border border-border hover:border-[#00BCD4]/50 transition-colors">
-                <div className="w-14 h-14 mx-auto mb-4 rounded-full bg-[#00BCD4]/10 flex items-center justify-center">
-                  <Plane className="w-7 h-7 text-[#00BCD4]" />
+              <div className="group text-center px-4">
+                <div className="mb-6">
+                  <Plane className="w-12 h-12 text-teal mx-auto group-hover:text-gold transition-colors duration-500" strokeWidth={1.5} />
                 </div>
-                <h3 className="font-semibold text-center mb-2 text-lg">Transfer</h3>
-                <p className="text-sm text-muted-foreground text-center leading-relaxed">
+                <h3 className="text-lg font-display font-semibold mb-4 text-foreground tracking-tight">Transfer</h3>
+                <div className="w-8 h-[1px] bg-gold/30 mx-auto mb-4"></div>
+                <p className="text-sm text-muted-foreground leading-relaxed font-light">
                   Transfers espetaculares por hidroavião (dia) ou speedboat (24h). Seu resort organiza tudo
                 </p>
               </div>
@@ -1043,42 +1070,50 @@ const IlhasMaldivasStatic = () => {
           </div>
         </section>
 
-        {/* Agency Highlight Section - Similar to India's "Why Choose Us" */}
-        <section className="py-32 sm:py-44 relative overflow-hidden bg-gradient-to-b from-[#0a0d1f] via-[#0f1525] to-[#0a0d1f]">
-          {/* Luxury bokeh light flares */}
-          <div className="absolute top-0 left-0 w-[600px] h-[600px] bg-gradient-radial from-[#00BCD4]/20 via-[#4DD0E1]/5 to-transparent rounded-full blur-3xl pointer-events-none animate-pulse" style={{ animationDuration: '8s' }}></div>
-          <div className="absolute top-1/4 right-0 w-[500px] h-[500px] bg-gradient-radial from-[#4DD0E1]/15 via-[#00BCD4]/5 to-transparent rounded-full blur-3xl pointer-events-none animate-pulse" style={{ animationDuration: '10s', animationDelay: '2s' }}></div>
-          <div className="absolute bottom-0 left-1/3 w-[700px] h-[700px] bg-gradient-radial from-[#F5E6D3]/10 via-[#00BCD4]/5 to-transparent rounded-full blur-3xl pointer-events-none animate-pulse" style={{ animationDuration: '12s', animationDelay: '4s' }}></div>
+        {/* Agency Highlight Section - Packages */}
+        <section className="py-32 sm:py-44 relative overflow-hidden bg-gradient-to-b from-[#0a0d1f] via-[#0d1220] to-[#0a0d1f]">
+          {/* Refined light elements */}
+          <div className="absolute top-0 left-0 w-[500px] h-[500px] bg-gradient-radial from-teal/15 via-teal/5 to-transparent rounded-full blur-3xl pointer-events-none"></div>
+          <div className="absolute top-1/3 right-0 w-[400px] h-[400px] bg-gradient-radial from-gold/10 via-gold/3 to-transparent rounded-full blur-3xl pointer-events-none"></div>
+          <div className="absolute bottom-0 left-1/2 w-[600px] h-[600px] bg-gradient-radial from-teal/12 via-transparent to-transparent rounded-full blur-3xl pointer-events-none"></div>
 
           <div className="container mx-auto relative z-10 px-4">
             {/* Section Header */}
-            <div className="text-center max-w-3xl mx-auto mb-20">
-              <p className="text-sm sm:text-base text-[#4DD0E1]/80 font-semibold tracking-[0.2em] uppercase mb-6">
-                Experiência e Confiança
-              </p>
+            <div className="text-center max-w-4xl mx-auto mb-24">
+              <div className="inline-block mb-8">
+                <div className="flex items-center gap-3 px-6 py-2 rounded-full border border-gold/20 bg-gold/5">
+                  <Star className="w-4 h-4 text-gold" strokeWidth={2} />
+                  <p className="text-sm tracking-[0.25em] uppercase text-gold/90 font-light">
+                    Experiência Premium
+                  </p>
+                  <Star className="w-4 h-4 text-gold" strokeWidth={2} />
+                </div>
+              </div>
 
-              <h2 className="text-4xl sm:text-5xl md:text-6xl font-display font-semibold text-white mb-8 tracking-tight leading-tight">
+              <h2 className="text-5xl sm:text-6xl md:text-7xl font-display font-light text-white mb-8 tracking-tight leading-[1.1]">
                 Nossos Pacotes para as Ilhas Maldivas
               </h2>
 
-              <p className="text-lg sm:text-xl text-slate-300/90 leading-relaxed font-light max-w-2xl mx-auto">
+              <div className="w-20 h-[1px] bg-gradient-to-r from-transparent via-gold to-transparent mx-auto mb-8"></div>
+
+              <p className="text-xl sm:text-2xl text-slate-300/80 leading-relaxed font-extralight">
                 Experiência exclusiva com tarifas especiais e curadoria especializada
               </p>
             </div>
 
             {/* Benefits Grid */}
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto mb-16">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-6 max-w-6xl mx-auto mb-20">
               {[
-                "✓ Agência especializada nas Ilhas Maldivas",
-                "✓ Parcerias diretas com os melhores resorts",
-                "✓ Melhores preços garantidos",
-                "✓ Pacotes all-inclusive personalizados",
-                "✓ Atendimento em português 24/7",
-                "✓ Suporte completo antes, durante e após a viagem"
+                "Agência especializada nas Ilhas Maldivas",
+                "Parcerias diretas com os melhores resorts",
+                "Melhores preços garantidos",
+                "Pacotes all-inclusive personalizados",
+                "Atendimento em português 24/7",
+                "Suporte completo antes, durante e após a viagem"
               ].map((benefit, index) => (
-                <div key={index} className="flex items-start gap-3 bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-5 hover:bg-white/10 transition-all duration-300">
-                  <span className="text-[#4DD0E1] text-lg font-bold flex-shrink-0">{benefit.split(' ')[0]}</span>
-                  <span className="text-white/90 text-base">{benefit.substring(2)}</span>
+                <div key={index} className="flex items-start gap-4 group">
+                  <div className="w-1.5 h-1.5 rounded-full bg-gold mt-2 flex-shrink-0 group-hover:scale-150 transition-transform duration-300"></div>
+                  <span className="text-white/90 text-base font-light leading-relaxed">{benefit}</span>
                 </div>
               ))}
             </div>

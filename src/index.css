@@ -37,8 +37,13 @@ All colors MUST be HSL.
     --accent-foreground: 0 0% 10%;
 
     /* Premium gold accent */
-    --gold: 43 69% 52%;
+    --gold: 43 74% 58%;
+    --gold-light: 43 85% 75%;
     --gold-foreground: 0 0% 10%;
+    
+    /* Teal accent for Maldives */
+    --teal: 187 85% 43%;
+    --teal-light: 187 80% 55%;
 
     --destructive: 0 70% 50%;
     --destructive-foreground: 0 0% 100%;
@@ -88,8 +93,12 @@ All colors MUST be HSL.
     --accent: 38 40% 70%;
     --accent-foreground: 0 0% 10%;
 
-    --gold: 43 69% 52%;
+    --gold: 43 74% 58%;
+    --gold-light: 43 85% 75%;
     --gold-foreground: 0 0% 10%;
+    
+    --teal: 187 85% 43%;
+    --teal-light: 187 80% 55%;
 
     --destructive: 0 62.8% 50%;
     --destructive-foreground: 36 17% 98%;
