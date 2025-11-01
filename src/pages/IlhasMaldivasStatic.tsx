@@ -984,7 +984,7 @@ const IlhasMaldivasStatic = () => {
                       </span>
                     </div>
                     <div className="text-slate-300/90 text-xs tracking-wide font-light">
-                      Confiado por <span className="text-[#4DD0E1] font-semibold">200.000+</span> viajantes
+                      Confiado por <span className="text-accent font-semibold">200.000+</span> viajantes
                     </div>
                   </div>
                 </a>
@@ -998,11 +998,8 @@ const IlhasMaldivasStatic = () => {
           <div className="container mx-auto px-4">
             <div className="text-center mb-12">
               <h2 className="text-3xl md:text-4xl font-display font-bold mb-4">
-                Explore Nossos Pacotes
+                Explore Os Pacotes
               </h2>
-              <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-                A Follow Me Viagens visitou e selecionou cada um dos resorts aqui listados. Do luxo acessível ao ultra-exclusivo, encontre o resort perfeito para a sua viagem.
-              </p>
             </div>
 
             <div className="max-w-7xl mx-auto">
