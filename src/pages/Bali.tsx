@@ -334,7 +334,7 @@ const Bali = () => {
                 {
                   icon: Star,
                   title: "5.000+ Clientes Satisfeitos",
-                  description: "Depoimentos reais, experiências transformadoras"
+                  description: "100% de avaliações positivas no Google e demais canais"
                 },
                 {
                   icon: Heart,
