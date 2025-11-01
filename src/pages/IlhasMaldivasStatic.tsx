@@ -877,8 +877,7 @@ const IlhasMaldivasStatic = () => {
                 Sobre o Destino
               </h2>
 
-              <div className="grid md:grid-cols-2 gap-12 items-center">
-                <div className="space-y-4 text-muted-foreground leading-relaxed">
+              <div className="space-y-4 text-muted-foreground leading-relaxed max-w-4xl mx-auto text-center">
                   <p>
                     As Ilhas Maldivas são um arquipélago paradisíaco localizado no Oceano Índico, composto por <strong className="text-foreground">26 atolls</strong> naturais e mais de <strong className="text-foreground">1.200 ilhas</strong> de coral formadas sobre formações vulcânicas subaquáticas. Este destino icônico oferece algumas das praias de areia branca mais pristine do mundo, águas cristalinas em tons de turquesa e azul-safira, e uma biodiversidade marinha incomparável.
                   </p>
@@ -889,18 +888,6 @@ const IlhasMaldivasStatic = () => {
                     Em 2025, as Maldivas receberam mais de <strong className="text-foreground">1,6 milhão de visitantes</strong>, consolidando-se como o destino número 1 para lua de mel e férias de luxo. Atualmente, o arquipélago conta com <strong className="text-foreground">183 resorts de luxo</strong>, desde propriedades boutique intimistas até complexos ultra-exclusivos com serviços de mayordomo e chefs privativos.
                   </p>
                 </div>
-
-                <div className="relative group">
-                  <div className="absolute -inset-1 bg-gradient-to-r from-[#00BCD4] to-[#4DD0E1] rounded-2xl blur opacity-25 group-hover:opacity-40 transition duration-1000"></div>
-                  <div className="relative">
-                    <img
-                      src="https://images.unsplash.com/photo-1506929562872-bb421503ef21?q=80&w=1968"
-                      alt="Praia paradisíaca das Maldivas"
-                      className="rounded-2xl shadow-2xl w-full h-[400px] object-cover"
-                    />
-                  </div>
-                </div>
-              </div>
             </div>
           </div>
         </section>
@@ -1006,6 +993,88 @@ const IlhasMaldivasStatic = () => {
           </div>
         </section>
 
+        {/* Agency Highlight Section - Packages */}
+        <section className="py-32 sm:py-44 relative overflow-hidden bg-gradient-to-b from-[#0a0d1f] via-[#0d1220] to-[#0a0d1f]">
+          {/* Refined light elements */}
+          <div className="absolute top-0 left-0 w-[500px] h-[500px] bg-gradient-radial from-teal/15 via-teal/5 to-transparent rounded-full blur-3xl pointer-events-none"></div>
+          <div className="absolute top-1/3 right-0 w-[400px] h-[400px] bg-gradient-radial from-gold/10 via-gold/3 to-transparent rounded-full blur-3xl pointer-events-none"></div>
+          <div className="absolute bottom-0 left-1/2 w-[600px] h-[600px] bg-gradient-radial from-teal/12 via-transparent to-transparent rounded-full blur-3xl pointer-events-none"></div>
+
+          <div className="container mx-auto relative z-10 px-4">
+            {/* Section Header */}
+            <div className="text-center max-w-4xl mx-auto mb-24">
+              <div className="inline-block mb-8">
+                <div className="flex items-center gap-3 px-6 py-2 rounded-full border border-gold/20 bg-gold/5">
+                  <Star className="w-4 h-4 text-gold" strokeWidth={2} />
+                  <p className="text-sm tracking-[0.25em] uppercase text-gold/90 font-light">
+                    Experiência Premium
+                  </p>
+                  <Star className="w-4 h-4 text-gold" strokeWidth={2} />
+                </div>
+              </div>
+
+              <h2 className="text-5xl sm:text-6xl md:text-7xl font-display font-light text-white mb-8 tracking-tight leading-[1.1]">
+                Nossos Pacotes para as Ilhas Maldivas
+              </h2>
+
+              <div className="w-20 h-[1px] bg-gradient-to-r from-transparent via-gold to-transparent mx-auto mb-8"></div>
+
+              <p className="text-xl sm:text-2xl text-slate-300/80 leading-relaxed font-extralight">
+                Experiência exclusiva com tarifas especiais e curadoria especializada
+              </p>
+            </div>
+
+            {/* Instagram Badge */}
+            <div className="text-center mt-16">
+              <div className="inline-flex items-center gap-4 bg-gradient-to-br from-white/10 via-white/5 to-white/[0.02] backdrop-blur-xl border border-white/20 rounded-full px-8 py-4 shadow-2xl hover:scale-105 transition-transform duration-300">
+                <a href="https://instagram.com/followmeviagens" target="_blank" rel="noopener noreferrer" className="flex items-center gap-4">
+                  <div className="relative">
+                    <div className="w-12 h-12 bg-gradient-to-br from-[#00BCD4] via-pink-500 to-purple-600 rounded-full flex items-center justify-center shadow-lg">
+                      <span className="text-white text-xl">📸</span>
+                    </div>
+                    <div className="absolute -bottom-1 -right-1 w-5 h-5 bg-blue-500 rounded-full flex items-center justify-center border-2 border-[#0a0d1f]">
+                      <svg className="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
+                        <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                      </svg>
+                    </div>
+                  </div>
+
+                  <div className="text-left">
+                    <div className="flex items-center gap-2 mb-1">
+                      <span className="text-white font-semibold text-base tracking-wide">
+                        @followmeviagens
+                      </span>
+                    </div>
+                    <div className="text-slate-300/90 text-xs tracking-wide font-light">
+                      Confiado por <span className="text-[#4DD0E1] font-semibold">200.000+</span> viajantes
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Resorts Section */}
+        <section className="py-16 md:py-24 bg-background">
+          <div className="container mx-auto px-4">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl md:text-4xl font-display font-bold mb-4">
+                Explore Nossos Resorts
+              </h2>
+              <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+                49 resorts cuidadosamente selecionados - do luxo acessível ao ultra-exclusivo. Encontre o paraíso perfeito para você.
+              </p>
+            </div>
+
+            <div className="max-w-7xl mx-auto">
+              <div className="space-y-12 sm:space-y-8">
+                {resorts.map((pkg, index) => <PackageListItem key={pkg.slug || pkg.referenceNumber || index} {...pkg} />)}
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* Practical Information Section */}
         <section className="py-24 md:py-32 bg-gradient-to-b from-muted/20 via-background to-background relative">
           {/* Top divider */}
@@ -1065,146 +1134,6 @@ const IlhasMaldivasStatic = () => {
                 <p className="text-sm text-muted-foreground leading-relaxed font-light">
                   Transfers espetaculares por hidroavião (dia) ou speedboat (24h). Seu resort organiza tudo
                 </p>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Agency Highlight Section - Packages */}
-        <section className="py-32 sm:py-44 relative overflow-hidden bg-gradient-to-b from-[#0a0d1f] via-[#0d1220] to-[#0a0d1f]">
-          {/* Refined light elements */}
-          <div className="absolute top-0 left-0 w-[500px] h-[500px] bg-gradient-radial from-teal/15 via-teal/5 to-transparent rounded-full blur-3xl pointer-events-none"></div>
-          <div className="absolute top-1/3 right-0 w-[400px] h-[400px] bg-gradient-radial from-gold/10 via-gold/3 to-transparent rounded-full blur-3xl pointer-events-none"></div>
-          <div className="absolute bottom-0 left-1/2 w-[600px] h-[600px] bg-gradient-radial from-teal/12 via-transparent to-transparent rounded-full blur-3xl pointer-events-none"></div>
-
-          <div className="container mx-auto relative z-10 px-4">
-            {/* Section Header */}
-            <div className="text-center max-w-4xl mx-auto mb-24">
-              <div className="inline-block mb-8">
-                <div className="flex items-center gap-3 px-6 py-2 rounded-full border border-gold/20 bg-gold/5">
-                  <Star className="w-4 h-4 text-gold" strokeWidth={2} />
-                  <p className="text-sm tracking-[0.25em] uppercase text-gold/90 font-light">
-                    Experiência Premium
-                  </p>
-                  <Star className="w-4 h-4 text-gold" strokeWidth={2} />
-                </div>
-              </div>
-
-              <h2 className="text-5xl sm:text-6xl md:text-7xl font-display font-light text-white mb-8 tracking-tight leading-[1.1]">
-                Nossos Pacotes para as Ilhas Maldivas
-              </h2>
-
-              <div className="w-20 h-[1px] bg-gradient-to-r from-transparent via-gold to-transparent mx-auto mb-8"></div>
-
-              <p className="text-xl sm:text-2xl text-slate-300/80 leading-relaxed font-extralight">
-                Experiência exclusiva com tarifas especiais e curadoria especializada
-              </p>
-            </div>
-
-            {/* Benefits Grid */}
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-6 max-w-6xl mx-auto mb-20">
-              {[
-                "Agência especializada nas Ilhas Maldivas",
-                "Parcerias diretas com os melhores resorts",
-                "Melhores preços garantidos",
-                "Pacotes all-inclusive personalizados",
-                "Atendimento em português 24/7",
-                "Suporte completo antes, durante e após a viagem"
-              ].map((benefit, index) => (
-                <div key={index} className="flex items-start gap-4 group">
-                  <div className="w-1.5 h-1.5 rounded-full bg-gold mt-2 flex-shrink-0 group-hover:scale-150 transition-transform duration-300"></div>
-                  <span className="text-white/90 text-base font-light leading-relaxed">{benefit}</span>
-                </div>
-              ))}
-            </div>
-
-            {/* Trust Signals */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12 mb-20">
-              {[
-                {
-                  icon: Shield,
-                  title: "20 Anos de Expertise",
-                  description: "Especialistas em jornadas de luxo"
-                },
-                {
-                  icon: Star,
-                  title: "5.000+ Clientes Satisfeitos",
-                  description: "Experiências transformadoras"
-                },
-                {
-                  icon: Heart,
-                  title: "50+ Resorts Parceiros",
-                  description: "Preços exclusivos nos melhores resorts"
-                },
-                {
-                  icon: Clock,
-                  title: "Atendimento 24/7",
-                  description: "Suporte dedicado sempre que precisar"
-                }
-              ].map((signal, index) => {
-                const Icon = signal.icon;
-                return (
-                  <div key={index} className="group text-center">
-                    <div className="w-20 h-20 mx-auto mb-6 rounded-2xl bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm border border-white/20 flex items-center justify-center group-hover:scale-110 transition-all duration-300">
-                      <Icon className="w-9 h-9 text-[#4DD0E1] group-hover:text-[#00BCD4] transition-colors" strokeWidth={1.5} />
-                    </div>
-                    <h3 className="text-xl font-display font-semibold text-white mb-3">
-                      {signal.title}
-                    </h3>
-                    <p className="text-base text-slate-300/90 leading-relaxed font-light">
-                      {signal.description}
-                    </p>
-                  </div>
-                );
-              })}
-            </div>
-
-            {/* Instagram Badge */}
-            <div className="text-center">
-              <div className="inline-flex items-center gap-5 bg-gradient-to-br from-white/10 via-white/5 to-white/[0.02] backdrop-blur-xl border border-white/20 rounded-full px-10 py-6 shadow-2xl hover:scale-105 transition-transform duration-300">
-                <a href="https://instagram.com/followmeviagens" target="_blank" rel="noopener noreferrer" className="flex items-center gap-5">
-                  <div className="relative">
-                    <div className="w-14 h-14 bg-gradient-to-br from-[#00BCD4] via-pink-500 to-purple-600 rounded-full flex items-center justify-center shadow-lg">
-                      <span className="text-white text-2xl">📸</span>
-                    </div>
-                    <div className="absolute -bottom-1 -right-1 w-6 h-6 bg-blue-500 rounded-full flex items-center justify-center border-2 border-[#0a0d1f]">
-                      <svg className="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
-                        <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                      </svg>
-                    </div>
-                  </div>
-
-                  <div className="text-left">
-                    <div className="flex items-center gap-2 mb-1">
-                      <span className="text-white font-semibold text-lg tracking-wide">
-                        @followmeviagens
-                      </span>
-                    </div>
-                    <div className="text-slate-300/90 text-sm tracking-wide font-light">
-                      Confiado por <span className="text-[#4DD0E1] font-semibold">200.000+</span> viajantes
-                    </div>
-                  </div>
-                </a>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Resorts Section */}
-        <section className="py-16 md:py-24 bg-background">
-          <div className="container mx-auto px-4">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-display font-bold mb-4">
-                Explore Nossos Resorts
-              </h2>
-              <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-                49 resorts cuidadosamente selecionados - do luxo acessível ao ultra-exclusivo. Encontre o paraíso perfeito para você.
-              </p>
-            </div>
-
-            <div className="max-w-7xl mx-auto">
-              <div className="space-y-12 sm:space-y-8">
-                {resorts.map((pkg, index) => <PackageListItem key={pkg.slug || pkg.referenceNumber || index} {...pkg} />)}
               </div>
             </div>
           </div>
