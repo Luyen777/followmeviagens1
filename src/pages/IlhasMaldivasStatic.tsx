@@ -1,4 +1,4 @@
-import { Crown, Home, Fish, Heart, Utensils, Leaf, Passport, DollarSign, Sun, Plane, Shield, Star, Clock } from "lucide-react";
+import { Crown, Home, Fish, Heart, Utensils, Leaf, FileText, DollarSign, Sun, Plane, Shield, Star, Clock } from "lucide-react";
 import { useState } from "react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
@@ -1002,7 +1002,7 @@ const IlhasMaldivasStatic = () => {
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
               <div className="bg-card p-6 rounded-xl border border-border hover:border-[#00BCD4]/50 transition-colors">
                 <div className="w-14 h-14 mx-auto mb-4 rounded-full bg-[#00BCD4]/10 flex items-center justify-center">
-                  <Passport className="w-7 h-7 text-[#00BCD4]" />
+                  <FileText className="w-7 h-7 text-[#00BCD4]" />
                 </div>
                 <h3 className="font-semibold text-center mb-2 text-lg">Visto na Chegada</h3>
                 <p className="text-sm text-muted-foreground text-center leading-relaxed">
