@@ -102,7 +102,6 @@ Comodidades nas Villas:
 - Clube Kids com atividades criativas, esportivas e educativas
 - Villas familiar/Thilamaafushi Villa com 2 ou 3 quartos, privacidade total
 - Menu kids e amenities baby
-- Resort pet friendly em algumas tarifas (sob consulta)
 - Bicicletas disponíveis
 - Atividades culturais e trilhas ecológicas
 - Sustentabilidade: adoção de práticas eco-friendly, redução de plásticos e restauração de recifes`
@@ -185,10 +184,6 @@ Comodidades nas Villas:
         question: "Crianças pagam?",
         answer: "Kids até 11 anos podem ficar gratuitamente com os pais em alguns planos. Consulte-nos para verificar as promoções vigentes e disponibilidade."
       },
-      {
-        question: "O resort aceita animais de estimação?",
-        answer: "Sim, o resort é pet friendly em algumas tarifas. Consulte-nos para verificar as condições e disponibilidade."
-      }
     ],
     images: [
       {

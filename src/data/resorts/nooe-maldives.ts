@@ -122,7 +122,6 @@ Comodidades nas Villas:
 
 Diferenciais do Resort:
 
-- Resort pet friendly sob consulta
 - Práticas sustentáveis
 - Serviço multilíngue
 - Foco em hospitalidade personalizada
@@ -212,7 +211,7 @@ Diferenciais do Resort:
       },
       {
         question: "O que diferencia o NOOE Maldives?",
-        answer: "Resort 5 estrelas no Vaavu Atoll com 72 villas modernas, Duplex Overwater Villas inovadoras com piscina suspensa, house reef famoso por tartarugas e tubarões-nurse, seis espaços gastronômicos (incluindo japonês teppanyaki), kids club completo, até 2 crianças free, pet friendly sob consulta, práticas sustentáveis e hospitalidade personalizada. Ideal para casais, famílias e grupos."
+        answer: "Resort 5 estrelas no Vaavu Atoll com 72 villas modernas, Duplex Overwater Villas inovadoras com piscina suspensa, house reef famoso por tartarugas e tubarões-nurse, seis espaços gastronômicos (incluindo japonês teppanyaki), kids club completo, até 2 crianças free, práticas sustentáveis e hospitalidade personalizada. Ideal para casais, famílias e grupos."
       }
     ],
     images: [

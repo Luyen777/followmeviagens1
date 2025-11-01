@@ -4,53 +4,68 @@ import { Link, useNavigate, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import logo from "@/assets/logo-new.png";
 const destinations = [{
-  label: "Dubai",
-  href: "/dubai"
-}, {
-  label: "Tailândia",
-  href: "/tailandia"
-}, {
-  label: "Índia",
-  href: "/india"
-}, {
   label: "África do Sul",
   href: "/africa-do-sul"
-}, {
-  label: "Seychelles",
-  href: "/seychelles"
-}, {
-  label: "Egito",
-  href: "/egito"
-}, {
-  label: "Vietnã",
-  href: "/vietna"
-}, {
-  label: "Turquia",
-  href: "/turquia"
-}, {
-  label: "Grécia",
-  href: "/grecia"
-}, {
-  label: "Bali",
-  href: "/bali"
-}, {
-  label: "Taiti",
-  href: "/taiti"
 }, {
   label: "Austrália",
   href: "/australia"
 }, {
-  label: "Nova Zelândia",
-  href: "/nova-zelandia"
+  label: "Bali",
+  href: "/bali"
 }, {
-  label: "Ilhas Maurício",
-  href: "/ilhas-mauricio"
+  label: "Camboja",
+  href: "/camboja"
+}, {
+  label: "Coreia do Sul",
+  href: "/coreia-do-sul"
+}, {
+  label: "Dubai",
+  href: "/dubai"
+}, {
+  label: "Egito",
+  href: "/egito"
 }, {
   label: "Fiji",
   href: "/fiji"
 }, {
-  label: "Camboja",
-  href: "/camboja"
+  label: "Filipinas",
+  href: "/filipinas"
+}, {
+  label: "Grécia",
+  href: "/grecia"
+}, {
+  label: "Ilhas Maurício",
+  href: "/ilhas-mauricio"
+}, {
+  label: "Índia",
+  href: "/india"
+}, {
+  label: "Japão",
+  href: "/japao"
+}, {
+  label: "Laos",
+  href: "/laos"
+}, {
+  label: "Nova Zelândia",
+  href: "/nova-zelandia"
+}, {
+  label: "Seychelles",
+  href: "/seychelles"
+}, {
+  label: "Tailândia",
+  href: "/tailandia"
+}, {
+  label: "Taiti",
+  href: "/taiti"
+}, {
+  label: "Tanzânia",
+  href: "/tanzania"
+}, {
+  label: "Turquia",
+  href: "/turquia"
+}, {
+  label: "Vietnã",
+  href: "/vietna"
 }];
 const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -163,7 +178,7 @@ const Navigation = () => {
                         <ChevronDown className="w-3 h-3" />
                       </button>
                       {isDestinationsOpen && <div className="absolute top-full left-0 pt-1 z-50">
-                          <div className="bg-background border border-border rounded-lg shadow-lg py-2 min-w-[200px] animate-fade-in">
+                          <div className="bg-background border border-border rounded-lg shadow-lg py-2 min-w-[200px] max-h-[70vh] overflow-y-auto animate-fade-in">
                             {destinations.map(dest => <Link key={dest.href} to={dest.href} className="block px-4 py-2 text-sm text-foreground/80 hover:text-foreground hover:bg-foreground/5 transition-colors">
                                 {dest.label}
                               </Link>)}
@@ -218,7 +233,7 @@ const Navigation = () => {
                         {item.label}
                         <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${isMobileDestinationsOpen ? 'rotate-180' : ''}`} />
                       </button>
-                      {isMobileDestinationsOpen && <div className="pl-4 mt-1 space-y-1 animate-fade-in">
+                      {isMobileDestinationsOpen && <div className="pl-4 mt-1 space-y-1 max-h-[50vh] overflow-y-auto animate-fade-in">
                           {destinations.map(dest => <Link key={dest.href} to={dest.href} onClick={() => {
                     setIsMenuOpen(false);
                     setIsMobileDestinationsOpen(false);
