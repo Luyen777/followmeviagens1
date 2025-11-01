@@ -7,6 +7,7 @@ import PackageListItem from "@/components/PackageListItem";
 import SEOHead from "@/components/SEOHead";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { createItemListSchema } from "@/lib/structuredData";
+import maldivesHero from "@/assets/maldives-hero2.jpg";
 
 // Custom interface for static resort data
 interface StaticResortData {
@@ -785,7 +786,7 @@ const IlhasMaldivasStatic = () => {
         {/* Hero Section */}
         <section className="relative min-h-[60vh] flex items-center justify-center overflow-hidden pt-20">
           <div className="absolute inset-0 bg-cover bg-center bg-fixed" style={{
-          backgroundImage: `url(https://images.unsplash.com/photo-1514282401047-d79a71a590e8?q=80&w=2065)`
+          backgroundImage: `url(${maldivesHero})`
         }}>
             <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/50 to-black/70" />
           </div>
