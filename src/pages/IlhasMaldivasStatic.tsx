@@ -1,10 +1,11 @@
-import { ChevronDown } from "lucide-react";
+import { Crown, Home, Fish, Heart, Utensils, Leaf, Passport, DollarSign, Sun, Plane, Shield, Star, Clock } from "lucide-react";
+import { useState } from "react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import PackageListItem from "@/components/PackageListItem";
-import Breadcrumbs from "@/components/Breadcrumbs";
 import SEOHead from "@/components/SEOHead";
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { createItemListSchema } from "@/lib/structuredData";
 
 // Custom interface for static resort data
@@ -815,6 +816,7 @@ const RESORTS_DATA: StaticResortData[] = [
 
 const IlhasMaldivasStatic = () => {
   const resorts = RESORTS_DATA;
+  const [openFaq, setOpenFaq] = useState<string | undefined>(undefined);
 
   // Create structured data for resort list
   const itemListSchema = createItemListSchema(
@@ -830,53 +832,459 @@ const IlhasMaldivasStatic = () => {
   return (
     <>
       <SEOHead
-        title="Pacotes para Maldivas 2024 | Resorts de Luxo | Follow Me Viagens"
-        description="Descubra os melhores pacotes para as Ilhas Maldivas. Resorts de luxo com tudo incluído, overwater villas, mergulho e experiências inesquecíveis. Pacotes personalizáveis para lua de mel e férias em família."
-        canonicalUrl="/ilhas-maldivas"
-        keywords={["maldivas", "pacotes maldivas", "resorts maldivas", "viagem maldivas", "lua de mel maldivas", "overwater villas"]}
+        title="Pacotes para Maldivas 2025 | Resorts de Luxo | Follow Me Viagens"
+        description="Descubra as Ilhas Maldivas - o paraíso do Oceano Índico. 49 resorts de luxo, overwater villas exclusivas, mergulho espetacular e experiências inesquecíveis. Pacotes all-inclusive personalizados."
+        canonicalUrl="/ilhas-maldivas-static"
+        keywords={["maldivas", "pacotes maldivas", "resorts maldivas", "viagem maldivas", "lua de mel maldivas", "overwater villas", "ilhas maldivas"]}
         structuredData={itemListSchema}
       />
 
-      <div className="min-h-screen bg-background">
+      <main className="min-h-screen bg-background">
         <Navigation />
         <WhatsAppButton />
 
-        <Breadcrumbs
-          items={[
-            { label: "Início", href: "/" },
-            { label: "Ilhas Maldivas", href: "/ilhas-maldivas" }
-          ]}
-        />
+        {/* Hero Section */}
+        <section className="relative min-h-[60vh] flex items-center justify-center overflow-hidden pt-20">
+          <div
+            className="absolute inset-0 bg-cover bg-center bg-fixed"
+            style={{ backgroundImage: `url(https://images.unsplash.com/photo-1514282401047-d79a71a590e8?q=80&w=2065)` }}
+          >
+            <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/50 to-black/70" />
+          </div>
 
-      {/* Hero Section */}
-      <section className="pt-40 pb-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-background via-background/50 to-background">
-        <div className="max-w-4xl mx-auto text-center">
-          <h1 className="text-5xl sm:text-6xl font-display font-light text-foreground mb-8 tracking-tight leading-tight lg:text-5xl">Pacotes de viagem para as Ilhas Maldivas</h1>
-          <p className="text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">Explore os melhores pacotes para as Maldivas. Cada resort oferece experiências únicas, com opções de luxo e lazer para todos os estilos. Todos os pacotes são customizáveis - fale com a nossa equipe para encontrar a opção perfeita pra você!</p>
-        </div>
-      </section>
+          <div className="relative z-10 container mx-auto px-4 py-24 text-center">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-white mb-6 animate-fade-in">
+              Descubra as Ilhas Maldivas
+            </h1>
+            <p className="text-xl md:text-2xl text-white/90 max-w-3xl mx-auto leading-relaxed animate-fade-in" style={{ animationDelay: '0.2s' }}>
+              O paraíso do Oceano Índico com luxo, exclusividade e belezas naturais incomparáveis
+            </p>
+          </div>
 
-      {/* Packages List */}
-      <section className="pb-24 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          {/* Sorting Dropdown */}
-          <div className="mb-12 flex justify-end">
-            <div className="inline-flex items-center gap-2 bg-card border border-border rounded-xl px-5 py-2.5 cursor-pointer hover:border-foreground/20 transition-colors duration-200">
-              <span className="text-sm text-muted-foreground font-medium">
-                Ordenar por
-              </span>
-              <ChevronDown className="w-4 h-4 text-muted-foreground" />
+          {/* Scroll indicator */}
+          <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+            <div className="w-6 h-10 border-2 border-white/50 rounded-full flex justify-center p-2">
+              <div className="w-1 h-3 bg-white/70 rounded-full"></div>
             </div>
           </div>
+        </section>
 
-          <div className="space-y-12 sm:space-y-8">
-            {resorts.map((pkg, index) => <PackageListItem key={pkg.slug || pkg.referenceNumber || index} {...pkg} />)}
+        {/* About Destination Section */}
+        <section className="py-16 md:py-24 bg-background">
+          <div className="container mx-auto px-4">
+            <div className="max-w-6xl mx-auto">
+              <h2 className="text-3xl md:text-4xl font-display font-bold mb-12 text-center">
+                Sobre o Destino
+              </h2>
+
+              <div className="grid md:grid-cols-2 gap-12 items-center">
+                <div className="space-y-4 text-muted-foreground leading-relaxed">
+                  <p>
+                    As Ilhas Maldivas são um arquipélago paradisíaco localizado no Oceano Índico, composto por <strong className="text-foreground">26 atolls</strong> naturais e mais de <strong className="text-foreground">1.200 ilhas</strong> de coral formadas sobre formações vulcânicas subaquáticas. Este destino icônico oferece algumas das praias de areia branca mais pristine do mundo, águas cristalinas em tons de turquesa e azul-safira, e uma biodiversidade marinha incomparável.
+                  </p>
+                  <p>
+                    Com clima tropical durante todo o ano (temperatura média entre <strong className="text-foreground">27-31°C</strong>), as Maldivas são o destino perfeito para quem busca luxo, privacidade absoluta e contato direto com a natureza. O conceito único de <strong className="text-foreground">"uma ilha, um resort"</strong> garante exclusividade máxima, com apenas um hotel por ilha privativa.
+                  </p>
+                  <p>
+                    Em 2025, as Maldivas receberam mais de <strong className="text-foreground">1,6 milhão de visitantes</strong>, consolidando-se como o destino número 1 para lua de mel e férias de luxo. Atualmente, o arquipélago conta com <strong className="text-foreground">183 resorts de luxo</strong>, desde propriedades boutique intimistas até complexos ultra-exclusivos com serviços de mayordomo e chefs privativos.
+                  </p>
+                </div>
+
+                <div className="relative group">
+                  <div className="absolute -inset-1 bg-gradient-to-r from-[#00BCD4] to-[#4DD0E1] rounded-2xl blur opacity-25 group-hover:opacity-40 transition duration-1000"></div>
+                  <div className="relative">
+                    <img
+                      src="https://images.unsplash.com/photo-1506929562872-bb421503ef21?q=80&w=1968"
+                      alt="Praia paradisíaca das Maldivas"
+                      className="rounded-2xl shadow-2xl w-full h-[400px] object-cover"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
+
+        {/* Why Choose Maldives Section */}
+        <section className="py-16 md:py-24 bg-gradient-to-b from-[#F5E6D3]/10 to-background">
+          <div className="container mx-auto px-4">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl md:text-4xl font-display font-bold mb-4">
+                Por Que Escolher as Ilhas Maldivas
+              </h2>
+              <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+                Um destino único que combina luxo incomparável, privacidade absoluta e natureza pristine
+              </p>
+            </div>
+
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+              {/* Benefit 1 */}
+              <div className="group bg-card border border-border rounded-2xl p-8 hover:shadow-xl hover:border-[#00BCD4]/50 transition-all duration-300 hover:-translate-y-1">
+                <div className="w-16 h-16 mx-auto mb-6 rounded-full bg-gradient-to-br from-[#00BCD4]/20 to-[#4DD0E1]/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                  <Crown className="w-8 h-8 text-[#00BCD4]" />
+                </div>
+                <h3 className="text-xl font-semibold mb-3 text-center">Luxo e Exclusividade Incomparáveis</h3>
+                <p className="text-muted-foreground text-center">
+                  Conceito único de 'uma ilha, um resort' garante privacidade absoluta e experiência premium sem igual
+                </p>
+              </div>
+
+              {/* Benefit 2 */}
+              <div className="group bg-card border border-border rounded-2xl p-8 hover:shadow-xl hover:border-[#00BCD4]/50 transition-all duration-300 hover:-translate-y-1">
+                <div className="w-16 h-16 mx-auto mb-6 rounded-full bg-gradient-to-br from-[#00BCD4]/20 to-[#4DD0E1]/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                  <Home className="w-8 h-8 text-[#00BCD4]" />
+                </div>
+                <h3 className="text-xl font-semibold mb-3 text-center">Villas Sobre a Água</h3>
+                <p className="text-muted-foreground text-center">
+                  Icônicas overwater villas com pisos de vidro, acesso direto ao oceano e vistas deslumbrantes 360°
+                </p>
+              </div>
+
+              {/* Benefit 3 */}
+              <div className="group bg-card border border-border rounded-2xl p-8 hover:shadow-xl hover:border-[#00BCD4]/50 transition-all duration-300 hover:-translate-y-1">
+                <div className="w-16 h-16 mx-auto mb-6 rounded-full bg-gradient-to-br from-[#00BCD4]/20 to-[#4DD0E1]/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                  <Fish className="w-8 h-8 text-[#00BCD4]" />
+                </div>
+                <h3 className="text-xl font-semibold mb-3 text-center">Vida Marinha Excepcional</h3>
+                <p className="text-muted-foreground text-center">
+                  Mais de 2.000 espécies marinhas, tubarões-baleia, arraias-manta e recifes de coral vibrantes
+                </p>
+              </div>
+
+              {/* Benefit 4 */}
+              <div className="group bg-card border border-border rounded-2xl p-8 hover:shadow-xl hover:border-[#00BCD4]/50 transition-all duration-300 hover:-translate-y-1">
+                <div className="w-16 h-16 mx-auto mb-6 rounded-full bg-gradient-to-br from-[#00BCD4]/20 to-[#4DD0E1]/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                  <Heart className="w-8 h-8 text-[#00BCD4]" />
+                </div>
+                <h3 className="text-xl font-semibold mb-3 text-center">Destino para Lua de Mel</h3>
+                <p className="text-muted-foreground text-center">
+                  O lugar mais romântico do mundo com experiências exclusivas para casais e jantares privativos
+                </p>
+              </div>
+
+              {/* Benefit 5 */}
+              <div className="group bg-card border border-border rounded-2xl p-8 hover:shadow-xl hover:border-[#00BCD4]/50 transition-all duration-300 hover:-translate-y-1">
+                <div className="w-16 h-16 mx-auto mb-6 rounded-full bg-gradient-to-br from-[#00BCD4]/20 to-[#4DD0E1]/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                  <Utensils className="w-8 h-8 text-[#00BCD4]" />
+                </div>
+                <h3 className="text-xl font-semibold mb-3 text-center">Gastronomia de Classe Mundial</h3>
+                <p className="text-muted-foreground text-center">
+                  Restaurantes subaquáticos, jantares privativos na praia e culinária internacional de alto nível
+                </p>
+              </div>
+
+              {/* Benefit 6 */}
+              <div className="group bg-card border border-border rounded-2xl p-8 hover:shadow-xl hover:border-[#00BCD4]/50 transition-all duration-300 hover:-translate-y-1">
+                <div className="w-16 h-16 mx-auto mb-6 rounded-full bg-gradient-to-br from-[#00BCD4]/20 to-[#4DD0E1]/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                  <Leaf className="w-8 h-8 text-[#00BCD4]" />
+                </div>
+                <h3 className="text-xl font-semibold mb-3 text-center">Sustentabilidade</h3>
+                <p className="text-muted-foreground text-center">
+                  Resorts eco-friendly com energia solar, restauração de corais e práticas sustentáveis pioneiras
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Practical Information Section */}
+        <section className="py-16 md:py-24 bg-background">
+          <div className="container mx-auto px-4">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl md:text-4xl font-display font-bold mb-4">
+                Informações Práticas
+              </h2>
+              <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+                Tudo que você precisa saber para planejar sua viagem
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+              <div className="bg-card p-6 rounded-xl border border-border hover:border-[#00BCD4]/50 transition-colors">
+                <div className="w-14 h-14 mx-auto mb-4 rounded-full bg-[#00BCD4]/10 flex items-center justify-center">
+                  <Passport className="w-7 h-7 text-[#00BCD4]" />
+                </div>
+                <h3 className="font-semibold text-center mb-2 text-lg">Visto na Chegada</h3>
+                <p className="text-sm text-muted-foreground text-center leading-relaxed">
+                  Visto gratuito de 30 dias para brasileiros. Necessário passaporte válido por 6 meses e certificado de vacina contra febre amarela
+                </p>
+              </div>
+
+              <div className="bg-card p-6 rounded-xl border border-border hover:border-[#00BCD4]/50 transition-colors">
+                <div className="w-14 h-14 mx-auto mb-4 rounded-full bg-[#00BCD4]/10 flex items-center justify-center">
+                  <DollarSign className="w-7 h-7 text-[#00BCD4]" />
+                </div>
+                <h3 className="font-semibold text-center mb-2 text-lg">Dólar Americano</h3>
+                <p className="text-sm text-muted-foreground text-center leading-relaxed">
+                  USD amplamente aceito. Troque pequena quantia para MVR (Rupia Maldívia) para gorjetas e compras locais
+                </p>
+              </div>
+
+              <div className="bg-card p-6 rounded-xl border border-border hover:border-[#00BCD4]/50 transition-colors">
+                <div className="w-14 h-14 mx-auto mb-4 rounded-full bg-[#00BCD4]/10 flex items-center justify-center">
+                  <Sun className="w-7 h-7 text-[#00BCD4]" />
+                </div>
+                <h3 className="font-semibold text-center mb-2 text-lg">Melhor Época</h3>
+                <p className="text-sm text-muted-foreground text-center leading-relaxed">
+                  Novembro a abril (estação seca) para clima ideal. Maio a outubro para preços menores e avistar tubarões-baleia
+                </p>
+              </div>
+
+              <div className="bg-card p-6 rounded-xl border border-border hover:border-[#00BCD4]/50 transition-colors">
+                <div className="w-14 h-14 mx-auto mb-4 rounded-full bg-[#00BCD4]/10 flex items-center justify-center">
+                  <Plane className="w-7 h-7 text-[#00BCD4]" />
+                </div>
+                <h3 className="font-semibold text-center mb-2 text-lg">Transfer</h3>
+                <p className="text-sm text-muted-foreground text-center leading-relaxed">
+                  Transfers espetaculares por hidroavião (dia) ou speedboat (24h). Seu resort organiza tudo
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Agency Highlight Section - Similar to India's "Why Choose Us" */}
+        <section className="py-32 sm:py-44 relative overflow-hidden bg-gradient-to-b from-[#0a0d1f] via-[#0f1525] to-[#0a0d1f]">
+          {/* Luxury bokeh light flares */}
+          <div className="absolute top-0 left-0 w-[600px] h-[600px] bg-gradient-radial from-[#00BCD4]/20 via-[#4DD0E1]/5 to-transparent rounded-full blur-3xl pointer-events-none animate-pulse" style={{ animationDuration: '8s' }}></div>
+          <div className="absolute top-1/4 right-0 w-[500px] h-[500px] bg-gradient-radial from-[#4DD0E1]/15 via-[#00BCD4]/5 to-transparent rounded-full blur-3xl pointer-events-none animate-pulse" style={{ animationDuration: '10s', animationDelay: '2s' }}></div>
+          <div className="absolute bottom-0 left-1/3 w-[700px] h-[700px] bg-gradient-radial from-[#F5E6D3]/10 via-[#00BCD4]/5 to-transparent rounded-full blur-3xl pointer-events-none animate-pulse" style={{ animationDuration: '12s', animationDelay: '4s' }}></div>
+
+          <div className="container mx-auto relative z-10 px-4">
+            {/* Section Header */}
+            <div className="text-center max-w-3xl mx-auto mb-20">
+              <p className="text-sm sm:text-base text-[#4DD0E1]/80 font-semibold tracking-[0.2em] uppercase mb-6">
+                Experiência e Confiança
+              </p>
+
+              <h2 className="text-4xl sm:text-5xl md:text-6xl font-display font-semibold text-white mb-8 tracking-tight leading-tight">
+                Nossos Pacotes para as Ilhas Maldivas
+              </h2>
+
+              <p className="text-lg sm:text-xl text-slate-300/90 leading-relaxed font-light max-w-2xl mx-auto">
+                Experiência exclusiva com tarifas especiais e curadoria especializada
+              </p>
+            </div>
+
+            {/* Benefits Grid */}
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto mb-16">
+              {[
+                "✓ Agência especializada nas Ilhas Maldivas",
+                "✓ Parcerias diretas com os melhores resorts",
+                "✓ Melhores preços garantidos",
+                "✓ Pacotes all-inclusive personalizados",
+                "✓ Atendimento em português 24/7",
+                "✓ Suporte completo antes, durante e após a viagem"
+              ].map((benefit, index) => (
+                <div key={index} className="flex items-start gap-3 bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-5 hover:bg-white/10 transition-all duration-300">
+                  <span className="text-[#4DD0E1] text-lg font-bold flex-shrink-0">{benefit.split(' ')[0]}</span>
+                  <span className="text-white/90 text-base">{benefit.substring(2)}</span>
+                </div>
+              ))}
+            </div>
+
+            {/* Trust Signals */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12 mb-20">
+              {[
+                {
+                  icon: Shield,
+                  title: "20 Anos de Expertise",
+                  description: "Especialistas em jornadas de luxo"
+                },
+                {
+                  icon: Star,
+                  title: "5.000+ Clientes Satisfeitos",
+                  description: "Experiências transformadoras"
+                },
+                {
+                  icon: Heart,
+                  title: "50+ Resorts Parceiros",
+                  description: "Preços exclusivos nos melhores resorts"
+                },
+                {
+                  icon: Clock,
+                  title: "Atendimento 24/7",
+                  description: "Suporte dedicado sempre que precisar"
+                }
+              ].map((signal, index) => {
+                const Icon = signal.icon;
+                return (
+                  <div key={index} className="group text-center">
+                    <div className="w-20 h-20 mx-auto mb-6 rounded-2xl bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm border border-white/20 flex items-center justify-center group-hover:scale-110 transition-all duration-300">
+                      <Icon className="w-9 h-9 text-[#4DD0E1] group-hover:text-[#00BCD4] transition-colors" strokeWidth={1.5} />
+                    </div>
+                    <h3 className="text-xl font-display font-semibold text-white mb-3">
+                      {signal.title}
+                    </h3>
+                    <p className="text-base text-slate-300/90 leading-relaxed font-light">
+                      {signal.description}
+                    </p>
+                  </div>
+                );
+              })}
+            </div>
+
+            {/* Instagram Badge */}
+            <div className="text-center">
+              <div className="inline-flex items-center gap-5 bg-gradient-to-br from-white/10 via-white/5 to-white/[0.02] backdrop-blur-xl border border-white/20 rounded-full px-10 py-6 shadow-2xl hover:scale-105 transition-transform duration-300">
+                <a href="https://instagram.com/followmeviagens" target="_blank" rel="noopener noreferrer" className="flex items-center gap-5">
+                  <div className="relative">
+                    <div className="w-14 h-14 bg-gradient-to-br from-[#00BCD4] via-pink-500 to-purple-600 rounded-full flex items-center justify-center shadow-lg">
+                      <span className="text-white text-2xl">📸</span>
+                    </div>
+                    <div className="absolute -bottom-1 -right-1 w-6 h-6 bg-blue-500 rounded-full flex items-center justify-center border-2 border-[#0a0d1f]">
+                      <svg className="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
+                        <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                      </svg>
+                    </div>
+                  </div>
+
+                  <div className="text-left">
+                    <div className="flex items-center gap-2 mb-1">
+                      <span className="text-white font-semibold text-lg tracking-wide">
+                        @followmeviagens
+                      </span>
+                    </div>
+                    <div className="text-slate-300/90 text-sm tracking-wide font-light">
+                      Confiado por <span className="text-[#4DD0E1] font-semibold">200.000+</span> viajantes
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Resorts Section */}
+        <section className="py-16 md:py-24 bg-background">
+          <div className="container mx-auto px-4">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl md:text-4xl font-display font-bold mb-4">
+                Explore Nossos Resorts
+              </h2>
+              <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+                49 resorts cuidadosamente selecionados - do luxo acessível ao ultra-exclusivo. Encontre o paraíso perfeito para você.
+              </p>
+            </div>
+
+            <div className="max-w-7xl mx-auto">
+              <div className="space-y-12 sm:space-y-8">
+                {resorts.map((pkg, index) => <PackageListItem key={pkg.slug || pkg.referenceNumber || index} {...pkg} />)}
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* FAQ Section */}
+        <section className="py-16 md:py-24 bg-gradient-to-b from-[#F5E6D3]/10 to-background">
+          <div className="container mx-auto px-4">
+            <div className="max-w-4xl mx-auto">
+              <div className="text-center mb-12">
+                <h2 className="text-3xl md:text-4xl font-display font-bold mb-4">
+                  Perguntas Frequentes
+                </h2>
+                <p className="text-lg text-muted-foreground">
+                  Tudo o que você precisa saber sobre as Ilhas Maldivas
+                </p>
+              </div>
+
+              <Accordion type="single" collapsible value={openFaq} onValueChange={setOpenFaq} className="w-full">
+                <AccordionItem value="item-1" className="border-b border-border">
+                  <AccordionTrigger className="text-left hover:text-[#00BCD4] transition-colors py-5">
+                    Preciso de visto para visitar as Maldivas?
+                  </AccordionTrigger>
+                  <AccordionContent className="text-muted-foreground leading-relaxed pb-5">
+                    Não. Brasileiros recebem visto gratuito de 30 dias na chegada. É necessário apenas passaporte válido por 6 meses, passagem de retorno, comprovante de hotel e certificado de vacina contra febre amarela. O processo é simples e feito diretamente no aeroporto de Malé.
+                  </AccordionContent>
+                </AccordionItem>
+
+                <AccordionItem value="item-2" className="border-b border-border">
+                  <AccordionTrigger className="text-left hover:text-[#00BCD4] transition-colors py-5">
+                    Qual a melhor época para visitar?
+                  </AccordionTrigger>
+                  <AccordionContent className="text-muted-foreground leading-relaxed pb-5">
+                    Novembro a abril é a estação seca com clima perfeito: sol garantido, mar calmo e céu azul. Maio a outubro é a estação chuvosa, mas oferece preços até 40% menores e é a melhor época para avistar tubarões-baleia e arraias-manta. Muitos resorts têm excelente clima mesmo na baixa temporada.
+                  </AccordionContent>
+                </AccordionItem>
+
+                <AccordionItem value="item-3" className="border-b border-border">
+                  <AccordionTrigger className="text-left hover:text-[#00BCD4] transition-colors py-5">
+                    Quanto custa uma viagem para as Maldivas?
+                  </AccordionTrigger>
+                  <AccordionContent className="text-muted-foreground leading-relaxed pb-5">
+                    Os custos variam muito: resorts variam de USD 400 a USD 3.000+ por noite por casal. Transfers custam USD 100-700 dependendo da distância. Voos do Brasil custam USD 1.500-3.000. Pacotes all-inclusive ajudam a controlar os gastos. Uma viagem de 5 noites para um casal pode custar de USD 5.000 a USD 20.000+ dependendo do resort escolhido.
+                  </AccordionContent>
+                </AccordionItem>
+
+                <AccordionItem value="item-4" className="border-b border-border">
+                  <AccordionTrigger className="text-left hover:text-[#00BCD4] transition-colors py-5">
+                    Posso beber álcool nas Maldivas?
+                  </AccordionTrigger>
+                  <AccordionContent className="text-muted-foreground leading-relaxed pb-5">
+                    Sim, mas APENAS nos resorts privativos. As Maldivas são um país muçulmano, então álcool é proibido em ilhas locais e na capital Malé. Nos resorts turísticos, álcool está disponível livremente (incluído em pacotes all-inclusive ou vendido separadamente). IMPORTANTE: NÃO traga álcool na bagagem - será confiscado pela alfândega.
+                  </AccordionContent>
+                </AccordionItem>
+
+                <AccordionItem value="item-5" className="border-b border-border">
+                  <AccordionTrigger className="text-left hover:text-[#00BCD4] transition-colors py-5">
+                    Qual moeda devo levar?
+                  </AccordionTrigger>
+                  <AccordionContent className="text-muted-foreground leading-relaxed pb-5">
+                    Dólares americanos (USD) são amplamente aceitos e preferidos. A maioria dos resorts cobra tudo em USD. A moeda local é a Rupia Maldívia (MVR), mas você só precisará dela para gorjetas ou compras em ilhas locais. Cartões de crédito internacionais funcionam bem nos resorts. Troque apenas uma pequena quantia para MVR se necessário.
+                  </AccordionContent>
+                </AccordionItem>
+
+                <AccordionItem value="item-6" className="border-b border-border">
+                  <AccordionTrigger className="text-left hover:text-[#00BCD4] transition-colors py-5">
+                    Como funciona o transfer do aeroporto?
+                  </AccordionTrigger>
+                  <AccordionContent className="text-muted-foreground leading-relaxed pb-5">
+                    Existem três opções: (1) Hidroavião - espetacular, voo cênico, mas opera apenas durante o dia (USD 300-700 por pessoa). (2) Speedboat - para resorts próximos, opera 24h, mais econômico (USD 100-300). (3) Voo doméstico + speedboat - para resorts distantes. Seu resort organiza TUDO - você recebe instruções detalhadas antes da viagem.
+                  </AccordionContent>
+                </AccordionItem>
+
+                <AccordionItem value="item-7" className="border-b border-border">
+                  <AccordionTrigger className="text-left hover:text-[#00BCD4] transition-colors py-5">
+                    O que está incluído em pacote all-inclusive?
+                  </AccordionTrigger>
+                  <AccordionContent className="text-muted-foreground leading-relaxed pb-5">
+                    Pacotes all-inclusive geralmente incluem: 3 refeições diárias (café, almoço, jantar), bebidas alcoólicas e não-alcoólicas selecionadas, snacks entre refeições, esportes aquáticos não motorizados (caiaque, stand-up paddle, snorkeling), uso de instalações (piscina, academia) e transfers. NÃO incluem: tratamentos de spa, mergulho autônomo (scuba diving), esportes motorizados e excursões especiais.
+                  </AccordionContent>
+                </AccordionItem>
+
+                <AccordionItem value="item-8" className="border-b border-border">
+                  <AccordionTrigger className="text-left hover:text-[#00BCD4] transition-colors py-5">
+                    Posso usar biquíni nas Maldivas?
+                  </AccordionTrigger>
+                  <AccordionContent className="text-muted-foreground leading-relaxed pb-5">
+                    Sim, total liberdade nos resorts privativos - use biquíni, maiô, roupas de banho à vontade. Porém, se visitar ilhas locais ou a capital Malé, o código de vestimenta é conservador: biquíni apenas em "bikini beaches" designadas. Em áreas públicas de ilhas locais, vista-se modestamente (ombros e joelhos cobertos). Nos resorts, não há restrições.
+                  </AccordionContent>
+                </AccordionItem>
+
+                <AccordionItem value="item-9" className="border-b border-border">
+                  <AccordionTrigger className="text-left hover:text-[#00BCD4] transition-colors py-5">
+                    Quanto tempo devo ficar?
+                  </AccordionTrigger>
+                  <AccordionContent className="text-muted-foreground leading-relaxed pb-5">
+                    Recomendamos mínimo de 5-7 noites para aproveitar bem. Muitos resorts oferecem promoções "pague 4, fique 5" ou "pague 7, fique 9". Para conhecer dois resorts diferentes, planeje 4-5 noites em cada. Menos de 4 noites é muito corrido considerando o longo voo internacional e os transfers. O ideal é 7-10 noites para relaxar completamente.
+                  </AccordionContent>
+                </AccordionItem>
+
+                <AccordionItem value="item-10" className="border-b border-border">
+                  <AccordionTrigger className="text-left hover:text-[#00BCD4] transition-colors py-5">
+                    É seguro nadar e fazer snorkeling?
+                  </AccordionTrigger>
+                  <AccordionContent className="text-muted-foreground leading-relaxed pb-5">
+                    Muito seguro! As águas são calmas, a vida marinha é amigável e não existem predadores perigosos nas áreas de snorkeling. Tubarões de recife são inofensivos. Use colete salva-vidas se não for nadador experiente, sapatos aquáticos para proteger dos corais, e NUNCA toque na vida marinha ou nos corais. A maioria dos resorts oferece equipamento gratuito de snorkeling e orientações de segurança.
+                  </AccordionContent>
+                </AccordionItem>
+              </Accordion>
+            </div>
+          </div>
+        </section>
 
         <Footer />
-      </div>
+      </main>
     </>
   );
 };
